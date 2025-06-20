@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relationship Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .intro-text {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .relationships-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .relationship-column {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .relationship-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .relationship-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .shortcut-info {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        .shortcut-info a {
+            color: #8b9dc3;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .relationships-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Relationship Thesaurus</h1>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="intro-text">
+            Every relationship tells a story, connecting people to others and the wider world. Whether your character is surrounded by loved ones, friends, acquaintances, or detractors, their interactions will reveal who they are and what's important to them. Write authentic, relatable relationships by understanding the possibilities and opportunities of each.
+        </div>
+
+        <div class="relationships-grid">
+            <div class="relationship-column">
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('acquaintances')">ACQUAINTANCES</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('adult-child-and-elderly-parent')">ADULT CHILD & ELDERLY PARENT</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('benefactor-and-recipient')">BENEFACTOR AND RECIPIENT</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('best-friends')">BEST FRIENDS</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('boss-and-employee')">BOSS AND EMPLOYEE</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('business-partners')">BUSINESS PARTNERS</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('caregiver-and-client')">CAREGIVER AND CLIENT</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('co-volunteers')">CO-VOLUNTEERS</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('coworkers')">COWORKERS</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('editor-and-author')">EDITOR AND AUTHOR</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('enemies')">ENEMIES</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('estranged-parent-and-child')">ESTRANGED PARENT AND CHILD</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('exes')">EXES</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('fling-participants')">FLING PARTICIPANTS</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('frenemies')">FRENEMIES</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('friends')">FRIENDS</a>
+            </div>
+
+            <div class="relationship-column">
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('friends-with-benefits')">FRIENDS WITH BENEFITS</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('giver-and-taker')">GIVER AND TAKER</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('godparent-and-godchild')">GODPARENT AND GODCHILD</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('grandparent-and-grandchild')">GRANDPARENT AND GRANDCHILD</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('guard-and-prisoner')">GUARD AND PRISONER</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('headmaster-and-student')">HEADMASTER AND STUDENT</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('host-and-guest')">HOST AND GUEST</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('imaginary-friend-and-child')">IMAGINARY FRIEND AND CHILD</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('in-laws')">IN-LAWS</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('landlord-and-tenant')">LANDLORD AND TENANT</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('master-and-apprentice')">MASTER AND APPRENTICE</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('mentor-and-protege')">MENTOR AND PROTÉGÉ</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('nanny-and-child')">NANNY AND CHILD</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('neighbors')">NEIGHBORS</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('one-night-stand-lovers')">ONE-NIGHT STAND LOVERS</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('parent-and-adult-child')">PARENT AND ADULT CHILD</a>
+            </div>
+
+            <div class="relationship-column">
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('parent-and-teen-child')">PARENT AND TEEN CHILD</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('people-who-are-dating')">PEOPLE WHO ARE DATING</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('police-officer-and-confidential-informant')">POLICE OFFICER AND CONFIDENTIAL INFORMANT</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('principal-and-teacher')">PRINCIPAL AND TEACHER</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('professional-and-client')">PROFESSIONAL AND CLIENT</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('protagonist-and-crush')">PROTAGONIST AND CRUSH</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('rivals')">RIVALS</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('service-provider-and-customer')">SERVICE PROVIDER AND CUSTOMER</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('siblings')">SIBLINGS</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('spouses-and-partners')">SPOUSES AND PARTNERS</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('spouses-in-a-forced-marriage')">SPOUSES IN A FORCED MARRIAGE</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('stalker-and-target')">STALKER AND TARGET</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('stepparent-and-stepchild')">STEPPARENT AND STEPCHILD</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('teacher-and-student')">TEACHER AND STUDENT</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('therapist-and-patient')">THERAPIST AND PATIENT</a>
+                <a href="#" class="relationship-link" onclick="navigateToRelationship('twins')">TWINS</a>
+            </div>
+        </div>
+
+        <div class="shortcut-info">
+            The shortcut for this page is t+r. For a complete list of shortcuts, see our <a href="#">Accessibility</a> guide.
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to main thesaurus page');
+        }
+
+        function navigateToRelationship(relationshipSlug) {
+            alert(`Navigating to: ${relationshipSlug}\n\nNext, you can show me the content for specific relationship pages you'd like me to build!`);
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>
