@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Occupation Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .intro-text {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .occupations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .occupation-column {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .occupation-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 6px;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .occupation-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .occupations-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Occupation Thesaurus</h1>
+            
+            <div class="navigation-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="intro-text">
+            A character's occupation says a lot about who they are. It can define their morals and values, stem from a past wound, hint at their highest aspiration, or highlight a talent or skill. Occupations should also help (or hinder) the character as they strive to achieve their goals. As such, they need to be chosen deliberately. Use this thesaurus to brainstorm viable career choices for your cast that will provide characterization and strengthen your story.
+        </div>
+
+        <div class="occupations-grid">
+            <div class="occupation-column">
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('actor')">ACTOR</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('air-traffic-controller')">AIR TRAFFIC CONTROLLER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('animal-rescue-worker')">ANIMAL RESCUE WORKER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('animal-trainer')">ANIMAL TRAINER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('antiques-dealer')">ANTIQUES DEALER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('architect')">ARCHITECT</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('auto-mechanic')">AUTO MECHANIC</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('babysitter')">BABYSITTER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('baker')">BAKER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('barista')">BARISTA</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('bartender')">BARTENDER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('book-conservator')">BOOK CONSERVATOR</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('bouncer')">BOUNCER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('bounty-hunter')">BOUNTY HUNTER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('business-tycoon')">BUSINESS TYCOON</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('carpenter')">CARPENTER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('cashier')">CASHIER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('chef')">CHEF</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('childrens-entertainer')">CHILDREN'S ENTERTAINER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('chocolatier')">CHOCOLATIER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('clergy-member')">CLERGY MEMBER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('concierge')">CONCIERGE</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('conductor')">CONDUCTOR</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('coroner')">CORONER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('corrections-officer-prison-guard')">CORRECTIONS OFFICER (PRISON GUARD)</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('crime-scene-cleaner')">CRIME SCENE CLEANER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('dancer')">DANCER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('deep-sea-diver-commercial')">DEEP SEA DIVER (COMMERCIAL)</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('dentist')">DENTIST</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('dietician')">DIETICIAN</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('diplomat')">DIPLOMAT</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('docent')">DOCENT</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('dog-groomer')">DOG GROOMER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('dream-interpreter')">DREAM INTERPRETER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('driver-cab')">DRIVER (CAB)</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('emergency-dispatcher')">EMERGENCY DISPATCHER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('emergency-medical-responder')">EMERGENCY MEDICAL RESPONDER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('emergency-room-physician')">EMERGENCY ROOM PHYSICIAN</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('escort')">ESCORT</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('ethical-hacker')">ETHICAL HACKER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('exotic-dancer')">EXOTIC DANCER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('farmer')">FARMER</a>
+            </div>
+
+            <div class="occupation-column">
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('fashion-designer')">FASHION DESIGNER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('firefighter')">FIREFIGHTER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('flight-attendant')">FLIGHT ATTENDANT</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('food-critic')">FOOD CRITIC</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('food-stylist')">FOOD STYLIST</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('fundraiser')">FUNDRAISER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('funeral-director')">FUNERAL DIRECTOR</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('general-contractor')">GENERAL CONTRACTOR</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('geologist')">GEOLOGIST</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('ghostwriter')">GHOSTWRITER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('glassblower')">GLASSBLOWER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('graphic-designer')">GRAPHIC DESIGNER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('home-health-aide')">HOME HEALTH AIDE</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('human-test-subject')">HUMAN TEST SUBJECT</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('hypnotherapist')">HYPNOTHERAPIST</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('interpreter')">INTERPRETER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('inventor')">INVENTOR</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('janitor')">JANITOR</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('jeweler')">JEWELER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('judge')">JUDGE</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('landscape-designer')">LANDSCAPE DESIGNER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('lawyer')">LAWYER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('librarian')">LIBRARIAN</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('lobbyist')">LOBBYIST</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('locksmith')">LOCKSMITH</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('mail-carrier')">MAIL CARRIER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('makeup-artist')">MAKEUP ARTIST</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('massage-therapist')">MASSAGE THERAPIST</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('master-brewer')">MASTER BREWER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('mechanical-engineer')">MECHANICAL ENGINEER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('midwife')">MIDWIFE</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('military-officer')">MILITARY OFFICER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('model')">MODEL</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('nanny')">NANNY</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('novelist')">NOVELIST</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('nurse-rn')">NURSE (RN)</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('outdoor-guide')">OUTDOOR GUIDE</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('paleontologist')">PALEONTOLOGIST</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('paralegal')">PARALEGAL</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('parole-officer')">PAROLE OFFICER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('personal-assistant-to-a-celebrity')">PERSONAL ASSISTANT TO A CELEBRITY</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('personal-shopper')">PERSONAL SHOPPER</a>
+            </div>
+
+            <div class="occupation-column">
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('personal-trainer')">PERSONAL TRAINER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('pest-control-technician')">PEST CONTROL TECHNICIAN</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('pharmacist')">PHARMACIST</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('physical-therapist')">PHYSICAL THERAPIST</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('pilot')">PILOT</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('podcaster')">PODCASTER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('police-officer')">POLICE OFFICER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('politician')">POLITICIAN</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('private-detective')">PRIVATE DETECTIVE</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('professional-athlete')">PROFESSIONAL ATHLETE</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('professional-mourner')">PROFESSIONAL MOURNER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('professional-poker-player')">PROFESSIONAL POKER PLAYER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('professor')">PROFESSOR</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('radio-dj')">RADIO DJ</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('rancher')">RANCHER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('realtor')">REALTOR</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('receptionist')">RECEPTIONIST</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('recruiter')">RECRUITER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('referee')">REFEREE</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('reiki-master')">REIKI MASTER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('reporter')">REPORTER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('robotics-engineer')">ROBOTICS ENGINEER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('secret-service-agent')">SECRET SERVICE AGENT</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('security-guard')">SECURITY GUARD</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('server')">SERVER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('skydiving-instructor')">SKYDIVING INSTRUCTOR</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('small-business-owner')">SMALL BUSINESS OWNER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('social-media-manager')">SOCIAL MEDIA MANAGER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('social-worker')">SOCIAL WORKER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('software-developer')">SOFTWARE DEVELOPER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('sommelier')">SOMMELIER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('street-performer')">STREET PERFORMER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('talent-agent')">TALENT AGENT</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('tattoo-artist')">TATTOO ARTIST</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('taxidermist')">TAXIDERMIST</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('teacher')">TEACHER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('therapist-mental-health')">THERAPIST (MENTAL HEALTH)</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('tour-guide')">TOUR GUIDE</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('treasure-hunter')">TREASURE HUNTER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('veterinarian')">VETERINARIAN</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('wedding-planner')">WEDDING PLANNER</a>
+                <a href="#" class="occupation-link" onclick="navigateToOccupation('yoga-instructor')">YOGA INSTRUCTOR</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to main thesaurus page');
+        }
+
+        function navigateToOccupation(occupationSlug) {
+            alert(`Navigating to: ${occupationSlug}\n\nNext, you can show me the content for specific occupation pages you'd like me to build!`);
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html> class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div
