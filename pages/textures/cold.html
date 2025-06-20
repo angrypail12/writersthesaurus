@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold - Texture Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title {
+            font-size: 1.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .comparison-category {
+            margin-bottom: 15px;
+        }
+
+        .category-title {
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .comparison-item {
+            font-size: 0.85rem;
+            margin-bottom: 3px;
+            color: #555;
+        }
+
+        .synonyms {
+            font-size: 0.85rem;
+            font-style: italic;
+            color: #666;
+        }
+
+        .example-section {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .example-text {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .helpful-tip {
+            background: #e8e8e8;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.6;
+            float: right;
+            width: 250px;
+            margin-left: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .note-section {
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+
+        .note-title {
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .helpful-tip {
+                float: none;
+                width: 100%;
+                margin: 20px 0;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../pages/textures.html" class="back-link">Back to Texture Thesaurus</a>
+        
+        <div class="header">
+            <h1 class="title">Texture Thesaurus</h1>
+            <h2 style="font-size: 1.2rem; color: #666; margin-top: 10px;">COLD</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot"></div>
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <strong>HELPFUL TIP</strong><br><br>
+            Textures are an excellent way to bring readers deeper into the scene. As you brainstorm describe textures found in the setting, readers will be reminded of their own past experiences, bind in unexpected with textures and emotions that develop reader empathy with the textures and become easier to navigate, especially when dealing with something abstract.
+        </div>
+
+        <div class="section">
+            <div class="section-title">Comparisons:</div>
+            
+            <div class="comparison-category">
+                <div class="category-title">NATURAL:</div>
+                <div class="comparison-item">Ice</div>
+                <div class="comparison-item">Snow</div>
+                <div class="comparison-item">A frozen pond or lake</div>
+                <div class="comparison-item">Steel</div>
+                <div class="comparison-item">Stone</div>
+                <div class="comparison-item">A blizzard</div>
+                <div class="comparison-item">Icicles</div>
+                <div class="comparison-item">Icebergs</div>
+                <div class="comparison-item">Ice flood</div>
+                <div class="comparison-item">Sleet</div>
+                <div class="comparison-item">Ice at the edge of a river or creek</div>
+                <div class="comparison-item">A mountain road</div>
+                <div class="comparison-item">The air in winter</div>
+                <div class="comparison-item">A cold front</div>
+                <div class="comparison-item">A penguin's home</div>
+            </div>
+
+            <div class="comparison-category">
+                <div class="category-title">MAN-MADE:</div>
+                <div class="comparison-item">An ice skating rink</div>
+                <div class="comparison-item">Frozen drinks (slushies, frozen lemonade, milkshakes, etc.)</div>
+                <div class="comparison-item">Popsicles</div>
+                <div class="comparison-item">A cold bottle of beer or soda, for instance)</div>
+                <div class="comparison-item">Refrigerius</div>
+                <div class="comparison-item">Air conditioning units (door handles, bench railings, water spigots, etc.)</div>
+                <div class="comparison-item">Ski slopes</div>
+                <div class="comparison-item">A cold pack</div>
+                <div class="comparison-item">An ice bath</div>
+                <div class="comparison-item">A cold shower on a hot day</div>
+                <div class="comparison-item">Ice machinery</div>
+                <div class="comparison-item">Ice fishing holes</div>
+                <div class="comparison-item">Ice sculptures</div>
+                <div class="comparison-item">Meat</div>
+                <div class="comparison-item">A walk-in freezer</div>
+                <div class="comparison-item">A blast of air conditioning on a hot day</div>
+                <div class="comparison-item">An uncovered bed on a cold night</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Synonyms:</div>
+            <div class="synonyms">cold, freezing, frigid, frosty, glacial, arctic</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Practical Examples:</div>
+            <div class="example-text">
+                Describing texture in a story is a powerful way to pull readers into a scene. Not only does it give depth to specific setting details, it can actually create intimacy between a reader and character. Because textures are universal, describing how something feels to the POV character can evoke a sense of shared experience in a reader. To anchor your audience in the scene using textures, make sure that comparisons and contrasts are clear and relatable. Choose textures that are naturally a part of the character or narrator's life knowledge and experiences.
+            </div>
+
+            <div class="example-section">
+                <div class="example-title">A WEAK EXAMPLE:</div>
+                <div class="example-text">Matt drew up the frozen lemonade through the steel straw. The frozen concoction had stuck to the roof of his mouth like the coldness of the frozen drink tasted—Oh call for his hot soup down, and managed his forehead. It had given him a brain freeze!</div>
+                
+                <div class="example-title">WHAT'S WRONG WITH THIS EXAMPLE?</div>
+                <div class="example-text">This example is so painful to read as it is to write. While the description adequately conveys the cold texture of the drink, the word choices and overall style don't sound well as tangage boy sucking down a frozen drink on a hot day. This passage is a good example of the importance of staying true to your viewpoint character so he will read as believable to the reader.</div>
+                
+                <div class="example-title">A STRONGER OPTION:</div>
+                <div class="example-text">Matt made disappointing slurping noises as he chuggged his frozen lemonade, his temple was going numb, and the drink would probably make him sick, but he was so hot, and it seemed so--And he slammed the cup down and grabbed his forehead. Brain freeze!</div>
+                
+                <div class="example-title">WHY DOES THIS EXAMPLE WORK?</div>
+                <div class="example-text">The verb choices (chugging, chuggged, slammed) along with the accompanying actions paint a clearer picture of the viewpoint character while also conveying the desired cold texture.</div>
+            </div>
+        </div>
+
+        <div class="note-section">
+            <div class="note-title">ADD A NOTE:</div>
+            <div class="example-text">
+                Use this space to add your own thoughts or ideas to this thesaurus entry. Information that applies to this topic, specific notes about a character or story, or anything else that comes to mind. Your notes are private and cannot be seen by other users. They can be found at the bottom of the individual thesaurus pages where they were originally recorded; they can also be accessed through the My Workspace tab at the top of any page.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texture Thesaurus - Pitted</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .helpful-tip {
+            background: #e8e8e8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            float: right;
+            width: 300px;
+            font-size: 0.9rem;
+        }
+
+        .helpful-tip h3 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .main-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .comparisons-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .comparison-list {
+            line-height: 1.8;
+            font-size: 0.9rem;
+        }
+
+        .comparison-list h4 {
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .synonyms {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .examples {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .example {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .example:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .example h4 {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .helpful-tip {
+                float: none;
+                width: 100%;
+            }
+            
+            .comparisons-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">Back to Texture Thesaurus</a>
+        
+        <div class="header">
+            <h1>Texture Thesaurus</h1>
+            <div class="subtitle">PITTED ✦</div>
+            
+            <div class="navigation-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="section">
+                    <h3>Comparisons:</h3>
+                    
+                    <div class="comparisons-grid">
+                        <div class="comparison-list">
+                            <h4>Natural:</h4>
+                            Weathered rock with cactamine or pumice<br>
+                            Volcanic rock or lemon peel<br>
+                            Tree bark<br>
+                            Honeycomb<br>
+                            Acne scars<br>
+                            Barnacles<br>
+                            An avocado skin<br>
+                            Stone caves<br>
+                            Strawberries<br>
+                            Coral<br>
+                            Termite mounds<br>
+                            The moon's surface<br>
+                            Hard-boiled eggs<br>
+                            Tree bark<br>
+                            Pumice pits<br>
+                            Almond shells<br>
+                            Peach pits<br>
+                            Anthills<br>
+                            Termite nests<br>
+                            Hail damage on a car
+                        </div>
+
+                        <div class="comparison-list">
+                            <h4>Man-Made:</h4>
+                            Old concrete (sidewalks, curbs, etc.)<br>
+                            Cracked tops<br>
+                            Pitted paint<br>
+                            Patches of rust<br>
+                            A golf ball<br>
+                            Cleaning sponges<br>
+                            Weathered buildings and statues<br>
+                            Old stonework<br>
+                            Linoleum<br>
+                            Old coins<br>
+                            English muffins<br>
+                            Corks<br>
+                            Sponge toffee<br>
+                            Aerated tennis<br>
+                            Pavements<br>
+                            Salt
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Synonyms:</h3>
+                    <div class="synonyms">
+                        holey/pocked, cratered, pocked, pockmarked, dimpled
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Practical Examples:</h3>
+                    <div class="examples">
+                        <p>Describing texture in a story is a powerful way to pull readers into a scene. Not only does it give depth to specific setting details, it can actually create intimacy between a reader and character. Because textures are universal, describing how something feels in the POV character can evoke a sense of shared experience in a reader. To anchor your audience in the scene using textures, make sure that comparisons and contrasts are clear and relatable. Choose textures that are naturally a part of the character or narrator's life knowledge and experiences.</p>
+
+                        <div class="example">
+                            <h4>A Weak Example:</h4>
+                            Janice smiled at her date, taking note of his expensive suit and gold watch. With a plated rock map of a face that silenced her long history with acne, he wasn't the best looking guy. But he obviously had cash. His slumped shoulders and hopeful gave said he'd have no trouble wedding all over him.
+                        </div>
+
+                        <div class="example">
+                            <h4>What's Wrong With This Example?</h4>
+                            This isn't bad, but it's a bit weak because the condition of his face is explained rather than compared or contrasted to something with a similar texture.
+                        </div>
+
+                        <div class="example">
+                            <h4>A Stronger Option:</h4>
+                            Janice smiled at her date, taking note of his expensive suit and gold watch. Not the best looking guy, with the slumping bear and hopeful gave said he'd have no trouble wedding all over him.
+                        </div>
+
+                        <div class="example">
+                            <h4>Why Does This Example Work?</h4>
+                            This comparison has nice symmetry. Not only does the handsome comparison create a good image of what his skin looks like, it provides a nice image into the psychological description of one character while giving insight into the personality of the other.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="helpful-tip">
+                <h3>HELPFUL TIP</h3>
+                <p>Textures are an excellent way to bring readers deeper into the scene. As you brainstorm descriptive textures found in the <strong>setting</strong>, readers will be reminded of their own past experiences. Next, connect the <strong>texture and emotion</strong>. For <strong>texture</strong> connected with the texture and become easier to imagine, especially when dealing with something abstract.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

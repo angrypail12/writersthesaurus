@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texture Thesaurus - Smooth</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .helpful-tip {
+            background: #e8e8e8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
+            float: right;
+            width: 300px;
+            font-size: 0.9rem;
+        }
+
+        .helpful-tip h3 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .main-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .comparisons-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .comparison-list {
+            line-height: 1.8;
+            font-size: 0.9rem;
+        }
+
+        .comparison-list h4 {
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .synonyms {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .examples {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .example {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .example:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .example h4 {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .helpful-tip {
+                float: none;
+                width: 100%;
+            }
+            
+            .comparisons-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">Back to Texture Thesaurus</a>
+        
+        <div class="header">
+            <h1>Texture Thesaurus</h1>
+            <div class="subtitle">SMOOTH ✦</div>
+            
+            <div class="navigation-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="section">
+                    <h3>Comparisons:</h3>
+                    
+                    <div class="comparisons-grid">
+                        <div class="comparison-list">
+                            <h4>Natural:</h4>
+                            The skin of an apple, eggplant, or watermelon<br>
+                            Pebbles<br>
+                            River-tumbled pebbles<br>
+                            Pearls<br>
+                            A blade<br>
+                            A shark or dolphin's fin<br>
+                            Driftwood<br>
+                            Fresh such as grapes, cherries, or plums<br>
+                            A snake's body<br>
+                            A baby's bottom<br>
+                            Fingernails<br>
+                            A tomato<br>
+                            Peeled garlic<br>
+                            A hazelnut's shell<br>
+                            A chestnut<br>
+                            A tortilla's shell
+                        </div>
+
+                        <div class="comparison-list">
+                            <h4>Man-Made:</h4>
+                            A piece of plastic<br>
+                            A piece of polished glass<br>
+                            Metal<br>
+                            Plastic<br>
+                            An ice rink<br>
+                            The surface of a desk<br>
+                            A wedding band<br>
+                            The top of a drum<br>
+                            Cardboard<br>
+                            A mirror<br>
+                            A dry coat of paint or varnish<br>
+                            A piece of glass<br>
+                            Ceramic tile<br>
+                            Polished marble, alabaster, or granite<br>
+                            A chalkboard<br>
+                            A chalkboard<br>
+                            A bowling lane<br>
+                            A bronze bell<br>
+                            Silk<br>
+                            Peeled boiled eggs<br>
+                            The inside of a spoon<br>
+                            China<br>
+                            Hardwood floors<br>
+                            A basketball court<br>
+                            Bowling balls<br>
+                            Ice skates<br>
+                            Cake fondant<br>
+                            Silk
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Synonyms:</h3>
+                    <div class="synonyms">
+                        polished, sleek
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Practical Examples:</h3>
+                    <div class="examples">
+                        <p>Describing texture in a story is a powerful way to pull readers into a scene. Not only does it give depth to specific setting details, it can actually create intimacy between a reader and character. Because textures are universal, describing how something feels in the POV character can evoke a sense of shared experience in a reader. To anchor your audience in the scene using textures, make sure that comparisons and contrasts are clear and relatable. Choose textures that are naturally a part of the character or narrator's life knowledge and experiences.</p>
+
+                        <div class="example">
+                            <h4>A Weak Example:</h4>
+                            Uncle Chris fixed off a gap-toothed grin as he ran his hand over the hull of his secondhand eggshells. "See? All broke in, and smooth as a river bottom in April?"
+                        </div>
+
+                        <div class="example">
+                            <h4>What's Wrong With This Example?</h4>
+                            No obvious in-tune Chris find his charming country twang, but it's a oath questionable that he's probably never seen, smelled, or touched a shark's fin. In his bio. To hint authentic, a texture comparison should always fit with the character's and what he might have experienced.
+                        </div>
+
+                        <div class="example">
+                            <h4>A Strong Example:</h4>
+                            Uncle Chris fixed off a gap-toothed grin as he ran his hand over the hull of his secondhand eggshells. "See? All broke in, and smooth as a river bottom in April?"
+                        </div>
+
+                        <div class="example">
+                            <h4>Why Does This Example Work?</h4>
+                            This comparison is more attuned to life on the farm, which, from his overalls and dialect, we can assume makes more sense for Uncle Chris.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="helpful-tip">
+                <h3>HELPFUL TIP</h3>
+                <p>Textures are an excellent way to bring readers deeper into the scene. As you brainstorm descriptive textures found in the <strong>setting</strong>, readers will be reminded of their own past experiences. Next, connect the <strong>texture and emotion</strong>. For <strong>texture</strong> connected with the texture and become easier to imagine, especially when dealing with something abstract.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

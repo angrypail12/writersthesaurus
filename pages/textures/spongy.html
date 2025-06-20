@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spongy - Texture Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title {
+            font-size: 1.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .comparison-category {
+            margin-bottom: 15px;
+        }
+
+        .category-title {
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .comparison-item {
+            font-size: 0.85rem;
+            margin-bottom: 3px;
+            color: #555;
+        }
+
+        .synonyms {
+            font-size: 0.85rem;
+            font-style: italic;
+            color: #666;
+        }
+
+        .example-section {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .example-text {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .helpful-tip {
+            background: #e8e8e8;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.6;
+            float: right;
+            width: 250px;
+            margin-left: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .helpful-tip {
+                float: none;
+                width: 100%;
+                margin: 20px 0;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../pages/textures.html" class="back-link">Back to Texture Thesaurus</a>
+        
+        <div class="header">
+            <h1 class="title">Texture Thesaurus</h1>
+            <h2 style="font-size: 1.2rem; color: #666; margin-top: 10px;">SPONGY</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot"></div>
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <strong>HELPFUL TIP</strong><br><br>
+            Textures are an excellent way to bring readers deeper into the scene. As you freshly describe textures found in the setting, readers will be reminded of their own past experiences. Used in conjunction with colors and textures or shapes, the object associated with the texture can become easier to imagine, especially when dealing with something abstract.
+        </div>
+
+        <div class="section">
+            <div class="section-title">Comparisons:</div>
+            
+            <div class="comparison-category">
+                <div class="category-title">NATURAL:</div>
+                <div class="comparison-item">A sea sponge</div>
+                <div class="comparison-item">Poodle fur</div>
+                <div class="comparison-item">Damp puff (moss, plants)</div>
+                <div class="comparison-item">Coral</div>
+                <div class="comparison-item">Mushrooms</div>
+                <div class="comparison-item">Fungi</div>
+                <div class="comparison-item">A forest floor thick with rotting leaves</div>
+                <div class="comparison-item">Dry lichen</div>
+                <div class="comparison-item">Soft swamps, pomegranates, etc.)</div>
+                <div class="comparison-item">Rotten wood</div>
+            </div>
+
+            <div class="comparison-category">
+                <div class="category-title">MAN-MADE:</div>
+                <div class="comparison-item">Fiberglass insulation</div>
+                <div class="comparison-item">Foam</div>
+                <div class="comparison-item">Tufa</div>
+                <div class="comparison-item">Cleaning sponges</div>
+                <div class="comparison-item">The surface of a loofah</div>
+                <div class="comparison-item">Gym and yoga mats</div>
+                <div class="comparison-item">Styrofoam</div>
+                <div class="comparison-item">Memory foam mattresses</div>
+                <div class="comparison-item">Pillows</div>
+                <div class="comparison-item">Bubble wrap</div>
+                <div class="comparison-item">Cake</div>
+                <div class="comparison-item">Scrubland saps</div>
+                <div class="comparison-item">A hamburger bun</div>
+                <div class="comparison-item">Pancakes</div>
+                <div class="comparison-item">Sponge balls</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Synonyms:</div>
+            <div class="synonyms">springy, poofy, porous, fluffy, cushioned, squashy</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Practical Examples:</div>
+            <div class="example-text">
+                Describing texture in a story is a powerful way to pull readers into a scene. Not only does it give depth to specific setting details, it can actually create intimacy between a reader and character. Because textures are universal, describing how something feels to the POV character can evoke a sense of shared experience in a reader. To anchor your audience in the scene using textures, make sure that comparisons and contrasts are clear and relatable. Choose textures that are naturally a part of the character or narrator's life knowledge and experiences.
+            </div>
+
+            <div class="example-section">
+                <div class="example-title">A WEAK EXAMPLE:</div>
+                <div class="example-text">Far beyond the trail, I found a lush mound of moss. I shucked off my backpack and dropped onto the springy bed, looking forward to a comfortable view of the treetops, and maybe a squishy snooze. After a few minutes of wriggling, I finally found a spot where the tree roots didn't breach nature's mattress.</div>
+                
+                <div class="example-title">WHAT'S WRONG WITH THIS EXAMPLE?</div>
+                <div class="example-text">There's conflicting detail here—the moss is described as lush and springy, suggesting comfort. However, the next detail is of moss polishing through the undergrowth, spoils the image. If the moss was truly as thick and suggested, more would not be feeling tree roots.</div>
+                
+                <div class="example-title">A STRONGER OPTION:</div>
+                <div class="example-text">Far beyond the trail, I found a lush green bed of moss. I shucked off my backpack and dropped onto the springy mound, looking forward to a comfortable view of the treetops, and maybe a sodden snooze. I sighed as I settled in. Even the well-cushioned outer roots couldn't breach nature's mattress.</div>
+                
+                <div class="example-title">WHY DOES THIS EXAMPLE WORK?</div>
+                <div class="example-text">The details have synergy one another; the roots are there but they can't pierce the thickness of the moss.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

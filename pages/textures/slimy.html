@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slimy - Texture Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .title {
+            font-size: 1.8rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #666;
+        }
+
+        .comparison-category {
+            margin-bottom: 15px;
+        }
+
+        .category-title {
+            font-weight: bold;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        .comparison-item {
+            font-size: 0.85rem;
+            margin-bottom: 3px;
+            color: #555;
+        }
+
+        .synonyms {
+            font-size: 0.85rem;
+            font-style: italic;
+            color: #666;
+        }
+
+        .example-section {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .example-text {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .helpful-tip {
+            background: #e8e8e8;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.6;
+            float: right;
+            width: 250px;
+            margin-left: 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .helpful-tip {
+                float: none;
+                width: 100%;
+                margin: 20px 0;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../pages/textures.html" class="back-link">Back to Texture Thesaurus</a>
+        
+        <div class="header">
+            <h1 class="title">Texture Thesaurus</h1>
+            <h2 style="font-size: 1.2rem; color: #666; margin-top: 10px;">SLIMY</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot"></div>
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <strong>HELPFUL TIP</strong><br><br>
+            Textures are an excellent way to bring readers deeper into the scene. As you freshly describe textures found in the setting, readers will be reminded of their own past experiences. Used in conjunction with colors and textures or shapes, the object associated with the texture can become easier to imagine, especially when dealing with something abstract.
+        </div>
+
+        <div class="section">
+            <div class="section-title">Comparisons:</div>
+            
+            <div class="comparison-category">
+                <div class="category-title">NATURAL:</div>
+                <div class="comparison-item">Seaweed leaves</div>
+                <div class="comparison-item">Oil and fish</div>
+                <div class="comparison-item">Snails</div>
+                <div class="comparison-item">A snail's slime</div>
+                <div class="comparison-item">A slug</div>
+                <div class="comparison-item">Fish</div>
+                <div class="comparison-item">Worms</div>
+                <div class="comparison-item">Salamanders</div>
+                <div class="comparison-item">Snakes</div>
+                <div class="comparison-item">Rotten vegetables and meat</div>
+                <div class="comparison-item">Raw egg</div>
+                <div class="comparison-item">Frog eggs</div>
+                <div class="comparison-item">Pond scum</div>
+                <div class="comparison-item">Seaweed</div>
+                <div class="comparison-item">Jellyfish</div>
+                <div class="comparison-item">Dog saliva</div>
+                <div class="comparison-item">Wet noodles</div>
+                <div class="comparison-item">Wet mushrooms or fungi</div>
+                <div class="comparison-item">Algae</div>
+                <div class="comparison-item">Wet mold</div>
+                <div class="comparison-item">Wet drizzled or deadwood</div>
+                <div class="comparison-item">Intestinal organs</div>
+                <div class="comparison-item">A sea cucumber</div>
+                <div class="comparison-item">Pumpkin guts</div>
+                <div class="comparison-item">Squid</div>
+                <div class="comparison-item">Kelp</div>
+                <div class="comparison-item">Afterbirth</div>
+                <div class="comparison-item">Vomit</div>
+                <div class="comparison-item">Mud</div>
+                <div class="comparison-item">Seaweed</div>
+            </div>
+
+            <div class="comparison-category">
+                <div class="category-title">MAN-MADE:</div>
+                <div class="comparison-item">Cooked beans</div>
+                <div class="comparison-item">Overcooked greens</div>
+                <div class="comparison-item">Axle grease</div>
+                <div class="comparison-item">Jelly and jam</div>
+                <div class="comparison-item">Oatmeal</div>
+                <div class="comparison-item">Overcooked gravy</div>
+                <div class="comparison-item">Super-wichis glue</div>
+                <div class="comparison-item">Shampoo</div>
+                <div class="comparison-item">Pudding</div>
+                <div class="comparison-item">Noodles in sauce</div>
+                <div class="comparison-item">Mixed-up coarse or gelatin</div>
+                <div class="comparison-item">Bast noodles</div>
+                <div class="comparison-item">Duck and pig pitbinge</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Synonyms:</div>
+            <div class="synonyms">slippery, slick, oily, viscous, glutinous</div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Practical Examples:</div>
+            <div class="example-text">
+                Describing texture in a story is a powerful way to pull readers into a scene. Not only does it give depth to specific setting details, it can actually create intimacy between a reader and character. Because textures are universal, describing how something feels to the POV character can evoke a sense of shared experience in a reader. To anchor your audience in the scene using textures, make sure that comparisons and contrasts are clear and relatable. Choose textures that are naturally a part of the character or narrator's life knowledge and experiences.
+            </div>
+
+            <div class="example-section">
+                <div class="example-title">A WEAK EXAMPLE:</div>
+                <div class="example-text">The pond's fish market was something to see—plastic tube filled with octopus and squid, their dripping, ropey tentacles hanging from the sides, months of greasy slimed scum on the tables, mounds of greasy slimed debris. Salted fish Blacksmiths.</div>
+                
+                <div class="example-title">WHAT'S WRONG WITH THIS EXAMPLE?</div>
+                <div class="example-text">Lots of good, slimy imagery, but that's the problem... textures experienced by the POV character are most effectively conveyed when shown through touch.</div>
+                
+                <div class="example-title">A STRONGER OPTION:</div>
+                <div class="example-text">At the fish market, the sea was like a trick to the flow, thick with the stench of blood and rotten innards. Men in rubber aprons whistled cheeses with precision, hopping up pieces into wet, clumsy heaps. At the end of the row I passed my goal—jumbo head filled with fresh oysters, their being a treasure that this smeary hop would be worth it. So much time wandering, so much money squandered, and Marcus wouldn't be able to resist my Oysters Rockefeller.</div>
+                
+                <div class="example-title">WHY DOES THIS EXAMPLE WORK?</div>
+                <div class="example-text">In a highly sensory environment, using multiple senses can make a more vivid image than using one sense alone. Here, the multisensory descriptions work together to evoke the emotional response of disgust, which reinforces the character's determination to create the perfect meal to woo Marcus.</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
