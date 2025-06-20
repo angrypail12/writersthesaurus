@@ -197,9 +197,7 @@
             </div>
         </div>
 
-        <div class="shortcut-info">
-            The shortcut for this page is t+s. For a complete list of shortcuts, see our <a href="#">Accessibility</a> guide.
-        </div>
+
     </div>
 
     <script>
@@ -208,7 +206,7 @@
         }
 
         function navigateToShape(shapeSlug) {
-            alert(`Navigating to: ${shapeSlug}\n\nNext, you can show me the content for specific shape pages you'd like me to build!`);
+            window.location.href = `../shapes/${shapeSlug}.html`;
         }
 
         // Add interactivity to navigation dots
