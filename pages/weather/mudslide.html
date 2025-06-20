@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudslide - Weather and Earthly Phenomenon Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .content-text {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .content-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-list li {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #e8e8e8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            float: right;
+            width: 300px;
+        }
+
+        .helpful-tip h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .helpful-tip p {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .helpful-tip {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../pages/weather.html" class="back-link">Back to Weather Thesaurus</a>
+        
+        <div class="header">
+            <h1>Weather and Earthly Phenomenon Thesaurus</h1>
+            <h2>MUDSLIDE ☆</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <h3>HELPFUL TIP:</h3>
+            <p>Don't be afraid to pair weather conditions with your setting choice to contrast or reinforce a character's emotions. Replacements might be mirrored in the relentless drizzle of rain and the resulting heavy drag of one's clothes; alternatively, the feeling can stand out in stark contrast to sunlight dancing over fresh snow. Can weather also provide symbolism, thereby enriching the reader's experience? Think about your goal for the scene and the mood you are trying to create, and then layer your description with meaningful choices.</p>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SIGHTS:</div>
+            <ul class="content-list">
+                <li>Muddy topsoil unable to hold the moisture from heavy rains</li>
+                <li>Rock loosening away from the ground and rolling downhill</li>
+                <li>Water rushing over the land soaking through moss and other ground cover</li>
+                <li>Swollen creeks exposing tree roots and weakening their hold on the land</li>
+                <li>Over-saturated dirt that begins to slough away</li>
+                <li>Trees sagging until gravity pulls them down</li>
+                <li>A wall of mud sliding over the ground</li>
+                <li>Mud causing vast destruction (toppling trees, knocking over telephone poles, uprooting giant boulders)</li>
+                <li>Structures being jerked away from their foundations when the slide hits (patios and decks shifting and tilting, sheds being pushed over, houses crashing loose from their footings)</li>
+                <li>Natural and man-made debris being carried downhill, picking up speed and strength</li>
+                <li>A wide trough of mud that devours everything in its path (roadways, cars, bridges, buildings, people)</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SMELLS:</div>
+            <ul class="content-list">
+                <li>Rainwater</li>
+                <li>Mud</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">TASTES:</div>
+            <div class="content-text">Splatters of mud that hit one's mouth while trying to escape</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">TEXTURES AND SENSATIONS:</div>
+            <ul class="content-list">
+                <li>The ground shifting under one's feet</li>
+                <li>Walls shuddering if one is inside when a mudslide hits</li>
+                <li>Losing one's balance and crashing into things</li>
+                <li>Bashing one's knees on the floor or ground</li>
+                <li>Mud seeping into one's shoes</li>
+                <li>Being sucked down into the mud</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SOUNDS:</div>
+            <ul class="content-list">
+                <li>Faint rumblings that increase as volume builds</li>
+                <li>Trees snapping</li>
+                <li>Boulders clacking as they slam together</li>
+                <li>A gunshot-like clap when larger slides start</li>
+                <li>The groaning of buildings as they're twisted and splintered</li>
+                <li>A sucking sound as debris is pulled under</li>
+                <li>Shattering glass</li>
+                <li>The crash of household items breaking</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">REINFORCING A MOOD:</div>
+            <div class="content-text">Though there are often warning signs, mudslides come on suddenly. The idea of suffocating under a wall of mud is terrifying, and those who escape gain renewed perspective of the value of life. While the aftermath may bring on feelings of helplessness and vulnerability, a disaster of this magnitude can become a shared loss that brings people together.</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SYMBOLISM:</div>
+            <div class="content-text">ENSLAVEMENT, DEPRESSION, INSTABILITY, CONSERVATION</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">COMMON CLICHÉS:</div>
+            <div class="content-text">A slide carrying a house or vehicle to the edge of a precipice where one move will send it over</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">WEATHER NOTES:</div>
+            <div class="content-text">Mudslides occur on steep slopes or mountainside. Slides are more likely to occur in places where vegetation has been removed through deforestation, construction, or wildfires. Slides happen during periods of heavy rain, when water soaks into the ground faster than it can run off, so if you want to include a mudslide in your story, make sure these conditions are in place.</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SCENARIOS FOR ADDING CONFLICT OR TENSION:</div>
+            <ul class="content-list">
+                <li>Surviving the disaster but having to deal with newfound issues (a crisis of faith, a panic disorder, physical injuries)</li>
+                <li>Engaging in illicit activity (having an affair, buying drugs, setting up a seedy business deal) that puts one in the mudslide's path, and having to explain to family members why one was at the site of the disaster</li>
+                <li>Being wrongfully accused of a crime and having a mudslide destroy evidence that can support one's alibi or set one free</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

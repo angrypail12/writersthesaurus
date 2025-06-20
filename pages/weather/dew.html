@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dew - Weather and Earthly Phenomena Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #333;
+        }
+
+        .content {
+            display: flex;
+            padding: 20px;
+            gap: 30px;
+        }
+
+        .main-content {
+            flex: 2;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .section p {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section li {
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .helpful-tip {
+            background: #e8e8e8;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .helpful-tip h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .helpful-tip p {
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #333;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .container {
+                margin: 10px;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="weather.html" class="back-link">Back to Weather Thesaurus</a>
+        
+        <div class="header">
+            <h1>Weather and Earthly Phenomenon Thesaurus</h1>
+            <h2>Dew</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="main-content">
+                <div class="section">
+                    <h3>Sights</h3>
+                    <ul>
+                        <li>Beads of water on flat surfaces</li>
+                        <li>A wet crystalline shimmer on greenery and trees</li>
+                        <li>Clear droplets collecting in the center of flower cups or leaf points so stems</li>
+                        <li>Droplets pooling together, subdivided and polishing out plant</li>
+                        <li>A healthy gleam to natural foliage</li>
+                        <li>Grass that appears frosted</li>
+                        <li>Heavy water pearls collecting on the sides of rain barrels or a glass patio table</li>
+                        <li>Sparkles that slip distorted surfaces in heavy droplets run together</li>
+                        <li>Water trails from leaves or objects in the garden</li>
+                        <li>Human feet or animal tracks making a clear path through a dewy field</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Smells</h3>
+                    <ul>
+                        <li>A fresh moist scent</li>
+                        <li>Greenery and growing things</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Tastes</h3>
+                    <p>Water lacking a faint taste of the surface it has touched (the metallic tang of metal or rust, for example)</p>
+                </div>
+
+                <div class="section">
+                    <h3>Textures and Sensations</h3>
+                    <ul>
+                        <li>Dampness</li>
+                        <li>Wetness</li>
+                        <li>Cool water settling against one's legs or walking through pool calls and shoes</li>
+                        <li>Wet droplets shaking loose from leaves above and falling on one's skin</li>
+                        <li>Brushing against surfaces that transfer moisture to one's clothes or skin</li>
+                        <li>Air that feels heavy and moist</li>
+                        <li>Becoming damp despite one's best efforts</li>
+                        <li>Damp clothing or towels that cress back and overnight</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Reinforcing a Mood</h3>
+                    <p>Dew reinforces feelings of calm and stillness. Most noticeable in the morning, it transitions night to day in a theme of renewal.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Symbolism</h3>
+                    <p><strong>PURITY, BEGINNINGS, HEALING, CLEANSING</strong></p>
+                </div>
+
+                <div class="section">
+                    <h3>Common Clichés</h3>
+                    <p>Comparing dew to jewels or tears</p>
+                </div>
+
+                <div class="section">
+                    <h3>Weather Notes</h3>
+                    <p>Dew gathers in the late evening hours when temperatures are at their coolest and the air contains the highest amount of moisture.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Scenarios for Adding Conflict or Tension</h3>
+                    <ul>
+                        <li>Dew creating slippery surfaces that someone the character's goal or warning</li>
+                        <li>A character feeling uncomfortable from the dampness despite other nice weather and having it ruined by dew</li>
+                        <li>Having one's escape route detected because dew is present</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="helpful-tip">
+                    <h4>Helpful Tip</h4>
+                    <p>Don't be afraid to pair weather conditions with your existing choice to contrast or reinforce a character's language. Snowstorms might be perceived as the character states or the peaceful serenity made their feel at peace with their environment, for instance. Or maybe the winter weather reflects the character's condition has the numbing hate after of one's choices; alternatively, the freezing can stand out in stark contrast to sunlight dancing very from snow. Can weather also provide predicament, lavishly regarding the reader's experience? Think about your plot for the scene and the mood you are trying to create, and then layer your descriptions with meaningful choices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add navigation functionality
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

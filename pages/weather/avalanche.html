@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avalanche - Weather and Earthly Phenomena Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #333;
+        }
+
+        .content {
+            display: flex;
+            padding: 20px;
+            gap: 30px;
+        }
+
+        .main-content {
+            flex: 2;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .section p {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section li {
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .helpful-tip {
+            background: #e8e8e8;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .helpful-tip h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .helpful-tip p {
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #333;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .container {
+                margin: 10px;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="weather.html" class="back-link">Back to Weather Thesaurus</a>
+        
+        <div class="header">
+            <h1>Weather and Earthly Phenomenon Thesaurus</h1>
+            <h2>Avalanche</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="main-content">
+                <div class="section">
+                    <h3>Sights</h3>
+                    <ul>
+                        <li>Snow in motion</li>
+                        <li>Snowpatch that pulls away and slides rapidly down a mountain</li>
+                        <li>A chute of snow that widens, accumulating mass as it races downhill</li>
+                        <li>A thick billowing cloud of frost at the forefront</li>
+                        <li>A wall of white that careers through the open land, swamping vegetation, uprooting trees and snaking boulders from their earthy beds</li>
+                        <li>Debris of all sizes being indiscriminately dislodged from their foundation</li>
+                        <li>Falling rock and ice</li>
+                        <li>Structures that are buried or pulled apart in an instant</li>
+                        <li>A thundering wall of snow shifting and tumbling</li>
+                        <li>Trees creating</li>
+                        <li>Forest poles sticking into the white</li>
+                        <li>Animals running in terror</li>
+                        <li>Birds taking flight</li>
+                        <li>People fleeing for their life as shadows sprint to flee only to be pulled under</li>
+                        <li>Splintered trees and loose pine needles defying the snow</li>
+                        <li>A field of great ice bumps and rolling debris in the aftermath</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Smells</h3>
+                    <ul>
+                        <li>Ozone</li>
+                        <li>Pine needles</li>
+                        <li>Cedar and other woody scents</li>
+                        <li>Mist</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Tastes</h3>
+                    <ul>
+                        <li>A slightly metallic flavor of snow and ice crystals</li>
+                        <li>Sour breath (from fear)</li>
+                        <li>Coppery blood (from biting one's tongue during the event)</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Textures and Sensations</h3>
+                    <ul>
+                        <li>Ice crystals pelling the skin</li>
+                        <li>Snow so violent is deadly cold</li>
+                        <li>Hands/feet that crumble on touch</li>
+                        <li>Sharp ice or tiny splinters scraping and cutting</li>
+                        <li>Heavy resentment</li>
+                        <li>The squeeze of snowbank against the whole of snow to avoid being pulled under</li>
+                        <li>The drag of debts and gear</li>
+                        <li>Bones broken forward in an unending tumble</li>
+                        <li>The struggle for snow dragged and scrambled</li>
+                        <li>Threaking pain in become scraped, broken bones</li>
+                        <li>Blood cold in snow accumulate to feel against one's exposed flesh</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Sounds</h3>
+                    <ul>
+                        <li>A crack in the snow pack breaks away from the shelf</li>
+                        <li>A creepy sound on the slide slopes</li>
+                        <li>The hiss of ice crystals spraying everything in their path</li>
+                        <li>Howling wind</li>
+                        <li>Large debris thumping and bouncing as it is thrown downhill</li>
+                        <li>The screech of bends taking flight</li>
+                        <li>Animals screaming and leaves pounding in wooded areas</li>
+                        <li>A loud rumble</li>
+                        <li>Silence in the aftermath</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Reinforcing a Mood</h3>
+                    <p>• Swift, overwhelming, and deadly: avalanches evokes a sense of terror into a scene. Those who witness, live through, or passively miss being caught in one are brought face to face with their own mortality.</p>
+                    <p>• A wilderness follows this type of event. A brush with an avalanche—or even witnessing the aftermath—may cause some to rethink their priorities or reconnect with important people in their lives.</p>
+                    <p>• An avalanche can overwhelm a life-altering event in which the point-of-view character loses control as it forces with a situation that leaves a hard, emotional impact.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Symbolism</h3>
+                    <p><strong>CONTROL, FATE, DOOMSDAY, OBSTACLES, SURVIVAL, DANGER</strong></p>
+                </div>
+
+                <div class="section">
+                    <h3>Common Clichés</h3>
+                    <p>A character experiencing an avalanche in an action scene (skiing, snowmobiling, driving down a mountain road, etc.)</p>
+                </div>
+
+                <div class="section">
+                    <h3>Weather Notes</h3>
+                    <p>Most avalanches are triggered when weight is placed on an unstable surface. Often by skiers, snowboarders, hikers or snowmobiles. Noise triggering an avalanche is largely a myth as this event. Overcoming an avalanche is largely impossible: vehicles that travels at high speeds and can maneuver well. Most avalanche victims survive if dog out within the first fifteen minutes, but odds drop to thirty percent or lower after forty-five minutes. After two hours, there are no survivors. In most cases, the cause of death is carbon monoxide poisoning.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Scenarios for Adding Conflict or Tension</h3>
+                    <ul>
+                        <li>Trying in a remote area where an avalanche takes out a road or a supply route, stranding great number</li>
+                        <li>A nearby avalanche ph-wing rescue on emergency services, so when the hero needs medical attention where it's not, a car accident, etc.) an one is available to help</li>
+                        <li>Being prep over a family action an avalanche occurs and disowning obsessed that both family members are missing</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="helpful-tip">
+                    <h4>Helpful Tip</h4>
+                    <p>Don't be afraid to pair weather conditions with your existing choice to contrast or reinforce a character's language. Snowstorms might be perceived as the character states or the peaceful serenity made their feel at peace with their environment, for instance. Or maybe the winter weather reflects the character's condition has the numbing that after of one's chosen; alternatively, the freezing can stand out in stark contrast to sunlight dancing very from snow. Can weather also provide predicament, lavishly regarding the reader's experience? Think about your plot for the scene and the mood you are trying to create, and then layer your descriptions with meaningful choices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add navigation functionality
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

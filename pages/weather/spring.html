@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring - Weather and Earthly Phenomenon Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .content-text {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .content-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-list li {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #e8e8e8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            float: right;
+            width: 300px;
+        }
+
+        .helpful-tip h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .helpful-tip p {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .helpful-tip {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../pages/weather.html" class="back-link">Back to Weather Thesaurus</a>
+        
+        <div class="header">
+            <h1>Weather and Earthly Phenomenon Thesaurus</h1>
+            <h2>SPRING ☆</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <h3>HELPFUL TIP:</h3>
+            <p>Don't be afraid to pair weather conditions with your setting choice to contrast or reinforce a character's emotions. Replacements might be mirrored in the relentless drizzle of rain and the resulting heavy drag of one's clothes; alternatively, the feeling can stand out in stark contrast to sunlight dancing over fresh snow. Can weather also provide symbolism, thereby enriching the reader's experience? Think about your goal for the scene and the mood you are trying to create, and then layer your description with meaningful choices.</p>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SIGHTS:</div>
+            <ul class="content-list">
+                <li>Bright sun warming the rich earth and encouraging shoots to grow</li>
+                <li>Flowering bulbs (crocuses, tulips, irises, grape hyacinths) adding color to flowerbeds</li>
+                <li>Garden gnomes and decorations emerging from a snowy sleep</li>
+                <li>Lawns turning green</li>
+                <li>Days growing steadily longer</li>
+                <li>Dormant plants pushing up around the yard</li>
+                <li>Buds and blossoms forming on trees</li>
+                <li>Robins nesting</li>
+                <li>Increased animal activity and baby animal sightings</li>
+                <li>Bright green leaves filling out the trees</li>
+                <li>Rivers rising as snow melts and rain falls</li>
+                <li>Butterflies and bees returning to the garden</li>
+                <li>People working in their yards</li>
+                <li>Tree fluff and pollen floating in the air</li>
+                <li>Seeds being traded in for bikes and scooters</li>
+                <li>Kids practicing for soccer tryouts</li>
+                <li>Lawns being groomed and mowed</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SMELLS:</div>
+            <ul class="content-list">
+                <li>A clean damp smell after it rains</li>
+                <li>Newly turned earth from gardens</li>
+                <li>Floral scents as flowers bloom</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">TASTES:</div>
+            <ul class="content-list">
+                <li>Nibbling on a new shoot of green grass</li>
+                <li>Rain on the tongue</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">TEXTURES AND SENSATIONS:</div>
+            <ul class="content-list">
+                <li>Warmth from the sun on one's skin</li>
+                <li>Digging with one's hands in the moist earth of the flowerbed and loosening clay clumps</li>
+                <li>A breeze that lifts the hair and slides across cheeks</li>
+                <li>Tugging on gardening gloves</li>
+                <li>Gripping the stalk of a weed and pulling</li>
+                <li>The smooth handle of a lawn rake</li>
+                <li>The clean feel of the air on one's bare legs and arms after so much time wearing long sleeves and pants</li>
+                <li>A tingling nose and scratchy throat from allergies</li>
+                <li>Sitting on a smooth porch step to enjoy the sunshine</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SOUNDS:</div>
+            <ul class="content-list">
+                <li>The trickle of snow melting</li>
+                <li>The steady patter of rain</li>
+                <li>The whisper of a breeze moving through bare dirt</li>
+                <li>Rubber boots splashing through puddles</li>
+                <li>Birds chirping as they seek out mates</li>
+                <li>The buzzing of insects</li>
+                <li>Geese honking</li>
+                <li>The roar of a lawn mower firing up for the first time</li>
+                <li>The clatter of new leaves in the breeze</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">REINFORCING A MOOD:</div>
+            <div class="content-text">After so many months of cold weather and brown or snow-covered landscapes, spring brings a renewed sense of optimism. Spirits lift, people are more friendly and kind. Spring evokes hope and vigor.</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SYMBOLISM:</div>
+            <div class="content-text">REBIRTH, BEGINNINGS, BEAUTY, HEALTH, HOPE</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">COMMON CLICHÉS:</div>
+            <div class="content-text">Calling someone a "spring chicken"</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">WEATHER NOTES:</div>
+            <div class="content-text">Weather and seasons vary by region. Spring in Canada looks very different from spring in southern California. Temperate areas may have a very short spring, if any at all.</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SCENARIOS FOR ADDING CONFLICT OR TENSION:</div>
+            <ul class="content-list">
+                <li>Too much rain in spring may cause flooding or turn back roads into bogs, stranding someone or causing him to be deeply camping trip turn foul for a character who isn't prepared</li>
+                <li>Spring and the mood of second chances might grate against a character who loses something, turning a beginning into an ending</li>
+                <li>Some allergies are inconvenient while others are deadly. Spring can be a source of much discomfort and pain for a character who feels sick just being outside</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

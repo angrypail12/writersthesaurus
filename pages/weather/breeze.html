@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breeze - Weather and Earthly Phenomena Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #333;
+        }
+
+        .content {
+            display: flex;
+            padding: 20px;
+            gap: 30px;
+        }
+
+        .main-content {
+            flex: 2;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .section p {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section li {
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .helpful-tip {
+            background: #e8e8e8;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .helpful-tip h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .helpful-tip p {
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #333;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .container {
+                margin: 10px;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="weather.html" class="back-link">Back to Weather Thesaurus</a>
+        
+        <div class="header">
+            <h1>Weather and Earthly Phenomenon Thesaurus</h1>
+            <h2>Breeze</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="main-content">
+                <div class="section">
+                    <h3>Sights</h3>
+                    <p>A breeze bestows the impression of fluid movement on any lightweight/scattering object. Fabrics—shirts, flags, or tablecloths at a patio bistro—will ripple or billow in a breeze. Leaves shall hair tide away from the face, and grasses bend and rustle. A breeze can carry items much as dirt, dust particles, or pollen and scatter them across the surface of a pool or lake, and scented leaves lying on the ground.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Smells</h3>
+                    <p>Breezes hold the scents of items in their surrounding environments. The breeze near a beach might carry a briny scent along with coconut-scented suntan lotion and food odors from nearby vendors that dogs, burgers, deeply fry oil, etc.). In an urban area, a breeze might smell of motor oil, car exhaust, hot asphalt, or sweet. In the woods: pine needles, earthly soil, greenery, and fragrant wildflowers would be lightly noticeable.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Textures and Sensations</h3>
+                    <p>Breezes can be warm or cool and can often provide because of the immediate sensory input that is generated when they touch the skin. One's skin may prickle if the breeze is too cool, but can also dry the eyes, resulting in the need to squint or blink more frequently.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Sounds</h3>
+                    <ul>
+                        <li>Rustling grass and leaves</li>
+                        <li>Fluttering fabric (clothing, a curtain, an open window, etc.)</li>
+                        <li>A creaking gate or door</li>
+                        <li>A crashing gate or door swinging along the ground</li>
+                        <li>A creating or door</li>
+                        <li>Distant voices</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Reinforcing a Mood</h3>
+                    <p>A breeze can lighten the mood of those within the setting. Through sensory stimulation, they can also pull a character out of his own inner world. In addition, breezes act as a welcome reprieve during a heat wave or on the deck of a battle.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Symbolism</h3>
+                    <p><strong>PEACE, FATE, PROGRESS, KNOWLEDGE, CHANGE, SUPERNATURAL OR PARANORMAL EVENTS, A SHIFT IN THOUGHT</strong></p>
+                </div>
+
+                <div class="section">
+                    <h3>Common Clichés</h3>
+                    <ul>
+                        <li>The breeze that tickles on caresses one's skin</li>
+                        <li>Using a breeze to blow a POV character's hair so she can then describe its color or length</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Weather Notes</h3>
+                    <p>Breezes are composed only over oceans, there are breezes as sea breezes and can be warm or cold depending on the season. Breezes can also create a sense of motion in the environment by making objects or dust particle is a gentle breeze breaking up log and mist, and creating more in stable. Breezes can be refreshing on a hot day and also offer relief by blowing through crops and grasses.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Scenarios for Adding Conflict or Tension</h3>
+                    <ul>
+                        <li>A breeze that pulls something important from the character's story (such as money or a code for a look box)</li>
+                        <li>A breeze carrying something to a character that creates anxiety in random soils, a Have You Seen This Child? poster with a familiar face on it, etc.)</li>
+                        <li>A breeze that shifts increasing things just enough to expose a hidden threat</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="helpful-tip">
+                    <h4>Helpful Tip</h4>
+                    <p>Don't be afraid to pair weather conditions with your existing choice to contrast or reinforce a character's language. Snowstorms might be perceived as the character states or the peaceful serenity made their feel at peace with their environment, for instance. Or maybe the winter weather reflects the character's condition the state that after of one's choices; alternatively, the freezing can stand out in stark contrast to sunlight dancing very from snow. Can weather also provide predicament, lavishly regarding the reader's experience? Think about your plot for the scene and the mood you are trying to create, and then layer your descriptions with meaningful choices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add navigation functionality
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

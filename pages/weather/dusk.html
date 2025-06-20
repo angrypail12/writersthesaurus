@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dusk - Weather and Earthly Phenomena Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #333;
+        }
+
+        .content {
+            display: flex;
+            padding: 20px;
+            gap: 30px;
+        }
+
+        .main-content {
+            flex: 2;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .section p {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section li {
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .helpful-tip {
+            background: #e8e8e8;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .helpful-tip h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .helpful-tip p {
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #333;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .container {
+                margin: 10px;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="weather.html" class="back-link">Back to Weather Thesaurus</a>
+        
+        <div class="header">
+            <h1>Weather and Earthly Phenomenon Thesaurus</h1>
+            <h2>Dusk</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="main-content">
+                <div class="section">
+                    <h3>Sights</h3>
+                    <ul>
+                        <li>Thickening shadows</li>
+                        <li>A purple night sky edged with pink and orange as the sun drops below the horizon</li>
+                        <li>Silhouettes</li>
+                        <li>Light draining from the sky</li>
+                        <li>Sweeping bats</li>
+                        <li>Parking warning as lot are wooded cover on road areas</li>
+                        <li>Fireflies winking on the light</li>
+                        <li>Streetlights brightening against the dusk</li>
+                        <li>Light spilling from the windows of houses as families head indoors</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Smells</h3>
+                    <ul>
+                        <li>Campfire smoke (in the summer)</li>
+                        <li>Chimney smoke (in the winter)</li>
+                        <li>Cooking food coming from a cooling barbecue grill</li>
+                        <li>Bug spray</li>
+                        <li>Citronella</li>
+                        <li>Oil from patio ladereds</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Textures and Sensations</h3>
+                    <ul>
+                        <li>Goose bumps caused by the cooling air</li>
+                        <li>Being invaded</li>
+                        <li>Sliding humidity by arm to till a sweatshirt</li>
+                        <li>A cool mist of exerescent falling over one's skin</li>
+                        <li>An evening breeze sliding through one's hair and ruffling clothes</li>
+                        <li>Briefly clasping one's arms to bring warmth back to the skin</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Sounds</h3>
+                    <ul>
+                        <li>Children coming the last bit and leaves on the trees</li>
+                        <li>Crickets and other night bugs (chirping, clicking, buzzing)</li>
+                        <li>The thunk of mosquitoes</li>
+                        <li>Frogs croaking</li>
+                        <li>Doors opening and closing</li>
+                        <li>Muffled voices as neighbors go porch to head in for the night</li>
+                        <li>Dogs barking at unseen noises</li>
+                        <li>Nearby street traffic slowly growing quieter</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Reinforcing a Mood</h3>
+                    <p>Dusk signals the start of night and an end to the stresses that have built up throughout the day—a time when characters can wind down and move toward a period of rest and relaxation. The weather at dusk, as at any time of day, can help influence the mood. A rainy, windy dusk may close conversations and dependence as a stormy day turns to stormy darkness. Breezy, airy dusks may lull the spirits. For maximum impact, pair a breeze with other weather elements to enhance the mood for readers.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Symbolism</h3>
+                    <p><strong>ENDINGS, CHANGE, DECLINE OF LIFE, FADING AWAY</strong></p>
+                </div>
+
+                <div class="section">
+                    <h3>Common Clichés</h3>
+                    <ul>
+                        <li>Dusk as a symbol of a dying person's imminent towards death</li>
+                        <li>Using dusk as the moment when supernatural beings (vampires, werewolves, etc.) become active</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Weather Notes</h3>
+                    <p>Dusk is usually generated orange and reddish light at dusk. When

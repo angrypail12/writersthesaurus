@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tornado - Weather and Earthly Phenomenon Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .content-text {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .content-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-list li {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #e8e8e8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            float: right;
+            width: 300px;
+        }
+
+        .helpful-tip h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .helpful-tip p {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .helpful-tip {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../pages/weather.html" class="back-link">Back to Weather Thesaurus</a>
+        
+        <div class="header">
+            <h1>Weather and Earthly Phenomenon Thesaurus</h1>
+            <h2>TORNADO ☆</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <h3>HELPFUL TIP:</h3>
+            <p>Don't be afraid to pair weather conditions with your setting choice to contrast or reinforce a character's emotions. Replacements might be mirrored in the relentless drizzle of rain and the resulting heavy drag of one's clothes; alternatively, the feeling can stand out in stark contrast to sunlight dancing over fresh snow. Can weather also provide symbolism, thereby enriching the reader's experience? Think about your goal for the scene and the mood you are trying to create, and then layer your description with meaningful choices.</p>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SIGHTS:</div>
+            <ul class="content-list">
+                <li>A sky covered in clouds</li>
+                <li>Hail</li>
+                <li>Lightning</li>
+                <li>Black clouds that are divided by a definable line</li>
+                <li>A vortex formation swirling the clouds far above</li>
+                <li>A funnel growing down toward the ground and varying in color from transparent to dark gray</li>
+                <li>Swirling air and debris</li>
+                <li>Gale force winds that reach upward of three hundred miles per hour</li>
+                <li>Lights flickering and going out in nearby populated areas</li>
+                <li>People running to storm shelters or other areas of safety</li>
+                <li>High winds creating an outer ring of light debris (grass, broken branches, leaves, garbage) to lift and swirl</li>
+                <li>Trees being ripped from roots</li>
+                <li>Siding pulling off of buildings</li>
+                <li>Uprooted objects tumbling and flying through the air (strollers, rain barrels, garbage cans, bikes, patio furniture, etc.)</li>
+                <li>Larger objects being crushed, flipped, torn apart, or lifted into the vortex (cars tossed, houses demolished, light poles and power poles ripped out of the earth, trees uprooted and splintered, asphalt peeled away from roads, bridges broken or damaged, sheds crumpled into unrecognizable metal pieces)</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SMELLS:</div>
+            <ul class="content-list">
+                <li>Rain</li>
+                <li>Ozone</li>
+                <li>Sweat</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">TEXTURES AND SENSATIONS:</div>
+            <ul class="content-list">
+                <li>A change in air pressure that makes one's ears pop</li>
+                <li>Wind that batters at one's clothing and knocks one off balance</li>
+                <li>Being thrown against objects or the ground</li>
+                <li>Pulling against the wind to open a storm shelter door</li>
+                <li>Debris flying through the air, causing cuts and scrapes</li>
+                <li>Hailstones raining down and causing welts</li>
+                <li>Wet clothing that sticks and chafes</li>
+                <li>Hot bodies crammed into a shelter</li>
+                <li>Shaking uncontrollably as the storm rages outside</li>
+                <li>Air that grows warm and stale from lack of circulation</li>
+                <li>The press of bodies in an enclosed area</li>
+                <li>Holding a loved one in a tight embrace</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SOUNDS:</div>
+            <ul class="content-list">
+                <li>Tornado sirens</li>
+                <li>The howling wind</li>
+                <li>Rain pelting the windows and roof</li>
+                <li>Objects striking off the house</li>
+                <li>Larger hailstones smashing glass and bouncing off the sidewalk</li>
+                <li>A sudden quiet</li>
+                <li>The sound of a freight train as the storm barrels through</li>
+                <li>Windows shattering</li>
+                <li>The house creaking</li>
+                <li>Beams breaking</li>
+                <li>Roofing nails shrieking as the roof is torn away</li>
+                <li>Large objects hitting the house</li>
+                <li>Household items smashing to the floor and being thrown against walls</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">REINFORCING A MOOD:</div>
+            <div class="content-text">The possibility of a tornado touching down makes people highly anxious and fearful. The power of such a storm can easily result in death; even if a character lives, he can end up losing everything he owns. No matter how safe someone might be, this weather element creates great apprehension as people wait in windowless basements or shelters to see the aftermath.</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SYMBOLISM:</div>
+            <div class="content-text">DISORDER, VULNERABILITY, INSTABILITY, FATE, VIOLENCE, WAR, POWER, DOOMSDAY</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">COMMON CLICHÉS:</div>
+            <div class="content-text">A disconcerted rebel refusing to seek safety and instead choosing to stare down the storm</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">WEATHER NOTES:</div>
+            <div class="content-text">Tornadoes occur when the air is warm and moist, right before a cold front rolls in. They usually occur in spring and summer, but depending on location and circumstances, they can happen at different times of the year. Tornadoes sometimes accompany tropical storms and hurricanes that move onto land, usually ahead of the storm's center. Funnel clouds might not be seen until they start picking up dirt and debris.</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SCENARIOS FOR ADDING CONFLICT OR TENSION:</div>
+            <ul class="content-list">
+                <li>An unprepared character who chooses to chase tornadoes without really understanding the risks</li>
+                <li>Creating apprehension by placing a tornado close to where the main character must go</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

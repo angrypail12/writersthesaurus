@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blizzard - Weather and Earthly Phenomena Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #333;
+        }
+
+        .content {
+            display: flex;
+            padding: 20px;
+            gap: 30px;
+        }
+
+        .main-content {
+            flex: 2;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .section p {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section li {
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .helpful-tip {
+            background: #e8e8e8;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .helpful-tip h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .helpful-tip p {
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #333;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .container {
+                margin: 10px;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="weather.html" class="back-link">Back to Weather Thesaurus</a>
+        
+        <div class="header">
+            <h1>Weather and Earthly Phenomenon Thesaurus</h1>
+            <h2>Blizzard</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="main-content">
+                <div class="section">
+                    <h3>Sights</h3>
+                    <ul>
+                        <li>Large flakes of snow cloaking white-out conditions</li>
+                        <li>Poor light quality</li>
+                        <li>Gray skies</li>
+                        <li>Limited visibility where distant objects become navigation difficult</li>
+                        <li>Wind that pounds snow sideways and creates whips</li>
+                        <li>Tree branches bending under the weight of snow</li>
+                        <li>A thick carpet on cars and buildings</li>
+                        <li>Landmarks obscured or erased by snow</li>
+                        <li>Windows iced over</li>
+                        <li>Flakes pepperoning one's clothing and hair</li>
+                        <li>Animal tracks that fill and disappear</li>
+                        <li>Frost clinging to eyelashes and facial hair</li>
+                        <li>Plumes of fogged breath in front of one's face</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Smells</h3>
+                    <ul>
+                        <li>An absence of scent</li>
+                        <li>Air stripped of most puns in the nostrils</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Tastes</h3>
+                    <ul>
+                        <li>The tang of cold scene licked from one's lips</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Textures and Sensations</h3>
+                    <ul>
+                        <li>Stinging flakes pelting one's frozen cheeks and clinging to the eyelashes or hair</li>
+                        <li>Skin that grows chapped and numb</li>
+                        <li>The cold pain of icy wind and falling temperatures that make one drop</li>
+                        <li>The exhausting slog of pushing through deep snow to break a trail</li>
+                        <li>Woeting and limiting away from the southeast of a storm</li>
+                        <li>Exhales that briefly warm the face before being sucked away by the cold</li>
+                        <li>A scares that aches with shiver</li>
+                        <li>Hands tucked tight in one's mouth clothes</li>
+                        <li>Blocking away snowflakes from one's lashes</li>
+                        <li>Watering eyes</li>
+                        <li>A state, full body shiver from the back of one's collar</li>
+                        <li>The cold of snow building up between footsteps and cuffs</li>
+                        <li>Fleeting one's fingers to bring sensation and warmth</li>
+                        <li>Snow that drips and sticks underfoot</li>
+                        <li>Hair and clothing growing heavier as wet snow soaks through</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Sounds</h3>
+                    <ul>
+                        <li>Wind that howls as whistles over the landscape</li>
+                        <li>The shutter of windows in their near sharp buzz of clothing</li>
+                        <li>One's own coughing breath while one labors outside during a storm</li>
+                        <li>Soft fabrics that crinkles with each movement</li>
+                        <li>The whispers of past signs rubbing together in the cold</li>
+                        <li>The crunch of snow compacting underfoot</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Reinforcing a Mood</h3>
+                    <ul>
+                        <li>A blizzard can reinforce a feeling of isolation, either for a character or an entire community.</li>
+                        <li>The raw power of nature also conveys the importance of safety and security.</li>
+                        <li>Blizzards have the ability to bring people together. The feeling of being confined can help characters find common ground and strengthen fellowship or do the opposite—creating friction and clauses that increase tension.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Symbolism</h3>
+                    <p><strong>DEATH, ISOLATION, OBSTACLES, RETREAT, SURVIVAL</strong></p>
+                </div>
+
+                <div class="section">
+                    <h3>Common Clichés</h3>
+                    <p>Walking out into a blizzard, overpowered, as a means of committing suicide</p>
+                </div>
+
+                <div class="section">
+                    <h3>Weather Notes</h3>
+                    <p>Blizzards are classified as long-duration snowstorms with sustained winds of at least 35 mph that produces reduced visibility of about 500 meters or less. What is often called a "blizzard" expected does not qualify as a storm after only a small amount of time, creating a 'frontline' and possibly death. Visibility is so reduced that a character can be a few feet from safety and not realize it—becoming lost. This type of storm also affects snow within a short period of time, and may completely psyche a populated area by knocking out power and making travel difficult or impossible. When writing a scene of this magnitude into a story, do your research to make sure its severity fits your fictional setting.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Scenarios for Adding Conflict or Tension</h3>
+                    <ul>
+                        <li>A blizzard forcing enemies to rely on one another for survival</li>
+                        <li>Having a family secret come out as people are trapped together</li>
+                        <li>Being prepared for the storm but having to flee one's refuge when something unexpected happens (a house fire, a home invasion, etc.)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="helpful-tip">
+                    <h4>Helpful Tip</h4>
+                    <p>Don't be afraid to pair weather conditions with your existing choice to contrast or reinforce a character's language. Snowstorms might be perceived as the character states or the peaceful serenity made their feel at peace with their environment, for instance. Or maybe the winter weather reflects the character's condition has the numbing hate after of one's choices; alternatively, the freezing can stand out in stark contrast to sunlight dancing very from snow. Can weather also provide predicament, lavishly regarding the reader's experience? Think about your plot for the scene and the mood you are trying to create, and then layer your descriptions with meaningful choices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add navigation functionality
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

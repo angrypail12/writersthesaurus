@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wind - Weather and Earthly Phenomenon Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .content-text {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .content-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-list li {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #e8e8e8;
+            padding: 20px;
+            border-radius: 8px;
+            margin-left: 20px;
+            margin-bottom: 30px;
+            float: right;
+            width: 300px;
+        }
+
+        .helpful-tip h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .helpful-tip p {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .helpful-tip {
+                float: none;
+                width: 100%;
+                margin-left: 0;
+                margin-bottom: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../pages/weather.html" class="back-link">Back to Weather Thesaurus</a>
+        
+        <div class="header">
+            <h1>Weather and Earthly Phenomenon Thesaurus</h1>
+            <h2>WIND ☆</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <h3>HELPFUL TIP:</h3>
+            <p>Don't be afraid to pair weather conditions with your setting choice to contrast or reinforce a character's emotions. Replacements might be mirrored in the relentless drizzle of rain and the resulting heavy drag of one's clothes; alternatively, the feeling can stand out in stark contrast to sunlight dancing over fresh snow. Can weather also provide symbolism, thereby enriching the reader's experience? Think about your goal for the scene and the mood you are trying to create, and then layer your description with meaningful choices.</p>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SIGHTS:</div>
+            <ul class="content-list">
+                <li>Clouds drifting or racing across the sky</li>
+                <li>Trees swaying and leaves fluttering</li>
+                <li>Grasses that bend and nod</li>
+                <li>Dead leaves sliding across the pavement</li>
+                <li>A flapping grocery bag caught on a branch</li>
+                <li>Loose flower petals blowing loose and coming to a stop in a tangle of tall grass</li>
+                <li>Debris being pushed and rolled</li>
+                <li>Hair being tossed and tangled</li>
+                <li>Dust being blown on the wind</li>
+                <li>Ocean waves churning into a storm</li>
+                <li>Sand blowing</li>
+                <li>Snow drifting across a street</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SMELLS:</div>
+            <div class="content-text">Wind has no smell of its own but carries the scents present in the environment: brine, wood smoke, pollution, freshly turned soil, rain, apple blossoms, a dumpster, etc.</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">TASTES:</div>
+            <div class="content-text">Particles carried on the wind, such as dirt, rain, sand, or snow</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">TEXTURES AND SENSATIONS:</div>
+            <ul class="content-list">
+                <li>Hair whipping one's face</li>
+                <li>Chapped lips and dry skin</li>
+                <li>Forcing one's eyes to a squint to keep them from drying out</li>
+                <li>Pant cuffs fluttering against one's ankles</li>
+                <li>Clothing flapping and ruffling against one's body</li>
+                <li>Wind-tossed leaves and trash bumping against one's shoes</li>
+                <li>A loss of equilibrium in the buffeting wind</li>
+                <li>A biting wind sliding through the gaps in one's clothing (down a collar, through an open zipper, between a glove and cuff, etc.)</li>
+                <li>Skin that stings with cold</li>
+                <li>Wind-blown sand pinging off of one's arms</li>
+                <li>Sweaty skin drying instantly in the wind</li>
+                <li>Ducking one's head and leaning forward in rough weather</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SOUNDS:</div>
+            <ul class="content-list">
+                <li>The howling, moaning, or sighing sound of air rushing over the landscape</li>
+                <li>Wind battering branches against the side of a house</li>
+                <li>A squeaking barn door left ajar</li>
+                <li>The slunk of blowing grass</li>
+                <li>Dirt tapping against a window</li>
+                <li>Leaves rustling and rubbing together</li>
+                <li>The creak of tall trees</li>
+                <li>The shudder of a gust rattling doors and windows</li>
+                <li>Tinkling wind chimes</li>
+                <li>Voices and other noises being carried from far away</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">REINFORCING A MOOD:</div>
+            <div class="content-text">Winds may be warm or cool, but the movement of air is usually welcome and appreciated on any hot or humid day. This evokes a feeling of release and relief, and signals change. High winds can bring an anxiety since they can be destructive, breaking windows, creating flooding or tsunamis, or causing power outages when lines are blown down. Others find winds comforting (wind storms) which can destroy property and lives. Wind is adaptable and can create a positive or negative mood depending on how it is described, so choose the descriptive elements that best set the stage for your scene.</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SYMBOLISM:</div>
+            <div class="content-text">DISORDER, CHANGE</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">COMMON CLICHÉS:</div>
+            <div class="content-text">Branches tearing off and crashing to the ground right where the character is standing</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">WEATHER NOTES:</div>
+            <div class="content-text">Wind is caused by shifts in air pressure. When low air pressure is predominant, there will be higher amounts of wind.</div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">SCENARIOS FOR ADDING CONFLICT OR TENSION:</div>
+            <ul class="content-list">
+                <li>Wind is something most people take for granted, so provide a situation where wind is needed but not available (to fill a sail, power a turbine, when one's air conditioning is broken, etc.)</li>
+                <li>Wind can cause problems in small ways that get under people's skin: blowing leaves off a pile one has just raked, scattering one's unsecured newspaper all over the lawn, or stealing one's favorite ball cap on the way to school. These small things can erode a character's good mood and make him sensitive to friction.</li>
+                <li>Wind can cause damage simply by tipping things over or causing breakage. Simple carelessness (setting a treasured figurine on a porch railing) can end tragically thanks to the wind and become the catalyst for an emotional outburst.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

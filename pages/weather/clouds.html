@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clouds - Weather and Earthly Phenomena Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: normal;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #666;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #333;
+        }
+
+        .content {
+            display: flex;
+            padding: 20px;
+            gap: 30px;
+        }
+
+        .main-content {
+            flex: 2;
+        }
+
+        .sidebar {
+            flex: 1;
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .section p {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .section li {
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .helpful-tip {
+            background: #e8e8e8;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        .helpful-tip h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .helpful-tip p {
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 20px;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #333;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            
+            .container {
+                margin: 10px;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="weather.html" class="back-link">Back to Weather Thesaurus</a>
+        
+        <div class="header">
+            <h1>Weather and Earthly Phenomenon Thesaurus</h1>
+            <h2>Clouds</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="main-content">
+                <div class="section">
+                    <h3>Sights</h3>
+                    <ul>
+                        <li>White puffs weathered by wind or pushed in a dark wall across a stormy sky</li>
+                        <li>Sunset in with streaks of pink or orange</li>
+                        <li>Storm-dark blisters blended with rain</li>
+                        <li>Silver margins</li>
+                        <li>Patches of sunlight that create shades through the gray</li>
+                        <li>Wispy or scant curls that slide across the moon and stars</li>
+                        <li>Glimpses that shore call wild light as shadows bloom</li>
+                        <li>Low banks that hug the foothills</li>
+                        <li>Gray clouds in a gray sky</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Textures and Sensations</h3>
+                    <p>Clouds are generally only felt as a cloud shadow because if one were able to touch the clouds, they would likely feel cold and damp.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Sounds</h3>
+                    <p>Thunder may accompany certain cloud formations.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Reinforcing a Mood</h3>
+                    <p>The type of cloud can dictate what sort of mood is present in a scene. Puffy white clouds are often associated with happy memories of love days, vacations, being outdoors, and good sunshine; they can evoke feelings of contentment, joy, and optimism. Quick-moving clouds, usually accompanied by wind, can bring about a feeling that change is coming. Dark clouds that pack the sky or seem to create a wall of shadow may set an ominous mood, heightening anxiety or fear. On the other hand, rain-filled clouds can also bring relief or excitement in an area that has been oppressed by heat as drought, so consider carefully the context of the scene.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Symbolism</h3>
+                    <p><strong>CHANGE, DOMINION, DEPRESSION, INNOCENCE, HIDING OR REVEALING INFORMATION, OPPRESSION</strong></p>
+                </div>
+
+                <div class="section">
+                    <h3>Common Clichés</h3>
+                    <ul>
+                        <li>A bank of clouds parting to let the sun shine down on a happy occasion or event</li>
+                        <li>A storm that troubles a villain's appearance or catastrophic event</li>
+                        <li>Describing clouds as "cotton balls"</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Weather Notes</h3>
+                    <p>Different weather conditions will dictate the type of clouds that form. Choose imagery that fits the scene, but if a specific weather event (such as tornado) occurs, research the clouds that typically appear before, during, and after to ensure accuracy.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Scenarios for Adding Conflict or Tension</h3>
+                    <ul>
+                        <li>Using clouds to lower the temperature, making an outdoor event (a day at the beach, a graduation party, a wedding, etc.) less comfortable</li>
+                        <li>Using low cloud cover to obscure the landscape, hiding an important landmark that a character is seeking</li>
+                        <li>Packing a sky with clouds at the most possible time in order to hide a dangerous threat (such as enemy fighter jets or stealth aircraft that are invisible to radar)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="helpful-tip">
+                    <h4>Helpful Tip</h4>
+                    <p>Don't be afraid to pair weather conditions with your existing choice to contrast or reinforce a character's language. Snowstorms might be perceived as the character states or the peaceful serenity made their feel at peace with their environment, for instance. Or maybe the winter weather reflects the character's condition has the numbing hate after of one's choices; alternatively, the freezing can stand out in stark contrast to sunlight dancing very from snow. Can weather also provide predicament, lavishly regarding the reader's experience? Think about your plot for the scene and the mood you are trying to create, and then layer your descriptions with meaningful choices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add navigation functionality
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>
