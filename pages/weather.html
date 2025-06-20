@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather and Earthly Phenomena Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .intro-text {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .weather-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .weather-column {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .weather-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .weather-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .weather-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Weather and Earthly Phenomena Thesaurus</h1>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="intro-text">
+            Different weather elements can completely transform the mood of a setting and determine what sort of emotional experience your readers will have. Use this thesaurus to add sensory details, reinforce themes through symbolism, or set the desired mood—all while steering clear of common clichés.
+        </div>
+
+        <div class="weather-grid">
+            <div class="weather-column">
+                <a href="#" class="weather-link" onclick="navigateToWeather('air-pollution')">AIR POLLUTION</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('avalanche')">AVALANCHE</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('blizzard')">BLIZZARD</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('breeze')">BREEZE</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('clouds')">CLOUDS</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('dew')">DEW</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('drought')">DROUGHT</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('dusk')">DUSK</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('dust-or-sandstorm')">DUST OR SANDSTORM</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('earthquake')">EARTHQUAKE</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('eclipse')">ECLIPSE</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('fall')">FALL</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('falling-star')">FALLING STAR</a>
+            </div>
+
+            <div class="weather-column">
+                <a href="#" class="weather-link" onclick="navigateToWeather('flood')">FLOOD</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('forest-fire')">FOREST FIRE</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('frost')">FROST</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('hailstorm')">HAILSTORM</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('heat-wave')">HEAT WAVE</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('hurricane')">HURRICANE</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('lightning')">LIGHTNING</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('mirage')">MIRAGE</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('mist-or-fog')">MIST OR FOG</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('moonlight')">MOONLIGHT</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('mudslide')">MUDSLIDE</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('rain')">RAIN</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('rainbow')">RAINBOW</a>
+            </div>
+
+            <div class="weather-column">
+                <a href="#" class="weather-link" onclick="navigateToWeather('sky')">SKY</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('sleet')">SLEET</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('snow')">SNOW</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('spring')">SPRING</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('summer')">SUMMER</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('sunlight')">SUNLIGHT</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('sunrise')">SUNRISE</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('sunset')">SUNSET</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('thunderstorm')">THUNDERSTORM</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('tornado')">TORNADO</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('vortex')">VORTEX</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('wind')">WIND</a>
+                <a href="#" class="weather-link" onclick="navigateToWeather('winter')">WINTER</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to main thesaurus page');
+        }
+
+        function navigateToWeather(weatherSlug) {
+            alert(`Navigating to: ${weatherSlug}\n\nNext, you can show me the content for specific weather pages you'd like me to build!`);
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>
