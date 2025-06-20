@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conflict Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .intro-text {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .conflicts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .conflict-column {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .conflict-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .conflict-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .conflicts-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Conflict Thesaurus</h1>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="intro-text">
+            The conflict scenarios you build into your story will provide vital tension, allow opportunities for your character's growth (or failure), and keep the pace from dragging. Use this thesaurus to find the right conflicts—from minor to catastrophic—that will take your characters and story where you need them to go.
+        </div>
+
+        <div class="conflicts-grid">
+            <div class="conflict-column">
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-parent-being-unwilling-to-commit')">A PARENT BEING UNWILLING TO COMMIT</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-partner-losing-their-job')">A PARTNER LOSING THEIR JOB</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-partner-racking-up-debt')">A PARTNER RACKING UP DEBT</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-place-of-safety-being-compromised')">A PLACE OF SAFETY BEING COMPROMISED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-plan-going-wrong')">A PLAN GOING WRONG</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-problem-at-a-childs-school')">A PROBLEM AT A CHILD'S SCHOOL</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-recession-or-economy-crash')">A RECESSION OR ECONOMY CRASH</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-repressed-memory-resurfacing')">A REPRESSED MEMORY RESURFACING</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-romance-being-stymied')">A ROMANCE BEING STYMIED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-romantic-competitor-entering-the-scene')">A ROMANTIC COMPETITOR ENTERING THE SCENE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-threatening-criminal-being-set-free')">A THREATENING CRIMINAL BEING SET FREE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-way-of-life-being-threatened')">A WAY OF LIFE BEING THREATENED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('an-anticipated-event-being-canceled')">AN ANTICIPATED EVENT BEING CANCELED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('an-elderly-parent-requiring-care')">AN ELDERLY PARENT REQUIRING CARE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('an-estranged-relative-showing-up')">AN ESTRANGED RELATIVE SHOWING UP</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('an-ex-interfering-in-ones-life')">AN EX INTERFERING IN ONE'S LIFE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('an-unexpected-change-of-plans')">AN UNEXPECTED CHANGE OF PLANS</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('an-unexpected-loss-of-prestige-or-wealth')">AN UNEXPECTED LOSS OF PRESTIGE OR WEALTH</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('an-unexpected-pregnancy')">AN UNEXPECTED PREGNANCY</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('an-unwanted-intrusion')">AN UNWANTED INTRUSION</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('an-unwanted-romantic-advance')">AN UNWANTED ROMANTIC ADVANCE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('bad-weather')">BAD WEATHER</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-arrested')">BEING ARRESTED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-assaulted-by-a-stranger')">BEING ASSAULTED BY A STRANGER</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-assigned-an-undesirable-partner')">BEING ASSIGNED AN UNDESIRABLE PARTNER</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-assigned-an-unpleasant-task')">BEING ASSIGNED AN UNPLEASANT TASK</a>
+            </div>
+
+            <div class="conflict-column">
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-offered-dirty-money')">BEING OFFERED DIRTY MONEY</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-orphaned')">BEING ORPHANED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-outmatched')">BEING OUTMATCHED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-passed-over-for-a-promotion')">BEING PASSED OVER FOR A PROMOTION</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-physically-marked-before-an-important-event')">BEING PHYSICALLY MARKED BEFORE AN IMPORTANT EVENT</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-placed-under-a-spell')">BEING PLACED UNDER A SPELL</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-poisoned')">BEING POISONED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-pressured-by-family')">BEING PRESSURED BY FAMILY</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-pressured-to-conform')">BEING PRESSURED TO CONFORM</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-pressured-to-cover-for-a-friend')">BEING PRESSURED TO COVER FOR A FRIEND</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-pushed-toward-a-specific-destiny')">BEING PUSHED TOWARD A SPECIFIC DESTINY</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-recognized')">BEING RECOGNIZED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-rejected-by-a-potential-love-interest')">BEING REJECTED BY A POTENTIAL LOVE INTEREST</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-sabotaged')">BEING SABOTAGED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-saddled-with-unexpected-responsibility')">BEING SADDLED WITH UNEXPECTED RESPONSIBILITY</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-scammed')">BEING SCAMMED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-set-up-to-fail')">BEING SET UP TO FAIL</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-stranded')">BEING STRANDED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-sued')">BEING SUED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-taken-for-granted')">BEING TAKEN FOR GRANTED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-targeted-by-a-monster-or-supernatural-force')">BEING TARGETED BY A MONSTER OR SUPERNATURAL FORCE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-targeted-for-revenge')">BEING TARGETED FOR REVENGE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-the-bearer-of-bad-news')">BEING THE BEARER OF BAD NEWS</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-thrust-into-the-spotlight')">BEING THRUST INTO THE SPOTLIGHT</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-trafficked')">BEING TRAFFICKED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-unable-to-forgive-oneself')">BEING UNABLE TO FORGIVE ONESELF</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-unable-to-forgive-someone')">BEING UNABLE TO FORGIVE SOMEONE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-unable-to-save-everyone')">BEING UNABLE TO SAVE EVERYONE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('being-underestimated')">BEING UNDERESTIMATED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('breaking-or-destroying-an-important-item')">BREAKING OR DESTROYING AN IMPORTANT ITEM</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('bureaucracy-tying-ones-hands')">BUREAUCRACY TYING ONE'S HANDS</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('causing-a-car-accident')">CAUSING A CAR ACCIDENT</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('causing-a-workplace-hazard')">CAUSING A WORKPLACE HAZARD</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('cheating-under-poor-leadership')">CHEATING UNDER POOR LEADERSHIP</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('childcare-failing-through')">CHILDCARE FAILING THROUGH</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('clashing-beliefs')">CLASHING BELIEFS</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('conflicting-internal-needs-or-desires')">CONFLICTING INTERNAL NEEDS OR DESIRES</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('contemplating-suicide')">CONTEMPLATING SUICIDE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('disappointing-someone')">DISAPPOINTING SOMEONE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('discovering-a-dead-body')">DISCOVERING A DEAD BODY</a>
+            </div>
+
+            <div class="conflict-column">
+                <a href="#" class="conflict-link" onclick="navigateToConflict('having-to-hurt-someone-to-save-them-from-a-worse-fate')">HAVING TO HURT SOMEONE TO SAVE THEM FROM A WORSE FATE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('having-to-leave-ones-home-or-homeland')">HAVING TO LEAVE ONE'S HOME OR HOMELAND</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('having-to-leave-someone-behind')">HAVING TO LEAVE SOMEONE BEHIND</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('having-to-make-a-final-stand')">HAVING TO MAKE A FINAL STAND</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('having-to-move')">HAVING TO MOVE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('having-to-pick-the-lesser-of-two-evils')">HAVING TO PICK THE LESSER OF TWO EVILS</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('having-to-prove-ones-innocence')">HAVING TO PROVE ONE'S INNOCENCE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('having-to-punish-someone')">HAVING TO PUNISH SOMEONE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('having-to-rely-on-others')">HAVING TO RELY ON OTHERS</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('having-to-split-up-for-safety')">HAVING TO SPLIT UP FOR SAFETY</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('having-to-stay-behind')">HAVING TO STAY BEHIND</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('having-to-steal-to-obtain-something-vital')">HAVING TO STEAL TO OBTAIN SOMETHING VITAL</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('having-to-work-with-an-enemy')">HAVING TO WORK WITH AN ENEMY</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('having-unwanted-powers')">HAVING UNWANTED POWERS</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('house-being-cut-at-work')">HOUSE BEING CUT AT WORK</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('incurring-an-unexpected-expense')">INCURRING AN UNEXPECTED EXPENSE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('indulging-when-one-should-not')">INDULGING WHEN ONE SHOULD NOT</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('lacking-an-important-resource')">LACKING AN IMPORTANT RESOURCE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('learning-that-one-was-adopted')">LEARNING THAT ONE WAS ADOPTED</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('leaving-someone-to-the-consequences-of-their-actions')">LEAVING SOMEONE TO THE CONSEQUENCES OF THEIR ACTIONS</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('losing-a-bet')">LOSING A BET</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('losing-a-child-in-a-public-place')">LOSING A CHILD IN A PUBLIC PLACE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('losing-a-job')">LOSING A JOB</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('losing-a-key-witness')">LOSING A KEY WITNESS</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('losing-a-phone')">LOSING A PHONE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('losing-a-source-of-transportation')">LOSING A SOURCE OF TRANSPORTATION</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('losing-a-vital-item')">LOSING A VITAL ITEM</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('losing-access-to-someone-important')">LOSING ACCESS TO SOMEONE IMPORTANT</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('losing-access-to-something-important')">LOSING ACCESS TO SOMETHING IMPORTANT</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('losing-an-ally')">LOSING AN ALLY</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('losing-ones-funding')">LOSING ONE'S FUNDING</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('losing-ones-temper')">LOSING ONE'S TEMPER</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('making-a-bad-investment')">MAKING A BAD INVESTMENT</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('making-a-crucial-mistake-at-work')">MAKING A CRUCIAL MISTAKE AT WORK</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('making-a-discovery-that-threatens-the-bond-of-friendship')">MAKING A DISCOVERY THAT THREATENS THE BOND OF FRIENDSHIP</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('mishandling-comes')">MISHANDLING COMES</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('missing-an-important-meeting-or-deadline')">MISSING AN IMPORTANT MEETING OR DEADLINE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('needing-to-borrow-money')">NEEDING TO BORROW MONEY</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('needing-to-circumvent-security')">NEEDING TO CIRCUMVENT SECURITY</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('needing-to-prioritize-an-order')">NEEDING TO PRIORITIZE AN ORDER</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('needing-to-infiltrate-a-group')">NEEDING TO INFILTRATE A GROUP</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('needing-to-sabotage-someone-to-win')">NEEDING TO SABOTAGE SOMEONE TO WIN</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to main thesaurus page');
+        }
+
+        function navigateToConflict(conflictSlug) {
+            alert(`Navigating to: ${conflictSlug}\n\nNext, you can show me the content for specific conflict pages you'd like me to build!`);
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>="navigateToConflict('a-search')">A SEARCH</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-child-getting-sick')">A CHILD GETTING SICK</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-child-wanting-to-live-with-ones-ex')">A CHILD WANTING TO LIVE WITH ONE'S EX</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-competitor-showing-up')">A COMPETITOR SHOWING UP</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-dangerous-crossing')">A DANGEROUS CROSSING</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-deadline-being-moved-up')">A DEADLINE BEING MOVED UP</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-delay-that-makes-one-late')">A DELAY THAT MAKES ONE LATE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-divorce-or-breakup')">A DIVORCE OR BREAKUP</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-family-member-dying')">A FAMILY MEMBER DYING</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-fear-or-phobia-rearing-its-head')">A FEAR OR PHOBIA REARING ITS HEAD</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-health-issue-cropping-up')">A HEALTH ISSUE CROPPING UP</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-house-fire')">A HOUSE FIRE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-lie-impacting-someone-else')">A LIE IMPACTING SOMEONE ELSE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-love-interest-taking-up-with-someone-else')">A LOVE INTEREST TAKING UP WITH SOMEONE ELSE</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-loved-one-being-put-in-harms-way')">A LOVED ONE BEING PUT IN HARM'S WAY</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-mechanical-malfunction')">A MECHANICAL MALFUNCTION</a>
+                <a href="#" class="conflict-link" onclick="navigateToConflict('a-natural-disaster')">A NATURAL DISASTER</a>
+                <a href="#" class="conflict-link" onclick
