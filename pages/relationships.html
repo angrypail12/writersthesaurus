@@ -251,9 +251,9 @@
             alert('Navigating back to main thesaurus page');
         }
 
-        function navigateToRelationship(relationshipSlug) {
-            alert(`Navigating to: ${relationshipSlug}\n\nNext, you can show me the content for specific relationship pages you'd like me to build!`);
-        }
+        function navigateToTexture(textureSlug) {
+    window.location.href = `relationship/${relationshipSlug}.html`;
+}
 
         // Add interactivity to navigation dots
         document.querySelectorAll('.dot').forEach((dot, index) => {
