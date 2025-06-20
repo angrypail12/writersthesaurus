@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .intro-text {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .tropes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .trope-column {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .trope-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .trope-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .tropes-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="intro-text">
+            Building a character from scratch can be tough, which is why many writers start with an archetype or familiar trope. This database of recognizable roles gives you a solid framework to build a credible character while showing you how to probe their deeper layers so they emerge as fresh and unique, not a stereotype.
+        </div>
+
+        <div class="tropes-grid">
+            <div class="trope-column">
+                <a href="#" class="trope-link" onclick="navigateToTrope('adrenaline-junkie')">ADRENALINE JUNKIE</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('antihero')">ANTIHERO</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('apex-predator')">APEX PREDATOR</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('bad-boy')">BAD BOY</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('bad-influence')">BAD INFLUENCE</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('benefactor')">BENEFACTOR</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('best-friend')">BEST FRIEND</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('big-finisher')">BIG FINISHER</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('bombshell')">BOMBSHELL</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('bossy-britches')">BOSSY BRITCHES</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('brownnoser')">BROWNNOSER</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('bully')">BULLY</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('caregiver-archetype')">CAREGIVER (ARCHETYPE)</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('chosen-one')">CHOSEN ONE</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('chess-figure')">CHESS FIGURE</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('con-artist')">CON ARTIST</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('conventional-granny')">CONVENTIONAL GRANNY</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('coward')">COWARD</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('cowboy')">COWBOY</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('creator-archetype')">CREATOR (ARCHETYPE)</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('dark-lord-or-lady')">DARK LORD OR LADY</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('doomsday-prepper')">DOOMSDAY PREPPER</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('double-agent')">DOUBLE AGENT</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('drill-sergeant')">DRILL SERGEANT</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('explorer-archetype')">EXPLORER (ARCHETYPE)</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('fae-folk')">FAE FOLK</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('fall-guy-or-girl')">FALL GUY OR GIRL</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('false-prophet')">FALSE PROPHET</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('father-figure')">FATHER FIGURE</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('femme-fatale')">FEMME FATALE</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('free-spirit')">FREE SPIRIT</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('funster')">FUNSTER</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('gentle-giant')">GENTLE GIANT</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('girl-or-boy-next-door')">GIRL OR BOY NEXT DOOR</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('good-king-or-queen')">GOOD KING OR QUEEN</a>
+            </div>
+
+            <div class="trope-column">
+                <a href="#" class="trope-link" onclick="navigateToTrope('good-samaritan')">GOOD SAMARITAN</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('grande-dame')">GRANDE DAME</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('grotesque')">GROTESQUE</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('hard-boiled-detective')">HARD-BOILED DETECTIVE</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('hero-archetype')">HERO (ARCHETYPE)</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('hopeless-romantic')">HOPELESS ROMANTIC</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('hot-ballionaire')">HOT BALLIONAIRE</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('hotshot')">HOTSHOT</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('ice-queen')">ICE QUEEN</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('innocent-archetype')">INNOCENT (ARCHETYPE)</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('jester-archetype')">JESTER (ARCHETYPE)</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('jock')">JOCK</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('knight-errant')">KNIGHT ERRANT</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('lady-of-adventure')">LADY OF ADVENTURE</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('loner')">LONER</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('loose-cannon')">LOOSE CANNON</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('lover-archetype')">LOVER (ARCHETYPE)</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('mad-scientist')">MAD SCIENTIST</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('mafia-don')">MAFIA DON</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('magician-archetype')">MAGICIAN (ARCHETYPE)</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('manic-pixie-dream-girl')">MANIC PIXIE DREAM GIRL</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('matriarch')">MATRIARCH</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('monster-hunter')">MONSTER HUNTER</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('moral-compass')">MORAL COMPASS</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('moses')">MOSES</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('mother-figure')">MOTHER FIGURE</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('nerd')">NERD</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('newcomer')">NEWCOMER</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('nice-guy-girl')">NICE GUY/GIRL</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('novice-sleuth')">NOVICE SLEUTH</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('orphan-archetype')">ORPHAN (ARCHETYPE)</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('patriarch')">PATRIARCH</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('peacemaker')">PEACEMAKER</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('pessimist')">PESSIMIST</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('phony-politician')">PHONY POLITICIAN</a>
+            </div>
+
+            <div class="trope-column">
+                <a href="#" class="trope-link" onclick="navigateToTrope('pirate')">PIRATE</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('professional-killer')">PROFESSIONAL KILLER</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('psychopath')">PSYCHOPATH</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('queen-bee')">QUEEN BEE</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('rebel-archetype')">REBEL (ARCHETYPE)</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('reluctant-hero')">RELUCTANT HERO</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('reluctant-monster')">RELUCTANT MONSTER</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('reluctantly-gifted')">RELUCTANTLY GIFTED</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('rightful-ruler')">RIGHTFUL RULER</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('ruler-archetype')">RULER (ARCHETYPE)</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('sacrificial-mystic')">SACRIFICIAL MYSTIC</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('sage-archetype')">SAGE (ARCHETYPE)</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('savant')">SAVANT</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('scrooge')">SCROOGE</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('senew')">SENEW</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('snarky-mcsnarkerson')">SNARKY MCSNARKERSON</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('snob')">SNOB</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('starving-artist')">STARVING ARTIST</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('storyteller')">STORYTELLER</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('superhero')">SUPERHERO</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('supervillain')">SUPERVILLAIN</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('thug')">THUG</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('tortured-hero')">TORTURED HERO</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('tragic-hero')">TRAGIC HERO</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('traitor')">TRAITOR</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('troubled-vet')">TROUBLED VET</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('uber-soldier')">UBER SOLDIER</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('underdog')">UNDERDOG</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('vigilante')">VIGILANTE</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('wallflower')">WALLFLOWER</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('well-mannered-thief')">WELL-MANNERED THIEF</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('whiskey-priest')">WHISKEY PRIEST</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('witch-in-the-woods')">WITCH IN THE WOODS</a>
+                <a href="#" class="trope-link" onclick="navigateToTrope('working-girl-or-boy')">WORKING GIRL OR BOY</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to main thesaurus page');
+        }
+
+        function navigateToTrope(tropeSlug) {
+            alert(`Navigating to: ${tropeSlug}\n\nNext, you can show me the content for specific trope pages you'd like me to build!`);
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>
