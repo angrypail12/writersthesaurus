@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positive Trait Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .intro-text {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .traits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .trait-column {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .trait-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .trait-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .shortcut-info {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        .shortcut-info a {
+            color: #8b9dc3;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .traits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Positive Trait Thesaurus</h1>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="intro-text">
+            Characters who resonate with readers are ones who possess admirable strengths that will help them defeat their inner demons and overcome the obstacles in their path. The positive trait thesaurus can help you delve deeper into your characters and shape them into people that readers will root for.
+        </div>
+
+        <div class="traits-grid">
+            <div class="trait-column">
+                <a href="#" class="trait-link" onclick="navigateToTrait('adaptable')">ADAPTABLE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('adventurous')">ADVENTUROUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('affectionate')">AFFECTIONATE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('alert')">ALERT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('ambitious')">AMBITIOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('analytical')">ANALYTICAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('appreciative')">APPRECIATIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('bold')">BOLD</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('calm')">CALM</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('cautious')">CAUTIOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('centered')">CENTERED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('charming')">CHARMING</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('confident')">CONFIDENT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('cooperative')">COOPERATIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('courageous')">COURAGEOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('courteous')">COURTEOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('creative')">CREATIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('curious')">CURIOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('decisive')">DECISIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('diplomatic')">DIPLOMATIC</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('disciplined')">DISCIPLINED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('discreet')">DISCREET</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('easygoing')">EASYGOING</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('efficient')">EFFICIENT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('empathetic')">EMPATHETIC</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('enthusiastic')">ENTHUSIASTIC</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('extroverted')">EXTROVERTED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('flamboyant')">FLAMBOYANT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('flirtatious')">FLIRTATIOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('focused')">FOCUSED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('friendly')">FRIENDLY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('funny')">FUNNY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('generous')">GENEROUS</a>
+            </div>
+
+            <div class="trait-column">
+                <a href="#" class="trait-link" onclick="navigateToTrait('gentle')">GENTLE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('happy')">HAPPY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('honest')">HONEST</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('honorable')">HONORABLE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('hospitable')">HOSPITABLE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('humble')">HUMBLE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('idealistic')">IDEALISTIC</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('imaginative')">IMAGINATIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('independent')">INDEPENDENT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('industrious')">INDUSTRIOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('innocent')">INNOCENT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('inspirational')">INSPIRATIONAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('intelligent')">INTELLIGENT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('introverted')">INTROVERTED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('just')">JUST</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('kind')">KIND</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('loyal')">LOYAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('mature')">MATURE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('merciful')">MERCIFUL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('meticulous')">METICULOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('nature-focused')">NATURE-FOCUSED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('nurturing')">NURTURING</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('obedient')">OBEDIENT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('objective')">OBJECTIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('observant')">OBSERVANT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('optimistic')">OPTIMISTIC</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('organized')">ORGANIZED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('passionate')">PASSIONATE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('patient')">PATIENT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('patriotic')">PATRIOTIC</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('pensive')">PENSIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('perceptive')">PERCEPTIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('persistent')">PERSISTENT</a>
+            </div>
+
+            <div class="trait-column">
+                <a href="#" class="trait-link" onclick="navigateToTrait('persuasive')">PERSUASIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('philosophical')">PHILOSOPHICAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('playful')">PLAYFUL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('private')">PRIVATE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('proactive')">PROACTIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('professional')">PROFESSIONAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('proper')">PROPER</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('protective')">PROTECTIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('quirky')">QUIRKY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('resourceful')">RESOURCEFUL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('responsible')">RESPONSIBLE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('sensible')">SENSIBLE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('sensual')">SENSUAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('sentimental')">SENTIMENTAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('simple')">SIMPLE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('socially-aware')">SOCIALLY AWARE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('sophisticated')">SOPHISTICATED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('spiritual')">SPIRITUAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('spontaneous')">SPONTANEOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('spunky')">SPUNKY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('studious')">STUDIOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('supportive')">SUPPORTIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('talented')">TALENTED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('thrifty')">THRIFTY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('tolerant')">TOLERANT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('traditional')">TRADITIONAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('trusting')">TRUSTING</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('uninhibited')">UNINHIBITED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('unselfish')">UNSELFISH</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('whimsical')">WHIMSICAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('wholesome')">WHOLESOME</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('wise')">WISE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('witty')">WITTY</a>
+            </div>
+        </div>
+
+        <div class="shortcut-info">
+            The shortcut for this page is t+p. For a complete list of shortcuts, see our <a href="#">Accessibility</a> guide.
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to main thesaurus page');
+        }
+
+        function navigateToTrait(traitSlug) {
+            alert(`Navigating to: ${traitSlug}\n\nNext, you can show me the content for specific trait pages you'd like me to build!`);
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>
