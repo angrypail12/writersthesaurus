@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fear Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .intro-text {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .fears-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .fear-column {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .fear-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .fear-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .shortcut-info {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        .shortcut-info a {
+            color: #8b9dc3;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .fears-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Fear Thesaurus</h1>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="intro-text">
+            Many things contribute to who a character becomes, but it is their ability (or failure) to conquer core fears that often determines their fate in the story. Use this thesaurus to uncover the fears that are holding your character back so you can write their behavior, show internal struggles, and include triggers that chip away at their disguise, helping them break free of the internal blocks that stand in the way of success.
+        </div>
+
+        <div class="fears-grid">
+            <div class="fear-column">
+                <a href="#" class="fear-link" onclick="navigateToFear('a-loved-one-dying')">A LOVED ONE DYING</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('a-secret-being-revealed')">A SECRET BEING REVEALED</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('abandonment')">ABANDONMENT</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('agoraphobia')">AGORAPHOBIA</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('becoming-a-parent')">BECOMING A PARENT</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('becoming-what-one-hates')">BECOMING WHAT ONE HATES</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('being-a-burden-to-others')">BEING A BURDEN TO OTHERS</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('being-attacked')">BEING ATTACKED</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('being-capable-of-harm')">BEING CAPABLE OF HARM</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('being-judged')">BEING JUDGED</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('being-labeled')">BEING LABELED</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('being-physically-touched')">BEING PHYSICALLY TOUCHED</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('being-pitied')">BEING PITIED</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('being-responsible-for-others')">BEING RESPONSIBLE FOR OTHERS</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('being-returned-to-an-abusive-environment')">BEING RETURNED TO AN ABUSIVE ENVIRONMENT</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('being-separated-from-loved-ones')">BEING SEPARATED FROM LOVED ONES</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('being-taken-advantage-of')">BEING TAKEN ADVANTAGE OF</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('being-unable-to-achieve-a-dream')">BEING UNABLE TO ACHIEVE A DREAM</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('being-unsafe')">BEING UNSAFE</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('being-watched')">BEING WATCHED</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('betrayal')">BETRAYAL</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('certain-kinds-of-people')">CERTAIN KINDS OF PEOPLE</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('change')">CHANGE</a>
+            </div>
+
+            <div class="fear-column">
+                <a href="#" class="fear-link" onclick="navigateToFear('competition')">COMPETITION</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('conditional-love')">CONDITIONAL LOVE</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('conflict')">CONFLICT</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('criticism')">CRITICISM</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('crowds')">CROWDS</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('death')">DEATH</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('discrimination')">DISCRIMINATION</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('extinction')">EXTINCTION</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('failure')">FAILURE</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('government')">GOVERNMENT</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('growing-old')">GROWING OLD</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('having-no-purpose')">HAVING NO PURPOSE</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('hope')">HOPE</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('humiliation')">HUMILIATION</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('infidelity')">INFIDELITY</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('isolation')">ISOLATION</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('leading')">LEADING</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('leaving-no-legacy')">LEAVING NO LEGACY</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('letting-others-down')">LETTING OTHERS DOWN</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('losing-autonomy')">LOSING AUTONOMY</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('losing-financial-security')">LOSING FINANCIAL SECURITY</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('losing-ones-heritage-or-cultural-identity')">LOSING ONE'S HERITAGE OR CULTURAL IDENTITY</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('losing-ones-mind')">LOSING ONE'S MIND</a>
+            </div>
+
+            <div class="fear-column">
+                <a href="#" class="fear-link" onclick="navigateToFear('losing-ones-social-standing')">LOSING ONE'S SOCIAL STANDING</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('losing-the-respect-of-others')">LOSING THE RESPECT OF OTHERS</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('love')">LOVE</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('mediocrity')">MEDIOCRITY</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('never-finding-happiness')">NEVER FINDING HAPPINESS</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('not-being-believed')">NOT BEING BELIEVED</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('not-being-in-control')">NOT BEING IN CONTROL</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('not-fitting-in')">NOT FITTING IN</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('ones-body-becoming-a-prison')">ONE'S BODY BECOMING A PRISON</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('ones-genetics')">ONE'S GENETICS</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('ones-instincts-being-unreliable')">ONE'S INSTINCTS BEING UNRELIABLE</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('persecution')">PERSECUTION</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('physical-pain')">PHYSICAL PAIN</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('public-speaking')">PUBLIC SPEAKING</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('putting-oneself-out-there')">PUTTING ONESELF OUT THERE</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('regret')">REGRET</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('rejection')">REJECTION</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('relational-commitment')">RELATIONAL COMMITMENT</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('repeating-a-cycle-of-abuse')">REPEATING A CYCLE OF ABUSE</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('sex')">SEX</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('sickness')">SICKNESS</a>
+                <a href="#" class="fear-link" onclick="navigateToFear('trusting-others')">TRUSTING OTHERS</a>
+            </div>
+        </div>
+
+        <div class="shortcut-info">
+            The shortcut for this page is t+f. For a complete list of shortcuts, see our <a href="#">Accessibility</a> guide.
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to main thesaurus page');
+        }
+
+        function navigateToFear(fearSlug) {
+            alert(`Navigating to: ${fearSlug}\n\nNext, you can show me the content for specific fear pages you'd like me to build!`);
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>
