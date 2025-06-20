@@ -455,9 +455,9 @@
             alert('Navigating back to main thesaurus page');
         }
 
-        function navigateToSetting(settingSlug) {
-            alert(`Navigating to: ${settingSlug}\n\nNext, you can show me the content for specific setting pages you'd like me to build!`);
-        }
+        function navigateToTexture(textureSlug) {
+    window.location.href = `setting/${settingSlug}.html`;
+}
 
         // Add interactivity to navigation dots
         document.querySelectorAll('.dot').forEach((dot, index) => {
