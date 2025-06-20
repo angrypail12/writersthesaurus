@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold - Color and Pattern Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #FFD700;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #8b9dc3;
+            color: white;
+            text-decoration: none;
+            border-radius: 50%;
+            line-height: 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #6a7ba8;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .comparisons-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .comparison-item {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #666;
+        }
+
+        .synonyms-section {
+            background-color: #fff9e6;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .synonyms-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .synonyms-list {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .example-box {
+            background-color: #f0f4f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .example-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .symbolism-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .symbolism-link {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .symbolism-link:hover {
+            color: #1e4187;
+        }
+
+        .helpful-tip {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #8b9dc3;
+            margin: 20px 0;
+        }
+
+        .tip-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .tip-content {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .comparisons-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../colors-patterns.html" class="back-link">Back to Colors and Patterns</a>
+        
+        <div class="header">
+            <h1>Gold</h1>
+            <div class="social-links">
+                <a href="#" title="Facebook">f</a>
+                <a href="#" title="Twitter">t</a>
+                <a href="#" title="Pinterest">p</a>
+                <a href="#" title="LinkedIn">in</a>
+                <a href="#" title="Email">@</a>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Comparisons:</div>
+            <div class="comparisons-grid">
+                <div class="comparison-item">Jewelry</div>
+                <div class="comparison-item">A first place medal or trophy</div>
+                <div class="comparison-item">Bullion, gold coin, doubloons, sovereigns, etc.</div>
+                <div class="comparison-item">Gold nuggets or bars</div>
+                <div class="comparison-item">Foil chocolate bar wrappers</div>
+                <div class="comparison-item">Brass doorknobs, bells, and handles</div>
+                <div class="comparison-item">Champagne foil</div>
+                <div class="comparison-item">Foil wrapped hearts and eggs (for Valentine's Day and Easter)</div>
+                <div class="comparison-item">Buckles, buttons, and zippers</div>
+                <div class="comparison-item">Pirate treasure</div>
+                <div class="comparison-item">Beer and champagne</div>
+                <div class="comparison-item">A king or a queen's crown</div>
+                <div class="comparison-item">The star on a Christmas tree</div>
+                <div class="comparison-item">A menorah</div>
+                <div class="comparison-item">Gilded armor</div>
+                <div class="comparison-item">Animal eyes (cats, eagles, etc.)</div>
+                <div class="comparison-item">Amber</div>
+                <div class="comparison-item">Pyrite</div>
+                <div class="comparison-item">Sparks</div>
+                <div class="comparison-item">Goldenrod flowers</div>
+                <div class="comparison-item">Honey</div>
+                <div class="comparison-item">Straw</div>
+                <div class="comparison-item">Fantail gold fish</div>
+                <div class="comparison-item">Gold fillings and caps</div>
+                <div class="comparison-item">High-end pens</div>
+                <div class="comparison-item">Embossed diplomas and degrees</div>
+                <div class="comparison-item">Embossed business cards or other materials</div>
+                <div class="comparison-item">Gold glitter</div>
+                <div class="comparison-item">Perfume bottle tops</div>
+                <div class="comparison-item">The Canadian loonie</div>
+                <div class="comparison-item">Sunlight</div>
+                <div class="comparison-item">Gold thread and wire</div>
+                <div class="comparison-item">Gold leaf flakes</div>
+                <div class="comparison-item">Lights</div>
+            </div>
+
+            <div class="synonyms-section">
+                <div class="synonyms-title">Synonyms For This Color:</div>
+                <div class="synonyms-list">golden, gold hue, amber, gilt, gilded, honeyed</div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Practical Examples:</div>
+            <p class="example-text">Colors are powerful descriptors, not filters. The right color comparison with a man-made or natural object will help paint an immediate picture, helping readers see the setting in a way that keeps the pace moving. When using something man-made or natural as a color comparison, choose one that is not only accurate and known to readers but also fits the mood. To feel authentic, the color choice should match the viewpoint character or narrator's history, education, and range of experiences.</p>
+
+            <div class="example-box">
+                <div class="example-title">A WEAK EXAMPLE:</div>
+                <div class="example-text">In the sunshine, golden highlights flecked her hair in honeyed ribbons.</div>
+            </div>
+
+            <div class="example-box">
+                <div class="example-title">WHAT'S WRONG WITH THIS EXAMPLE?</div>
+                <div class="example-text">We've got conflicting descriptors: are the highlights flecks or ribbons? Being concise will keep the description tight and help you avoid the dreaded purple prose.</div>
+            </div>
+
+            <div class="example-box">
+                <div class="example-title">A STRONGER OPTION:</div>
+                <div class="example-text">Sunlight transformed her hair into a radiant spill of gold.</div>
+            </div>
+
+            <div class="example-box">
+                <div class="example-title">WHY IS THIS EXAMPLE BETTER?</div>
+                <div class="example-text">It's clearer and has better word economy. Hair is a physical feature that just needs a sound bite in order to get an image across. No need to go overboard when describing it.</div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Symbolism Associated With This Color:</div>
+            <div class="symbolism-links">
+                <a href="#" class="symbolism-link">wealth</a>
+                <a href="#" class="symbolism-link">success</a>
+            </div>
+            <p class="example-text" style="margin-top: 15px;">luxury, abundance, extravagance, enlightenment, winning, royalty, value</p>
+        </div>
+
+        <div class="helpful-tip">
+            <div class="tip-title">Helpful Tip:</div>
+            <div class="tip-content">
+                Color is important to the human experience, meaning readers are hardwired to notice it. When description is necessary, think about how your color and pattern choices may be used as <strong>motifs</strong> to help symbolize an idea you want to subtly reinforce in the <strong>setting</strong> description.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gray - Color and Pattern Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #808080;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #808080;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #8b9dc3;
+            color: white;
+            text-decoration: none;
+            border-radius: 50%;
+            line-height: 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #6a7ba8;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .shade-section {
+            margin-bottom: 25px;
+        }
+
+        .shade-title {
+            font-weight: bold;
+            color: #808080;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .shade-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .shade-item {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        .hues-section {
+            background-color: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .hues-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .hues-list {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .example-box {
+            background-color: #f0f4f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .example-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .symbolism-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .symbolism-link {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .symbolism-link:hover {
+            color: #1e4187;
+        }
+
+        .helpful-tip {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #8b9dc3;
+            margin: 20px 0;
+        }
+
+        .tip-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .tip-content {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .shade-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../colors-patterns.html" class="back-link">Back to Colors and Patterns</a>
+        
+        <div class="header">
+            <h1>Gray</h1>
+            <div class="social-links">
+                <a href="#" title="Facebook">f</a>
+                <a href="#" title="Twitter">t</a>
+                <a href="#" title="Pinterest">p</a>
+                <a href="#" title="LinkedIn">in</a>
+                <a href="#" title="Email">@</a>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Comparisons:</div>
+            
+            <div class="shade-section">
+                <div class="shade-title">Light Shades:</div>
+                <div class="shade-items">
+                    <div class="shade-item">Gray hairs</div>
+                    <div class="shade-item">Ashes</div>
+                    <div class="shade-item">Fog</div>
+                    <div class="shade-item">Smoke</div>
+                    <div class="shade-item">Slate</div>
+                    <div class="shade-item">Dirty snow</div>
+                    <div class="shade-item">Street ice</div>
+                    <div class="shade-item">Moths</div>
+                    <div class="shade-item">Smog</div>
+                </div>
+            </div>
+
+            <div class="shade-section">
+                <div class="shade-title">Medium Shades:</div>
+                <div class="shade-items">
+                    <div class="shade-item">Wolves</div>
+                    <div class="shade-item">Cement</div>
+                    <div class="shade-item">Paved steps and pathways</div>
+                    <div class="shade-item">Dull metals</div>
+                    <div class="shade-item">Lemurs</div>
+                    <div class="shade-item">Sharks</div>
+                    <div class="shade-item">A manta ray</div>
+                    <div class="shade-item">Stones, rocks, and granite</div>
+                    <div class="shade-item">Statues</div>
+                    <div class="shade-item">A mouse</div>
+                    <div class="shade-item">Headstones</div>
+                    <div class="shade-item">Satellite dishes</div>
+                    <div class="shade-item">Duct tape</div>
+                    <div class="shade-item">Gravel</div>
+                </div>
+            </div>
+
+            <div class="shade-section">
+                <div class="shade-title">Dark Shades:</div>
+                <div class="shade-items">
+                    <div class="shade-item">Storm clouds</div>
+                    <div class="shade-item">Street pavement</div>
+                    <div class="shade-item">Naval ships</div>
+                    <div class="shade-item">Pencil leads</div>
+                    <div class="shade-item">Elephants</div>
+                    <div class="shade-item">Charcoal</div>
+                    <div class="shade-item">Cavities</div>
+                    <div class="shade-item">Weathered barns and fences</div>
+                    <div class="shade-item">Driftwood</div>
+                    <div class="shade-item">Rotten wood</div>
+                    <div class="shade-item">Tornados</div>
+                    <div class="shade-item">Chain link fencing</div>
+                    <div class="shade-item">Barbed Wire</div>
+                    <div class="shade-item">Pewter</div>
+                </div>
+            </div>
+
+            <div class="hues-section">
+                <div class="hues-title">Hues Within This Color Spectrum:</div>
+                <div class="hues-list">slate, dove gray, pewter, charcoal, ash, iron, gunmetal, platinum, battleship, taupe</div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Practical Examples:</div>
+            <p class="example-text">Colors are powerful descriptors, not filters. The right color comparison with a man-made or natural object will help paint an immediate picture, helping readers see the setting in a way that keeps the pace moving. When using something man-made or natural as a color comparison, choose one that is not only accurate and known to readers but also fits the mood. To feel authentic, the color choice should match the viewpoint character or narrator's history, education, and range of experiences.</p>
+
+            <div class="example-box">
+                <div class="example-title">A WEAK EXAMPLE:</div>
+                <div class="example-text">Marc stood by the gym doors in his basketball uniform, tall and muscular and perfect, his brown hair tousled and curly with sweat. I stared, every particle in my body tingling as I drank in my future boyfriend... until he opened his mouth and I caught a glimpse of teeth the color of dirty snow. Ew. No way would I be with a guy who couldn't be bothered to use a freaking whitening kit.</div>
+            </div>
+
+            <div class="example-box">
+                <div class="example-title">WHAT'S WRONG WITH THIS EXAMPLE?</div>
+                <div class="example-text">The image of Marc feels a bit generic, but that's okay because it highlights the character's shallowness. However, the image of dirty snow seems too watered down to be a real turn off, especially when she isn't turned off by sport sweat. We need something stronger to feel like her distaste is justified, at least to her.</div>
+            </div>
+
+            <div class="example-box">
+                <div class="example-title">A STRONGER OPTION:</div>
+                <div class="example-text">Marc stood by the gym doors in his basketball uniform, tall and muscular and perfect, his brown hair tousled and curly with sweat. I stared, every particle in my body tingling as I drank in my future boyfriend... until he opened his mouth and I caught a glimpse of a twisted row of dingy gray teeth. Ew. Making out with him would be like kissing a mouthful of gravel.</div>
+            </div>
+
+            <div class="example-box">
+                <div class="example-title">WHY IS THIS EXAMPLE BETTER?</div>
+                <div class="example-text">Gravel is a much better comparison because the color doesn't just suggest teeth that are less than pearly-perfect, it also implies Marc needs some dental work. It provides more detail and a much stronger mental picture.</div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Symbolism Associated With This Color:</div>
+            <div class="symbolism-links">
+                <a href="#" class="symbolism-link">depression</a>
+                <a href="#" class="symbolism-link">isolation</a>
+            </div>
+            <p class="example-text" style="margin-top: 15px;">the elderly, neutrality or emotionlessness, dignity, compromise, boredom, practicality, composure</p>
+        </div>
+
+        <div class="helpful-tip">
+            <div class="tip-title">Helpful Tip:</div>
+            <div class="tip-content">
+                Color is important to the human experience, meaning readers are hardwired to notice it. When description is necessary, think about how your color and pattern choices may be used as <strong>motifs</strong> to help symbolize an idea you want to subtly reinforce in the <strong>setting</strong> description.
+            </div>
+        </div>
+    </div>
+</body>
+</html>

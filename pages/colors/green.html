@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green - Color and Pattern Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #228B22;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #228B22;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #8b9dc3;
+            color: white;
+            text-decoration: none;
+            border-radius: 50%;
+            line-height: 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #6a7ba8;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .shade-section {
+            margin-bottom: 25px;
+        }
+
+        .shade-title {
+            font-weight: bold;
+            color: #228B22;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .shade-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .shade-item {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        .hues-section {
+            background-color: #f0fff0;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .hues-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .hues-list {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .example-box {
+            background-color: #f0f4f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .example-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .symbolism-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .symbolism-link {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .symbolism-link:hover {
+            color: #1e4187;
+        }
+
+        .helpful-tip {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #8b9dc3;
+            margin: 20px 0;
+        }
+
+        .tip-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .tip-content {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .shade-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../colors-patterns.html" class="back-link">Back to Colors and Patterns</a>
+        
+        <div class="header">
+            <h1>Green</h1>
+            <div class="social-links">
+                <a href="#" title="Facebook">f</a>
+                <a href="#" title="Twitter">t</a>
+                <a href="#" title="Pinterest">p</a>
+                <a href="#" title="LinkedIn">in</a>
+                <a href="#" title="Email">@</a>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Comparisons:</div>
+            
+            <div class="shade-section">
+                <div class="shade-title">Light Shades:</div>
+                <div class="shade-items">
+                    <div class="shade-item">Cabbage</div>
+                    <div class="shade-item">Celery</div>
+                    <div class="shade-item">Olive</div>
+                    <div class="shade-item">Pear</div>
+                    <div class="shade-item">Pea soup</div>
+                    <div class="shade-item">Lettuce leaves</div>
+                    <div class="shade-item">New growth on plants</div>
+                    <div class="shade-item">Moss</div>
+                    <div class="shade-item">Mold</div>
+                    <div class="shade-item">A sickly dye job</div>
+                    <div class="shade-item">Over-chlorinated hair (from swimming pools)</div>
+                    <div class="shade-item">Sage</div>
+                    <div class="shade-item">Artichoke</div>
+                    <div class="shade-item">A fish fin</div>
+                    <div class="shade-item">A ground-cover</div>
+                    <div class="shade-item">Pea soup</div>
+                    <div class="shade-item">Green grapes</div>
+                    <div class="shade-item">Cacti</div>
+                    <div class="shade-item">Tree buds</div>
+                    <div class="shade-item">The back of a fern frond</div>
+                    <div class="shade-item">A golf course fairway</div>
+                    <div class="shade-item">Absinthe</div>
+                    <div class="shade-item">Pak or bok choy</div>
+                    <div class="shade-item">Purging mantis</div>
+                    <div class="shade-item">Frogs</div>
+                    <div class="shade-item">Kiwi</div>
+                    <div class="shade-item">Limes</div>
+                    <div class="shade-item">Glow sticks</div>
+                    <div class="shade-item">Parrot feathers</div>
+                    <div class="shade-item">Olives</div>
+                    <div class="shade-item">Emeralds (old sage, bereft, etc.)</div>
+                    <div class="shade-item">Malachite</div>
+                </div>
+            </div>
+
+            <div class="shade-section">
+                <div class="shade-title">Medium Shades:</div>
+                <div class="shade-items">
+                    <div class="shade-item">Crocodiles</div>
+                    <div class="shade-item">Iguanas</div>
+                    <div class="shade-item">Jalapeño peppers</div>
+                    <div class="shade-item">Lime rind</div>
+                    <div class="shade-item">Pine needles</div>
+                    <div class="shade-item">Grass</div>
+                    <div class="shade-item">Grass stains</div>
+                    <div class="shade-item">Fresh lettuce</div>
+                    <div class="shade-item">Ivy jade</div>
+                    <div class="shade-item">Emeralds</div>
+                    <div class="shade-item">Pond scum</div>
+                    <div class="shade-item">Asparagus</div>
+                    <div class="shade-item">Broccoli</div>
+                    <div class="shade-item">Ivy leaves</div>
+                    <div class="shade-item">Fiddleheads</div>
+                    <div class="shade-item">Bamboo stalks</div>
+                    <div class="shade-item">Palm fronds</div>
+                    <div class="shade-item">Pond algae</div>
+                    <div class="shade-item">Fresh grass</div>
+                    <div class="shade-item">Carrot tops</div>
+                    <div class="shade-item">Clover</div>
+                    <div class="shade-item">Flower stems</div>
+                    <div class="shade-item">Pine boughs</div>
+                    <div class="shade-item">Cucumber, mint and other fresh herbs</div>
+                    <div class="shade-item">Lettuce</div>
+                    <div class="shade-item">Recycling symbols</div>
+                    <div class="shade-item">Radioactive waste</div>
+                    <div class="shade-item">Onion tops and leeks</div>
+                    <div class="shade-item">Parsley</div>
+                    <div class="shade-item">A park-sized cigarette</div>
+                    <div class="shade-item">Foliage</div>
+                    <div class="shade-item">Rainweeds</div>
+                </div>
+            </div>
+
+            <div class="shade-section">
+                <div class="shade-title">Dark Shades:</div>
+                <div class="shade-items">
+                    <div class="shade-item">Wet leaves</div>
+                    <div class="shade-item">Mold</div>
+                    <div class="shade-item">Algae</div>
+                    <div class="shade-item">Algae</div>
+                    <div class="shade-item">Spinach</div>
+                    <div class="shade-item">Seaweed</div>
+                    <div class="shade-item">Pine needles</div>
+                    <div class="shade-item">Cucumber and avocado skin</div>
+                    <div class="shade-item">A boy leaf</div>
+                    <div class="shade-item">Pickles</div>
+                    <div class="shade-item">Myrtle</div>
+                    <div class="shade-item">Spinach</div>
+                    <div class="shade-item">Evergreen leaves</div>
+                    <div class="shade-item">Dirty aquariums</div>
+                    <div class="shade-item">Hedges</div>
+                    <div class="shade-item">Garden hose</div>
+                    <div class="shade-item">Military clothing and vehicles</div>
+                    <div class="shade-item">A Christmas wreath</div>
+                    <div class="shade-item">Reptilian skin</div>
+                    <div class="shade-item">Rot and mildew</div>
+                    <div class="shade-item">Seagram water</div>
+                    <div class="shade-item">Marshes</div>
+                    <div class="shade-item">Money</div>
+                    <div class="shade-item">Emerald pools in novels</div>
+                    <div class="shade-item">Swamp shrubs</div>
+                </div>
+            </div>
+
+            <div class="hues-section">
+                <div class="hues-title">Hues Within This Color Spectrum:</div>
+                <div class="hues-list">chartreuse, olive, forest, army, celadonine, hunter, kelly, viridian, chlorophyll, teal, lime, turquoise, cyan, emerald, celadon, jade, moss, pine, sea</div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Practical Examples:</div>
+            <p class="example-text">Colors are powerful descriptors, not filters. The right color comparison with a man-made or natural object will help paint an immediate picture, helping readers see the setting in a way that keeps the pace moving. When using something man-made or natural as a color comparison, choose one that is not only accurate and known to readers but also fits the mood. To feel authentic, the color choice should match the viewpoint character or narrator's history, education, and range of experiences.</p>
+
+            <div class="example-box">
+                <div class="example-title">A WEAK EXAMPLE:</div>
+                <div class="example-text">When Jasper said his cousin was coming to visit, I figured he'd be like the rest of the farm boys: sturdy and dumb as an ox. Boy, was I wrong. Forest-dark hair and blue eyes made me lose my grip so much that I forgot to say goodbye to my boyfriend first. You could be the green of our yard got greener before we mowed it.</div>
+            </div>
+
+            <div class="example-box">
+                <div class="example-title">WHAT'S WRONG WITH THIS EXAMPLE?</div>
+                <div class="example-text">The style of writing here suggests the narrator is trying to show how hip friend is to a turnoff in guys, yet using a cousin barely skips a beat over letting her boyfriend first. You could be as green as our yard got greener before we mowed is awkward.</div>
+            </div>
+
+            <div class="example-box">
+                <div class="example-title">A STRONGER OPTION:</div>
+                <div class="example-text">When Jasper said his cousin was coming to visit, I figured he'd be like the rest of the farm boys: sturdy and dumb as an ox. Boy, was I wrong. Forest-dark hair and blue eyes made me lose my grip so much that Josh would have been green being out of the loop if he'd seen me doing.</div>
+            </div>
+
+            <div class="example-box">
+                <div class="example-title">WHY IS THIS EXAMPLE BETTER?</div>
+                <div class="example-text">This example works because the comparison is a very famous part, helping them form an immediate picture.</div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Symbolism Associated With This Color:</div>
+            <div class="symbolism-links">
+                <a href="#" class="symbolism-link">jealousy</a>
+                <a href="#" class="symbolism-link">nature</a>
+                <a href="#" class="symbolism-link">envy</a>
+                <a href="#" class="symbolism-link">youth</a>
+                <a href="#" class="symbolism-link">balance and harmony</a>
+                <a href="#" class="symbolism-link">renewal</a>
+            </div>
+            <p class="example-text" style="margin-top: 15px;">represents a strong moral compass, nature, safety and stability, envy and resentment and jealousy, being impetuous and immature</p>
+        </div>
+
+        <div class="helpful-tip">
+            <div class="tip-title">Helpful Tip:</div>
+            <div class="tip-content">
+                Color is important to the human experience, meaning readers are hardwired to notice it. When description is necessary, think about how your color and pattern choices may be used as <strong>motifs</strong> to help symbolize an idea you want to subtly reinforce in the <strong>setting</strong> description.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
