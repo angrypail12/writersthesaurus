@@ -223,9 +223,9 @@
             alert('Navigating back to main thesaurus page');
         }
 
-        function navigateToWeather(weatherSlug) {
-            alert(`Navigating to: ${weatherSlug}\n\nNext, you can show me the content for specific weather pages you'd like me to build!`);
-        }
+        function navigateToTexture(textureSlug) {
+    window.location.href = `weather/${weatherSlug}.html`;
+}
 
         // Add interactivity to navigation dots
         document.querySelectorAll('.dot').forEach((dot, index) => {
