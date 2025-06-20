@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color and Pattern Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .intro-text {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .colors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .color-column {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .color-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .color-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .shortcut-info {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.8rem;
+            color: #999;
+        }
+
+        .shortcut-info a {
+            color: #8b9dc3;
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .colors-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Color and Pattern Thesaurus</h1>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="intro-text">
+            When describing certain things in a story—particularly colors and patterns—writers often use a comparison of some sort to help create a stronger visual image for readers. Choosing the right comparison will help paint a vivid picture and encourage the audience to make emotional associations as they read. The purpose of this thesaurus is to help you find that perfect match, allowing you to reinforce a specific mood or meaning for the colors or patterns you need to describe.
+        </div>
+
+        <div class="colors-grid">
+            <div class="color-column">
+                <a href="#" class="color-link" onclick="navigateToColor('black')">BLACK</a>
+                <a href="#" class="color-link" onclick="navigateToColor('blue')">BLUE</a>
+                <a href="#" class="color-link" onclick="navigateToColor('brown')">BROWN</a>
+                <a href="#" class="color-link" onclick="navigateToColor('gold')">GOLD</a>
+                <a href="#" class="color-link" onclick="navigateToColor('gray')">GRAY</a>
+                <a href="#" class="color-link" onclick="navigateToColor('green')">GREEN</a>
+            </div>
+
+            <div class="color-column">
+                <a href="#" class="color-link" onclick="navigateToColor('orange')">ORANGE</a>
+                <a href="#" class="color-link" onclick="navigateToColor('pink')">PINK</a>
+                <a href="#" class="color-link" onclick="navigateToColor('purple')">PURPLE</a>
+                <a href="#" class="color-link" onclick="navigateToColor('red')">RED</a>
+                <a href="#" class="color-link" onclick="navigateToColor('silver')">SILVER</a>
+                <a href="#" class="color-link" onclick="navigateToColor('spotted')">SPOTTED</a>
+            </div>
+
+            <div class="color-column">
+                <a href="#" class="color-link" onclick="navigateToColor('striped')">STRIPED</a>
+                <a href="#" class="color-link" onclick="navigateToColor('transparent')">TRANSPARENT</a>
+                <a href="#" class="color-link" onclick="navigateToColor('white')">WHITE</a>
+                <a href="#" class="color-link" onclick="navigateToColor('yellow')">YELLOW</a>
+            </div>
+        </div>
+
+        <div class="shortcut-info">
+            The shortcut for this page is t+k. For a complete list of shortcuts, see our <a href="#">Accessibility</a> guide.
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to main thesaurus page');
+        }
+
+        function navigateToColor(colorSlug) {
+            alert(`Navigating to: ${colorSlug}\n\nNext, you can show me the content for specific color pages you'd like me to build!`);
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>
