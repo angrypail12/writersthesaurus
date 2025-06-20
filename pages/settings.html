@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setting Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .intro-text {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .settings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .setting-column {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .setting-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 6px;
+            font-size: 0.8rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .setting-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .settings-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Setting Thesaurus</h1>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="intro-text">
+            Settings come alive through description, and the right details can evoke emotion, drawing readers in. This thesaurus explores different locations and their associated sights, smells, tastes, sounds, and textures for you to weave into your storytelling, thereby deepening the reader's sensory experience.
+        </div>
+
+        <div class="settings-grid">
+            <div class="setting-column">
+                <a href="#" class="setting-link" onclick="navigateToSetting('abandoned-mine')">ABANDONED MINE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('airplane')">AIRPLANE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('airport')">AIRPORT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('alley')">ALLEY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('ambulance')">AMBULANCE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('amusement-park')">AMUSEMENT PARK</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('ancient-ruins')">ANCIENT RUINS</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('antiques-shop')">ANTIQUES SHOP</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('archery-range')">ARCHERY RANGE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('arctic-tundra')">ARCTIC TUNDRA</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('art-gallery')">ART GALLERY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('art-studio')">ART STUDIO</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('attic')">ATTIC</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('backyard')">BACKYARD</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('badlands')">BADLANDS</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('bakery')">BAKERY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('ballroom')">BALLROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('bank')">BANK</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('bar')">BAR</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('barn')">BARN</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('basement')">BASEMENT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('bazaar')">BAZAAR</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('beach')">BEACH</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('beach-party')">BEACH PARTY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('big-city-street')">BIG CITY STREET</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('birthday-party')">BIRTHDAY PARTY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('black-tie-event')">BLACK TIE EVENT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('block-party')">BLOCK PARTY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('boarding-school')">BOARDING SCHOOL</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('boardroom')">BOARDROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('bomb-shelter')">BOMB SHELTER</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('bookstore')">BOOKSTORE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('bowling-alley')">BOWLING ALLEY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('break-room')">BREAK ROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('brewery')">BREWERY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('bridge')">BRIDGE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('campsite')">CAMPSITE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('canyon')">CANYON</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('car-accident')">CAR ACCIDENT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('car-wash')">CAR WASH</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('carnival-funhouse')">CARNIVAL FUNHOUSE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('casino')">CASINO</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('casual-dining-restaurant')">CASUAL DINING RESTAURANT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('cave')">CAVE</a>
+            </div>
+
+            <div class="setting-column">
+                <a href="#" class="setting-link" onclick="navigateToSetting('gas-station')">GAS STATION</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('ghost-town')">GHOST TOWN</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('golf-course')">GOLF COURSE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('graveyard')">GRAVEYARD</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('green-room')">GREEN ROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('greenhouse')">GREENHOUSE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('grocery-store')">GROCERY STORE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('grotto')">GROTTO</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('group-foster-home')">GROUP FOSTER HOME</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('gymnasium')">GYMNASIUM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('hair-salon')">HAIR SALON</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('halloween-party')">HALLOWEEN PARTY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('hardware-store')">HARDWARE STORE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('haunted-house')">HAUNTED HOUSE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('herbalists-shop')">HERBALIST'S SHOP</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('high-school-cafeteria')">HIGH SCHOOL CAFETERIA</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('high-school-hallway')">HIGH SCHOOL HALLWAY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('hiking-trail')">HIKING TRAIL</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('home-office')">HOME OFFICE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('homeless-shelter')">HOMELESS SHELTER</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('horse-racing-track')">HORSE RACING TRACK</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('hospital')">HOSPITAL</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('hospital-room')">HOSPITAL ROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('hot-springs')">HOT SPRINGS</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('hotel-room')">HOTEL ROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('house-fire')">HOUSE FIRE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('house-party')">HOUSE PARTY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('hunting-cabin')">HUNTING CABIN</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('ice-cream-parlor')">ICE CREAM PARLOR</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('indoor-shooting-range')">INDOOR SHOOTING RANGE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('jewelry-store')">JEWELRY STORE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('judges-chambers')">JUDGE'S CHAMBERS</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('juvenile-detention-center')">JUVENILE DETENTION CENTER</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('kitchen')">KITCHEN</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('lake')">LAKE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('landfill')">LANDFILL</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('laundromat')">LAUNDROMAT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('library')">LIBRARY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('lighthouse')">LIGHTHOUSE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('limousine')">LIMOUSINE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('liquor-store')">LIQUOR STORE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('living-room')">LIVING ROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('man-cave')">MAN CAVE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('mansion')">MANSION</a>
+            </div>
+
+            <div class="setting-column">
+                <a href="#" class="setting-link" onclick="navigateToSetting('pirate-ship')">PIRATE SHIP</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('playground')">PLAYGROUND</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('police-car')">POLICE CAR</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('police-station')">POLICE STATION</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('pond')">POND</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('pool-hall')">POOL HALL</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('preschool')">PRESCHOOL</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('principals-office')">PRINCIPAL'S OFFICE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('prison-cell')">PRISON CELL</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('prom')">PROM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('psychiatric-ward')">PSYCHIATRIC WARD</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('psychics-shop')">PSYCHIC'S SHOP</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('pub')">PUB</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('public-restroom')">PUBLIC RESTROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('quarry')">QUARRY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('rainforest')">RAINFOREST</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('ranch')">RANCH</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('rapid-city-street')">RAPID CITY STREET</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('recording-studio')">RECORDING STUDIO</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('refugee-camp')">REFUGEE CAMP</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('residential-bathroom')">RESIDENTIAL BATHROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('river')">RIVER</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('rock-concert')">ROCK CONCERT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('rodeo')">RODEO</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('roof-cellar')">ROOF CELLAR</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('run-down-apartment')">RUN-DOWN APARTMENT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('salvage-yard')">SALVAGE YARD</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('school-bus')">SCHOOL BUS</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('school-lockers-room')">SCHOOL LOCKER'S ROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('science-lab')">SCIENCE LAB</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('secret-passageway')">SECRET PASSAGEWAY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('sewers')">SEWERS</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('shopping-mall')">SHOPPING MALL</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('skate-park')">SKATE PARK</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('ski-resort')">SKI RESORT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('slaughterhouse')">SLAUGHTERHOUSE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('small-town-street')">SMALL TOWN STREET</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('spa')">SPA</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('sporting-event-stands')">SPORTING EVENT STANDS</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('submarine')">SUBMARINE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('subway-train')">SUBWAY TRAIN</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('subway-tunnel')">SUBWAY TUNNEL</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('summer-camp')">SUMMER CAMP</a>
+            </div>
+
+            <div class="setting-column">
+                <a href="#" class="setting-link" onclick="navigateToSetting('cheap-motel')">CHEAP MOTEL</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('chicken-coop')">CHICKEN COOP</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('childs-bedroom')">CHILD'S BEDROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('church')">CHURCH</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('circus')">CIRCUS</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('city-bus')">CITY BUS</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('coffeehouse')">COFFEEHOUSE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('community-center')">COMMUNITY CENTER</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('condemned-apartment-building')">CONDEMNED APARTMENT BUILDING</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('construction-site')">CONSTRUCTION SITE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('convenience-store')">CONVENIENCE STORE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('country-road')">COUNTRY ROAD</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('county-fair')">COUNTY FAIR</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('courtroom')">COURTROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('creek')">CREEK</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('cruise-ship')">CRUISE SHIP</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('custodial-supply-room')">CUSTODIAL SUPPLY ROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('deli')">DELI</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('desert')">DESERT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('diner')">DINER</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('dorm-room')">DORM ROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('dungeon')">DUNGEON</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('elementary-school-classroom')">ELEMENTARY SCHOOL CLASSROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('elevator')">ELEVATOR</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('emergency-room')">EMERGENCY ROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('empty-lot')">EMPTY LOT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('executives-office')">EXECUTIVE'S OFFICE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('factory')">FACTORY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('farm')">FARM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('farmers-market')">FARMER'S MARKET</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('fast-food-restaurant')">FAST FOOD RESTAURANT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('fire-station')">FIRE STATION</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('fishing-boat')">FISHING BOAT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('fitness-center')">FITNESS CENTER</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('flower-garden')">FLOWER GARDEN</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('flower-shop')">FLOWER SHOP</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('forest')">FOREST</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('funeral-home')">FUNERAL HOME</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('gallows')">GALLOWS</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('garage')">GARAGE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('garage-sale')">GARAGE SALE</a>
+            </div>
+
+            <div class="setting-column">
+                <a href="#" class="setting-link" onclick="navigateToSetting('marina')">MARINA</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('marsh')">MARSH</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('mausoleum')">MAUSOLEUM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('meadow')">MEADOW</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('mechanics-shop')">MECHANIC'S SHOP</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('medieval-castle')">MEDIEVAL CASTLE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('medieval-castle-armory')">MEDIEVAL CASTLE ARMORY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('medieval-tavern')">MEDIEVAL TAVERN</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('medieval-village')">MEDIEVAL VILLAGE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('military-base')">MILITARY BASE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('military-helicopter')">MILITARY HELICOPTER</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('moors')">MOORS</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('morgue')">MORGUE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('motor-home')">MOTOR HOME</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('mountains')">MOUNTAINS</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('movie-set')">MOVIE SET</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('movie-theater')">MOVIE THEATER</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('museum')">MUSEUM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('newsroom')">NEWSROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('nightclub')">NIGHTCLUB</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('nursery')">NURSERY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('nursing-home')">NURSING HOME</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('ocean')">OCEAN</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('office-cubicle')">OFFICE CUBICLE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('old-pick-up-truck')">OLD PICK-UP TRUCK</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('orchard')">ORCHARD</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('outdoor-pool')">OUTDOOR POOL</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('outdoor-skating-rink')">OUTDOOR SKATING RINK</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('outhouse')">OUTHOUSE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('parade')">PARADE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('park')">PARK</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('parking-garage')">PARKING GARAGE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('parking-lot')">PARKING LOT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('pasture')">PASTURE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('patio-deck')">PATIO DECK</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('pawn-shop')">PAWN SHOP</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('penthouse-suite')">PENTHOUSE SUITE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('performing-arts-theater')">PERFORMING ARTS THEATER</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('pet-store')">PET STORE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('pharmacy')">PHARMACY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('photography-studio')">PHOTOGRAPHY STUDIO</a>
+            </div>
+
+            <div class="setting-column">
+                <a href="#" class="setting-link" onclick="navigateToSetting('swamp')">SWAMP</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('tank')">TANK</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('tattoo-parlor')">TATTOO PARLOR</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('taxi')">TAXI</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('taxidermist')">TAXIDERMIST</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('teachers-lounge')">TEACHER'S LOUNGE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('teenagers-bedroom')">TEENAGER'S BEDROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('teenagers-bedroom-closet')">TEENAGER'S BEDROOM CLOSET</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('therapists-office')">THERAPIST'S OFFICE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('thrift-store')">THRIFT STORE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('tool-shed')">TOOL SHED</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('trade-show')">TRADE SHOW</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('trailer-park')">TRAILER PARK</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('train-station')">TRAIN STATION</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('tree-house')">TREE HOUSE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('trendy-mall-clothing-store')">TRENDY MALL CLOTHING STORE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('tropical-island')">TROPICAL ISLAND</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('tropical-resort')">TROPICAL RESORT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('truck-stop')">TRUCK STOP</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('underground-storm-shelter')">UNDERGROUND STORM SHELTER</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('underpass')">UNDERPASS</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('university-lecture-hall')">UNIVERSITY LECTURE HALL</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('university-quad')">UNIVERSITY QUAD</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('upscale-hotel-lobby')">UPSCALE HOTEL LOBBY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('urban-rooftop')">URBAN ROOFTOP</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('used-car-dealership')">USED CAR DEALERSHIP</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('vegas-stage-show')">VEGAS STAGE SHOW</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('vegetable-patch')">VEGETABLE PATCH</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('vet-clinic')">VET CLINIC</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('video-arcade')">VIDEO ARCADE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('waiting-room')">WAITING ROOM</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('wake')">WAKE</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('water-park')">WATER PARK</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('waterfall')">WATERFALL</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('wedding-reception')">WEDDING RECEPTION</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('wine-cellar')">WINE CELLAR</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('winery')">WINERY</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('workshop')">WORKSHOP</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('yacht')">YACHT</a>
+                <a href="#" class="setting-link" onclick="navigateToSetting('zoo')">ZOO</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to main thesaurus page');
+        }
+
+        function navigateToSetting(settingSlug) {
+            alert(`Navigating to: ${settingSlug}\n\nNext, you can show me the content for specific setting pages you'd like me to build!`);
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>
