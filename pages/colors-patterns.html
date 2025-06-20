@@ -152,7 +152,7 @@
 </head>
 <body>
     <div class="container">
-        <a href="#" class="back-link" onclick="goBack()">Back to Main Thesaurus</a>
+        <a href="../index.html" class="back-link">Back to Main Thesaurus</a>
         
         <div class="header">
             <h1>Color and Pattern Thesaurus</h1>
@@ -176,28 +176,28 @@
 
         <div class="colors-grid">
             <div class="color-column">
-                <a href="#" class="color-link" onclick="navigateToColor('black')">BLACK</a>
-                <a href="#" class="color-link" onclick="navigateToColor('blue')">BLUE</a>
-                <a href="#" class="color-link" onclick="navigateToColor('brown')">BROWN</a>
-                <a href="#" class="color-link" onclick="navigateToColor('gold')">GOLD</a>
-                <a href="#" class="color-link" onclick="navigateToColor('gray')">GRAY</a>
-                <a href="#" class="color-link" onclick="navigateToColor('green')">GREEN</a>
+                <a href="colors/black.html" class="color-link">BLACK</a>
+                <a href="colors/blue.html" class="color-link">BLUE</a>
+                <a href="colors/brown.html" class="color-link">BROWN</a>
+                <a href="colors/gold.html" class="color-link">GOLD</a>
+                <a href="colors/gray.html" class="color-link">GRAY</a>
+                <a href="colors/green.html" class="color-link">GREEN</a>
             </div>
 
             <div class="color-column">
-                <a href="#" class="color-link" onclick="navigateToColor('orange')">ORANGE</a>
-                <a href="#" class="color-link" onclick="navigateToColor('pink')">PINK</a>
-                <a href="#" class="color-link" onclick="navigateToColor('purple')">PURPLE</a>
-                <a href="#" class="color-link" onclick="navigateToColor('red')">RED</a>
-                <a href="#" class="color-link" onclick="navigateToColor('silver')">SILVER</a>
-                <a href="#" class="color-link" onclick="navigateToColor('spotted')">SPOTTED</a>
+                <a href="colors/orange.html" class="color-link">ORANGE</a>
+                <a href="colors/pink.html" class="color-link">PINK</a>
+                <a href="colors/purple.html" class="color-link">PURPLE</a>
+                <a href="colors/red.html" class="color-link">RED</a>
+                <a href="colors/silver.html" class="color-link">SILVER</a>
+                <a href="colors/spotted.html" class="color-link">SPOTTED</a>
             </div>
 
             <div class="color-column">
-                <a href="#" class="color-link" onclick="navigateToColor('striped')">STRIPED</a>
-                <a href="#" class="color-link" onclick="navigateToColor('transparent')">TRANSPARENT</a>
-                <a href="#" class="color-link" onclick="navigateToColor('white')">WHITE</a>
-                <a href="#" class="color-link" onclick="navigateToColor('yellow')">YELLOW</a>
+                <a href="colors/striped.html" class="color-link">STRIPED</a>
+                <a href="colors/transparent.html" class="color-link">TRANSPARENT</a>
+                <a href="colors/white.html" class="color-link">WHITE</a>
+                <a href="colors/yellow.html" class="color-link">YELLOW</a>
             </div>
         </div>
 
@@ -207,14 +207,6 @@
     </div>
 
     <script>
-        function goBack() {
-            alert('Navigating back to main thesaurus page');
-        }
-
-        function navigateToColor(colorSlug) {
-            alert(`Navigating to: ${colorSlug}\n\nNext, you can show me the content for specific color pages you'd like me to build!`);
-        }
-
         // Add interactivity to navigation dots
         document.querySelectorAll('.dot').forEach((dot, index) => {
             dot.addEventListener('click', function() {
