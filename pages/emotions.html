@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .intro-text {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .emotions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .emotion-column {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .emotion-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .emotion-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .emotions-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Emotion Thesaurus</h1>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="intro-text">
+            No two characters should express emotion the same way. To avoid reusing tired gestures or slipping into telling, use this thesaurus to brainstorm fresh body language, visceral sensations, and thoughts to express your character's emotions in ways that make sense for them.
+        </div>
+
+        <div class="emotions-grid">
+            <div class="emotion-column">
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('acceptance')">ACCEPTANCE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('admiration')">ADMIRATION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('adoration')">ADORATION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('agitation')">AGITATION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('amazement')">AMAZEMENT</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('amusement')">AMUSEMENT</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('anger')">ANGER</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('anguish')">ANGUISH</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('annoyance')">ANNOYANCE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('anticipation')">ANTICIPATION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('anxiety')">ANXIETY</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('appalled')">APPALLED</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('apprehension')">APPREHENSION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('awe')">AWE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('betrayed')">BETRAYED</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('bitterness')">BITTERNESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('certainty')">CERTAINTY</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('concern')">CONCERN</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('confidence')">CONFIDENCE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('conflicted')">CONFLICTED</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('confusion')">CONFUSION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('connectedness')">CONNECTEDNESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('contempt')">CONTEMPT</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('curiosity')">CURIOSITY</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('defeat')">DEFEAT</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('defensiveness')">DEFENSIVENESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('defiance')">DEFIANCE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('denial')">DENIAL</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('depressed')">DEPRESSED</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('desire')">DESIRE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('despair')">DESPAIR</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('desperation')">DESPERATION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('determination')">DETERMINATION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('devastation')">DEVASTATION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('disappointment')">DISAPPOINTMENT</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('disbelief')">DISBELIEF</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('discouragement')">DISCOURAGEMENT</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('disgust')">DISGUST</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('disillusionment')">DISILLUSIONMENT</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('dissatisfaction')">DISSATISFACTION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('doubt')">DOUBT</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('dread')">DREAD</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('eagerness')">EAGERNESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('elation')">ELATION</a>
+            </div>
+
+            <div class="emotion-column">
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('embarrassment')">EMBARRASSMENT</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('empathy')">EMPATHY</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('envy')">ENVY</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('euphoria')">EUPHORIA</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('excitement')">EXCITEMENT</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('fear')">FEAR</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('fearlessness')">FEARLESSNESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('flustered')">FLUSTERED</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('frustration')">FRUSTRATION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('giddiness')">GIDDINESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('gratitude')">GRATITUDE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('grief')">GRIEF</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('guilt')">GUILT</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('happiness')">HAPPINESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('hatred')">HATRED</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('homesickness')">HOMESICKNESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('hopefulness')">HOPEFULNESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('horror')">HORROR</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('humbled')">HUMBLED</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('humiliation')">HUMILIATION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('hurt')">HURT</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('hysteria')">HYSTERIA</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('impatience')">IMPATIENCE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('inadequacy')">INADEQUACY</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('indifference')">INDIFFERENCE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('indignation')">INDIGNATION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('insecurity')">INSECURITY</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('inspired')">INSPIRED</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('intimidation')">INTIMIDATION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('irritation')">IRRITATION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('jealousy')">JEALOUSY</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('joy')">JOY</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('loneliness')">LONELINESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('longing')">LONGING</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('love')">LOVE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('lust')">LUST</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('misery')">MISERY</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('moodiness')">MOODINESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('moved')">MOVED</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('neglected')">NEGLECTED</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('nervousness')">NERVOUSNESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('nostalgia')">NOSTALGIA</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('obsession')">OBSESSION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('overwhelmed')">OVERWHELMED</a>
+            </div>
+
+            <div class="emotion-column">
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('paranoia')">PARANOIA</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('peacefulness')">PEACEFULNESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('pity')">PITY</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('pleased')">PLEASED</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('powerlessness')">POWERLESSNESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('pride')">PRIDE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('rage')">RAGE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('regret')">REGRET</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('relief')">RELIEF</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('reluctance')">RELUCTANCE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('remorse')">REMORSE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('resentment')">RESENTMENT</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('resignation')">RESIGNATION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('revulsion')">REVULSION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('sadness')">SADNESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('satisfaction')">SATISFACTION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('schadenfreude')">SCHADENFREUDE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('scorn')">SCORN</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('self-loathing')">SELF-LOATHING</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('self-pity')">SELF-PITY</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('shame')">SHAME</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('shock')">SHOCK</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('skepticism')">SKEPTICISM</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('smugness')">SMUGNESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('soberness')">SOBERNESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('strength')">STRENGTH</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('surprise')">SURPRISE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('suspicion')">SUSPICION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('sympathy')">SYMPATHY</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('terror')">TERROR</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('tormented')">TORMENTED</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('unappreciated')">UNAPPRECIATED</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('uncertainty')">UNCERTAINTY</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('unease')">UNEASE</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('validation')">VALIDATION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('valued')">VALUED</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('vengefulness')">VENGEFULNESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('vindication')">VINDICATION</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('vulnerability')">VULNERABILITY</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('wanderlust')">WANDERLUST</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('wariness')">WARINESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('wistfulness')">WISTFULNESS</a>
+                <a href="#" class="emotion-link" onclick="navigateToEmotion('worry')">WORRY</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to main thesaurus page');
+        }
+
+        function navigateToEmotion(emotionSlug) {
+            alert(`Navigating to: ${emotionSlug}\n\nNext, you can show me the content for specific emotion pages you'd like me to build!`);
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>
