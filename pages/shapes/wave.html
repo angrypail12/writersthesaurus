@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave - Shape Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .content-area {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .main-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .sidebar {
+            background: #e8e8e8;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .comparison-list {
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .comparison-list p {
+            margin-bottom: 8px;
+        }
+
+        .examples-section {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .example {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .example-label {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #8b9dc3;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        .helpful-tip {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .helpful-tip h4 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .helpful-tip p {
+            font-size: 0.8rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .content-area {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            body {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../pages/shapes.html" class="back-link">Back to Shape Thesaurus</a>
+        
+        <div class="header">
+            <h1>Shape Thesaurus</h1>
+            <h2>Wave</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div class="main-content">
+                <div class="section">
+                    <h3>Comparisons:</h3>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <strong>NATURAL:</strong>
+                        <div class="comparison-list">
+                            <p>Calla lily flowers</p>
+                            <p>Waves</p>
+                            <p>Dunes</p>
+                            <p>Flickering flames</p>
+                            <p>Smoke</p>
+                            <p>Sand dunes</p>
+                            <p>Mountainous slopes or rises</p>
+                            <p>A winding road</p>
+                            <p>A serpent</p>
+                            <p>Tidal range ripples</p>
+                            <p>A ridgeline</p>
+                            <p>Hair</p>
+                            <p>Sweet pea petals</p>
+                            <p>Grass and almond leaves moving in the breeze</p>
+                            <p>A meandering snake</p>
+                            <p>Tree roots</p>
+                            <p>A winding beach</p>
+                            <p>Various veins</p>
+                            <p>The ridges of the brain</p>
+                            <p>Sedimentary layers</p>
+                            <p>Muscles under the skin</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <strong>MAN-MADE:</strong>
+                        <div class="comparison-list">
+                            <p>Flags flapping in the wind</p>
+                            <p>A child's drawing</p>
+                            <p>Floating silk</p>
+                            <p>Reflections in a swimming pool</p>
+                            <p>A ripple print afghan</p>
+                            <p>Corrugated metal</p>
+                            <p>Pleated skirts</p>
+                            <p>A loopy hillside</p>
+                            <p>Foothills as seen from afar</p>
+                            <p>Shingles</p>
+                            <p>The waved as a shoe or boot</p>
+                            <p>Multi-flavored ice cream (Neapolitan, butterschotch ripple, etc.)</p>
+                            <p>Streamers</p>
+                            <p>Railroad gallows</p>
+                            <p>Curly hair</p>
+                            <p>Ribbons</p>
+                            <p>Bacon</p>
+                            <p>Unraveled rope, string, or metal</p>
+                            <p>Cracklines</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Synonyms:</h3>
+                    <p style="font-size: 0.9rem; font-style: italic;">rolled, curled, rippled, sinuous, snaky, squiggly, undulating, billowy</p>
+                </div>
+
+                <div class="examples-section">
+                    <h3>Practical Examples:</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 20px;">When making comparisons, it is often beneficial to use objects that readers will recognize. It's also important to choose objects that fit both the type of story you're writing and the narrating character's individual experience. Description is a balancing act between anchoring readers in the unique story world while only describing what is necessary. Use as few words as possible to convey a shape; save room for other details to really make the description stand out.</p>
+                    
+                    <div class="example">
+                        <div class="example-label">A Weak Example:</div>
+                        <p>Anna danced, her agile body flexing and curving like corrugated metal.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-label">What's Wrong With This Example?</div>
+                        <p>While corrugated metal is wavy in nature, it is also fixed. Any attempt at movement would be stiff, not lithe or fluid.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-label">A Stronger Option:</div>
+                        <p>Anna danced, her agile body flexing and curving like sweet grass kissed by a passing breeze.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-label">Why Does This Work?</div>
+                        <p>This comparison lines up better to convey the image and fits better with Anna's dancing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="social-icons">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">t</a>
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">@</a>
+                </div>
+
+                <div class="helpful-tip">
+                    <h4>Helpful Tip</h4>
+                    <p>Shape is one of the most essential ingredients of description, and using a comparison with a common object makes non-made or obvious writers can be a strong way to 'show' and online word economy. Sometimes the shape of something can have symbolic meaning, but even if it does not, describing important objects in the setting helps readers see the landscape and feel more part of the scene.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

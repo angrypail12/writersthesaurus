@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square - Shape Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: normal;
+            margin-bottom: 30px;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .content-area {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .main-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .sidebar {
+            background: #e8e8e8;
+            padding: 20px;
+            border-radius: 8px;
+            height: fit-content;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .comparison-list {
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .comparison-list p {
+            margin-bottom: 8px;
+        }
+
+        .examples-section {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .example {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .example-label {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            margin-bottom: 5px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #8b9dc3;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            text-decoration: none;
+        }
+
+        .helpful-tip {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .helpful-tip h4 {
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .helpful-tip p {
+            font-size: 0.8rem;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .content-area {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            body {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../pages/shapes.html" class="back-link">Back to Shape Thesaurus</a>
+        
+        <div class="header">
+            <h1>Shape Thesaurus</h1>
+            <h2>Square</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="content-area">
+            <div class="main-content">
+                <div class="section">
+                    <h3>Comparisons:</h3>
+                    
+                    <div style="margin-bottom: 20px;">
+                        <strong>NATURAL:</strong>
+                        <div class="comparison-list">
+                            <p>There are no true squares in nature</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <strong>MAN-MADE:</strong>
+                        <div class="comparison-list">
+                            <p>Blocks</p>
+                            <p>Dice</p>
+                            <p>Keyboard keys</p>
+                            <p>Math diamonds</p>
+                            <p>Air conditioning vents</p>
+                            <p>Cushions</p>
+                            <p>City blocks</p>
+                            <p>Window panes</p>
+                            <p>Crackers and cheese squares</p>
+                            <p>Rubik's cube sections</p>
+                            <p>Tic-tac-toe squares</p>
+                            <p>Floor tiles and parquet slabs</p>
+                            <p>Pieces of bread</p>
+                            <p>Cheese slices</p>
+                            <p>Agricultural fields</p>
+                            <p>Creeps</p>
+                            <p>A crosshatch</p>
+                            <p>Magnets</p>
+                            <p>Casserole dishes</p>
+                            <p>Patio tiles</p>
+                            <p>Quilt blocks</p>
+                            <p>Calendar squares</p>
+                            <p>Sticky notes</p>
+                            <p>Tea bags</p>
+                            <p>Ice cubes</p>
+                            <p>Soda crackers</p>
+                            <p>Lunch boxes</p>
+                            <p>Napkins</p>
+                            <p>Origami paper</p>
+                            <p>Board games (checkers, chess, etc.)</p>
+                            <p>Pot holders</p>
+                            <p>Computer and TV monitors</p>
+                            <p>Cake</p>
+                            <p>Jewelry boxes</p>
+                            <p>Brownies</p>
+                            <p>Moving boxes</p>
+                            <p>Tiles (floor or holograph pieces)</p>
+                            <p>Diamonds</p>
+                            <p>A laundry or garbage chute door</p>
+                            <p>CD cases</p>
+                            <p>Picture frames</p>
+                            <p>Washcloths</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Synonyms:</h3>
+                    <p style="font-size: 0.9rem; font-style: italic;">boxy, even-sided, quadrate, right-angled, four-sided</p>
+                </div>
+
+                <div class="examples-section">
+                    <h3>Practical Examples:</h3>
+                    <p style="font-size: 0.9rem; margin-bottom: 20px;">When making comparisons, it is often beneficial to use objects that readers will recognize. It's also important to choose objects that fit both the type of story you're writing and the narrating character's individual experience. Description is a balancing act between anchoring readers in the unique story world while only describing what is necessary. Use as few words as possible to convey a shape; save room for other details to really make the description stand out.</p>
+                    
+                    <div class="example">
+                        <div class="example-label">A Weak Example:</div>
+                        <p>The rain pelting the roof woke me from my afternoon nap and I stretched, cat-like. A glance at the clock showed that noon had long since passed. I shot up and ran for the front door, praying that I wasn't too late... but I was. There, lying on the rain-drenched step, was the soggy square package I'd been waiting for—soggy and swaying like a cardboard month.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-label">What's Wrong With This Example?</div>
+                        <p>It's simple: squares on their own are a bit boring. When they're being used as descriptors for contrast or comparison, other details should be included to make the image way with readers.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-label">A Stronger Option:</div>
+                        <p>The rain pelting the roof woke me from my afternoon nap and I stretched, cat-like. A glance at the clock showed that noon had long since passed. I shot up and ran for the front door, praying that I wasn't too late... but I was. There, lying on the rain-drenched step, was the package I'd been waiting for—soggy and swaying like a cardboard mouth.</p>
+                    </div>
+
+                    <div class="example">
+                        <div class="example-label">Why Does This Work?</div>
+                        <p>This one works better because there are a few more details (soggy, swaying, cardboard) to paint a form picture for the reader.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="social-icons">
+                    <a href="#" class="social-icon">f</a>
+                    <a href="#" class="social-icon">t</a>
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">@</a>
+                </div>
+
+                <div class="helpful-tip">
+                    <h4>Helpful Tip</h4>
+                    <p>Shape is one of the most essential ingredients of description, and using a comparison with a common object makes non-made or obvious writers can be a strong way to 'show' and online word economy. Sometimes the shape of something can have symbolic meaning, but even if it does not, describing important objects in the setting helps readers see the landscape and feel more part of the scene.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
