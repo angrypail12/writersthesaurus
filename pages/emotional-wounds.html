@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotional Wound Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .intro-text {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .wounds-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .wound-column {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .wound-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .wound-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .wounds-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Emotional Wound Thesaurus</h1>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="intro-text">
+            Emotional wounds from the past have the power to greatly impact our characters' personalities and choices in the future. Get to know your characters intimately by choosing the right emotional wound, understanding its effects will enable you to write realistic, fully-formed characters that resonate with readers and make sense for your story.
+        </div>
+
+        <div class="wounds-grid">
+            <div class="wound-column">
+                <a href="#" class="wound-link" onclick="navigateToWound('being-victimized-by-a-perpetrator-who-was-never-caught')">BEING VICTIMIZED BY A PERPETRATOR WHO WAS NEVER CAUGHT</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('caving-to-peer-pressure')">CAVING TO PEER PRESSURE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('childhood-sexual-abuse-by-a-known-person')">CHILDHOOD SEXUAL ABUSE BY A KNOWN PERSON</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('choosing-to-not-be-involved-in-a-childs-life')">CHOOSING TO NOT BE INVOLVED IN A CHILD'S LIFE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('cracking-under-pressure')">CRACKING UNDER PRESSURE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('crossing-moral-lines-to-survive')">CROSSING MORAL LINES TO SURVIVE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('declaring-bankruptcy')">DECLARING BANKRUPTCY</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('discovering-a-partners-sexual-orientation-secret')">DISCOVERING A PARTNER'S SEXUAL ORIENTATION SECRET</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('discovering-a-siblings-abuse')">DISCOVERING A SIBLING'S ABUSE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('discovering-hidden-information-about-ones-ancestry')">DISCOVERING HIDDEN INFORMATION ABOUT ONE'S ANCESTRY</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('divorcing-ones-spouse')">DIVORCING ONE'S SPOUSE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('domestic-abuse')">DOMESTIC ABUSE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('experiencing-poverty')">EXPERIENCING POVERTY</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('experiencing-the-death-of-a-parent-as-a-child-or-youth')">EXPERIENCING THE DEATH OF A PARENT AS A CHILD OR YOUTH</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('failing-at-school')">FAILING AT SCHOOL</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('failing-to-do-the-right-thing')">FAILING TO DO THE RIGHT THING</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('failing-to-save-someones-life')">FAILING TO SAVE SOMEONE'S LIFE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('failing-short-of-societys-physical-standards')">FAILING SHORT OF SOCIETY'S PHYSICAL STANDARDS</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('financial-ruin-due-to-a-spouses-irresponsibility')">FINANCIAL RUIN DUE TO A SPOUSE'S IRRESPONSIBILITY</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('finding-out-one-was-adopted')">FINDING OUT ONE WAS ADOPTED</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('finding-out-ones-child-was-abused')">FINDING OUT ONE'S CHILD WAS ABUSED</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('getting-dumped')">GETTING DUMPED</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('getting-lost-in-a-natural-environment')">GETTING LOST IN A NATURAL ENVIRONMENT</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('giving-a-child-up-for-adoption')">GIVING A CHILD UP FOR ADOPTION</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('growing-up-in-a-cult')">GROWING UP IN A CULT</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('growing-up-in-foster-care')">GROWING UP IN FOSTER CARE</a>
+            </div>
+
+            <div class="wound-column">
+                <a href="#" class="wound-link" onclick="navigateToWound('growing-up-in-the-public-eye')">GROWING UP IN THE PUBLIC EYE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('growing-up-in-the-shadow-of-a-successful-sibling')">GROWING UP IN THE SHADOW OF A SUCCESSFUL SIBLING</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('growing-up-with-a-siblings-disability-or-chronic-illness')">GROWING UP WITH A SIBLING'S DISABILITY OR CHRONIC ILLNESS</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('having-a-controlling-or-overly-strict-parent')">HAVING A CONTROLLING OR OVERLY STRICT PARENT</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('having-an-abortion')">HAVING AN ABORTION</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('having-ones-ideas-or-work-stolen')">HAVING ONE'S IDEAS OR WORK STOLEN</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('having-parents-who-favored-one-child-over-another')">HAVING PARENTS WHO FAVORED ONE CHILD OVER ANOTHER</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('having-too-big-to-survive')">HAVING TOO BIG TO SURVIVE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('identity-theft')">IDENTITY THEFT</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('infertility')">INFERTILITY</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('infidelity')">INFIDELITY</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('learning-that-one-parent-had-a-second-family')">LEARNING THAT ONE PARENT HAD A SECOND FAMILY</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('learning-that-ones-parent-was-a-monster')">LEARNING THAT ONE'S PARENT WAS A MONSTER</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('living-in-a-dangerous-neighborhood')">LIVING IN A DANGEROUS NEIGHBORHOOD</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('living-in-an-emotionally-repressed-household')">LIVING IN AN EMOTIONALLY REPRESSED HOUSEHOLD</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('living-through-civil-unrest')">LIVING THROUGH CIVIL UNREST</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('living-through-famine-or-drought')">LIVING THROUGH FAMINE OR DROUGHT</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('living-with-a-critical-medical-diagnosis')">LIVING WITH A CRITICAL MEDICAL DIAGNOSIS</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('living-with-an-abusive-caregiver')">LIVING WITH AN ABUSIVE CAREGIVER</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('living-with-chronic-pain-or-illness')">LIVING WITH CHRONIC PAIN OR ILLNESS</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('losing-a-limb')">LOSING A LIMB</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('losing-a-loved-one-due-to-a-professionals-negligence')">LOSING A LOVED ONE DUE TO A PROFESSIONAL'S NEGLIGENCE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('losing-a-loved-one-to-a-random-act-of-violence')">LOSING A LOVED ONE TO A RANDOM ACT OF VIOLENCE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('losing-one-or-finding-out-about-ones-ancestry')">LOSING ONE OR FINDING OUT ABOUT ONE'S ANCESTRY</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('making-a-very-public-mistake')">MAKING A VERY PUBLIC MISTAKE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('misplaced-loyalty')">MISPLACED LOYALTY</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('not-being-a-priority-growing-up')">NOT BEING A PRIORITY GROWING UP</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('poor-judgment-leading-to-unintended-consequences')">POOR JUDGMENT LEADING TO UNINTENDED CONSEQUENCES</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('prejudice-or-discrimination')">PREJUDICE OR DISCRIMINATION</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('sexual-dysfunction')">SEXUAL DYSFUNCTION</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('social-difficulties')">SOCIAL DIFFICULTIES</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('telling-the-truth-but-not-being-believed')">TELLING THE TRUTH BUT NOT BEING BELIEVED</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('the-death-of-a-pet')">THE DEATH OF A PET</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('the-death-of-ones-child')">THE DEATH OF ONE'S CHILD</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('unrequited-love')">UNREQUITED LOVE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('watching-someone-die')">WATCHING SOMEONE DIE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('witnessing-a-murder')">WITNESSING A MURDER</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('witnessing-violence-at-a-young-age')">WITNESSING VIOLENCE AT A YOUNG AGE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('wrongful-imprisonment')">WRONGFUL IMPRISONMENT</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to main thesaurus page');
+        }
+
+        function navigateToWound(woundSlug) {
+            alert(`Navigating to: ${woundSlug}\n\nNext, you can show me the content for specific wound pages you'd like me to build!`);
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html> onclick="navigateToWound('a-caregiving')">A CAREGIVING</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-child-dying-on-ones-watch')">A CHILD DYING ON ONE'S WATCH</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-home-invasion')">A HOME INVASION</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-house-fire')">A HOUSE FIRE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-learning-disability')">A LEARNING DISABILITY</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-life-threatening-accident')">A LIFE-THREATENING ACCIDENT</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-loved-ones-suicide')">A LOVED ONE'S SUICIDE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-miscarriage-or-stillbirth')">A MISCARRIAGE OR STILLBIRTH</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-natural-or-man-made-disaster')">A NATURAL OR MAN-MADE DISASTER</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-nomadic-childhood')">A NOMADIC CHILDHOOD</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-parents-abandonment-or-rejection')">A PARENT'S ABANDONMENT OR REJECTION</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-parents-divorce')">A PARENT'S DIVORCE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-physical-assault')">A PHYSICAL ASSAULT</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-physical-disfigurement')">A PHYSICAL DISFIGUREMENT</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-school-shooting')">A SCHOOL SHOOTING</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-siblings-betrayal')">A SIBLING'S BETRAYAL</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-speech-impediment')">A SPEECH IMPEDIMENT</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-terminal-illness-diagnosis')">A TERMINAL ILLNESS DIAGNOSIS</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-toxic-relationship')">A TOXIC RELATIONSHIP</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('a-traumatic-brain-injury')">A TRAUMATIC BRAIN INJURY</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('abandonment-over-an-unexpected-pregnancy')">ABANDONMENT OVER AN UNEXPECTED PREGNANCY</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('accidentally-killing-someone')">ACCIDENTALLY KILLING SOMEONE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('an-abuse-of-power')">AN ABUSE OF POWER</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('attaining-a-mental-condition')">ATTAINING A MENTAL CONDITION</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('bearing-the-responsibility-for-many-deaths')">BEARING THE RESPONSIBILITY FOR MANY DEATHS</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('becoming-a-caregiver-at-an-early-age')">BECOMING A CAREGIVER AT AN EARLY AGE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('becoming-homeless-for-reasons-out-of-ones-control')">BECOMING HOMELESS FOR REASONS OUT OF ONE'S CONTROL</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-bullied')">BEING BULLIED</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-disappointed-by-a-role-model')">BEING DISAPPOINTED BY A ROLE MODEL</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-disowned-or-shunned')">BEING DISOWNED OR SHUNNED</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-falsely-accused-of-a-crime')">BEING FALSELY ACCUSED OF A CRIME</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-fired-or-laid-off')">BEING FIRED OR LAID OFF</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-forced-to-keep-a-dark-secret')">BEING FORCED TO KEEP A DARK SECRET</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-forced-to-leave-ones-homeland')">BEING FORCED TO LEAVE ONE'S HOMELAND</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-held-captive')">BEING HELD CAPTIVE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-humiliated-by-others')">BEING HUMILIATED BY OTHERS</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-illegitimately-incarcerated-for-a-crime')">BEING ILLEGITIMATELY INCARCERATED FOR A CRIME</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-left-down-by-a-trusted-organization-or-social-system')">BEING LET DOWN BY A TRUSTED ORGANIZATION OR SOCIAL SYSTEM</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-raised-by-a-narcissist')">BEING RAISED BY A NARCISSIST</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-raised-by-an-addict')">BEING RAISED BY AN ADDICT</a>
+            </div>
+
+            <div class="wound-column">
+                <a href="#" class="wound-link" onclick="navigateToWound('being-raised-by-neglectful-parents')">BEING RAISED BY NEGLECTFUL PARENTS</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-raised-by-overprotective-parents')">BEING RAISED BY OVERPROTECTIVE PARENTS</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-raised-by-parents-who-loved-conditionally')">BEING RAISED BY PARENTS WHO LOVED CONDITIONALLY</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-rejected-by-ones-peers')">BEING REJECTED BY ONE'S PEERS</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-sent-away-as-a-child')">BEING SENT AWAY AS A CHILD</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-sexually-violated')">BEING SEXUALLY VIOLATED</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-so-beautiful-its-all-people-see')">BEING SO BEAUTIFUL, IT'S ALL PEOPLE SEE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-starved')">BEING STARVED</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-the-product-of-a-rape')">BEING THE PRODUCT OF A RAPE</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-the-victim-of-a-vicious-rumor')">BEING THE VICTIM OF A VICIOUS RUMOR</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-tortured')">BEING TORTURED</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-trapped-in-a-collapsed-building')">BEING TRAPPED IN A COLLAPSED BUILDING</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-trapped-with-a-dead-body')">BEING TRAPPED WITH A DEAD BODY</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-treated-as-property')">BEING TREATED AS PROPERTY</a>
+                <a href="#" class="wound-link" onclick="navigateToWound('being-unfairly-blamed-for-someones-death')">BEING UNFAIRLY BLAMED FOR SOMEONE'S DEATH</a>
+                <a href="#" class="wound-link"
