@@ -217,8 +217,8 @@
         }
 
         function navigateToTexture(textureSlug) {
-            alert(`Navigating to: ${textureSlug}\n\nNext, you can show me the content for specific texture pages you'd like me to build!`);
-        }
+    window.location.href = `textures/${textureSlug}.html`;
+}
 
         // Add interactivity to navigation dots
         document.querySelectorAll('.dot').forEach((dot, index) => {
