@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Negative Trait Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .intro-text {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .traits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .trait-column {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .trait-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .trait-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .traits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Negative Trait Thesaurus</h1>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="intro-text">
+            Memorable characters are complex and should have both flaws and positive qualities. Specific negative traits will not only make your characters more believable, they will provide weaknesses that must be overcome in order to attain success. It's our hope that you'll be able to use this thesaurus to round out the dark side of your character's personality.
+        </div>
+
+        <div class="traits-grid">
+            <div class="trait-column">
+                <a href="#" class="trait-link" onclick="navigateToTrait('abrasive')">ABRASIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('addictive')">ADDICTIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('antisocial')">ANTISOCIAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('apathetic')">APATHETIC</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('callous')">CALLOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('catty')">CATTY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('childish')">CHILDISH</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('cocky')">COCKY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('compulsive')">COMPULSIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('confrontational')">CONFRONTATIONAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('controlling')">CONTROLLING</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('cowardly')">COWARDLY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('cruel')">CRUEL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('cynical')">CYNICAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('defensive')">DEFENSIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('devious')">DEVIOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('dishonest')">DISHONEST</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('disloyal')">DISLOYAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('disorganized')">DISORGANIZED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('disrespectful')">DISRESPECTFUL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('evasive')">EVASIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('evil')">EVIL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('extravagant')">EXTRAVAGANT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('fanatical')">FANATICAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('flaky')">FLAKY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('foolish')">FOOLISH</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('forgetful')">FORGETFUL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('frivolous')">FRIVOLOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('fussy')">FUSSY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('gossipy')">GOSSIPY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('greedy')">GREEDY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('grimingy')">GRIMINY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('gullible')">GULLIBLE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('haughty')">HAUGHTY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('hostile')">HOSTILE</a>
+            </div>
+
+            <div class="trait-column">
+                <a href="#" class="trait-link" onclick="navigateToTrait('humorless')">HUMORLESS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('hypocritical')">HYPOCRITICAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('ignorant')">IGNORANT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('impatient')">IMPATIENT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('impulsive')">IMPULSIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('inattentive')">INATTENTIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('indecisive')">INDECISIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('inflexible')">INFLEXIBLE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('inhibited')">INHIBITED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('insecure')">INSECURE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('irrational')">IRRATIONAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('irresponsible')">IRRESPONSIBLE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('jealous')">JEALOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('judgmental')">JUDGMENTAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('know-it-all')">KNOW-IT-ALL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('lazy')">LAZY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('macho')">MACHO</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('manipulative')">MANIPULATIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('martyr')">MARTYR</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('materialistic')">MATERIALISTIC</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('melodramatic')">MELODRAMATIC</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('mischievous')">MISCHIEVOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('morbid')">MORBID</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('nagging')">NAGGING</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('needy')">NEEDY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('nervous')">NERVOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('nosy')">NOSY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('obsessive')">OBSESSIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('oversensitive')">OVERSENSITIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('paranoid')">PARANOID</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('perfectionist')">PERFECTIONIST</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('pessimistic')">PESSIMISTIC</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('possessive')">POSSESSIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('prejudiced')">PREJUDICED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('pretentious')">PRETENTIOUS</a>
+            </div>
+
+            <div class="trait-column">
+                <a href="#" class="trait-link" onclick="navigateToTrait('pushy')">PUSHY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('rebellious')">REBELLIOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('reckless')">RECKLESS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('resentful')">RESENTFUL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('rowdy')">ROWDY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('scatterbrained')">SCATTERBRAINED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('self-destructive')">SELF-DESTRUCTIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('self-indulgent')">SELF-INDULGENT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('selfish')">SELFISH</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('sleazy')">SLEAZY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('spoiled')">SPOILED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('stingy')">STINGY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('stubborn')">STUBBORN</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('subservient')">SUBSERVIENT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('superstitious')">SUPERSTITIOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('suspicious')">SUSPICIOUS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('tactless')">TACTLESS</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('temperamental')">TEMPERAMENTAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('timid')">TIMID</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('uncommunicative')">UNCOMMUNICATIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('uncooperative')">UNCOOPERATIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('uncouth')">UNCOUTH</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('unethical')">UNETHICAL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('ungrateful')">UNGRATEFUL</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('unintelligent')">UNINTELLIGENT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('vain')">VAIN</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('verbose')">VERBOSE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('vindictive')">VINDICTIVE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('violent')">VIOLENT</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('volatile')">VOLATILE</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('weak-willed')">WEAK-WILLED</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('whiny')">WHINY</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('withdrawn')">WITHDRAWN</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('workaholic')">WORKAHOLIC</a>
+                <a href="#" class="trait-link" onclick="navigateToTrait('worrywart')">WORRYWART</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to main thesaurus page');
+        }
+
+        function navigateToTrait(traitSlug) {
+            alert(`Navigating to: ${traitSlug}\n\nNext, you can show me the content for specific trait pages you'd like me to build!`);
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>
