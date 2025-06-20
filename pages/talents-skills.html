@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent and Skill Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .intro-text {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .talents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .talent-column {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .talent-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .talent-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .talents-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Talent and Skill Thesaurus</h1>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="intro-text">
+            Choosing a talent or skill that fits with your character's personality, lifestyle, and values can go a long way to helping them break free of the common stereotypes seen so often in fiction. This thesaurus will help you find the perfect quality or two that will show readers your character's uniqueness while also providing depth that makes sense for your story.
+        </div>
+
+        <div class="talents-grid">
+            <div class="talent-column">
+                <a href="#" class="talent-link" onclick="navigateToTalent('a-knack-for-languages')">A KNACK FOR LANGUAGES</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('a-knack-for-making-money')">A KNACK FOR MAKING MONEY</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('a-way-with-animals')">A WAY WITH ANIMALS</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('archery')">ARCHERY</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('astral-projection')">ASTRAL PROJECTION</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('astrological-divination')">ASTROLOGICAL DIVINATION</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('baking')">BAKING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('basic-first-aid')">BASIC FIRST AID</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('blending-in')">BLENDING IN</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('carpentry')">CARPENTRY</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('charm')">CHARM</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('computer-hacking')">COMPUTER HACKING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('creativity')">CREATIVITY</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('detail-oriented')">DETAIL-ORIENTED</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('dexterity')">DEXTERITY</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('empathy')">EMPATHY</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('enhanced-hearing')">ENHANCED HEARING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('enhanced-sense-of-smell')">ENHANCED SENSE OF SMELL</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('enhanced-taste-buds')">ENHANCED TASTE BUDS</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('equanimity')">EQUANIMITY</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('esp-clairvoyance')">ESP (CLAIRVOYANCE)</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('exceptional-memory')">EXCEPTIONAL MEMORY</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('farming')">FARMING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('fishing')">FISHING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('foraging')">FORAGING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('gaining-the-trust-of-others')">GAINING THE TRUST OF OTHERS</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('gaming')">GAMING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('gardening')">GARDENING</a>
+            </div>
+
+            <div class="talent-column">
+                <a href="#" class="talent-link" onclick="navigateToTalent('good-listening-skills')">GOOD LISTENING SKILLS</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('good-with-numbers')">GOOD WITH NUMBERS</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('haggling')">HAGGLING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('herbalism')">HERBALISM</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('high-pain-tolerance')">HIGH PAIN TOLERANCE</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('hospitality')">HOSPITALITY</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('hot-wiring-a-car')">HOT-WIRING A CAR</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('intuition')">INTUITION</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('knife-throwing')">KNIFE THROWING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('knowledge-of-explosives')">KNOWLEDGE OF EXPLOSIVES</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('leadership')">LEADERSHIP</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('lip-reading')">LIP-READING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('lying')">LYING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('making-friends')">MAKING FRIENDS</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('making-people-laugh')">MAKING PEOPLE LAUGH</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('mechanically-inclined')">MECHANICALLY INCLINED</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('mentalism')">MENTALISM</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('mimicking')">MIMICKING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('multitasking')">MULTITASKING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('musicality')">MUSICALITY</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('networking')">NETWORKING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('organization')">ORGANIZATION</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('out-of-the-box-thinking')">OUT-OF-THE-BOX THINKING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('parkour')">PARKOUR</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('peacekeeping')">PEACEKEEPING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('performing')">PERFORMING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('photographic-memory')">PHOTOGRAPHIC MEMORY</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('predicting-the-weather')">PREDICTING THE WEATHER</a>
+            </div>
+
+            <div class="talent-column">
+                <a href="#" class="talent-link" onclick="navigateToTalent('promotion')">PROMOTION</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('psychokinesis')">PSYCHOKINESIS</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('public-speaking')">PUBLIC SPEAKING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('reading-people')">READING PEOPLE</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('regeneration')">REGENERATION</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('repurposing')">REPURPOSING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('research')">RESEARCH</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('sales')">SALES</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('sculpting')">SCULPTING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('self-defense')">SELF-DEFENSE</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('sewing')">SEWING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('sharpshooting')">SHARPSHOOTING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('sleight-of-hand')">SLEIGHT OF HAND</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('stamina')">STAMINA</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('strategic-thinking')">STRATEGIC THINKING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('strong-breath-control')">STRONG BREATH CONTROL</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('super-strength')">SUPER STRENGTH</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('survival-skills')">SURVIVAL SKILLS</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('swift-footedness')">SWIFT-FOOTEDNESS</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('talking-with-the-dead')">TALKING WITH THE DEAD</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('teaching')">TEACHING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('throwing-ones-voice')">THROWING ONE'S VOICE</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('vision')">VISION</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('whittling')">WHITTLING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('wilderness-navigation')">WILDERNESS NAVIGATION</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('wrestling')">WRESTLING</a>
+                <a href="#" class="talent-link" onclick="navigateToTalent('writing')">WRITING</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to main thesaurus page');
+        }
+
+        function navigateToTalent(talentSlug) {
+            alert(`Navigating to: ${talentSlug}\n\nNext, you can show me the content for specific talent pages you'd like me to build!`);
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>
