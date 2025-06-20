@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thesaurus Description Database</title>
+    <meta name="description" content="Professional thesaurus database for writers - comprehensive show-don't-tell resource">
+    <meta name="keywords" content="writing, thesaurus, character development, story, fiction, writers">
+    <meta property="og:title" content="Writer's Thesaurus Database">
+    <meta property="og:description" content="The largest show-don't-tell database for writers">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .social-links {
+            margin-top: 30px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #8b9dc3;
+            color: white;
+            text-decoration: none;
+            border-radius: 50%;
+            margin: 0 5px;
+            line-height: 40px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #6a7ba8;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+            text-align: center;
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Background images for each category */
+        .character-motivations { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%234a5568" width="400" height="200"/><circle fill="%23ed8936" cx="100" cy="100" r="30"/><path fill="%23f7fafc" d="M200 50 L220 100 L200 150 L180 100 Z"/></svg>'); }
+        .character-types { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%232d3748" width="400" height="200"/><rect fill="%234299e1" x="150" y="75" width="100" height="50" rx="10"/></svg>'); }
+        .colors-patterns { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%234c51bf" width="400" height="200"/><circle fill="%23ed64a6" cx="200" cy="100" r="40"/></svg>'); }
+        .conflicts { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%23553c9a" width="400" height="200"/><polygon fill="%23f56565" points="200,50 240,150 160,150"/></svg>'); }
+        .emotion-amplifiers { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%231a365d" width="400" height="200"/><rect fill="%2348bb78" x="100" y="80" width="200" height="40" rx="20"/></svg>'); }
+        .emotional-wounds { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%23742a2a" width="400" height="200"/><path fill="%23fc8181" d="M200 60 C220 80, 240 100, 200 140 C160 100, 180 80, 200 60 Z"/></svg>'); }
+        .emotions { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%23975a16" width="400" height="200"/><circle fill="%23fbb040" cx="200" cy="100" r="35"/></svg>'); }
+        .fears { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%23234e52" width="400" height="200"/><path fill="%2338b2ac" d="M150 80 L250 80 L220 120 L180 120 Z"/></svg>'); }
+        .negative-traits { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%23744210" width="400" height="200"/><rect fill="%23d69e2e" x="120" y="70" width="160" height="60" rx="15"/></svg>'); }
+        .occupations { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%23652b19" width="400" height="200"/><rect fill="%23ed8936" x="150" y="80" width="100" height="40" rx="5"/></svg>'); }
+        .physical-features { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%23822727" width="400" height="200"/><circle fill="%23f6e05e" cx="200" cy="100" r="30"/></svg>'); }
+        .positive-traits { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%23276749" width="400" height="200"/><path fill="%2368d391" d="M160 80 L240 80 L220 120 L180 120 Z"/></svg>'); }
+        .relationships { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%234c1d95" width="400" height="200"/><circle fill="%23a78bfa" cx="180" cy="100" r="25"/><circle fill="%23a78bfa" cx="220" cy="100" r="25"/></svg>'); }
+        .settings { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%231a202c" width="400" height="200"/><rect fill="%234fd1c7" x="100" y="120" width="200" height="60" rx="10"/></svg>'); }
+        .shapes { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%23975a16" width="400" height="200"/><polygon fill="%23fed7aa" points="200,60 230,90 200,120 170,90"/></svg>'); }
+        .talents-skills { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%23744210" width="400" height="200"/><polygon fill="%23f6e05e" points="200,50 210,80 240,80 220,100 230,130 200,115 170,130 180,100 160,80 190,80"/></svg>'); }
+        .textures { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%23553c9a" width="400" height="200"/><rect fill="%23d6f5d6" x="120" y="70" width="160" height="60" rx="10"/></svg>'); }
+        .themes-symbols { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%23234e52" width="400" height="200"/><circle fill="%23fbb040" cx="200" cy="100" r="40" stroke="%23fed7aa" stroke-width="3" fill="none"/></svg>'); }
+        .weather { background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200"><rect fill="%232d3748" width="400" height="200"/><path fill="%23fbb040" d="M200 80 L210 90 L200 100 L190 90 Z"/><path fill="%23fc8181" d="M200 110 L205 115 L200 125 L195 115 Z"/></svg>'); }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Thesaurus Description Database</h1>
+            <p>Ready to level up your description and write powerful stories? Search the largest show-don't-tell database for writers available anywhere.</p>
+            
+            <div class="social-links">
+                <a href="#" title="Facebook">f</a>
+                <a href="#" title="Twitter">t</a>
+                <a href="#" title="Pinterest">p</a>
+                <a href="#" title="LinkedIn">in</a>
+                <a href="#" title="Email">@</a>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div class="category-card" onclick="window.location.href='pages/character-motivations.html'">
+                <div class="card-image character-motivations"></div>
+                <div class="card-content">
+                    <div class="card-title">Character Motivations</div>
+                    <div class="card-description">
+                        Explore character arc from all angles by digging into what is motivating your protagonist, the obstacles that could stand in their way, and how sacrifices may be required if they are to succeed.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/character-types-tropes.html'">
+                <div class="card-image character-types"></div>
+                <div class="card-content">
+                    <div class="card-title">Character Types and Tropes</div>
+                    <div class="card-description">
+                        Craft unforgettable characters by deepening familiar tropes and archetypes through tailor-made fears, struggles, and cliché-defying twists.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/colors-patterns.html'">
+                <div class="card-image colors-patterns"></div>
+                <div class="card-content">
+                    <div class="card-title">Colors and Patterns</div>
+                    <div class="card-description">
+                        Create a stronger visual image for readers by choosing the perfect descriptive matches to the colors of your world, helping readers make emotional associations that draw them in.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/conflicts.html'">
+                <div class="card-image conflicts"></div>
+                <div class="card-content">
+                    <div class="card-title">Conflicts</div>
+                    <div class="card-description">
+                        Conflict should generate problems for your character, cause internal crises, and force them to adapt and fight hard to win. This database will provide you with endless possibilities for fresh story complications.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/emotion-amplifiers.html'">
+                <div class="card-image emotion-amplifiers"></div>
+                <div class="card-content">
+                    <div class="card-title">Emotion Amplifiers</div>
+                    <div class="card-description">
+                        Altering a character's mood through emotional amplifiers (such as hunger, illness, stress, and pain) is a great way to generate tension, turn up the heat, and complicate your character's situation.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/emotional-wounds.html'">
+                <div class="card-image emotional-wounds"></div>
+                <div class="card-content">
+                    <div class="card-title">Emotional Wounds</div>
+                    <div class="card-description">
+                        While wounds generate fears, misbeliefs, and dysfunction, they also steer a character's decisions and actions. Understanding your character's trauma will help you plot a meaningful goal (which may include a path to overcoming this past pain).
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/emotions.html'">
+                <div class="card-image emotions"></div>
+                <div class="card-content">
+                    <div class="card-title">Emotions</div>
+                    <div class="card-description">
+                        Brainstorm fresh body language, visceral sensations, thoughts, dialogue cues, and actions to express your character's emotions in ways that fit their personality and emotional range.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/fears.html'">
+                <div class="card-image fears"></div>
+                <div class="card-content">
+                    <div class="card-title">Fears</div>
+                    <div class="card-description">
+                        Fears stemming from difficult experiences, mental health conditions, and emotional trauma can limit your character, holding them back from what they want most. Brainstorm how real-life fears will steer their behavior and hamper them in the story.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/negative-traits.html'">
+                <div class="card-image negative-traits"></div>
+                <div class="card-content">
+                    <div class="card-title">Negative Traits</div>
+                    <div class="card-description">
+                        Readers want to see characters who are flawed, complex, and far from perfect. Choose negative traits that fit the character, cause them problems in the story, and may need to be shed if they are to achieve their story goal.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/occupations.html'">
+                <div class="card-image occupations"></div>
+                <div class="card-content">
+                    <div class="card-title">Occupations</div>
+                    <div class="card-description">
+                        A job or career is loaded with show-don't-tell details that reveal your character's personality, morals, skills, and more. It also provides a natural environment for work-life crossover friction and (if you choose it) goal achievement.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/physical-features.html'">
+                <div class="card-image physical-features"></div>
+                <div class="card-content">
+                    <div class="card-title">Physical Features</div>
+                    <div class="card-description">
+                        Say goodbye to boring physical description dumps! Instead, use this database to choose meaningful details that seed hints about who your character is, their personality traits, preferences, attitudes, and much more.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/positive-traits.html'">
+                <div class="card-image positive-traits"></div>
+                <div class="card-content">
+                    <div class="card-title">Positive Traits</div>
+                    <div class="card-description">
+                        To draw readers in, well-layered characters should have admirable qualities that showcase their identity, reveal morals, help them communicate, and assist them in achieving their story goals. This thesaurus provides you with endless options for unique personality combinations.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/relationships.html'">
+                <div class="card-image relationships"></div>
+                <div class="card-content">
+                    <div class="card-title">Relationships</div>
+                    <div class="card-description">
+                        Healthy and supportive or dysfunctional and toxic, relationships add drama and show readers who your character really is. So surround your protagonist with allies and enemies, mirrors and foils. Use their connections with others to infuse the story with tension, conflict, and meaningful stakes.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/settings.html'">
+                <div class="card-image settings"></div>
+                <div class="card-content">
+                    <div class="card-title">Settings</div>
+                    <div class="card-description">
+                        Instead of choosing a generic location for a scene, scan our setting database to find one that perfectly fits the action, generates natural conflict, and triggers the character's emotions. Then, use sensory details to pull readers into the scene and the character's experience.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/shapes.html'">
+                <div class="card-image shapes"></div>
+                <div class="card-content">
+                    <div class="card-title">Shapes</div>
+                    <div class="card-description">
+                        Convey shapes quickly with apt comparisons, saving your word count for other descriptive areas, such as emotions, character development, sensory details, and conflict.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/talents-skills.html'">
+                <div class="card-image talents-skills"></div>
+                <div class="card-content">
+                    <div class="card-title">Talents and Skills</div>
+                    <div class="card-description">
+                        What special skills or talents make your character exceptional and unique? Bonus points if this quality is something others fail to see the value of...especially when it ends up helping the character achieve their goal!
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/textures.html'">
+                <div class="card-image textures"></div>
+                <div class="card-content">
+                    <div class="card-title">Textures</div>
+                    <div class="card-description">
+                        Touch is a vital sense for engaging readers. This thesaurus helps you choose details that will make important story moments more intimate, pulling readers into the character's viewpoint.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/themes-symbols.html'">
+                <div class="card-image themes-symbols"></div>
+                <div class="card-content">
+                    <div class="card-title">Themes and Symbols</div>
+                    <div class="card-description">
+                        Not only will symbols deepen your story's meaning, they also turn readers into active participants as they gather the clues about your character's emotions, backstory, and more.
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-card" onclick="window.location.href='pages/weather.html'">
+                <div class="card-image weather"></div>
+                <div class="card-content">
+                    <div class="card-title">Weather and Earthly Phenomena</div>
+                    <div class="card-description">
+                        Weather is packed with storytelling power, altering a character's emotions, creating mood, foreshadowing, and more. It also adds realism to the story, so make sure to include it in your scenes.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px; padding: 30px; background: white; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+            <h2 style="margin-bottom: 15px; color: #333;">Never struggle with Show-and-Tell again.</h2>
+            <p style="margin-bottom: 20px; color: #666;">Start your free exploration to access story details that will push your plot forward, characterize your cast, and bring emotion to the page.</p>
+            <button style="background: #8b9dc3; color: white; padding: 12px 30px; border: none; border-radius: 5px; font-size: 1.1rem; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#6a7ba8'" onmouseout="this.style.backgroundColor='#8b9dc3'">
+                EXPLORE NOW
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Add some hover effects
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
