@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Motivation Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .mini-lesson {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .intro-text {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .motivations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .motivation-column {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .motivation-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .motivation-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .motivation-link.dark {
+            color: #4a5568;
+        }
+
+        .motivation-link.dark:hover {
+            color: #2d3748;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .motivations-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Character Motivation Thesaurus</h1>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="mini-lesson">
+            <div class="intro-text">
+                A compelling goal is one of the cornerstones of strong fiction, but conveying why the character is driven to achieve it is what draws readers in and makes them care. Explore all angles of character arc by digging deep into what is motivating your protagonist, the obstacles that could stand in their way, and how sacrifices may play a role if the character is to succeed.
+            </div>
+            <div>
+                <strong>*Dark Motivations:</strong> These are unhealthy or negative goals commonly embraced by villains or protagonists pursuing a false motivation (one they believe will fulfill them but ultimately will not).
+            </div>
+            <div>
+                <strong>*Adult Motivations:</strong> Goals like these are often pursued by children and young adults and frequently occur in stories written for these age groups.
+            </div>
+        </div>
+
+        <div class="motivations-grid">
+            <div class="motivation-column">
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('achieving-dominion-over-another')">ACHIEVING DOMINION OVER ANOTHER (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('achieving-spiritual-enlightenment')">ACHIEVING SPIRITUAL ENLIGHTENMENT</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('avoiding-certain-death')">AVOIDING CERTAIN DEATH</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('avoiding-financial-ruin')">AVOIDING FINANCIAL RUIN</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('beating-a-diagnosis-or-condition')">BEATING A DIAGNOSIS OR CONDITION</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('becoming-a-leader-of-others')">BECOMING A LEADER OF OTHERS</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('becoming-the-sole-power-or-authority')">BECOMING THE SOLE POWER OR AUTHORITY (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('being-a-philanthropist')">BEING A PHILANTHROPIST</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('being-accepted-by-others')">BEING ACCEPTED BY OTHERS</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('being-acknowledged-or-appreciated-by-family')">BEING ACKNOWLEDGED OR APPRECIATED BY FAMILY</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('being-the-best-at-something')">BEING THE BEST AT SOMETHING</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('breaking-people-so-they-abandon-their-beliefs')">BREAKING PEOPLE SO THEY ABANDON THEIR BELIEFS (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('caring-for-an-aging-parent')">CARING FOR AN AGING PARENT</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('carrying-on-a-legacy')">CARRYING ON A LEGACY</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('capturing-the-bad-guy-or-girl')">CAPTURING THE BAD GUY OR GIRL</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('causing-someone-pain')">CAUSING SOMEONE PAIN (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('coming-to-grips-with-a-mental-condition')">COMING TO GRIPS WITH A MENTAL CONDITION</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('controlling-others')">CONTROLLING OTHERS (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('coping-with-a-learning-disability-or-illness')">COPING WITH A LEARNING DISABILITY OR ILLNESS (ADULT)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('correcting-a-perceived-mistake')">CORRECTING A PERCEIVED MISTAKE (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('creating-or-discovering-something-important')">CREATING OR DISCOVERING SOMETHING IMPORTANT</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('dealing-with-bullies')">DEALING WITH BULLIES (ADULT)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('discovering-ones-true-self')">DISCOVERING ONE'S TRUE SELF</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('doing-the-right-thing')">DOING THE RIGHT THING</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('doing-the-right-thing-adult')">DOING THE RIGHT THING (ADULT)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('embracing-a-personal-identity')">EMBRACING A PERSONAL IDENTITY (ADULT)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('escaping-a-dangerous-life-one-no-longer-wants-to-live')">ESCAPING A DANGEROUS LIFE ONE NO LONGER WANTS TO LIVE</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('escaping-a-killer')">ESCAPING A KILLER</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('escaping-confinement')">ESCAPING CONFINEMENT</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('escaping-danger-adult')">ESCAPING DANGER (ADULT)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('escaping-homelessness')">ESCAPING HOMELESSNESS</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('escaping-invaders')">ESCAPING INVADERS</a>
+            </div>
+
+            <div class="motivation-column">
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('escaping-whispered-disaster')">ESCAPING WHISPERED DISASTER</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('evading-responsibility')">EVADING RESPONSIBILITY (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('exploring-ones-biological-roots')">EXPLORING ONE'S BIOLOGICAL ROOTS</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('finding-a-lifelong-partner')">FINDING A LIFELONG PARTNER</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('finding-friendship-or-companionship')">FINDING FRIENDSHIP OR COMPANIONSHIP</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('finding-ones-purpose')">FINDING ONE'S PURPOSE</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('finding-something-lost')">FINDING SOMETHING LOST</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('fitting-in-adult')">FITTING IN (ADULT)</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('forcing-a-big-change')">FORCING A BIG CHANGE (DARK)</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('forcing-conversion')">FORCING CONVERSION (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('forgiving-oneself')">FORGIVING ONESELF</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('gaining-control-over-ones-own-life')">GAINING CONTROL OVER ONE'S OWN LIFE</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('getting-revenge')">GETTING REVENGE (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('giving-up-a-child')">GIVING UP A CHILD</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('having-a-child')">HAVING A CHILD</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('having-it-all')">HAVING IT ALL (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('helping-a-loved-one-recognize-they-are-hurting-themselves-and-others')">HELPING A LOVED ONE RECOGNIZE THEY ARE HURTING THEMSELVES AND OTHERS</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('keeping-what-one-has-no-matter-what')">KEEPING WHAT ONE HAS NO MATTER WHAT (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('learning-to-trust-adult')">LEARNING TO TRUST (ADULT)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('making-someone-proud')">MAKING SOMEONE PROUD</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('navigating-a-changing-family-situation-adult')">NAVIGATING A CHANGING FAMILY SITUATION (ADULT)</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('obliterating-an-enemy')">OBLITERATING AN ENEMY (DARK)</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('obsessively-pursuing-a-relationship')">OBSESSIVELY PURSUING A RELATIONSHIP (DARK)</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('obtaining-glory-whatever-the-cost')">OBTAINING GLORY WHATEVER THE COST (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('obtaining-shelter-from-the-elements')">OBTAINING SHELTER FROM THE ELEMENTS</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('overcoming-a-debilitating-fear')">OVERCOMING A DEBILITATING FEAR</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('overcoming-a-fear-adult')">OVERCOMING A FEAR (ADULT)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('overcoming-abuse-and-learning-to-trust')">OVERCOMING ABUSE AND LEARNING TO TRUST</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('overcoming-addiction')">OVERCOMING ADDICTION</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('overthrowing-good-with-evil')">OVERTHROWING GOOD WITH EVIL (DARK)</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('profiteering')">PROFITEERING (DARK)</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('promoting-chaos')">PROMOTING CHAOS (DARK)</a>
+            </div>
+
+            <div class="motivation-column">
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('protecting-a-loved-one')">PROTECTING A LOVED ONE</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('protecting-ones-home-or-property')">PROTECTING ONE'S HOME OR PROPERTY</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('providing-for-ones-family')">PROVIDING FOR ONE'S FAMILY</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('providing-security-for-future-generations')">PROVIDING SECURITY FOR FUTURE GENERATIONS</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('proving-someone-wrong')">PROVING SOMEONE WRONG</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('pursuing-a-passion')">PURSUING A PASSION</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('pursuing-a-toxic-desire')">PURSUING A TOXIC DESIRE (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('pursuing-justice-for-oneself-or-others')">PURSUING JUSTICE FOR ONESELF OR OTHERS</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('pursuing-knowledge')">PURSUING KNOWLEDGE</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('pursuing-mastery-of-a-skill-or-talent')">PURSUING MASTERY OF A SKILL OR TALENT</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('realizing-a-dream')">REALIZING A DREAM</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('reconciling-with-an-estranged-family-member')">RECONCILING WITH AN ESTRANGED FAMILY MEMBER</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('repaying-a-debt')">REPAYING A DEBT</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('rescuing-a-loved-one-from-a-captor')">RESCUING A LOVED ONE FROM A CAPTOR</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('resisting-peer-pressure-adult')">RESISTING PEER PRESSURE (ADULT)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('restoring-ones-name-or-reputation')">RESTORING ONE'S NAME OR REPUTATION</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('righting-a-deep-wrong')">RIGHTING A DEEP WRONG</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('ruining-someones-life')">RUINING SOMEONE'S LIFE (DARK)</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('ruining-someones-reputation')">RUINING SOMEONE'S REPUTATION (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('saving-the-world')">SAVING THE WORLD</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('seeking-death')">SEEKING DEATH (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('seeking-others')">SEEKING OTHERS</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('solving-a-problem-adult')">SOLVING A PROBLEM (ADULT)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('stopping-an-event-from-happening')">STOPPING AN EVENT FROM HAPPENING</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('supporting-oneself-financially')">SUPPORTING ONESELF FINANCIALLY</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('surviving-loss')">SURVIVING LOSS</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('surviving-the-death-of-a-loved-one')">SURVIVING THE DEATH OF A LOVED ONE</a>
+                <a href="#" class="motivation-link dark" onclick="navigateToMotivation('taking-what-one-is-owed')">TAKING WHAT ONE IS OWED (DARK)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('trying-something-new-adult')">TRYING SOMETHING NEW (ADULT)</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('trying-to-succeed-where-one-has-previously-failed')">TRYING TO SUCCEED WHERE ONE HAS PREVIOUSLY FAILED</a>
+                <a href="#" class="motivation-link" onclick="navigateToMotivation('winning-a-competition')">WINNING A COMPETITION</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            // In a real implementation, this would navigate back to the main page
+            alert('Navigating back to main thesaurus page');
+            // window.history.back() or window.location.href = 'index.html';
+        }
+
+        function navigateToMotivation(motivationSlug) {
+            // This would navigate to individual motivation pages
+            alert(`Navigating to: ${motivationSlug}\n\nNext, you can show me the content for specific motivation pages you'd like me to build!`);
+            // In a real implementation: window.location.href = `motivations/${motivationSlug}.html`;
+        }
+
+        // Add some interactivity to the navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                // Remove active class from all dots
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                // Add active class to clicked dot
+                this.classList.add('active');
+                
+                // In a real implementation, this might navigate to different sections or pages
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>
