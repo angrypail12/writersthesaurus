@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue - Color and Pattern Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #4299e1;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #4299e1;
+            margin-bottom: 10px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #8b9dc3;
+            color: white;
+            text-decoration: none;
+            border-radius: 50%;
+            line-height: 30px;
+            text-align: center;
+            font-size: 0.8rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: #6a7ba8;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .shade-section {
+            margin-bottom: 25px;
+        }
+
+        .shade-title {
+            font-weight: bold;
+            color: #4299e1;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        .shade-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .shade-item {
+            font-size: 0.9rem;
+            line-height: 1.4;
+            color: #666;
+        }
+
+        .hues-section {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .hues-title {
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .hues-list {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .example-box {
+            background-color: #f0f4f8;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .example-text {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .symbolism-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .symbolism-link {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .symbolism-link:hover {
+            color: #1e4187;
+        }
+
+        .helpful-tip {
+            background-color: #e8f4f8;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #8b9dc3;
+            margin: 20px 0;
+        }
+
+        .tip-title {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .tip-content {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .shade-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../pages/colors-patterns.html" class="back-link">Back to Colors and Patterns</a>
+        
+        <div class="header">
+            <h1>Blue</h1>
+            <div class="social-links">
+                <a href="#" title="Facebook">f</a>
+                <a href="#" title="Twitter">t</a>
+                <a href="#" title="Pinterest">p</a>
+                <a href="#" title="LinkedIn">in</a>
+                <a href="#" title="Email">@</a>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Comparisons:</div>
+            
+            <div class="shade-section">
+                <div class="shade-title">Light Shades:</div>
+                <div class="shade-items">
+                    <div class="shade-item">A robin's egg</div>
+                    <div class="shade-item">An ocean in the Caribbean</div>
+                    <div class="shade-item">Forget-me-nots</div>
+                    <div class="shade-item">Cornflowers</div>
+                    <div class="shade-item">Periwinkles</div>
+                    <div class="shade-item">Pool water</div>
+                    <div class="shade-item">Mouthwash</div>
+                    <div class="shade-item">Wide open sky</div>
+                </div>
+            </div>
+
+            <div class="shade-section">
+                <div class="shade-title">Medium Shades:</div>
+                <div class="shade-items">
+                    <div class="shade-item">Pacific blue tang fish</div>
+                    <div class="shade-item">A blue jay</div>
+                    <div class="shade-item">A blue rose</div>
+                    <div class="shade-item">Curacao liquor</div>
+                    <div class="shade-item">The 'blue screen of death'</div>
+                    <div class="shade-item">The bluebell flower</div>
+                    <div class="shade-item">A peacock feather</div>
+                    <div class="shade-item">Cookie Monster</div>
+                    <div class="shade-item">Blung</div>
+                    <div class="shade-item">Blue beetle</div>
+                    <div class="shade-item">Blue morpho butterflies</div>
+                    <div class="shade-item">Turquoise</div>
+                </div>
+            </div>
+
+            <div class="shade-section">
+                <div class="shade-title">Dark Shades:</div>
+                <div class="shade-items">
+                    <div class="shade-item">Denim</div>
+                    <div class="shade-item">Blueberries</div>
+                    <div class="shade-item">Stormy water</div>
+                    <div class="shade-item">Sapphires</div>
+                    <div class="shade-item">Concord grapes</div>
+                    <div class="shade-item">Ink</div>
+                    <div class="shade-item">Huckleberries</div>
+                    <div class="shade-item">Blue cheese</div>
+                    <div class="shade-item">Frostbite</div>
+                    <div class="shade-item">Bruises</div>
+                    <div class="shade-item">Varicose veins</div>
+                    <div class="shade-item">Lakes</div>
+                    <div class="shade-item">Rivers</div>
+                    <div class="shade-item">Cobalt</div>
+                    <div class="shade-item">Lapis lazuli</div>
+                    <div class="shade-item">Blue shrimp</div>
+                </div>
+            </div>
+
+            <div class="hues-section">
+                <div class="hues-title">Hues Within This Color Spectrum:</div>
+                <div class="hues-list">azure, periwinkle, turquoise, aqua, sky, robin's egg, cerulean, cobalt, indigo, navy, royal, sapphire, teal, ultramarine, powder blue</div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Practical Examples:</div>
+            <p class="example-text">Colors are powerful descriptors, not filters. The right color comparison with a man-made or natural object will help paint an immediate picture, helping readers see the setting in a way that keeps the pace moving. When using something man-made or natural as a color comparison, choose one that is not only accurate and known to readers but also fits the mood. To feel authentic, the color choice should match the viewpoint character or narrator's history, education, and range of experiences.</p>
+
+            <div class="example-box">
+                <div class="example-title">A WEAK EXAMPLE:</div>
+                <div class="example-text">We reached Albert too late. His eyes stared ahead, glassy and unseeing, and his lips were blue, as if he had chugged a bottle of Scope only moments before expiring.</div>
+            </div>
+
+            <div class="example-box">
+                <div class="example-title">WHAT'S WRONG WITH THIS EXAMPLE?</div>
+                <div class="example-text">The comical twist at the end spoils the shock of finding a loved one dead. As well, while (most) mouthwash is blue, it doesn't tend to stain the things it touches.</div>
+            </div>
+
+            <div class="example-box">
+                <div class="example-title">A STRONGER OPTION:</div>
+                <div class="example-text">We reached Albert too late. His eyes stared ahead, glassy and unseeing, and his lips were blue, as if he had eaten a handful of ripe blueberries only moments before expiring.</div>
+            </div>
+
+            <div class="example-box">
+                <div class="example-title">WHY DOES THIS EXAMPLE WORK?</div>
+                <div class="example-text">Comedy shifts to sadness through the suggestion of Albert doing something utterly benign moments before his death. It also highlights how fragile one's hold on life really is.</div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Symbolism Associated With This Color:</div>
+            <div class="symbolism-links">
+                <a href="#" class="symbolism-link">depression</a>
+                <a href="#" class="symbolism-link">peace</a>
+                <a href="#" class="symbolism-link">friendship</a>
+                <a href="#" class="symbolism-link">inflexibility</a>
+            </div>
+            <p class="example-text" style="margin-top: 15px;">honesty and loyalty, trustworthiness and sincerity, responsibility, strong relationships, nostalgia</p>
+        </div>
+
+        <div class="helpful-tip">
+            <div class="tip-title">Helpful Tip:</div>
+            <div class="tip-content">
+                Color is important to the human experience, meaning readers are hardwired to notice it. When description is necessary, think about how your color and pattern choices may be used as <strong>motifs</strong> to help symbolize an idea you want to subtly reinforce in the <strong>setting</strong> description.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
