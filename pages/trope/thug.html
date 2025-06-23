@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Type and Trope Thesaurus - Thug</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1.3rem;
+            letter-spacing: 0.05em;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-content {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .section-content p {
+            margin-bottom: 8px;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+        }
+
+        .strengths-weaknesses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        .link-item:after {
+            content: ", ";
+            color: #333;
+            text-decoration: none;
+        }
+
+        .link-item:last-child:after {
+            content: "";
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: #2c5aa0;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .strengths-weaknesses {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>THUG</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <strong>Helpful Tip:</strong> Using a trope or archetype helps readers quickly understand a character, but stepping them 
+            beyond their predictable layers: beyond, add depth with a unique backstory, emotional wound, and related 
+            trait and flaw. You can also break expectations with an internal job, informative ways, or positive 
+            personality change that will help your character stand apart.
+        </div>
+
+        <div class="section">
+            <h3>Description:</h3>
+            <div class="section-content">
+                <p>This brutal henchman or gang member engages in criminal activity and stands at violence. They're usually strong, aggressive, street-smart, and intimidating, as well as unquestioningly loyal to the party they work for.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples:</h3>
+            <div class="section-content fictional-examples">
+                <p>Bill Sikes (Oliver Twist), Bob Ewell (To Kill a Mockingbird), Draco Malfoy (The Boy Who Lived), Tommy DeVito (Goodfellas), Tuco Salamanca (Breaking Bad)</p>
+            </div>
+        </div>
+
+        <div class="strengths-weaknesses">
+            <div class="section">
+                <h3>Common Strengths:</h3>
+                <div class="section-content">
+                    <div class="link-list">
+                        <span class="link-item">ALERT</span>
+                        <span class="link-item">BOLD</span>
+                        <span class="link-item">CALM</span>
+                        <span class="link-item">CAUTIOUS</span>
+                        <span class="link-item">DECISIVE</span>
+                        <span class="link-item">DISCIPLINED</span>
+                        <span class="link-item">EFFICIENT</span>
+                        <span class="link-item">FOCUSED</span>
+                        <span class="link-item">LOYAL</span>
+                        <span class="link-item">OBEDIENT</span>
+                        <span class="link-item">OBSERVANT</span>
+                        <span class="link-item">PERSISTENT</span>
+                        <span class="link-item">PERSUASIVE</span>
+                        <span class="link-item">PROACTIVE</span>
+                        <span class="link-item">PROTECTIVE</span>
+                        <span class="link-item">RESOURCEFUL</span>
+                        <span class="link-item">RESPONSIBLE</span>
+                        <span class="link-item">SIMPLE</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Common Weaknesses:</h3>
+                <div class="section-content">
+                    <div class="link-list">
+                        <span class="link-item">ABRASIVE</span>
+                        <span class="link-item">CALLOUS</span>
+                        <span class="link-item">COCKY</span>
+                        <span class="link-item">CONFRONTATIONAL</span>
+                        <span class="link-item">CONTROLLING</span>
+                        <span class="link-item">CRUEL</span>
+                        <span class="link-item">DISHONEST</span>
+                        <span class="link-item">HOSTILE</span>
+                        <span class="link-item">HUMORLESS</span>
+                        <span class="link-item">INFLEXIBLE</span>
+                        <span class="link-item">MACHO</span>
+                        <span class="link-item">PARANOID</span>
+                        <span class="link-item">PREJUDICED</span>
+                        <span class="link-item">RECKLESS</span>
+                        <span class="link-item">SUBSERVIENT</span>
+                        <span class="link-item">TEMPERAMENTAL</span>
+                        <span class="link-item">UNCOUTH</span>
+                        <span class="link-item">VINDICTIVE</span>
+                        <span class="link-item">VIOLENT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies:</h3>
+            <div class="section-content">
+                <p>• Being a team of action</p>
+                <p>• Purposely intimidating others</p>
+                <p>• Being physically imposing and aggressive</p>
+                <p>• Hanging around in groups</p>
+                <p>• Being strong and tough</p>
+                <p>• Seeing the world in a simple, uncomplicated way</p>
+                <p>• Having a short fuse</p>
+                <p>• Acting erratically</p>
+                <p>• Indulging in activities in criminal activity</p>
+                <p>• Being loyal to their employer or organization</p>
+                <p>• Returning to violence without thinking too much about it</p>
+                <p>• Being contemptuous when serious problems</p>
+                <p>• Having a regular ego</p>
+                <p>• Never backing down from a challenge</p>
+                <p>• Picking fights for fun</p>
+                <p>• Being emotionally distant</p>
+                <p>• Being a "yes man"</p>
+                <p>• Being somewhat by doing dirty deeds that no one else will do</p>
+                <p>• Using coarse language</p>
+                <p>• Having a tight circle of friends</p>
+                <p>• Having a tough background</p>
+                <p>• Difficulty thinking for themselves</p>
+                <p>• Always losing the company line</p>
+                <p>• Having trouble standards—e.g., I can that they shouldn't hit way, but they can't do the same to my friends</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">BECOMING WHAT ONE HATES</span>
+                    <span class="link-item">BEING ATTACKED</span>
+                    <span class="link-item">BEING CAPABLE OF HARM</span>
+                    <span class="link-item">BEING PHYSICALLY TOUCHED</span>
+                    <span class="link-item">BEING PITIED</span>
+                    <span class="link-item">BEING RESPONSIBLE FOR OTHERS</span>
+                    <span class="link-item">BEING SEPARATED FROM LOVED ONES</span>
+                    <span class="link-item">BEING UNSAFE</span>
+                    <span class="link-item">CONFLICT</span>
+                    <span class="link-item">PERSECUTION</span>
+                    <span class="link-item">PHYSICAL PAIN</span>
+                    <span class="link-item">PUBLIC SPEAKING</span>
+                    <span class="link-item">REGRET</span>
+                    <span class="link-item">REPEATING A CYCLE OF ABUSE</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them:</h3>
+            <div class="section-content">
+                <p>• Being told something they are about and feeling vulnerable</p>
+                <p>• Being part of family or a work organization</p>
+                <p>• Encountering someone stronger and tougher than they are</p>
+                <p>• Being targeted by a law enforcement crackdown</p>
+                <p>• Being forced into doing something they are truly or doubts</p>
+                <p>• A child, spouse, or sibling visiting deadly of the person the character works for</p>
+                <p>• Being offered a better arrangement by an enemy</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth:</h3>
+            <div class="section-content">
+                <p>• Being so blood gradually with a target during a mind ride or astrology or being stuck in an elevator together) and forming a deep connection</p>
+                <p>• Struggling to be the provider for their family or loved one</p>
+                <p>• Having to choose between the employer and a loved one</p>
+                <p>• Wishing for a simpler, more peaceful existence</p>
+                <p>• Watching for their employees without losing their tough guy facade</p>
+                <p>• Not knowing who they are beyond their criminal persona</p>
+                <p>• Being afraid to do something the character actually disagrees with</p>
+                <p>• Experiencing feelings of disloyalty in their heart</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Cliches to Be Aware Of:</h3>
+            <div class="section-content">
+                <p>• The bullying, mindless brute who carries out every order without question</p>
+                <p>• The emotionally detached henchman</p>
+                <p>• The thug who is nothing more than a walking, talking everyone says</p>
+                <p>• The loyal thug being who is used as a scapegoat by those in power</p>
+                <p>• The henchman with no ambitions beyond being the muscle for a prime player</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With A Character Who...</h3>
+            <div class="section-content">
+                <p>• ... has a code of honor</p>
+                <p>• ... has an Achilles' heel—a vulnerable spot</p>
+                <p>• ... isn't male</p>
+                <p>• ... navigates a change arc and becomes more sympathetic, unrepresentative, moral, or selfless</p>
+                <p>• ... is severely loyal to two opposing parties or organizations</p>
+                <p>• ... isn't always reliable narrator</p>
+                <p>• ... doesn't have typical male: ambitious, worryward, sophisticated, courteous, kind, etc.</p>
+                <p>• ... has an atypical trait: ambitious, worryward, sophisticated, courteous, kind, etc.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Unexpected Occupations for This Character:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">ANIMAL RESCUE WORKER</span>
+                    <span class="link-item">CHOCOLATIER</span>
+                    <span class="link-item">DANCER</span>
+                    <span class="link-item">EMERGENCY MEDICAL RESPONDER</span>
+                    <span class="link-item">FLIGHT ATTENDANT</span>
+                    <span class="link-item">HOME HEALTH AIDE</span>
+                    <span class="link-item">LIBRARIAN</span>
+                    <span class="link-item">MAKEUP ARTIST</span>
+                    <span class="link-item">NANNY</span>
+                    <span class="link-item">NURSE (RN)</span>
+                    <span class="link-item">RING MASTER</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Create Something New:</h3>
+            <div class="section-content">
+                <p>• Thug + Caregiver</p>
+                <p>• Thug + Free Spirit</p>
+                <p>• Thug + Lover</p>
+                <p>• Thug + Sage Figures</p>
+                <p>• Thug + Reluctantly Gifted</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Similar or Related Tropes:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">BULLY</span>
+                    <span class="link-item">MAFIA DON</span>
+                    <span class="link-item">UBER SOLDIER</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>

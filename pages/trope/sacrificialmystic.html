@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacrificial Mystic - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: normal;
+            letter-spacing: 0.05em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .main-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .sidebar {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #8b9dc3;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+            color: #666;
+        }
+
+        .strengths-weaknesses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .strength-weakness-section h4 {
+            font-size: 0.9rem;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .trait-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .trait-tag {
+            background: #e9ecef;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #495057;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .trait-tag.strength {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .trait-tag.weakness {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .behaviors-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .behaviors-list li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .behaviors-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8b9dc3;
+        }
+
+        .tip-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .tip-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tip-box p {
+            color: #856404;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+
+        .link-tags {
+            margin-top: 20px;
+        }
+
+        .link-tags a {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.85rem;
+            margin-right: 15px;
+        }
+
+        .link-tags a:hover {
+            color: #1e4187;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .strengths-weaknesses {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>SACRIFICIAL MYSTIC ✪</h2>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="section">
+                    <h3>Description:</h3>
+                    <p>This character has a rare and incredible psychic, supernatural, or spiritual ability. But to obtain it, they've had to give up something valuable of their own.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Fictional Examples:</h3>
+                    <p class="fictional-examples">Adam Parrish (The Raven Cycle), Nyx Orcane (Greek mythology), Dinah Bellman (The Langoliers), Eli (The Book of Eli)</p>
+                </div>
+
+                <div class="strengths-weaknesses">
+                    <div class="strength-weakness-section">
+                        <h4>Common Strengths:</h4>
+                        <div class="trait-list">
+                            <span class="trait-tag strength">Courageous</span>
+                            <span class="trait-tag strength">Empathetic</span>
+                            <span class="trait-tag strength">Focused</span>
+                            <span class="trait-tag strength">Generous</span>
+                            <span class="trait-tag strength">Honorable</span>
+                            <span class="trait-tag strength">Idealistic</span>
+                            <span class="trait-tag strength">Independent</span>
+                            <span class="trait-tag strength">Inspirational</span>
+                            <span class="trait-tag strength">Intelligent</span>
+                            <span class="trait-tag strength">Kind</span>
+                            <span class="trait-tag strength">Loyal</span>
+                            <span class="trait-tag strength">Observant</span>
+                            <span class="trait-tag strength">Passionate</span>
+                            <span class="trait-tag strength">Perceptive</span>
+                            <span class="trait-tag strength">Protective</span>
+                            <span class="trait-tag strength">Resourceful</span>
+                            <span class="trait-tag strength">Responsible</span>
+                            <span class="trait-tag strength">Sensible</span>
+                            <span class="trait-tag strength">Spiritual</span>
+                            <span class="trait-tag strength">Supportive</span>
+                            <span class="trait-tag strength">Talented</span>
+                            <span class="trait-tag strength">Unselfish</span>
+                            <span class="trait-tag strength">Wise</span>
+                        </div>
+                    </div>
+
+                    <div class="strength-weakness-section">
+                        <h4>Common Weaknesses:</h4>
+                        <div class="trait-list">
+                            <span class="trait-tag weakness">Antisocial</span>
+                            <span class="trait-tag weakness">Cocky</span>
+                            <span class="trait-tag weakness">Controlling</span>
+                            <span class="trait-tag weakness">Devious</span>
+                            <span class="trait-tag weakness">Fanatical</span>
+                            <span class="trait-tag weakness">Inflexible</span>
+                            <span class="trait-tag weakness">Irrational</span>
+                            <span class="trait-tag weakness">Irresponsible</span>
+                            <span class="trait-tag weakness">Know-It-All</span>
+                            <span class="trait-tag weakness">Manipulative</span>
+                            <span class="trait-tag weakness">Martyr</span>
+                            <span class="trait-tag weakness">Obsessive</span>
+                            <span class="trait-tag weakness">Pushy</span>
+                            <span class="trait-tag weakness">Reckless</span>
+                            <span class="trait-tag weakness">Self-Destructive</span>
+                            <span class="trait-tag weakness">Superstitious</span>
+                            <span class="trait-tag weakness">Suspicious</span>
+                            <span class="trait-tag weakness">Unstable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Associated Actions, Behaviors, and Tendencies:</h3>
+                    <ul class="behaviors-list">
+                        <li>Receiving abilities through their actions and world favors or others</li>
+                        <li>Wanting to help people</li>
+                        <li>Speaking words of wisdom</li>
+                        <li>Remaining calm in the face of chaos</li>
+                        <li>Warning their parents with humility (not being driven by ego)</li>
+                        <li>Viewing themselves as a tool rather than its user</li>
+                        <li>Being a good listener</li>
+                        <li>Standing up for what they believe in</li>
+                        <li>Having a purpose in life that's greater than themselves</li>
+                        <li>Moving at a slower pace, not wanting to be rushed</li>
+                        <li>Easily reaching people and situations</li>
+                        <li>Following their intuition</li>
+                        <li>Being open-minded</li>
+                        <li>Finding excitement, not being dull or the past</li>
+                        <li>Being mystical or spiritual</li>
+                        <li>Refusing small details about a person or situation</li>
+                        <li>Struggling with the price and cost before making a decision</li>
+                        <li>Wanting to help to sacrifice for a greater cause</li>
+                        <li>Being a loner</li>
+                        <li>Living simply</li>
+                        <li>Being a loner</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Fears That Might Limit the Character:</h3>
+                    <div class="link-tags">
+                        <a href="#">Becoming a Parent</a>
+                        <a href="#">Becoming What One Hates</a>
+                        <a href="#">Being a Burden to Others</a>
+                        <a href="#">Being Capable of Harm</a>
+                        <a href="#">Being Forced</a>
+                        <a href="#">Being Taken Advantage Of</a>
+                        <a href="#">Criticism</a>
+                        <a href="#">Government</a>
+                        <a href="#">Humiliation</a>
+                        <a href="#">Losing Authority</a>
+                        <a href="#">Losing One's Mind</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="tip-box">
+                    <h4>Helpful Tip:</h4>
+                    <p>Using a trope or archetype helps readers quickly understand a character, but stepping down creates a weak and predictable figure. Instead, add depth with a unique backstory, emotional wounds, and context that creates an arc to potential growth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to Character Types and Tropes page');
+        }
+    </script>
+</body>
+</html>

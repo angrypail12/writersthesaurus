@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traitor - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .trope-title {
+            font-size: 1.3rem;
+            color: #8b9dc3;
+            margin-bottom: 20px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #8b9dc3;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .section p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background-color: #8b9dc3;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tag:hover {
+            background-color: #6a7ba8;
+        }
+
+        .list-item {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .helpful-tip {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-left: 20px;
+            border-left: 4px solid #8b9dc3;
+        }
+
+        .helpful-tip h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .helpful-tip p {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="trope-title">TRAITOR ⚹</div>
+            <div class="navigation">
+                <div class="nav-dots">
+                    <div class="dot"></div>
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <a href="../pages/character-types-tropes.html" class="back-link">Back to Character Types and Tropes</a>
+
+            <div class="section">
+                        <h2>Description:</h2>
+                        <p>At some point in the story, this character perceives issues and betrays their former allies to benefit themselves.</p>
+                    </div>
+
+                    <div class="section">
+                        <h2>Fictional Examples:</h2>
+                        <p>Cyrus Lupo(arrel (A Song of Ice and Fire), Edmund Pevensie (The Lion, the Witch, and the Wardrobe), Peter Pettigrew (the Harry Potter stories), Iago (Othello), Judas (the Bible)</p>
+                    </div>
+
+                    <div class="section">
+                        <h2>Common Strengths:</h2>
+                        <div class="tags">
+                            <span class="tag">Adaptable</span>
+                            <span class="tag">Adventurous</span>
+                            <span class="tag">Alert</span>
+                            <span class="tag">Ambitious</span>
+                            <span class="tag">Analytical</span>
+                            <span class="tag">Cautious</span>
+                            <span class="tag">Charming</span>
+                            <span class="tag">Diplomatic</span>
+                            <span class="tag">Discreet</span>
+                            <span class="tag">Observant</span>
+                            <span class="tag">Patient</span>
+                            <span class="tag">Persuasive</span>
+                            <span class="tag">Resourceful</span>
+                            <span class="tag">Responsible</span>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Common Weaknesses:</h2>
+                        <div class="tags">
+                            <span class="tag">Cowardly</span>
+                            <span class="tag">Defensive</span>
+                            <span class="tag">Devious</span>
+                            <span class="tag">Dishonest</span>
+                            <span class="tag">Disloyal</span>
+                            <span class="tag">Hypocritical</span>
+                            <span class="tag">Manipulative</span>
+                            <span class="tag">Nosy</span>
+                            <span class="tag">Selfish</span>
+                            <span class="tag">Suspicious</span>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Associated Actions, Behaviors, and Tendencies:</h2>
+                        <div class="list-item">Being adept at reading others and knowing what they want to hear</div>
+                        <div class="list-item">Thinking strategically</div>
+                        <div class="list-item">Being slow to offer trustworthiness to others</div>
+                        <div class="list-item">Resenting or keeping a low profile</div>
+                        <div class="list-item">Being highly observant, watching everyone and seeing everything</div>
+                        <div class="list-item">Being suspicious of others</div>
+                        <div class="list-item">Easily distrusting other people, unwilling to doubt they have about the character</div>
+                        <div class="list-item">Living a double life</div>
+                        <div class="list-item">Acting noncommittal or ambiguous questions to figure out where people stand</div>
+                        <div class="list-item">Lying easily</div>
+                        <div class="list-item">Delivering well-timed support or betrayal at a destination</div>
+                        <div class="list-item">Manipulating others for their own gain</div>
+                        <div class="list-item">Taking either short-sighted or extraordinarily long-sighted</div>
+                        <div class="list-item">Taking actions without care for how they will hurt others</div>
+                        <div class="list-item">Acting in morally ambiguous ways</div>
+                        <div class="list-item">Being envious</div>
+                        <div class="list-item">Raising distrust while maintaining a presence of loyalty</div>
+                        <div class="list-item">Playing their cards close to the vest</div>
+                        <div class="list-item">Being devious</div>
+                        <div class="list-item">Looking out for their own interests first and foremost</div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Fears that Might Limit the Character:</h2>
+                        <div class="tags">
+                            <span class="tag">A Secret Being Revealed</span>
+                            <span class="tag">Becoming What One Hates</span>
+                            <span class="tag">Being Judged</span>
+                            <span class="tag">Being Taken Advantage Of</span>
+                            <span class="tag">Betrayal</span>
+                            <span class="tag">Isolation</span>
+                            <span class="tag">Losing The Respect Of Others</span>
+                            <span class="tag">One's Instincts Being Unreliable</span>
+                            <span class="tag">Persecution</span>
+                            <span class="tag">Rejection</span>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Situations that Will Challenge Them:</h2>
+                        <div class="list-item">Being betrayed by someone they've allied with</div>
+                        <div class="list-item">Being caught in their betrayal</div>
+                        <div class="list-item">Being assigned a professional duty that conflicts with their personal motives</div>
+                        <div class="list-item">Their intentions being prematurely revealed to the person they intended to betray</div>
+                        <div class="list-item">Discovering unintended and possibly catastrophic consequences of their betrayal</div>
+                        <div class="list-item">Having to work with those they intended to betray to neutralize an external threat</div>
+                        <div class="list-item">Discovering new information that changes their perspective and makes them rethink their loyalties</div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Inner Struggles to Give Them Depth:</h2>
+                        <div class="list-item">Being torn between self-preservation and doing what's right</div>
+                        <div class="list-item">Feeling guilty for their betrayals and rationalizing why it was their best option</div>
+                        <div class="list-item">Wanting to make amends but facing external pressure to abandon all contact with the betrayed party</div>
+                        <div class="list-item">Yearning to be accepted by the people they're supposed to betray</div>
+                        <div class="list-item">Living in constant fear that their betrayal and true motivations will be discovered</div>
+                        <div class="list-item">Struggling with indecision about an upcoming betrayal</div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Clichés to be Aware Of:</h2>
+                        <div class="list-item">The traitor being completely callous toward those they betray</div>
+                        <div class="list-item">The one-dimensional traitor who is portrayed as purely evil-serving with no conscience</div>
+                        <div class="list-item">The betrayer who suddenly switches sides at the last moment, often by heroically sacrificing themselves, with little buildup or justification so it feels forced</div>
+                        <div class="list-item">The traitor whose motivations are predictable, such as revenge or envy</div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Twist this Trope with a Character Who...</h2>
+                        <div class="list-item">Never intended to betray their allies but their plans went awry or their actions were misinterpreted</div>
+                        <div class="list-item">Is only pretending to be a traitor to gain the trust of a powerful enemy</div>
+                        <div class="list-item">Regrets their decision</div>
+                        <div class="list-item">Betrays their second group of allies in favour of returning to the original group they betrayed</div>
+                        <div class="list-item">Is being coerced into betraying their allies to protect someone they care about</div>
+                        <div class="list-item">Is not in their right mind due to being hypnotized, possessed, or brainwashed</div>
+                        <div class="list-item">Has an atypical trait: Honorable, Sentimental, Remorseful, Worried, Wholesome, etc.</div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Create Something New:</h2>
+                        <div class="list-item">Traitor + Best Friend</div>
+                        <div class="list-item">Traitor + Moral Compass</div>
+                        <div class="list-item">Traitor + Nice Guy or Girl</div>
+                        <div class="list-item">Traitor + Hero</div>
+                        <div class="list-item">Traitor + Christ Figure</div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Similar or Related Tropes:</h2>
+                        <div class="tags">
+                            <span class="tag">Double Agent</span>
+                            <span class="tag">Loose Cannon</span>
+                            <span class="tag">Phony Politician</span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Add interactivity to tags
+        document.querySelectorAll('.tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                console.log('Clicked tag:', this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>

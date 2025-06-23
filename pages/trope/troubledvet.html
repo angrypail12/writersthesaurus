@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubled Vet - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .trope-title {
+            font-size: 1.3rem;
+            color: #8b9dc3;
+            margin-bottom: 20px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #8b9dc3;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .section p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background-color: #8b9dc3;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tag:hover {
+            background-color: #6a7ba8;
+        }
+
+        .list-item {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .helpful-tip {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-left: 20px;
+            border-left: 4px solid #8b9dc3;
+        }
+
+        .helpful-tip h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            color: #666;
+        }
+
+        .helpful-tip p {
+            font-size: 0.8rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="trope-title">TROUBLED VET ⚹</div>
+            <div class="navigation">
+                <div class="nav-dots">
+                    <div class="dot"></div>
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <a href="../pages/character-types-tropes.html" class="back-link">Back to Character Types and Tropes</a>
+
+            <div class="section">
+                        <h2>Description:</h2>
+                        <p>This war veteran is scarred by their experiences and resulting mental health conditions that they have difficulty integrating into civilian life.</p>
+                    </div>
+
+                    <div class="section">
+                        <h2>Fictional Examples:</h2>
+                        <p>John Rambo (First Blood), Ben Kizer (Down on the Fourth of July), Millard (The Deer Hunter)</p>
+                    </div>
+
+                    <div class="section">
+                        <h2>Common Strengths:</h2>
+                        <div class="tags">
+                            <span class="tag">Cautious</span>
+                            <span class="tag">Decisive</span>
+                            <span class="tag">Disciplined</span>
+                            <span class="tag">Humble</span>
+                            <span class="tag">Independent</span>
+                            <span class="tag">Industrious</span>
+                            <span class="tag">Just</span>
+                            <span class="tag">Observant</span>
+                            <span class="tag">Persistent</span>
+                            <span class="tag">Private</span>
+                            <span class="tag">Proactive</span>
+                            <span class="tag">Protective</span>
+                            <span class="tag">Responsible</span>
+                            <span class="tag">Responsible</span>
+                            <span class="tag">Traditional</span>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Common Weaknesses:</h2>
+                        <div class="tags">
+                            <span class="tag">Abrasive</span>
+                            <span class="tag">Addictive</span>
+                            <span class="tag">Antisocial</span>
+                            <span class="tag">Apathetic</span>
+                            <span class="tag">Confrontational</span>
+                            <span class="tag">Cynical</span>
+                            <span class="tag">Evasive</span>
+                            <span class="tag">Humorless</span>
+                            <span class="tag">Impatient</span>
+                            <span class="tag">Irrational</span>
+                            <span class="tag">Martyr</span>
+                            <span class="tag">Paranoid</span>
+                            <span class="tag">Resentful</span>
+                            <span class="tag">Self-Destructive</span>
+                            <span class="tag">Temperamental</span>
+                            <span class="tag">Uncooperative</span>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Associated Actions, Behaviors, and Tendencies:</h2>
+                        <div class="list-item">Visited hard work, being responsible, and doing what's right</div>
+                        <div class="list-item">Being resourceful</div>
+                        <div class="list-item">Having strong opinions that they don't necessarily share</div>
+                        <div class="list-item">Staying hyper alert to direction before speaking or taking action</div>
+                        <div class="list-item">Feeling emotionally disconnected from others</div>
+                        <div class="list-item">Feeling emotionally disconnected from others</div>
+                        <div class="list-item">Startling easily, being jumpy</div>
+                        <div class="list-item">Suffering with insomnia</div>
+                        <div class="list-item">Having difficulty finding common flashbacks</div>
+                        <div class="list-item">Difficulty regulating their anger</div>
+                        <div class="list-item">Experiencing beyond mood swings</div>
+                        <div class="list-item">Having panic attacks</div>
+                        <div class="list-item">Difficulty relating to others</div>
+                        <div class="list-item">Abusing substances as a way to numb pain or distracting memories</div>
+                        <div class="list-item">Being overly protective with their privacy and personal information</div>
+                        <div class="list-item">Keeping their war experiences to themselves</div>
+                        <div class="list-item">Struggling in silence, hesitating to share their pain with others</div>
+                        <div class="list-item">Being hyper vigilant about potential threats</div>
+                        <div class="list-item">Positioning themselves to public places so they can see the doors and access exits</div>
+                        <div class="list-item">Being irritated</div>
+                        <div class="list-item">Struggling with survivor's guilt</div>
+                        <div class="list-item">Difficulty trusting others</div>
+                        <div class="list-item">Struggling with authority figures they think are clean rather than the good</div>
+                        <div class="list-item">Demanding watchful authorities such as the government</div>
+                        <div class="list-item">Dismissing from reality</div>
+                        <div class="list-item">Acting oddly and violent and using "when they dissociate"</div>
+                        <div class="list-item">Living with a mental health condition (that may be undiagnosed or untreated)</div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Fears that Might Limit the Character:</h2>
+                        <div class="tags">
+                            <span class="tag">Becoming What One Hates</span>
+                            <span class="tag">Being A Burden To Others</span>
+                            <span class="tag">Being Judged</span>
+                            <span class="tag">Being Returned To An Abusive Environment</span>
+                            <span class="tag">Being Separated From Loved Ones</span>
+                            <span class="tag">Betrayal</span>
+                            <span class="tag">Certain Kinds Of People</span>
+                            <span class="tag">Government</span>
+                            <span class="tag">Losing One's Mind</span>
+                            <span class="tag">Not Being Believed</span>
+                            <span class="tag">One's Instincts Being Unreliable</span>
+                            <span class="tag">Being Innumerable</span>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Situations that Will Challenge Them:</h2>
+                        <div class="list-item">Being in public when the character is triggered by a loud noise, a mechanical, etc.</div>
+                        <div class="list-item">Working jobs that conflicts with these beliefs that they are untrained</div>
+                        <div class="list-item">A loved one dying, revealing their survivor's guilt</div>
+                        <div class="list-item">The anniversary of a traumatic wartime event</div>
+                        <div class="list-item">Learning from a lack of money or without support</div>
+                        <div class="list-item">Dealing with someone who idealizes the character or disrespects their sacrifice</div>
+                        <div class="list-item">Learning that a brother- or sister-in-arms has died</div>
+                        <div class="list-item">Being called back into service</div>
+                        <div class="list-item">learning contact and understanding or lasting themselves as a loved one</div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Inner Struggles to Give Them Depth:</h2>
+                        <div class="list-item">Creating distance in an important relationship because the character is unable to share their past or talk about the past</div>
+                        <div class="list-item">Feeling like no one outside of the military understands what they've been through</div>
+                        <div class="list-item">Living in guilt and pain over what they saw, survived, had to do, and deserved</div>
+                        <div class="list-item">Feeling as though they no longer have a purpose</div>
+                        <div class="list-item">Feeling extreme guilt or remorse for what they committed</div>
+                        <div class="list-item">Struggling with medications that do not relieve their burden</div>
+                        <div class="list-item">Wanting to serve their country but knowing they can't return to active service</div>
+                        <div class="list-item">Having conflicted feelings about their country and the military</div>
+                        <div class="list-item">Suspecting they need help but taking themselves they can deal with it on their own</div>
+                        <div class="list-item">Wanting to do anything to not be a pain</div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Clichés to be Aware Of:</h2>
+                        <div class="list-item">The trouble yet who is hostile because of uncontrollable rage and is avoided by the love of a good woman</div>
+                        <div class="list-item">The battle-shocked soldier who experiences a full recovery by the end of the story, with an ongoing trauma to last from</div>
+                        <div class="list-item">The traumatized soldier where stress tolerances around firm trauma</div>
+                        <div class="list-item">The troubled veteran who finds redemption through brutality interfering themselves in the end</div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Twist this Trope with a Character Who...</h2>
+                        <div class="list-item">Isn't male</div>
+                        <div class="list-item">Researches the actual events that led to creating unreliable narrative</div>
+                        <div class="list-item">Acquires an unexpected friend or support in the form of a child, dog, or other unlikely companion</div>
+                        <div class="list-item">Is willing to be open up about their history and be vulnerable</div>
+                        <div class="list-item">Prefers being with people who can also help</div>
+                        <div class="list-item">Has an atypical trait: Extroverted, Funny, Spiritual, Appreciative, Quirky, etc.</div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Unexpected Occupations for this Character:</h2>
+                        <div class="tags">
+                            <span class="tag">Book Conservator</span>
+                            <span class="tag">Clergy Member</span>
+                            <span class="tag">Dream Interpreter</span>
+                            <span class="tag">Food Stylist</span>
+                            <span class="tag">Midwife</span>
+                            <span class="tag">Paleontologist</span>
+                            <span class="tag">Personal Assistant to a Celebrity</span>
+                            <span class="tag">Personal Shopper</span>
+                            <span class="tag">Sommelier</span>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Create Something New:</h2>
+                        <div class="list-item">Troubled Vet + Farmer</div>
+                        <div class="list-item">Troubled Vet + Best Friend</div>
+                        <div class="list-item">Troubled Vet + Rightful Ruler</div>
+                        <div class="list-item">Troubled Vet + Sage</div>
+                        <div class="list-item">Troubled Vet + Saint</div>
+                    </div>
+
+                    <div class="section">
+                        <h2>Similar or Related Tropes:</h2>
+                        <div class="tags">
+                            <span class="tag">Loner</span>
+                            <span class="tag">Loose Cannon</span>
+                            <span class="tag">Orphan (Archetype)</span>
+                            <span class="tag">Protagonist Killer</span>
+                            <span class="tag">Tormented Hero</span>
+                            <span class="tag">Uber Soldier</span>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Add interactivity to tags
+        document.querySelectorAll('.tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                console.log('Clicked tag:', this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>

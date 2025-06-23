@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Type and Trope Thesaurus - Starving Artist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1.3rem;
+            letter-spacing: 0.05em;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-content {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .section-content p {
+            margin-bottom: 8px;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+        }
+
+        .strengths-weaknesses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        .link-item:after {
+            content: ", ";
+            color: #333;
+            text-decoration: none;
+        }
+
+        .link-item:last-child:after {
+            content: "";
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: #2c5aa0;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .strengths-weaknesses {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>STARVING ARTIST</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <strong>Helpful Tip:</strong> Using a trope or archetype helps readers quickly understand a character, but stepping them 
+            beyond their predictable layers: beyond, add depth with a unique backstory, emotional wound, and related 
+            trait and flaw. You can also break expectations with an internal job, informative ways, or positive 
+            personality change that will help your character stand apart.
+        </div>
+
+        <div class="section">
+            <h3>Description:</h3>
+            <div class="section-content">
+                <p>This character artist is dedicated to a craft that doesn't meet their financial needs. They are often plagued by self-doubt and struggle to balance artistic endeavors with real-world responsibilities.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples:</h3>
+            <div class="section-content fictional-examples">
+                <p>Orpheus (Greek mythology), Stephen Dedalus (A Portrait of the Artist as a Young Man), Cliff Stern (Crimes and Misdemeanors)</p>
+            </div>
+        </div>
+
+        <div class="strengths-weaknesses">
+            <div class="section">
+                <h3>Common Strengths:</h3>
+                <div class="section-content">
+                    <div class="link-list">
+                        <span class="link-item">AMBITIOUS</span>
+                        <span class="link-item">CREATIVE</span>
+                        <span class="link-item">DISCIPLINED</span>
+                        <span class="link-item">FOCUSED</span>
+                        <span class="link-item">IDEALISTIC</span>
+                        <span class="link-item">IMAGINATIVE</span>
+                        <span class="link-item">INDEPENDENT</span>
+                        <span class="link-item">INTROVERTED</span>
+                        <span class="link-item">OBSERVANT</span>
+                        <span class="link-item">PASSIONATE</span>
+                        <span class="link-item">PENSIVE</span>
+                        <span class="link-item">PERSISTENT</span>
+                        <span class="link-item">PHILOSOPHICAL</span>
+                        <span class="link-item">QUIRKY</span>
+                        <span class="link-item">RESOURCEFUL</span>
+                        <span class="link-item">TALENTED</span>
+                        <span class="link-item">THRIFTY</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Common Weaknesses:</h3>
+                <div class="section-content">
+                    <div class="link-list">
+                        <span class="link-item">ADDICTIVE</span>
+                        <span class="link-item">ANTISOCIAL</span>
+                        <span class="link-item">COMPULSIVE</span>
+                        <span class="link-item">DISHONEST</span>
+                        <span class="link-item">EVASIVE</span>
+                        <span class="link-item">IRRESPONSIBLE</span>
+                        <span class="link-item">JEALOUS</span>
+                        <span class="link-item">NEEDY</span>
+                        <span class="link-item">OBSESSIVE</span>
+                        <span class="link-item">PESSIMISTIC</span>
+                        <span class="link-item">RESENTFUL</span>
+                        <span class="link-item">SELF-DESTRUCTIVE</span>
+                        <span class="link-item">STUBBORN</span>
+                        <span class="link-item">TEMPERAMENTAL</span>
+                        <span class="link-item">WITHDRAWN</span>
+                        <span class="link-item">WORKAHOLIC</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies:</h3>
+            <div class="section-content">
+                <p>• Spending the evenings and populate mornings</p>
+                <p>• Searching for inspiration in their sense</p>
+                <p>• Being frugal and thrifty</p>
+                <p>• Being intensely dedicated to their artistic practice</p>
+                <p>• Putting an emphasis on artistic vision over financial success or sleep</p>
+                <p>• Romanticizing; being able to make do or fix things themselves</p>
+                <p>• Taking risks with their work</p>
+                <p>• Being more focused on the people around them</p>
+                <p>• Doing odd jobs and side gigs to pay the bills</p>
+                <p>• Always being on the lookout for inspiration</p>
+                <p>• Spending long hours on their work</p>
+                <p>• Networking and encouragement and being constantly hosed by self-doubt</p>
+                <p>• Being disciplined about their work</p>
+                <p>• Complaining about their inability to catch a break</p>
+                <p>• Blaming others for their lack of success</p>
+                <p>• Missing deadlines for their level of success</p>
+                <p>• Feeling misunderstood</p>
+                <p>• Wanting toward non-conformity</p>
+                <p>• Having strong ideals about how art should be done</p>
+                <p>• Embracing unusual beheld or ideas; being seen by others as odd or "not there"</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">A SECRET BEING REVEALED</span>
+                    <span class="link-item">BEING TAKEN TO ACHIEVE A DREAM</span>
+                    <span class="link-item">BEING UNABLE TO ACHIEVE A DREAM</span>
+                    <span class="link-item">CERTAIN KINDS OF PEOPLE</span>
+                    <span class="link-item">COMPETITION</span>
+                    <span class="link-item">CRITICISM</span>
+                    <span class="link-item">FAILURE</span>
+                    <span class="link-item">BEYOND OTHERS DOWN</span>
+                    <span class="link-item">LOSING THE RESPECT OF OTHERS</span>
+                    <span class="link-item">MEDIOCRITY</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them:</h3>
+            <div class="section-content">
+                <p>• A client friend or loved one becoming more successful than the character</p>
+                <p>• Having to take a hated day job</p>
+                <p>• A publisher, editor, or agent pushing the character to compromise their standards for money</p>
+                <p>• Being betrayed or ripped off by someone they trust or their dreams</p>
+                <p>• Experiencing discrimination that keeps the artist from being accepted</p>
+                <p>• Struggling with an addiction</p>
+                <p>• Being forced to sell their art for below-market value</p>
+                <p>• A spouse of loved one being tired in the classroom</p>
+                <p>• Losing a mentor</p>
+                <p>• Going through a dry open where inspiration deserts the character</p>
+                <p>• A marketplace being rejected</p>
+                <p>• Accidentally destroying a massive amount of their work</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth:</h3>
+            <div class="section-content">
+                <p>• Being jealous of successful artists</p>
+                <p>• The character wanting to do what's right for them but also needing the approval of a parent, sibling, or significant other</p>
+                <p>• Being given a shot at someone that comes at someone else's expense</p>
+                <p>• Being forced to choose between pursuing their passion and being a job that brings much needed income</p>
+                <p>• Struggling with imposter syndrome</p>
+                <p>• Struggling with important personal relationships</p>
+                <p>• Wrestling with an untreated mental health condition</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Cliches to Be Aware Of:</h3>
+            <div class="section-content">
+                <p>• The artist who romanticizes poverty and doesn't seem to be affected much by it</p>
+                <p>• The artist experiencing a breakthrough and effortlessly creating a masterpiece</p>
+                <p>• The stereotypical artist living in an expensive area, such as Paris, New York, or Los Angeles</p>
+                <p>• A depressed, drug-addicted, and/or suicidal artist</p>
+                <p>• A struggling artist living in a loft studio-type residence</p>
+                <p>• The artist who makes a living as a furniture and unethical businessperson</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With A Character Who...</h3>
+            <div class="section-content">
+                <p>• ... had one early success but hasn't been able to replicate it</p>
+                <p>• ... is extremely successful in their day job, which is unrelated to their art</p>
+                <p>• ... is compelled to create art but is disturbing or infuriating to others</p>
+                <p>• ... looks and lives like the typical suburbanite</p>
+                <p>• ... has an atypical trait: Cary, Devoted, Manipulative, Superstitious, Traditional, Sensible, etc.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Unexpected Occupations for This Character:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">AUTO MECHANIC</span>
+                    <span class="link-item">BOUNCER</span>
+                    <span class="link-item">BOUNTY HUNTER</span>
+                    <span class="link-item">CLERGY MEMBER</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Create Something New:</h3>
+            <div class="section-content">
+                <p>• Starving Artist + Bad Boy</p>
+                <p>• Starving Artist + Conventional Granny</p>
+                <p>• Starving Artist + Psychopath</p>
+                <p>• Starving Artist + Vigilante</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Similar or Related Tropes:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">CREATOR (ARCHETYPE)</span>
+                    <span class="link-item">SAVANT</span>
+                    <span class="link-item">STORYTELLER</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>

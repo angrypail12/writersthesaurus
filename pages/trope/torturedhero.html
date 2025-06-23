@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Type and Trope Thesaurus - Tortured Hero</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1.3rem;
+            letter-spacing: 0.05em;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-content {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .section-content p {
+            margin-bottom: 8px;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+        }
+
+        .strengths-weaknesses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        .link-item:after {
+            content: ", ";
+            color: #333;
+            text-decoration: none;
+        }
+
+        .link-item:last-child:after {
+            content: "";
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: #2c5aa0;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .strengths-weaknesses {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>TORTURED HERO</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <strong>Helpful Tip:</strong> Using a trope or archetype helps readers quickly understand a character, but stepping them 
+            beyond their predictable layers: beyond, add depth with a unique backstory, emotional wound, and related 
+            trait and flaw. You can also break expectations with an internal job, informative ways, or positive 
+            personality change that will help your character stand apart.
+        </div>
+
+        <div class="section">
+            <h3>Description:</h3>
+            <div class="section-content">
+                <p>This deeply emotional hero is characterized by self-doubt, melancholy, and isolation. In extreme cases, they may be depressed or self-destructive.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples:</h3>
+            <div class="section-content fictional-examples">
+                <p>Allies (The Time Traveler's Wife), Sebastian (Crime and Punishment), Esther Greenwood (The Bell Jar), Katniss Everdeen (The Hunger Games), the Beast (Beauty and the Beast)</p>
+            </div>
+        </div>
+
+        <div class="strengths-weaknesses">
+            <div class="section">
+                <h3>Common Strengths:</h3>
+                <div class="section-content">
+                    <div class="link-list">
+                        <span class="link-item">ANALYTICAL</span>
+                        <span class="link-item">CAUTIOUS</span>
+                        <span class="link-item">EMPATHETIC</span>
+                        <span class="link-item">INTELLIGENT</span>
+                        <span class="link-item">INTROVERTED</span>
+                        <span class="link-item">LOYAL</span>
+                        <span class="link-item">OBSERVANT</span>
+                        <span class="link-item">PASSIONATE</span>
+                        <span class="link-item">PENSIVE</span>
+                        <span class="link-item">PERCEPTIVE</span>
+                        <span class="link-item">PHILOSOPHICAL</span>
+                        <span class="link-item">PRIVATE</span>
+                        <span class="link-item">SENTIMENTAL</span>
+                        <span class="link-item">STUDIOUS</span>
+                        <span class="link-item">WISE</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Common Weaknesses:</h3>
+                <div class="section-content">
+                    <div class="link-list">
+                        <span class="link-item">ANTISOCIAL</span>
+                        <span class="link-item">CYNICAL</span>
+                        <span class="link-item">DEFENSIVE</span>
+                        <span class="link-item">DISHONEST</span>
+                        <span class="link-item">EVASIVE</span>
+                        <span class="link-item">IRRATIONAL</span>
+                        <span class="link-item">MARTYR</span>
+                        <span class="link-item">MELODRAMATIC</span>
+                        <span class="link-item">NEEDY</span>
+                        <span class="link-item">OBSESSIVE</span>
+                        <span class="link-item">OVERSENSITIVE</span>
+                        <span class="link-item">PESSIMISTIC</span>
+                        <span class="link-item">RECKLESS</span>
+                        <span class="link-item">RESENTFUL</span>
+                        <span class="link-item">SELF-DESTRUCTIVE</span>
+                        <span class="link-item">SELF-INDULGENT</span>
+                        <span class="link-item">SELFISH</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies:</h3>
+            <div class="section-content">
+                <p>• Hiding relying justice</p>
+                <p>• Thinking carefully before they speak</p>
+                <p>• Doubting themselves</p>
+                <p>• Daydreaming of a simpler life</p>
+                <p>• Being able to get themselves in other people about</p>
+                <p>• Seeking the truth</p>
+                <p>• Being emotionally reserved</p>
+                <p>• Struggling with painful memories</p>
+                <p>• Ignoring past traumas and facing their demons</p>
+                <p>• Shock understanding (or just being reluctant to be around)</p>
+                <p>• Having a past problem</p>
+                <p>• Having unreconciled to others</p>
+                <p>• Spending a lot of time in their own head</p>
+                <p>• Slipping easily into depression and gloom</p>
+                <p>• Struggling with addictions</p>
+                <p>• Struggling when being someone required</p>
+                <p>• Being apathetic</p>
+                <p>• Difficulty committing to others</p>
+                <p>• Always being prepared</p>
+                <p>• Always worrying about what could go wrong</p>
+                <p>• Thinking negative thoughts</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">A SECRET BEING REVEALED</span>
+                    <span class="link-item">BECOMING WHAT ONE HATES</span>
+                    <span class="link-item">BEING CAPABLE OF HARM</span>
+                    <span class="link-item">BEING PHYSICALLY TOUCHED</span>
+                    <span class="link-item">BEING SEPARATED FROM LOVED ONES</span>
+                    <span class="link-item">BETRAYAL</span>
+                    <span class="link-item">CRITICISM</span>
+                    <span class="link-item">DEATH</span>
+                    <span class="link-item">FAILURE</span>
+                    <span class="link-item">HAVING NO PURPOSE</span>
+                    <span class="link-item">HOPE</span>
+                    <span class="link-item">LETTING OTHERS DOWN</span>
+                    <span class="link-item">REJECTION</span>
+                    <span class="link-item">RELATIONAL COMMITMENT</span>
+                    <span class="link-item">TRUSTING OTHERS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them:</h3>
+            <div class="section-content">
+                <p>• Facing a difficult moral choice in which there is no clear answer</p>
+                <p>• Facing a situation that echoes their wounding event</p>
+                <p>• Being challenged by someone who cares about their well-being</p>
+                <p>• Being forced into a position of leadership</p>
+                <p>• Suffering yet another love that threatens to push them over the edge emotionally</p>
+                <p>• Being forced into a relationship with someone they care about</p>
+                <p>• Having to forge opinions and hope to keep someone's spirits up</p>
+                <p>• Meeting someone who challenges their entire ego, encouraging them to leave their comfort zone and face their past</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth:</h3>
+            <div class="section-content">
+                <p>• Being to keep it together for the people around them while struggling inside</p>
+                <p>• Suffering from impostor syndrome</p>
+                <p>• Struggling with deep feelings of guilt</p>
+                <p>• Wating to use others as their salvation</p>
+                <p>• Doubting redemption but believing it beyond their reach</p>
+                <p>• Wanting company or companionship but feeling they don't deserve it</p>
+                <p>• Being convinced that life is meaningless but hoping they're wrong</p>
+                <p>• Struggling with an increased sense critic</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Cliches to Be Aware Of:</h3>
+            <div class="section-content">
+                <p>• The whiny hero who loves feeling sorry for himself</p>
+                <p>• The tortured hero who won't help themselves or accept help from others</p>
+                <p>• The hero who is saved by love</p>
+                <p>• The apathetic hero who is too quick gained into action</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With A Character Who...</h3>
+            <div class="section-content">
+                <p>• ... isn't tortured by a trauma</p>
+                <p>• ... isn't male</p>
+                <p>• ... is surrounded and social</p>
+                <p>• ... takes their melancholy apparent on world mood rather than a wounding event</p>
+                <p>• ... has an atypical trait: Charming, Quirky, Randy, Witty, etc.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Unexpected Occupations for This Character:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">CHILDREN'S ENTERTAINER</span>
+                    <span class="link-item">LIBRARIAN</span>
+                    <span class="link-item">NANNY</span>
+                    <span class="link-item">PERSONAL ASSISTANT TO A CELEBRITY</span>
+                    <span class="link-item">WEDDING PLANNER</span>
+                    <span class="link-item">YOGA INSTRUCTOR</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Create Something New:</h3>
+            <div class="section-content">
+                <p>• Tortured Hero + Girl or Boy Next Door</p>
+                <p>• Tortured Hero + Good King or Queen</p>
+                <p>• Tortured Hero + Conventional Granny</p>
+                <p>• Tortured Hero + Hotshot</p>
+                <p>• Tortured Hero + Mother Figure</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Similar or Related Tropes:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">HERO (ARCHETYPE)</span>
+                    <span class="link-item">ORPHAN (ARCHETYPE)</span>
+                    <span class="link-item">RELUCTANT HERO</span>
+                    <span class="link-item">SUPERHERO</span>
+                    <span class="link-item">TRAGIC HERO</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>

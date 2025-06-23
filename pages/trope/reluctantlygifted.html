@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reluctantly Gifted - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: normal;
+            letter-spacing: 0.05em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .main-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .sidebar {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #8b9dc3;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+            color: #666;
+        }
+
+        .strengths-weaknesses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .strength-weakness-section h4 {
+            font-size: 0.9rem;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .trait-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .trait-tag {
+            background: #e9ecef;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #495057;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .trait-tag.strength {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .trait-tag.weakness {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .behaviors-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .behaviors-list li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .behaviors-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8b9dc3;
+        }
+
+        .tip-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .tip-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tip-box p {
+            color: #856404;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+
+        .link-tags {
+            margin-top: 20px;
+        }
+
+        .link-tags a {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.85rem;
+            margin-right: 15px;
+        }
+
+        .link-tags a:hover {
+            color: #1e4187;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .strengths-weaknesses {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>RELUCTANTLY GIFTED ✪</h2>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="section">
+                    <h3>Description:</h3>
+                    <p>This character is extraordinary in some way, with a supernatural gift or exceptional talent they're reluctant to use.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Fictional Examples:</h3>
+                    <p class="fictional-examples">Rogue (Rogue One: A Star Wars Story), Elsa (Frozen), Nina Zenik (Six of Crows), Adam Parrish (The Raven Cycle), Elsa (Frozen)</p>
+                </div>
+
+                <div class="strengths-weaknesses">
+                    <div class="strength-weakness-section">
+                        <h4>Common Strengths:</h4>
+                        <div class="trait-list">
+                            <span class="trait-tag strength">Cautious</span>
+                            <span class="trait-tag strength">Courageous</span>
+                            <span class="trait-tag strength">Disciplined</span>
+                            <span class="trait-tag strength">Empathetic</span>
+                            <span class="trait-tag strength">Focused</span>
+                            <span class="trait-tag strength">Honorable</span>
+                            <span class="trait-tag strength">Humble</span>
+                            <span class="trait-tag strength">Idealistic</span>
+                            <span class="trait-tag strength">Independent</span>
+                            <span class="trait-tag strength">Industrious</span>
+                            <span class="trait-tag strength">Intelligent</span>
+                            <span class="trait-tag strength">Mature</span>
+                            <span class="trait-tag strength">Protective</span>
+                            <span class="trait-tag strength">Responsible</span>
+                            <span class="trait-tag strength">Sensible</span>
+                            <span class="trait-tag strength">Talented</span>
+                            <span class="trait-tag strength">Wise</span>
+                        </div>
+                    </div>
+
+                    <div class="strength-weakness-section">
+                        <h4>Common Weaknesses:</h4>
+                        <div class="trait-list">
+                            <span class="trait-tag weakness">Addictive</span>
+                            <span class="trait-tag weakness">Cowardly</span>
+                            <span class="trait-tag weakness">Evasive</span>
+                            <span class="trait-tag weakness">Fussy</span>
+                            <span class="trait-tag weakness">Hypocritical</span>
+                            <span class="trait-tag weakness">Insecure</span>
+                            <span class="trait-tag weakness">Manipulative</span>
+                            <span class="trait-tag weakness">Megalomaniac</span>
+                            <span class="trait-tag weakness">Nervous</span>
+                            <span class="trait-tag weakness">Pessimistic</span>
+                            <span class="trait-tag weakness">Self-Destructive</span>
+                            <span class="trait-tag weakness">Selfish</span>
+                            <span class="trait-tag weakness">Stubborn</span>
+                            <span class="trait-tag weakness">Suspicious</span>
+                            <span class="trait-tag weakness">Uncooperative</span>
+                            <span class="trait-tag weakness">Weak-Willed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Associated Actions, Behaviors, and Tendencies:</h3>
+                    <ul class="behaviors-list">
+                        <li>Being a social hiding-place</li>
+                        <li>Following their intuition</li>
+                        <li>Being secretive</li>
+                        <li>Avoiding the spotlight</li>
+                        <li>Trying to blend in</li>
+                        <li>Being ordinary</li>
+                        <li>Underplaying their abilities and skills</li>
+                        <li>Having a strong moral code</li>
+                        <li>Being reluctant to use their full power</li>
+                        <li>Turning toward reluctance</li>
+                        <li>Wanting to remain in their comfort zone</li>
+                        <li>Finding reasons not to use their gift</li>
+                        <li>Using their gift reluctantly</li>
+                        <li>Resenting their choice and seeing them as a burden</li>
+                        <li>Feeling personally responsible for things</li>
+                        <li>Being a loner</li>
+                        <li>Trying to move</li>
+                        <li>Having a life they'd prefer to being extraordinary</li>
+                        <li>Not wanting to be responsible for others</li>
+                        <li>Hiding their gift</li>
+                        <li>Being cynical</li>
+                        <li>Thinking in terms of worst-case scenarios</li>
+                        <li>Assuming that bad things that happened before will happen again</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Fears That Might Limit the Character:</h3>
+                    <div class="link-tags">
+                        <a href="#">A Loved One Dying</a>
+                        <a href="#">Becoming What One Hates</a>
+                        <a href="#">Being Capable of Harm</a>
+                        <a href="#">Being Judged</a>
+                        <a href="#">Being Labeled</a>
+                        <a href="#">Being Watched</a>
+                        <a href="#">Being Separated from Loved Ones</a>
+                        <a href="#">Being Unable to Achieve a Dream</a>
+                        <a href="#">Being Taken Advantage Of</a>
+                        <a href="#">Being Viewed</a>
+                        <a href="#">Government</a>
+                        <a href="#">Isolation</a>
+                        <a href="#">Letting Others Down</a>
+                        <a href="#">Losing Autonomy</a>
+                        <a href="#">Losing the Respect of Others</a>
+                        <a href="#">Persecution</a>
+                        <a href="#">Relational Commitment</a>
+                        <a href="#">Trusting Others</a>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Situations That Will Challenge Them:</h3>
+                    <ul class="behaviors-list">
+                        <li>A loved one putting their life at risk and the character's gift being the cure they can do to save or try using their gift</li>
+                        <li>Having their gift exposed</li>
+                        <li>Being tricked into using their talents for nefarious purposes</li>
+                        <li>Being forced to use their power</li>
+                        <li>Being publicly rejected for hiding their abilities for talent</li>
+                        <li>New legislation that makes using their gift or ability illegal or punishable by death</li>
+                        <li>Not being able to control their power</li>
+                        <li>Losing their ability</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Inner Struggles to Give Them Depth:</h3>
+                    <ul class="behaviors-list">
+                        <li>Remembering when they've used their gift in the past with bad results</li>
+                        <li>Knowing that using their gift should be for the past with bad news</li>
+                        <li>Wrestling if people find out what they can do, so they'll be ostracized</li>
+                        <li>Worrying that if people find out what they can do, they'll be ostracized</li>
+                        <li>Feeling their gift is corrupted</li>
+                        <li>Feeling guilty for not having the courage to use their talent or being unable to control it</li>
+                        <li>Worrying that they can't live up to other people's expectations</li>
+                        <li>Knowing that using their gift will cost them something personally</li>
+                        <li>Knowing that people find out where they can do things they'll be stressed</li>
+                        <li>Knowing that using their gift will aid them something personally</li>
+                        <li>Aware that if people find out where they can do things, they'll be stressed</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Clichés to Be Aware Of:</h3>
+                    <ul class="behaviors-list">
+                        <li>The character whose powers come without limits</li>
+                        <li>The chosen one who may have powers they must use to save the world</li>
+                        <li>The reluctantly gifted loner</li>
+                        <li>The role model who comes along and who helps heal in the story</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Twist This Trope With a Character Who...</h3>
+                    <ul class="behaviors-list">
+                        <li>Has always been a gift and a curse</li>
+                        <li>Has problems their ability can't solve</li>
+                        <li>Uses their gift when it serves their own purposes</li>
+                        <li>Has more than one hidden gift</li>
+                        <li>Uses their gift to solve fun or comedic situations</li>
+                        <li>Has an atypical trait: Drunkemontic, Cooky, Vindicative, etc.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Create Something New:</h3>
+                    <ul class="behaviors-list">
+                        <li>Reluctantly Gifted + Bad Boy</li>
+                        <li>Reluctantly Gifted + Femme Fatale</li>
+                        <li>Reluctantly Gifted + Bully</li>
+                        <li>Reluctantly Gifted + Savant</li>
+                        <li>Reluctantly Gifted + Pioneer</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Similar or Related Tropes:</h3>
+                    <div class="link-tags">
+                        <a href="#">Rebel (Archetype)</a>
+                        <a href="#">Reluctant Hero</a>
+                        <a href="#">Reluctant Monster</a>
+                        <a href="#">Tortured Hero</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="tip-box">
+                    <h4>Helpful Tip:</h4>
+                    <p>Using a trope or archetype helps readers quickly understand a character, but stepping down creates a weak and predictable figure. Instead, add depth with a unique backstory, emotional wounds, and context that creates an arc to potential growth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to Character Types and Tropes page');
+        }
+    </script>
+</body>
+</html>

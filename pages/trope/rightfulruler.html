@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rightful Ruler - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: normal;
+            letter-spacing: 0.05em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .main-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .sidebar {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #8b9dc3;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+            color: #666;
+        }
+
+        .strengths-weaknesses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .strength-weakness-section h4 {
+            font-size: 0.9rem;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .trait-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .trait-tag {
+            background: #e9ecef;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #495057;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .trait-tag.strength {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .trait-tag.weakness {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .behaviors-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .behaviors-list li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .behaviors-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8b9dc3;
+        }
+
+        .tip-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .tip-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tip-box p {
+            color: #856404;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+
+        .link-tags {
+            margin-top: 20px;
+        }
+
+        .link-tags a {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.85rem;
+            margin-right: 15px;
+        }
+
+        .link-tags a:hover {
+            color: #1e4187;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .strengths-weaknesses {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>RIGHTFUL RULER ✪</h2>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="section">
+                    <h3>Description:</h3>
+                    <p>In a kingdom that going from bad to worse, this character has a legitimate claim to the throne and is the only one who can make things right. But first they'll have to come out of protective hiding, stop running from fate, or be made aware of their destiny. The early part of the character's arc is the focus of this entry. For information on this character once they've become the ruler they were meant to be, see <strong>GOOD KING OR QUEEN</strong>.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Fictional Examples:</h3>
+                    <p class="fictional-examples">Aragorn (The Lord of the Rings), King Arthur (The Once and Future King), Daenerys Targaryen (A Song of Ice and Fire), King T'Challa (the Marvel Universe), Queen Elsa (Frozen)</p>
+                </div>
+
+                <div class="strengths-weaknesses">
+                    <div class="strength-weakness-section">
+                        <h4>Common Strengths:</h4>
+                        <div class="trait-list">
+                            <span class="trait-tag strength">Adventurous</span>
+                            <span class="trait-tag strength">Calm</span>
+                            <span class="trait-tag strength">Cautious</span>
+                            <span class="trait-tag strength">Charming</span>
+                            <span class="trait-tag strength">Discreet</span>
+                            <span class="trait-tag strength">Easygoing</span>
+                            <span class="trait-tag strength">Empathetic</span>
+                            <span class="trait-tag strength">Honorable</span>
+                            <span class="trait-tag strength">Humble</span>
+                            <span class="trait-tag strength">Inspirational</span>
+                            <span class="trait-tag strength">Intelligent</span>
+                            <span class="trait-tag strength">Just</span>
+                            <span class="trait-tag strength">Kind</span>
+                            <span class="trait-tag strength">Loyal</span>
+                            <span class="trait-tag strength">Observant</span>
+                            <span class="trait-tag strength">Patient</span>
+                            <span class="trait-tag strength">Perceptive</span>
+                            <span class="trait-tag strength">Persuasive</span>
+                            <span class="trait-tag strength">Private</span>
+                            <span class="trait-tag strength">Protective</span>
+                            <span class="trait-tag strength">Responsible</span>
+                            <span class="trait-tag strength">Socially Aware</span>
+                            <span class="trait-tag strength">Tolerant</span>
+                            <span class="trait-tag strength">Traditional</span>
+                            <span class="trait-tag strength">Wise</span>
+                            <span class="trait-tag strength">Witty</span>
+                        </div>
+                    </div>
+
+                    <div class="strength-weakness-section">
+                        <h4>Common Weaknesses:</h4>
+                        <div class="trait-list">
+                            <span class="trait-tag weakness">Apathetic</span>
+                            <span class="trait-tag weakness">Childish</span>
+                            <span class="trait-tag weakness">Cowardly</span>
+                            <span class="trait-tag weakness">Defensive</span>
+                            <span class="trait-tag weakness">Dishonest</span>
+                            <span class="trait-tag weakness">Evasive</span>
+                            <span class="trait-tag weakness">Haughty</span>
+                            <span class="trait-tag weakness">Hypocritical</span>
+                            <span class="trait-tag weakness">Impatient</span>
+                            <span class="trait-tag weakness">Inflexible</span>
+                            <span class="trait-tag weakness">Insecure</span>
+                            <span class="trait-tag weakness">Indecisive</span>
+                            <span class="trait-tag weakness">Perfectionist</span>
+                            <span class="trait-tag weakness">Pessimistic</span>
+                            <span class="trait-tag weakness">Temperamental</span>
+                            <span class="trait-tag weakness">Weak-Willed</span>
+                            <span class="trait-tag weakness">Withdrawn</span>
+                            <span class="trait-tag weakness">Worrywart</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Associated Actions, Behaviors, and Tendencies:</h3>
+                    <ul class="behaviors-list">
+                        <li>Valuing justice</li>
+                        <li>Putting the needs of many over their own</li>
+                        <li>Being courteous and respectful</li>
+                        <li>Seeking to right wrongs</li>
+                        <li>Making sacrifices in the name of justice or doing the right thing</li>
+                        <li>Being naturally liked and respected by others</li>
+                        <li>Being groomed with honor and holding themselves to a high standard</li>
+                        <li>Listening to wise counsel</li>
+                        <li>Having a strong personal code of honor</li>
+                        <li>Showing compassion and mercy to others</li>
+                        <li>Being humble, avoiding activities or actions that will draw unneeded attention</li>
+                        <li>Seeking out more deserving leaders before accepting leadership responsibilities</li>
+                        <li>Connecting with all land or their people (emotionally or supernaturally)</li>
+                        <li>Showing glimpses of wisdom</li>
+                        <li>Thinking of the community as a team, not as individuals</li>
+                        <li>Being eloquent, charming, charismatic, or inspiring</li>
+                        <li>Standing up for their people in small, understated ways</li>
+                        <li>Encouraging others</li>
+                        <li>Becoming defensive when pushed toward their destiny</li>
+                        <li>Avoiding people who know the character's true identity or destiny</li>
+                        <li>Making excuses for why they won't claim the throne</li>
+                        <li>Seeing things the way they want to see them instead of how they actually are (no they can justify not stepping up and taking charge)</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Fears That Might Limit the Character:</h3>
+                    <div class="link-tags">
+                        <a href="#">A Secret Being Revealed</a>
+                        <a href="#">Becoming What One Hates</a>
+                        <a href="#">Being Responsible for Others</a>
+                        <a href="#">Betrayal</a>
+                        <a href="#">Criticism</a>
+                        <a href="#">Failure</a>
+                        <a href="#">Leading</a>
+                        <a href="#">Letting Others Down</a>
+                        <a href="#">Losing Autonomy</a>
+                        <a href="#">Not Being in Control</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Situations That Will Challenge Them:</h3>
+                    <ul class="behaviors-list">
+                        <li>Someone threatening to reveal the character's whereabouts or the truth of their identity</li>
+                        <li>Encountering their supposed supporters</li>
+                        <li>Losing the support of an ally</li>
+                        <li>Being pressured to go public before the character is willing to do so</li>
+                        <li>Trying to effect change without an official authority and being ridiculed for it</li>
+                        <li>Having to sacrifice rules or learn necessary skills while being scrutinized by others</li>
+                        <li>Being challenged as an outsider</li>
+                        <li>Learning that they can only regain their positions at the sacrifice of their integrity</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Inner Struggles to Give Them Depth:</h3>
+                    <ul class="behaviors-list">
+                        <li>Doubting their ability or right to rule</li>
+                        <li>Having dreams and aspirations that keeps the character away from their destiny</li>
+                        <li>Self-doubt related to their past and what caused the fall from power</li>
+                        <li>Knowing what they must do but fearing failure</li>
+                        <li>Wanting to share their secret with someone but not knowing who can be trusted</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Clichés to Be Aware Of:</h3>
+                    <ul class="behaviors-list">
+                        <li>The unschooled king whose followers support him with unwavering loyalty based solely on his bloodline</li>
+                        <li>The ruler who, once claiming their birthright, too easily learns the lessons and skills needed to be an effective leader</li>
+                        <li>The righteous ruler whose virtue and honor is treated only by the blindness of their opponents heart</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Twist This Trope With a Character Who...</h3>
+                    <ul class="behaviors-list">
+                        <li>Has admirable motivations for wanting to take the throne but is deeply flawed</li>
+                        <li>Is not the lost heir or hasn't been magically chosen</li>
+                        <li>Is not related to those in power, and on-lands because it's stronger than one</li>
+                        <li>Is fulfilled and wisely successful in their current life, making it harder for them to give it up</li>
+                        <li>Truly doesn't believe they're the rightful ruler</li>
+                        <li>Has an atypical trait: Machel, Tomei, Flamboyant, Foolish, Devious, etc.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Create Something New:</h3>
+                    <ul class="behaviors-list">
+                        <li>Rightful Ruler + Anthony</li>
+                        <li>Rightful Ruler + Clown</li>
+                        <li>Rightful Ruler + Governess</li>
+                        <li>Rightful Ruler + Magician</li>
+                        <li>Rightful Ruler + Storyteller</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Similar or Related Tropes:</h3>
+                    <div class="link-tags">
+                        <a href="#">Chosen One</a>
+                        <a href="#">Good King or Queen</a>
+                        <a href="#">Matriarch</a>
+                        <a href="#">Patriarch</a>
+                        <a href="#">Reluctant Hero</a>
+                        <a href="#">Tortured Hero</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="tip-box">
+                    <h4>Helpful Tip:</h4>
+                    <p>Using a trope or archetype helps readers quickly understand a character, but stepping down creates a weak and predictable figure. Instead, add depth with a unique backstory, emotional wounds, and context that creates an arc to potential growth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to Character Types and Tropes page');
+        }
+    </script>
+</body>
+</html>

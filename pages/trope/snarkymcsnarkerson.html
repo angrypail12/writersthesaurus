@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Type and Trope Thesaurus - Snarky McSnarkerson</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1.3rem;
+            letter-spacing: 0.05em;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-content {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .section-content p {
+            margin-bottom: 8px;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+        }
+
+        .strengths-weaknesses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        .link-item:after {
+            content: ", ";
+            color: #333;
+            text-decoration: none;
+        }
+
+        .link-item:last-child:after {
+            content: "";
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: #2c5aa0;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .strengths-weaknesses {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>SNARKY MCSNARKERSON</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <strong>Helpful Tip:</strong> Using a trope or archetype helps readers quickly understand a character, but stepping them 
+            beyond their predictable layers: beyond, add depth with a unique backstory, emotional wound, and related 
+            trait and flaw. You can also break expectations with an internal job, informative ways, or positive 
+            personality change that will help your character stand apart.
+        </div>
+
+        <div class="section">
+            <h3>Description:</h3>
+            <div class="section-content">
+                <p>This highly sarcastic and often cynical character is known for their quick comebacks and deadpan delivery. Skilled at wordplay with a knack for finding the irony in any situation, they employ satire, sarcasm, and humor—often to convey social commentary and criticism.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples:</h3>
+            <div class="section-content fictional-examples">
+                <p>Artemis Fowl (the Artemis Fowl series), Sherlock Holmes (the Sherlock Holmes Franchise), Tony Stark (Iron Man), Chandler Bing (Friends)</p>
+            </div>
+        </div>
+
+        <div class="strengths-weaknesses">
+            <div class="section">
+                <h3>Common Strengths:</h3>
+                <div class="section-content">
+                    <div class="link-list">
+                        <span class="link-item">ALERT</span>
+                        <span class="link-item">BOLD</span>
+                        <span class="link-item">CALM</span>
+                        <span class="link-item">CONFIDENT</span>
+                        <span class="link-item">CREATIVE</span>
+                        <span class="link-item">FUNNY</span>
+                        <span class="link-item">HONEST</span>
+                        <span class="link-item">INDEPENDENT</span>
+                        <span class="link-item">INTELLIGENT</span>
+                        <span class="link-item">OBJECTIVE</span>
+                        <span class="link-item">OBSERVANT</span>
+                        <span class="link-item">PERCEPTIVE</span>
+                        <span class="link-item">PHILOSOPHICAL</span>
+                        <span class="link-item">PLAYFUL</span>
+                        <span class="link-item">QUIRKY</span>
+                        <span class="link-item">SPONTANEOUS</span>
+                        <span class="link-item">SPUNKY</span>
+                        <span class="link-item">UNINHIBITED</span>
+                        <span class="link-item">WITTY</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Common Weaknesses:</h3>
+                <div class="section-content">
+                    <div class="link-list">
+                        <span class="link-item">ABRASIVE</span>
+                        <span class="link-item">CONFRONTATIONAL</span>
+                        <span class="link-item">CYNICAL</span>
+                        <span class="link-item">DISRESPECTFUL</span>
+                        <span class="link-item">PRETENTIOUS</span>
+                        <span class="link-item">PUSHY</span>
+                        <span class="link-item">RECKLESS</span>
+                        <span class="link-item">SELF-INDULGENT</span>
+                        <span class="link-item">SELFISH</span>
+                        <span class="link-item">TACTLESS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies:</h3>
+            <div class="section-content">
+                <p>• Employing wit and laugh</p>
+                <p>• Borrowing bright and laugh</p>
+                <p>• Being sharp-witted</p>
+                <p>• Naturally resorting to sarcasm</p>
+                <p>• Excelling at wordplay</p>
+                <p>• Being funny</p>
+                <p>• Making cutting observations</p>
+                <p>• Freely speaking their mind</p>
+                <p>• Using authentic and pointed or predisposing to what others think</p>
+                <p>• Making self-deprecating remarks</p>
+                <p>• Using humor as a weapon—say, when someone opposes the character</p>
+                <p>• Commenting on irony</p>
+                <p>• Excelling at wordplay</p>
+                <p>• Having good comedic timing</p>
+                <p>• Using sarcasm</p>
+                <p>• Being able to sniff out hypocrisy and insincerity</p>
+                <p>• Using humor as a defense mechanism</p>
+                <p>• Caring more about saying what pleases them for other people's feelings</p>
+                <p>• Feeling superior to others</p>
+                <p>• Taking pride in being able to put people in their place</p>
+                <p>• Always needing to have the last word</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">BEING JUDGED</span>
+                    <span class="link-item">COMPETITION</span>
+                    <span class="link-item">CONFLICT</span>
+                    <span class="link-item">CRITICISM</span>
+                    <span class="link-item">HUMILIATION</span>
+                    <span class="link-item">LOSING THE RESPECT OF OTHERS</span>
+                    <span class="link-item">REGRET</span>
+                    <span class="link-item">REJECTION</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them:</h3>
+            <div class="section-content">
+                <p>• Causing trouble for others when the character's target is a priority (a best down, etc.)</p>
+                <p>• Having to become less cynical person who just wants they out</p>
+                <p>• The character being asked for advice, and they have no idea what to say</p>
+                <p>• Being emotionally impaired and unable to think quickly (due to a serious illness, medication, a head trauma, etc.)</p>
+                <p>• Having to share a difficult truth with a loved one</p>
+                <p>• Being romantically interested in someone who doesn't get the character's sense of humor</p>
+                <p>• Being viewed by others as mean or cruel for their jokes</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth:</h3>
+            <div class="section-content">
+                <p>• Using their humor to hide a secret, and always fearing it will come to light</p>
+                <p>• Wanting to graciously connect with others but being too afraid to make themselves vulnerable</p>
+                <p>• Feeling compelled to reveal a truth but respecting the pain it will bring to the hearer</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Cliches to Be Aware Of:</h3>
+            <div class="section-content">
+                <p>• The smart mouth character where it's their one note and they never reveal any depth</p>
+                <p>• Flippant wisehiems whose comic dos-top snark becomes a defining characteristic trait</p>
+                <p>• The caustic and witty vilain who brings all one-liners but never reveals any true vulnerability, complexity of motivation, or depth</p>
+                <p>• The snarky character who is consistently making people the butt of his jokes, yet they still love him</p>
+                <p>• Snarky characters who are always bloody and wise</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With A Character Who...</h3>
+            <div class="section-content">
+                <p>• ... is snarky but also emotionally available and vulnerable</p>
+                <p>• ... is an unknown despite their dry and snarky humor</p>
+                <p>• ... is an optimist despite their dry and snarky humor</p>
+                <p>• ... has a medical reason for their snarky rants—due to a brain condition or their medication relating their inhibitions, for instance</p>
+                <p>• ... has an atypical trait: analytical, innocent, needy, empathetic, gullible, etc.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Unexpected Occupations for This Character:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">AIR TRAFFIC CONTROLLER</span>
+                    <span class="link-item">CORONER</span>
+                    <span class="link-item">FUNERAL DIRECTOR</span>
+                    <span class="link-item">HYPNOTHERAPIST</span>
+                    <span class="link-item">JUDGE</span>
+                    <span class="link-item">LIBRARIAN</span>
+                    <span class="link-item">PHARMACIST</span>
+                    <span class="link-item">POLITICIAN</span>
+                    <span class="link-item">RECEPTIONIST</span>
+                    <span class="link-item">SOMMELIER</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Create Something New:</h3>
+            <div class="section-content">
+                <p>• Snarky McSnarkerson + Apex Predator</p>
+                <p>• Snarky McSnarkerson + Chosen One</p>
+                <p>• Snarky McSnarkerson + Good King or Queen</p>
+                <p>• Snarky McSnarkerson + Mother Figure</p>
+                <p>• Snarky McSnarkerson + Sage</p>
+                <p>• Snarky McSnarkerson + Wallflower</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Similar or Related Tropes:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">BEST FRIEND</span>
+                    <span class="link-item">BIG FINISHER</span>
+                    <span class="link-item">FUNSTER</span>
+                    <span class="link-item">JESTER (ARCHETYPE)</span>
+                    <span class="link-item">STORYTELLER</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>

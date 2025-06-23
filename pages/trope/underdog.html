@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Underdog - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .trope-title {
+            font-size: 1.3rem;
+            color: #8b9dc3;
+            margin-bottom: 20px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-dots {
+            display: flex;
+            gap: 8px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #8b9dc3;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .section p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background-color: #8b9dc3;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tag:hover {
+            background-color: #6a7ba8;
+        }
+
+        .list-item {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+                border-radius: 0;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="trope-title">UNDERDOG ⚹</div>
+            <div class="navigation">
+                <div class="nav-dots">
+                    <div class="dot"></div>
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <a href="../pages/character-types-tropes.html" class="back-link">Back to Character Types and Tropes</a>
+
+            <div class="section">
+                <h2>Description:</h2>
+                <p>At the start of the story, this competitor is woefully outmatched and has no chance of winning. They typically begin as a reluctant participant who eventually dedicates themselves wholeheartedly to coming out on top.</p>
+            </div>
+
+            <div class="section">
+                <h2>Fictional Examples:</h2>
+                <p>Daniel LaRusso (The Karate Kid), Rocky Balboa (Rocky), Turtle Suenson (The Lord of the Rings movies), Mamma Durcatella Martinelli (Gladiator), Margaret "Maggie" Fitzgerald (Million Dollar Baby), Rocky Balboa (the Rocky franchise), Vince Papale (Invincible)</p>
+            </div>
+
+            <div class="section">
+                <h2>Common Strengths:</h2>
+                <div class="tags">
+                    <span class="tag">Adaptable</span>
+                    <span class="tag">Alert</span>
+                    <span class="tag">Ambitious</span>
+                    <span class="tag">Analytical</span>
+                    <span class="tag">Cautious</span>
+                    <span class="tag">Centered</span>
+                    <span class="tag">Curious</span>
+                    <span class="tag">Disciplined</span>
+                    <span class="tag">Efficient</span>
+                    <span class="tag">Focused</span>
+                    <span class="tag">Honorable</span>
+                    <span class="tag">Humble</span>
+                    <span class="tag">Idealistic</span>
+                    <span class="tag">Industrious</span>
+                    <span class="tag">Inspirational</span>
+                    <span class="tag">Just</span>
+                    <span class="tag">Passionate</span>
+                    <span class="tag">Patient</span>
+                    <span class="tag">Persistent</span>
+                    <span class="tag">Resourceful</span>
+                    <span class="tag">Responsible</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Common Weaknesses:</h2>
+                <div class="tags">
+                    <span class="tag">Apathetic</span>
+                    <span class="tag">Childish</span>
+                    <span class="tag">Ignorant</span>
+                    <span class="tag">Impatient</span>
+                    <span class="tag">Impulsive</span>
+                    <span class="tag">Inflexible</span>
+                    <span class="tag">Insecure</span>
+                    <span class="tag">Martyr</span>
+                    <span class="tag">Nervous</span>
+                    <span class="tag">Reckless</span>
+                    <span class="tag">Sensitive</span>
+                    <span class="tag">Stubborn</span>
+                    <span class="tag">Uncommunicative</span>
+                    <span class="tag">Vindictive</span>
+                    <span class="tag">Withdrawn</span>
+                    <span class="tag">Worrywart</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Associated Actions, Behaviors, and Tendencies:</h2>
+                <div class="list-item">Starting out as a disadvantage</div>
+                <div class="list-item">Being outraged they will not give up</div>
+                <div class="list-item">Persevering when times are tough</div>
+                <div class="list-item">Being resilient in the face of setbacks and opposition</div>
+                <div class="list-item">Being humble and unassuming</div>
+                <div class="list-item">Adapting to new situations quickly</div>
+                <div class="list-item">Working hard to achieve their goals</div>
+                <div class="list-item">Being courageous</div>
+                <div class="list-item">Fighting creative solutions to problems</div>
+                <div class="list-item">Rising to meet the challenge</div>
+                <div class="list-item">Challenging assumptions people make about them</div>
+                <div class="list-item">Standing up for what they believe is right</div>
+                <div class="list-item">Having empathy for others who are misunderstood or undervalued</div>
+                <div class="list-item">Being a person of action</div>
+                <div class="list-item">Being not defined by others</div>
+                <div class="list-item">Having a strong work ethic</div>
+                <div class="list-item">Maintaining a positive attitude</div>
+                <div class="list-item">Empowering others to believe in themselves and their potential</div>
+                <div class="list-item">Being patient, knowing that success will come in time</div>
+                <div class="list-item">Making sacrifices to reach their goals</div>
+                <div class="list-item">Seeing failure as an opportunity to learn</div>
+                <div class="list-item">Using adversity to fuel their determination to win</div>
+            </div>
+
+            <div class="section">
+                <h2>Fears that Might Limit the Character:</h2>
+                <div class="tags">
+                    <span class="tag">Being Judged</span>
+                    <span class="tag">Being Watched</span>
+                    <span class="tag">Competition</span>
+                    <span class="tag">Criticism</span>
+                    <span class="tag">Letting Others Down</span>
+                    <span class="tag">Putting Oneself Out There</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Situations that Will Challenge Them:</h2>
+                <div class="list-item">Experiencing discrimination because of their race, gender, skill level, or social status</div>
+                <div class="list-item">Lacking the necessary skills or tools to win and not knowing how to acquire them</div>
+                <div class="list-item">Discovering their mentor or trainer is fraudulent</div>
+                <div class="list-item">Working within an impossible timeline (with high stakes)</div>
+                <div class="list-item">Developing an emotional, physical, or mental health challenge that impedes their ability to succeed</div>
+                <div class="list-item">Losing a supportive and encouraging supporter or loved one</div>
+            </div>
+
+            <div class="section">
+                <h2>Inner Struggles to Give Them Depth:</h2>
+                <div class="list-item">Feeling isolated in the fight</div>
+                <div class="list-item">Feeling pressured, as if everyone is counting on them to succeed</div>
+                <div class="list-item">Dealing with public expectations despite their opponent appears</div>
+                <div class="list-item">Doubting the loyalty or authenticity of they allies</div>
+                <div class="list-item">Struggling to achieve respect or self-esteem</div>
+                <div class="list-item">Clinging to habits that success will elevate them to the underdog position</div>
+                <div class="list-item">Entering the arena because of familial or societal expectations (not because the character wants to do it)</div>
+            </div>
+
+            <div class="section">
+                <h2>Clichés to be Aware Of:</h2>
+                <div class="list-item">A predictable plot line that emerges the underdog's success</div>
+                <div class="list-item">The rebel leaders being insurmountably odds who rallies support through rousing inspirational speeches and leads his followers to a quick victory</div>
+                <div class="list-item">The athlete underdog who wins because of those loyal and hard work</div>
+            </div>
+
+            <div class="section">
+                <h2>Twist this Trope with a Character Who...</h2>
+                <div class="list-item">Isn't an individual but a group, people, or nation</div>
+                <div class="list-item">Continuously encounters morally ambiguous decisions on their journey</div>
+                <div class="list-item">Discovers the people or institutions they're fighting was their benefactor all along</div>
+                <div class="list-item">Wins at their goal but loses something precious at the same time</div>
+                <div class="list-item">Has an atypical trait: Lazy, Spoiled, Depressed, Controlling, Confident, etc.</div>
+            </div>
+
+            <div class="section">
+                <h2>Unexpected Occupations for this Character:</h2>
+                <div class="tags">
+                    <span class="tag">Business Tycoon</span>
+                    <span class="tag">Conductor</span>
+                    <span class="tag">Coroner</span>
+                    <span class="tag">Emergency Room Physician</span>
+                    <span class="tag">Judge</span>
+                    <span class="tag">Military Officer</span>
+                    <span class="tag">Secret Service Agent</span>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Create Something New:</h2>
+                <div class="list-item">Underdog + Benefactor</div>
+                <div class="list-item">Underdog + Sage</div>
+                <div class="list-item">Underdog + Sado</div>
+                <div class="list-item">Underdog + Hero</div>
+                <div class="list-item">Underdog + Uber-Soldier</div>
+            </div>
+
+            <div class="section">
+                <h2>Similar or Related Tropes:</h2>
+                <div class="tags">
+                    <span class="tag">Grotesque</span>
+                    <span class="tag">Nice Nerd</span>
+                    <span class="tag">Starving Artist</span>
+                    <span class="tag">Tortured Hero</span>
+                    <span class="tag">Tragic Hero</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+
+        // Add interactivity to tags
+        document.querySelectorAll('.tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                console.log('Clicked tag:', this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>

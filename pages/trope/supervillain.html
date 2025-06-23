@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Type and Trope Thesaurus - Supervillain</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1.3rem;
+            letter-spacing: 0.05em;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-content {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .section-content p {
+            margin-bottom: 8px;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+        }
+
+        .strengths-weaknesses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        .link-item:after {
+            content: ", ";
+            color: #333;
+            text-decoration: none;
+        }
+
+        .link-item:last-child:after {
+            content: "";
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: #2c5aa0;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .strengths-weaknesses {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>SUPERVILLAIN</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <strong>Helpful Tip:</strong> Using a trope or archetype helps readers quickly understand a character, but stepping them 
+            beyond their predictable layers: beyond, add depth with a unique backstory, emotional wound, and related 
+            trait and flaw. You can also break expectations with an internal job, informative ways, or positive 
+            personality change that will help your character stand apart.
+        </div>
+
+        <div class="section">
+            <h3>Description:</h3>
+            <div class="section-content">
+                <p>This megalomaniac nemesis is augmented with extraordinary or supernatural powers. There is typically a history between the two characters to explain and complicate their dynamic.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples:</h3>
+            <div class="section-content fictional-examples">
+                <p>Lex Luthor (the Superman franchise), Voldemort (Harry Potter series), Magneto (X-Men movies, the Joker (the Batman franchise), Loki (Thor)</p>
+            </div>
+        </div>
+
+        <div class="strengths-weaknesses">
+            <div class="section">
+                <h3>Common Strengths:</h3>
+                <div class="section-content">
+                    <div class="link-list">
+                        <span class="link-item">ADAPTABLE</span>
+                        <span class="link-item">ADVENTUROUS</span>
+                        <span class="link-item">AMBITIOUS</span>
+                        <span class="link-item">BOLD</span>
+                        <span class="link-item">CONFIDENT</span>
+                        <span class="link-item">DECISIVE</span>
+                        <span class="link-item">DISCIPLINED</span>
+                        <span class="link-item">FOCUSED</span>
+                        <span class="link-item">INDUSTRIOUS</span>
+                        <span class="link-item">OBSERVANT</span>
+                        <span class="link-item">ORGANIZED</span>
+                        <span class="link-item">PERSISTENT</span>
+                        <span class="link-item">PERSUASIVE</span>
+                        <span class="link-item">PHILOSOPHICAL</span>
+                        <span class="link-item">PRIVATE</span>
+                        <span class="link-item">RESOURCEFUL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Common Weaknesses:</h3>
+                <div class="section-content">
+                    <div class="link-list">
+                        <span class="link-item">ABRASIVE</span>
+                        <span class="link-item">ANTISOCIAL</span>
+                        <span class="link-item">CALLOUS</span>
+                        <span class="link-item">COCKY</span>
+                        <span class="link-item">CONFRONTATIONAL</span>
+                        <span class="link-item">CONTROLLING</span>
+                        <span class="link-item">CRUEL</span>
+                        <span class="link-item">DISRESPECTFUL</span>
+                        <span class="link-item">EVASIVE</span>
+                        <span class="link-item">EXTRAVAGANT</span>
+                        <span class="link-item">FANATICAL</span>
+                        <span class="link-item">HAUGHTY</span>
+                        <span class="link-item">HOSTILE</span>
+                        <span class="link-item">MANIPULATIVE</span>
+                        <span class="link-item">MEGALOMANIAC</span>
+                        <span class="link-item">MISCHIEVOUS</span>
+                        <span class="link-item">PUSHY</span>
+                        <span class="link-item">REBELLIOUS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies:</h3>
+            <div class="section-content">
+                <p>• Intelligence</p>
+                <p>• Determination</p>
+                <p>• Resourcefulness</p>
+                <p>• Believing that their own story</p>
+                <p>• Having charismatic powers of persuasion</p>
+                <p>• Having a memorable catchphrase</p>
+                <p>• Thinking strategically</p>
+                <p>• Planning to capitalize to get the right people for their "team"</p>
+                <p>• Having a unique style and fashion</p>
+                <p>• Devising elaborate and diabolical plans</p>
+                <p>• Surrounding themselves with henchmen or minions</p>
+                <p>• Having a weakness that they try to hide</p>
+                <p>• Being motivated by revenge, power, or a grand-but-misguided vision for the world</p>
+                <p>• Resisting about their schemes</p>
+                <p>• Being arrogant</p>
+                <p>• Being power-hungry</p>
+                <p>• Considering their enemy identity behind a persona</p>
+                <p>• Having charismatic powers of persuasion</p>
+                <p>• Having a memorable catchphrase</p>
+                <p>• Thinking of elaborate and diabolical plans</p>
+                <p>• Surrounding themselves with henchmen or minions</p>
+                <p>• Being motivated by revenge, power, or a grand-but-misguided vision for the world</p>
+                <p>• Resisting about their schemes</p>
+                <p>• Being arrogant</p>
+                <p>• Being power-hungry</p>
+                <p>• Considering their enemy identity behind a persona</p>
+                <p>• Having little value for human life</p>
+                <p>• Considering the hero or group of heroes as their arch-nemesis</p>
+                <p>• Being frustrated by their or failures among underlings</p>
+                <p>• Having little patience for failure or mistakes among underlings</p>
+                <p>• Easily discarding allies or team members when they are no longer serve the character's purposes</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">A LOVED ONE DYING</span>
+                    <span class="link-item">AGORAPHOBIA</span>
+                    <span class="link-item">BEING CAPABLE OF HARM</span>
+                    <span class="link-item">BEING JUDGED</span>
+                    <span class="link-item">BEING SEPARATED FROM LOVED ONES</span>
+                    <span class="link-item">BEING UNSAFE</span>
+                    <span class="link-item">CONFLICT</span>
+                    <span class="link-item">FAILURE</span>
+                    <span class="link-item">LETTING OTHERS DOWN</span>
+                    <span class="link-item">LOSING ONE'S HERITAGE OR CULTURAL IDENTITY</span>
+                    <span class="link-item">LOSING THE RESPECT OF OTHERS</span>
+                    <span class="link-item">NOT FITTING IN</span>
+                    <span class="link-item">PHYSICAL PAIN</span>
+                    <span class="link-item">PUTTING ONESELF OUT THERE</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them:</h3>
+            <div class="section-content">
+                <p>• Facing a hero with equal or greater power than their own</p>
+                <p>• Having a new hero prove to be uncorrupted than anticipated</p>
+                <p>• Having to work with other supervillains (or even heroes) to accomplish a goal</p>
+                <p>• Documenting unforeseen consequences of their villainy, such as their actions creating an even greater hero or harming someone they care about</p>
+                <p>• Being humbled by their own mistakes</p>
+                <p>• Losing access to their power or being everyone</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth:</h3>
+            <div class="section-content">
+                <p>• Struggling with a past traumatic event that started them down this path</p>
+                <p>• Being conflicted with a past misunderstanding between them and their character</p>
+                <p>• Struggling with a past misunderstanding between them and their character</p>
+                <p>• Having moments of wanting to change course and be a different person, but feeling unable to do so</p>
+                <p>• Feeling lonely or unloved despite having lived lovements</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Cliches to Be Aware Of:</h3>
+            <div class="section-content">
+                <p>• A megalomaniac world leader who creates chaos simply to watch the world burn</p>
+                <p>• A supervillain whose plans are easily thwarted, but who manipulating their plans or architecture to the hero, giving their enemies time to apprise</p>
+                <p>• The single-minded megalomaniac whose goal is world domination without any complexity of motivation</p>
+                <p>• The fabulously wealthy inventor who relies on their technological genius, death traps, or kidnapping the hero's girlfriend to gain leverage</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With A Character Who...</h3>
+            <div class="section-content">
+                <p>• ... a a great genius as parent</p>
+                <p>• ... is a female</p>
+                <p>• ... possesses villainy for a noble cause, such as protecting someone vulnerable or preventing more lives by taking a few</p>
+                <p>• ... is an unreliable narrator, relaying events to the reader that are distorted versions of the truth</p>
+                <p>• ... shares as a villain but makes the jump to becoming a superhero or antihero</p>
+                <p>• ... has a tragic backstory that makes them sympathetic to the audience</p>
+                <p>• ... has a tragic backstory that makes them relent that version of their past</p>
+                <p>• ... in therapy to deal with their past</p>
+                <p>• ... isn't male</p>
+                <p>• ... has an atypical trait: empathetic, generous, appreciative, needy, worrymart, etc.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Unexpected Occupations for This Character:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">ANIMAL RESCUE WORKER</span>
+                    <span class="link-item">BARTENDER</span>
+                    <span class="link-item">CLERGY MEMBER</span>
+                    <span class="link-item">LIBRARIAN</span>
+                    <span class="link-item">MIDWIFE</span>
+                    <span class="link-item">PERSONAL SHOPPER</span>
+                    <span class="link-item">SOCIAL WORKER</span>
+                    <span class="link-item">TEACHER</span>
+                    <span class="link-item">WEDDING PLANNER</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Create Something New:</h3>
+            <div class="section-content">
+                <p>• Supervillain + Best Friend</p>
+                <p>• Supervillain + Grand Dame</p>
+                <p>• Supervillain + Lover</p>
+                <p>• Supervillain + Mother</p>
+                <p>• Supervillain + Sage</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Similar or Related Tropes:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">ANTIHERO</span>
+                    <span class="link-item">APEX PREDATOR</span>
+                    <span class="link-item">DARK LORD OR LADY</span>
+                    <span class="link-item">MONSTER</span>
+                    <span class="link-item">SUPERHERO</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>

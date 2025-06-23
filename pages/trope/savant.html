@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savant - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: normal;
+            letter-spacing: 0.05em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .main-content {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .sidebar {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #8b9dc3;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+            color: #666;
+        }
+
+        .strengths-weaknesses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .strength-weakness-section h4 {
+            font-size: 0.9rem;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .trait-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .trait-tag {
+            background: #e9ecef;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #495057;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+        }
+
+        .trait-tag.strength {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .trait-tag.weakness {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .behaviors-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .behaviors-list li {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .behaviors-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8b9dc3;
+        }
+
+        .tip-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .tip-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .tip-box p {
+            color: #856404;
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+        }
+
+        .link-tags {
+            margin-top: 20px;
+        }
+
+        .link-tags a {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.85rem;
+            margin-right: 15px;
+        }
+
+        .link-tags a:hover {
+            color: #1e4187;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .strengths-weaknesses {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>SAVANT ✪</h2>
+        </div>
+
+        <div class="content-grid">
+            <div class="main-content">
+                <div class="section">
+                    <h3>Description:</h3>
+                    <p>Savants are gifted in a certain field but deficient in other areas. They might have studied hard to hone their talent, or the skill may come naturally with little work or practice at all.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Fictional Examples:</h3>
+                    <p class="fictional-examples">Sherlock Holmes (the Sherlock Holmes series), Beth Harmon (The Queen's Gambit), Raymond Babbitt (Rain Man), Sheridan Cooper (The Big Bang Theory)</p>
+                </div>
+
+                <div class="strengths-weaknesses">
+                    <div class="strength-weakness-section">
+                        <h4>Common Strengths:</h4>
+                        <div class="trait-list">
+                            <span class="trait-tag strength">Creative</span>
+                            <span class="trait-tag strength">Curious</span>
+                            <span class="trait-tag strength">Decisive</span>
+                            <span class="trait-tag strength">Focused</span>
+                            <span class="trait-tag strength">Imaginative</span>
+                            <span class="trait-tag strength">Independent</span>
+                            <span class="trait-tag strength">Introverted</span>
+                            <span class="trait-tag strength">Meticulous</span>
+                            <span class="trait-tag strength">Passionate</span>
+                            <span class="trait-tag strength">Pensive</span>
+                            <span class="trait-tag strength">Persistent</span>
+                            <span class="trait-tag strength">Private</span>
+                            <span class="trait-tag strength">Quirky</span>
+                            <span class="trait-tag strength">Studious</span>
+                            <span class="trait-tag strength">Talented</span>
+                        </div>
+                    </div>
+
+                    <div class="strength-weakness-section">
+                        <h4>Common Weaknesses:</h4>
+                        <div class="trait-list">
+                            <span class="trait-tag weakness">Abrasive</span>
+                            <span class="trait-tag weakness">Apathetic</span>
+                            <span class="trait-tag weakness">Compulsive</span>
+                            <span class="trait-tag weakness">Disorganized</span>
+                            <span class="trait-tag weakness">Forgetful</span>
+                            <span class="trait-tag weakness">Fussy</span>
+                            <span class="trait-tag weakness">Humorless</span>
+                            <span class="trait-tag weakness">Impatient</span>
+                            <span class="trait-tag weakness">Inflexible</span>
+                            <span class="trait-tag weakness">Obsessive</span>
+                            <span class="trait-tag weakness">Tactless</span>
+                            <span class="trait-tag weakness">Temperamental</span>
+                            <span class="trait-tag weakness">Uncommunicative</span>
+                            <span class="trait-tag weakness">Uncooperative</span>
+                            <span class="trait-tag weakness">Withdrawn</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Associated Actions, Behaviors, and Tendencies:</h3>
+                    <ul class="behaviors-list">
+                        <li>Being exceptionally talented or gifted in a particular area of knowledge</li>
+                        <li>Focusing intently on one thing for long periods of time</li>
+                        <li>Striving for mastery in their area of expertise</li>
+                        <li>Being a perfectionist</li>
+                        <li>Preferring to work alone</li>
+                        <li>Identifying patterns easily or subconsciously</li>
+                        <li>Being extremely organized or being disorganized, or moving fluidly with everyday tasks beyond their scope of genius</li>
+                        <li>Not picking up on social cues</li>
+                        <li>Lacking emotional empathy</li>
+                        <li>Having memorable quirks</li>
+                        <li>Being socially awkward</li>
+                        <li>Difficulty relating to others</li>
+                        <li>Having a difficult time forming social connections</li>
+                        <li>Displaying compulsive behaviors</li>
+                        <li>Having limited interests</li>
+                        <li>Being uncomfortable with their own emotions</li>
+                        <li>Being socially awkward</li>
+                        <li>Maintaining a rigid routine</li>
+                        <li>Having heightened sensory sensitivity</li>
+                        <li>Struggling with change</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Fears That Might Limit the Character:</h3>
+                    <div class="link-tags">
+                        <a href="#">Becoming What One Hates</a>
+                        <a href="#">Being Labeled</a>
+                        <a href="#">Being Unable to Achieve a Dream</a>
+                        <a href="#">Competition</a>
+                        <a href="#">Discrimination</a>
+                        <a href="#">Losing One's Mind</a>
+                        <a href="#">Rejection</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="tip-box">
+                    <h4>Helpful Tip:</h4>
+                    <p>Using a trope or archetype helps readers quickly understand a character, but stepping down creates a weak and predictable figure. Instead, add depth with a unique backstory, emotional wounds, and context that creates an arc to potential growth.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            alert('Navigating back to Character Types and Tropes page');
+        }
+    </script>
+</body>
+</html>

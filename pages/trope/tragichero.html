@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Type and Trope Thesaurus - Tragic Hero</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1.3rem;
+            letter-spacing: 0.05em;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-content {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .section-content p {
+            margin-bottom: 8px;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+        }
+
+        .strengths-weaknesses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        .link-item:after {
+            content: ", ";
+            color: #333;
+            text-decoration: none;
+        }
+
+        .link-item:last-child:after {
+            content: "";
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: #2c5aa0;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .strengths-weaknesses {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>TRAGIC HERO</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <strong>Helpful Tip:</strong> Using a trope or archetype helps readers quickly understand a character, but stepping them 
+            beyond their predictable layers: beyond, add depth with a unique backstory, emotional wound, and related 
+            trait and flaw. You can also break expectations with an internal job, informative ways, or positive 
+            personality change that will help your character stand apart.
+        </div>
+
+        <div class="section">
+            <h3>Description:</h3>
+            <div class="section-content">
+                <p>This character shares many of the traditionally heroic traits: courage, honor, nobility, ambition, and perseverance. But despite their good intentions, they have a fatal flaw that they're unable to overcome and results in their ultimate demise.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples:</h3>
+            <div class="section-content fictional-examples">
+                <p>Hamlet (Hamlet), Jay Gatsby (The Great Gatsby), Carmen Santangelo (Game of Thrones), Tony Soprano (The Sopranos), Anakin Skywalker (the Star Wars franchise)</p>
+            </div>
+        </div>
+
+        <div class="strengths-weaknesses">
+            <div class="section">
+                <h3>Common Strengths:</h3>
+                <div class="section-content">
+                    <div class="link-list">
+                        <span class="link-item">ADAPTABLE</span>
+                        <span class="link-item">AMBITIOUS</span>
+                        <span class="link-item">BOLD</span>
+                        <span class="link-item">CONFIDENT</span>
+                        <span class="link-item">DECISIVE</span>
+                        <span class="link-item">FOCUSED</span>
+                        <span class="link-item">HONORABLE</span>
+                        <span class="link-item">IDEALISTIC</span>
+                        <span class="link-item">INDEPENDENT</span>
+                        <span class="link-item">INTELLIGENT</span>
+                        <span class="link-item">LOYAL</span>
+                        <span class="link-item">OBSERVANT</span>
+                        <span class="link-item">PASSIONATE</span>
+                        <span class="link-item">PENSIVE</span>
+                        <span class="link-item">PERCEPTIVE</span>
+                        <span class="link-item">PERSISTENT</span>
+                        <span class="link-item">PROTECTIVE</span>
+                        <span class="link-item">RESOURCEFUL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Common Weaknesses:</h3>
+                <div class="section-content">
+                    <div class="link-list">
+                        <span class="link-item">ABRASIVE</span>
+                        <span class="link-item">CALLOUS</span>
+                        <span class="link-item">CHILDISH</span>
+                        <span class="link-item">COCKY</span>
+                        <span class="link-item">COMPULSIVE</span>
+                        <span class="link-item">CONFRONTATIONAL</span>
+                        <span class="link-item">CONTROLLING</span>
+                        <span class="link-item">DEVIOUS</span>
+                        <span class="link-item">FANATICAL</span>
+                        <span class="link-item">GREEDY</span>
+                        <span class="link-item">HYPOCRITICAL</span>
+                        <span class="link-item">IMPULSIVE</span>
+                        <span class="link-item">IRRATIONAL</span>
+                        <span class="link-item">MANIPULATIVE</span>
+                        <span class="link-item">OBSESSIVE</span>
+                        <span class="link-item">POSSESSIVE</span>
+                        <span class="link-item">SELF-DESTRUCTIVE</span>
+                        <span class="link-item">STUBBORN</span>
+                        <span class="link-item">VOLATILE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies:</h3>
+            <div class="section-content">
+                <p>• Taking any risk if it will bring the closer to their goal</p>
+                <p>• Being responsible</p>
+                <p>• Trending toward introspection (and possibly over-thinking)</p>
+                <p>• Having a strong code of beliefs</p>
+                <p>• Working well with partners, underlings, and others</p>
+                <p>• Preferring to work alone</p>
+                <p>• Thinking carefully before they speak</p>
+                <p>• Believing they have a purpose, and working toward it</p>
+                <p>• Enjoying a challenge</p>
+                <p>• Being driven to do things for the good of their loved ones</p>
+                <p>• Having a healthy work ethic; doing what needs to be done to accomplish the goal</p>
+                <p>• Being age-driven</p>
+                <p>• Struggling with personal demons</p>
+                <p>• Arrogance</p>
+                <p>• Hiding or downplaying their true feelings</p>
+                <p>• Lacking self-awareness</p>
+                <p>• Working hard to keep their flaws or demons hidden</p>
+                <p>• Rationalizing</p>
+                <p>• Becoming obsessed or fanatical about their goal</p>
+                <p>• Being too proud to ask their own team and shortcomings</p>
+                <p>• Believing themselves to be bullet-proof</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">ABANDONMENT</span>
+                    <span class="link-item">BECOMING WHAT ONE HATES</span>
+                    <span class="link-item">BEING A BURDEN TO OTHERS</span>
+                    <span class="link-item">BEING CAPABLE OF HARM</span>
+                    <span class="link-item">BETRAYAL</span>
+                    <span class="link-item">CERTAIN KINDS OF PEOPLE</span>
+                    <span class="link-item">DEATH</span>
+                    <span class="link-item">HUMILIATION</span>
+                    <span class="link-item">LEAVING NO LEGACY</span>
+                    <span class="link-item">LETTING OTHERS DOWN</span>
+                    <span class="link-item">LOSING THE RESPECT OF OTHERS</span>
+                    <span class="link-item">NOT BEING IN CONTROL</span>
+                    <span class="link-item">NOT FITTING IN</span>
+                    <span class="link-item">REJECTION</span>
+                    <span class="link-item">RELATIONAL COMMITMENT</span>
+                    <span class="link-item">TRUSTING OTHERS</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them:</h3>
+            <div class="section-content">
+                <p>• Having to make a difficult moral or ethical choice that will hurt them or someone else</p>
+                <p>• Being confronted with their flaw</p>
+                <p>• Failing with addiction</p>
+                <p>• Being betrayed by someone close to them</p>
+                <p>• Having their knowledge base discovered and threatened to be revealed</p>
+                <p>• Having to work with someone they don't respect or trust</p>
+                <p>• Being thrust into a position of power they don't want or feel ready for</p>
+                <p>• Facing a rival who is stronger or smarter than they are</p>
+                <p>• Being reminded of their first fear</p>
+                <p>• Being confronted with the people about their care about</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth:</h3>
+            <div class="section-content">
+                <p>• Fearing that they can't protect the people who are close to them</p>
+                <p>• Being aware of their flaws but being unable to resist or change them</p>
+                <p>• Being haunted by sad and ashamed of their past</p>
+                <p>• Being aware that their actions are hurting others but continuing to pursue a cause</p>
+                <p>• Being plagued by deep insecurity and being driven to hide it from others</p>
+                <p>• Resenting their fatal flaw but choosing to ignore or dismiss it</p>
+                <p>• Recognizing that a past wounding event is destroying but refusing to come to terms with it</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Cliches to Be Aware Of:</h3>
+            <div class="section-content">
+                <p>• The tragic hero whose downfall is too predictable</p>
+                <p>• The tragic hero whose world is too simplistic (black vs. white, good vs. evil, etc.)</p>
+                <p>• The tragic hero whose death or downfall transformation occurs too quickly or easily</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With A Character Who...</h3>
+            <div class="section-content">
+                <p>• ... is a child or a teenager</p>
+                <p>• ... isn't male</p>
+                <p>• ... isn't afraid to show their vulnerabilities</p>
+                <p>• ... has a sense of dark that plays a key role in their downfall</p>
+                <p>• ... has an atypical trait: Affectionate, Frivolous, Funny, Mischievous, Spontaneous, etc.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Create Something New:</h3>
+            <div class="section-content">
+                <p>• Tragic Hero + Joker</p>
+                <p>• Tragic Hero + Cowboy</p>
+                <p>• Tragic Hero + Femme Fatale</p>
+                <p>• Tragic Hero + Good King or Queen</p>
+                <p>• Tragic Hero + Rebel</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Similar or Related Tropes:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">HERO (ARCHETYPE)</span>
+                    <span class="link-item">RELUCTANT HERO</span>
+                    <span class="link-item">TORTURED HERO</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>

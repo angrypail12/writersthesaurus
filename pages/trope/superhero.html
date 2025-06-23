@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            font-size: 13px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-dot {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 1.2rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: normal;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            font-size: 1.5rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .main-content {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .sidebar {
+            background: #e8e6e3;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section h3 {
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .section p {
+            margin-bottom: 10px;
+        }
+
+        .section ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .section li {
+            margin-bottom: 3px;
+        }
+
+        .strengths-weaknesses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .link-list {
+            margin-bottom: 8px;
+        }
+
+        .link-list a {
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-right: 8px;
+            font-size: 0.85rem;
+        }
+
+        .link-list a:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .sidebar h4 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .sidebar p {
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .strengths-weaknesses {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <div class="nav-dot"></div>
+            <div class="nav-dot"></div>
+        </div>
+
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>Superhero</h2>
+        </div>
+
+        <div class="content">
+            <div class="main-content">
+                <div class="section">
+                    <h3>Description:</h3>
+                    <p>This hero is equipped with specific superpowers or resources that are used to protect the human race—usually from a parade of supervillains.</p>
+                </div>
+
+                <div class="section">
+                    <h3>Fictional Examples:</h3>
+                    <p>Wonder Woman (DC comics), Spiderman (Marvel comics), Black Widow (Marvel comics), Rob and Helen Parr (The Incredibles)</p>
+                </div>
+
+                <div class="strengths-weaknesses">
+                    <div class="section">
+                        <h3>Common Strengths:</h3>
+                        <div class="link-list">
+                            <a href="#">ADVENTUROUS</a><a href="#">ALERT</a><a href="#">CONFIDENT</a><a href="#">COURAGEOUS</a><a href="#">DECISIVE</a><a href="#">DISCREET</a><a href="#">FOCUSED</a><a href="#">HONEST</a><a href="#">HONORABLE</a><a href="#">HUMBLE</a><a href="#">IDEALISTIC</a><a href="#">INDEPENDENT</a><a href="#">JUST</a><a href="#">LOYAL</a><a href="#">OBSERVANT</a><a href="#">OPTIMISTIC</a><a href="#">PRIVATE</a><a href="#">PROTECTIVE</a><a href="#">RESOURCEFUL</a>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3>Common Weaknesses:</h3>
+                        <div class="link-list">
+                            <a href="#">COCKY</a><a href="#">CONFRONTATIONAL</a><a href="#">DEFENSIVE</a><a href="#">EVASIVE</a><a href="#">MACHO</a><a href="#">OBSESSIVE</a><a href="#">PERFECTIONIST</a><a href="#">RECKLESS</a><a href="#">SELF-DESTRUCTIVE</a><a href="#">STUBBORN</a><a href="#">VIOLENT</a><a href="#">VOLATILE</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Associated Actions, Behaviors, and Tendencies:</h3>
+                    <ul>
+                        <li>Putting themselves at risk to help others</li>
+                        <li>Wanting to help people</li>
+                        <li>Having a strong sense of justice</li>
+                        <li>Being natural leaders or quiet leaders</li>
+                        <li>Having a strong moral code</li>
+                        <li>Being an effective leader</li>
+                        <li>Having a protective instinct that runs deeper than the short term</li>
+                        <li>Starting low close relationships</li>
+                        <li>Being responsible with a strong sense of duty</li>
+                        <li>Controlling their emotions</li>
+                        <li>Being driven by purpose</li>
+                        <li>Making justice a priority</li>
+                        <li>Preferring to work alone</li>
+                        <li>Thinking out the short first</li>
+                        <li>Being careful who they trust</li>
+                        <li>Being open to learning new things</li>
+                        <li>Only using their powers for good</li>
+                        <li>Having their secret (or learning new ones)</li>
+                        <li>Not being open others</li>
+                        <li>Believing in justice can always go better</li>
+                        <li>Defending the vulnerable</li>
+                        <li>Avoiding the limelight</li>
+                        <li>Accepting that they may die if they don't want assistance</li>
+                        <li>Believing they know what's best</li>
+                        <li>Being condescending</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Flaws That Might Limit the Character:</h3>
+                    <div class="link-list">
+                        <a href="#">A SECRET BEING REVEALED</a><a href="#">BECOMING WHAT ONE HATES</a><a href="#">BEING RESPONSIBLE FOR OTHERS</a><a href="#">BEING SEPARATED FROM LOVED ONES</a><a href="#">BEING UNABLE TO ACHIEVE A DREAM</a><a href="#">BEING UNSAFE</a><a href="#">BEING WATCHED</a><a href="#">CONFLICT</a><a href="#">FAILURE</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Situations That Will Challenge Them:</h3>
+                    <ul>
+                        <li>Facing a villain who learns each weakness or is stronger than they are</li>
+                        <li>Being betrayed by someone they trust</li>
+                        <li>Their true identity being revealed</li>
+                        <li>Having their powers stripped from them or come collateral damage</li>
+                        <li>Their powers failing at the worst possible time</li>
+                        <li>Losing their powers</li>
+                        <li>Being forced to work with people who are incompetent or have a different belief system</li>
+                        <li>Loved ones facing a dangerous situation the character's powers can't save them from</li>
+                        <li>Being forced to choose between duty and their family</li>
+                        <li>Having to remove someone who is insanely evil</li>
+                        <li>Having to join forces with a rival</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Inner Struggles to Give Them Depth:</h3>
+                    <ul>
+                        <li>Feeling isolated because they can't tell people the truth about their powers or their identity</li>
+                        <li>Feeling like they don't belong in the regular (human) world</li>
+                        <li>Fearing that their powers aren't strong enough to combat the evil they're facing</li>
+                        <li>Fearing that using great power will corrupt them or change who they are</li>
+                        <li>Feeling overwhelmed by the magnitude of the task they're facing</li>
+                        <li>Wanting to give up</li>
+                        <li>Worrying that the people they're saving aren't worth it</li>
+                        <li>Being frustrated when the people they save end up back in trouble</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Clichés to Be Aware Of:</h3>
+                    <ul>
+                        <li>A superhero with no flaws or weaknesses internal powers</li>
+                        <li>A superhero who always beats the bad guys effortlessly</li>
+                        <li>The superhero who serves endless hundreds, cow cosnuts, or enemies there</li>
+                        <li>The helpful superhero where displays arrogance or refuses to interact but not to other characters</li>
+                        <li>One powers have no limits and function perfectly</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Twist This Trope With a Character Who...</h3>
+                    <ul>
+                        <li>Suffers from self-doubt</li>
+                        <li>Resents their powers and sees them as a burden</li>
+                        <li>Has obvious flaws</li>
+                        <li>Makes poor decisions</li>
+                        <li>Is accident-prone</li>
+                        <li>Has an atypical trait: Cynical, Philosophical, Temperamental, Grumpy, Wisacass, etc.</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Unexpected Occupations for This Character:</h3>
+                    <div class="link-list">
+                        <a href="#">BARISTA</a><a href="#">CASHIER</a><a href="#">CLERGY MEMBER</a><a href="#">CRIME SCENE CLEANER</a><a href="#">DOG GROOMER</a><a href="#">DRIVER (CAB)</a><a href="#">EXOTIC DANCER</a><a href="#">JANITOR</a><a href="#">MIDWIFE</a><a href="#">PEST CONTROL TECHNICIAN</a><a href="#">SOCIAL WORKER</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h3>Create Something New:</h3>
+                    <ul>
+                        <li>Superhero + Antihero</li>
+                        <li>Superhero + Sage</li>
+                        <li>Superhero + Mafia Don</li>
+                        <li>Superhero + Patriarch</li>
+                        <li>Superhero + Storyteller</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h3>Similar or Related Tropes:</h3>
+                    <div class="link-list">
+                        <a href="#">HERO (ARCHETYPE)</a><a href="#">SUPERVILLAIN</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <h4>Helpful Tip:</h4>
+                <p>Using a trope or archetype helps create a foundation for a character, but managing their desires & needs and problematic flaws, heroics and depths with a unique backstory, <u>convincing strengths</u> and related fears and flaws. You can also break expectations with an unusual job, <u>subversive details</u>, reverse of <u>inverting</u>.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

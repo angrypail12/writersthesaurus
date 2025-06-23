@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Type and Trope Thesaurus - Storyteller</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 1.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .header h2 {
+            font-size: 1.3rem;
+            letter-spacing: 0.05em;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin: 20px 0;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            font-size: 0.9rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .section-content {
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .section-content p {
+            margin-bottom: 8px;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+        }
+
+        .strengths-weaknesses {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        .link-item:after {
+            content: ", ";
+            color: #333;
+            text-decoration: none;
+        }
+
+        .link-item:last-child:after {
+            content: "";
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #e8f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            color: #2c5aa0;
+            margin: 20px 0;
+        }
+
+        @media (max-width: 768px) {
+            .strengths-weaknesses {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>STORYTELLER</h2>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <strong>Helpful Tip:</strong> Using a trope or archetype helps readers quickly understand a character, but stepping them 
+            beyond their predictable layers: beyond, add depth with a unique backstory, emotional wound, and related 
+            trait and flaw. You can also break expectations with an internal job, informative ways, or positive 
+            personality change that will help your character stand apart.
+        </div>
+
+        <div class="section">
+            <h3>Description:</h3>
+            <div class="section-content">
+                <p>Part historian, entertainer, and conscience, this character has a knack for storytelling through oration, song, poetry, the written word, or other creative means. Their stories often challenge societal norms and raise important questions for listeners.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples:</h3>
+            <div class="section-content fictional-examples">
+                <p>Scheherazade (One Thousand and One Nights), Joddlor (The Biker), Kaven Blane (City of Ariven), Chopin Trouillefou (Disney's The Hunchback of Notre Dame)</p>
+            </div>
+        </div>
+
+        <div class="strengths-weaknesses">
+            <div class="section">
+                <h3>Common Strengths:</h3>
+                <div class="section-content">
+                    <div class="link-list">
+                        <span class="link-item">CREATIVE</span>
+                        <span class="link-item">CURIOUS</span>
+                        <span class="link-item">EMPATHETIC</span>
+                        <span class="link-item">ENTHUSIASTIC</span>
+                        <span class="link-item">FOCUSED</span>
+                        <span class="link-item">IMAGINATIVE</span>
+                        <span class="link-item">INSPIRATIONAL</span>
+                        <span class="link-item">INTELLIGENT</span>
+                        <span class="link-item">PASSIONATE</span>
+                        <span class="link-item">PENSIVE</span>
+                        <span class="link-item">PERCEPTIVE</span>
+                        <span class="link-item">PERSUASIVE</span>
+                        <span class="link-item">PHILOSOPHICAL</span>
+                        <span class="link-item">PLAYFUL</span>
+                        <span class="link-item">SPONTANEOUS</span>
+                        <span class="link-item">WHIMSICAL</span>
+                        <span class="link-item">WISE</span>
+                        <span class="link-item">WITTY</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Common Weaknesses:</h3>
+                <div class="section-content">
+                    <div class="link-list">
+                        <span class="link-item">CATTY</span>
+                        <span class="link-item">CONFRONTATIONAL</span>
+                        <span class="link-item">GOSSIPY</span>
+                        <span class="link-item">MANIPULATIVE</span>
+                        <span class="link-item">MELODRAMATIC</span>
+                        <span class="link-item">MISCHIEVOUS</span>
+                        <span class="link-item">TEMPERAMENTAL</span>
+                        <span class="link-item">VAIN</span>
+                        <span class="link-item">VERBOSE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies:</h3>
+            <div class="section-content">
+                <p>• Being gifted at developing complicated plots down to a message people can understand</p>
+                <p>• Being a natural performer</p>
+                <p>• Using the sound of their own voice</p>
+                <p>• Using their gift to shine a light on injustices and right wrongs</p>
+                <p>• Being theatrical and dramatic</p>
+                <p>• Dominating conversations</p>
+                <p>• Hosting their storytelling skills</p>
+                <p>• Enjoying conversation about culture, art, and important</p>
+                <p>• Being an avid reader</p>
+                <p>• Disappearing for story with the people whose story is being told</p>
+                <p>• Engaging up with current events</p>
+                <p>• Not being afraid to rattle traditions with their narratives</p>
+                <p>• Being good at changing a crowd or holding their attention</p>
+                <p>• Having no ownership or creativity venues (bookshops, coffee, poetry readings, etc.)</p>
+                <p>• Having an extensive collection of art (books, paintings, DVDs, etc.)</p>
+                <p>• Being comfortable and living with a lot of creative clutter</p>
+                <p>• Being able to see an idea from many different angles</p>
+                <p>• Exaggerating for the sake of impact</p>
+                <p>• Being a deep thinker</p>
+                <p>• Enjoying solitude</p>
+                <p>• Thinking outside the box</p>
+                <p>• Having your time management</p>
+                <p>• Struggling with unexpected or change of thought</p>
+                <p>• Difficulty keeping secrets</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">A SECRET BEING REVEALED</span>
+                    <span class="link-item">BEING WATCHED</span>
+                    <span class="link-item">CONFLICT</span>
+                    <span class="link-item">CROWDS</span>
+                    <span class="link-item">LOSING THE RESPECT OF OTHERS</span>
+                    <span class="link-item">PERSECUTION</span>
+                    <span class="link-item">PUBLIC SPEAKING</span>
+                    <span class="link-item">PUTTING ONESELF OUT THERE</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them:</h3>
+            <div class="section-content">
+                <p>• Being told something they're not allowed to repeat</p>
+                <p>• Their work being stolen</p>
+                <p>• Having to use their stories as freedom of speech</p>
+                <p>• Being threatened to remain for sharing certain information</p>
+                <p>• Suffering to a foreign place where they're unable to communicate with others</p>
+                <p>• Being turned at to write and tell stories</p>
+                <p>• Feeling unspired or unprepared</p>
+                <p>• Seeing another storyteller using their own and manipulate others</p>
+                <p>• Having to remain anonymous while telling someone's story</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth:</h3>
+            <div class="section-content">
+                <p>• Wanting to speak truth but being afraid to challenge the status quo</p>
+                <p>• Struggling with impostor syndrome</p>
+                <p>• Being told they have an ongoing tired of always delivering difficult news</p>
+                <p>• Experiencing a fear of grief that strips their creative abilities</p>
+                <p>• An injury or illness that makes it impossible for them to tell stories in their preferred way (a writer developing arthritis, a verbal storytelling being their voice, etc.)</p>
+                <p>• Losing the limelight and having secrets that must be kept in the dark</p>
+                <p>• Secretly misplacing with the failure as the story they need to tell</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Cliches to Be Aware Of:</h3>
+            <div class="section-content">
+                <p>• The traveling minstrel storyteller</p>
+                <p>• The storyteller who uses one primary delivery and little variation</p>
+                <p>• The storyteller as a minor character with no arc, whose only job is to reveal truth to the hero or audience</p>
+                <p>• Storytellers who rely on traditional methods and are clueless about modern trends</p>
+                <p>• Storytellers who reveal difficult truths about powerful people without enduring any consequences</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With A Character Who...</h3>
+            <div class="section-content">
+                <p>• ... has a speech impediment or disability that hinders to themselves</p>
+                <p>• ... has a successful day job with storytelling as a side day</p>
+                <p>• ... wants to remain anonymous</p>
+                <p>• ... isn't always a reliable narrator</p>
+                <p>• ... doesn't have years of extensive looking</p>
+                <p>• ... uses technology instead of traditional mediums for storytelling</p>
+                <p>• ... doesn't have typical trait: Vivacious, Vindictive, Devious, etc.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Unexpected Occupations for This Character:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">CORRECTIONS OFFICER (PRISON GUARD)</span>
+                    <span class="link-item">FARMER</span>
+                    <span class="link-item">FUNERAL DIRECTOR</span>
+                    <span class="link-item">HUMAN TEST SUBJECT</span>
+                    <span class="link-item">JANITOR</span>
+                    <span class="link-item">MECHANICAL ENGINEER</span>
+                    <span class="link-item">PEST CONTROL TECHNICIAN</span>
+                    <span class="link-item">ROBOTICS ENGINEER</span>
+                    <span class="link-item">SECRET SERVICE AGENT</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Create Something New:</h3>
+            <div class="section-content">
+                <p>• Storyteller + Antihero</p>
+                <p>• Storyteller + Con Artist</p>
+                <p>• Storyteller + Hot Billionaire</p>
+                <p>• Storyteller + Ice Queen</p>
+                <p>• Storyteller + Sacrificial Mystic</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Similar or Related Tropes:</h3>
+            <div class="section-content">
+                <div class="link-list">
+                    <span class="link-item">CREATOR (ARCHETYPE)</span>
+                    <span class="link-item">MORAL COMPASS</span>
+                    <span class="link-item">REBEL (ARCHETYPE)</span>
+                    <span class="link-item">SAGE (ARCHETYPE)</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>
