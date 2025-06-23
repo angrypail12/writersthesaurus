@@ -306,9 +306,8 @@
         }
 
         function navigateToMotivation(motivationSlug) {
-            // This would navigate to individual motivation pages
-            alert(`Navigating to: ${character-motivationsSlug}\n\nNext, you can show me the content for specific motivation pages you'd like me to build!`);
-            // In a real implementation: window.location.href = `character-motivations/${character-motivationsSlug}.html`;
+            // Navigate to individual motivation pages in the character-motivations subfolder
+            window.location.href = `character-motivations/${motivationSlug}.html`;
         }
 
         // Add some interactivity to the navigation dots
