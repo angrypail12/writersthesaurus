@@ -296,8 +296,8 @@
         }
 
         function navigateToTrope(tropeSlug) {
-            alert(`Navigating to: ${tropeSlug}\n\nNext, you can show me the content for specific trope pages you'd like me to build!`);
-        }
+    window.location.href = `trope/${tropeSlug}.html`;
+}
 
         // Add interactivity to navigation dots
         document.querySelectorAll('.dot').forEach((dot, index) => {
