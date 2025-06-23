@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Father Figure - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 30px;
+            letter-spacing: 0.1em;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            color: #2c5aa0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            letter-spacing: 0.1em;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #f8f9fa;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="subtitle">FATHER FIGURE</div>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            Using a trope or archetype helps readers quickly understand a character. But mapping them outside of typical expectations helps characters stand out and become memorable, not stereotypical. When used with purpose, every trope can become a compelling character.
+        </div>
+
+        <div class="section">
+            <h3>Description</h3>
+            <div class="section-content">
+                This character plays the role of a parent, adoptive, nurturing, and wise compared to the protagonist. Though the father figure often has no children of their own or they are estranged from them, but still desires the train.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples</h3>
+            <div class="section-content">
+                Alfred Pennyworth (Batman), Obi-Wan Kenobi (Star Wars), Gandalf (The Lord of the Rings), Atticus Finch (To Kill a Mockingbird), Dumbledore (Harry Potter), Vito Corleone (The Godfather), Mufasa (The Lion King), Uncle Ben (Spider-Man)
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Strengths</h3>
+            <div class="link-list">
+                <span class="link-item">CONFIDENT</span>
+                <span class="link-item">DIPLOMATIC</span>
+                <span class="link-item">DISCIPLINED</span>
+                <span class="link-item">HONORABLE</span>
+                <span class="link-item">HOSPITABLE</span>
+                <span class="link-item">IDEALISTIC</span>
+                <span class="link-item">INTELLIGENT</span>
+                <span class="link-item">KIND</span>
+                <span class="link-item">LOYAL</span>
+                <span class="link-item">NURTURING</span>
+                <span class="link-item">PERCEPTIVE</span>
+                <span class="link-item">PERSUASIVE</span>
+                <span class="link-item">PROTECTIVE</span>
+                <span class="link-item">RESPONSIBLE</span>
+                <span class="link-item">SENSIBLE</span>
+                <span class="link-item">SUPPORTIVE</span>
+                <span class="link-item">WISE</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Weaknesses</h3>
+            <div class="link-list">
+                <span class="link-item">CONTROLLING</span>
+                <span class="link-item">MARTYR</span>
+                <span class="link-item">OBEDIENT</span>
+                <span class="link-item">PENSIVE</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies</h3>
+            <div class="section-content">
+                Being protective of their charges<br>
+                Sharing their wisdom<br>
+                Seeing what they do not ready or need<br>
+                Being authoritative where necessary<br>
+                Pushing greatness for the people or their elite<br>
+                Being emotionally available when needed<br>
+                Expecting people's boundaries<br>
+                Setting a strong moral framework<br>
+                Being willing to make hard calls<br>
+                Having personalized that may not always be their changing<br>
+                Showing what is right<br>
+                Making affirmative statements to help the protagonist<br>
+                Building up their people's motivations and encouraging the virtue<br>
+                Being present when others<br>
+                Offering personalized encouragement they may need guidance or not their appropriate dreams<br>
+                Speaking the truth, even when it hurts<br>
+                Making themselves available to help the protagonist<br>
+                Building affirmative relationships to help the protagonist<br>
+                Thinking they who do what's best for the people in their charge<br>
+                Teaching key who love what they need for the wisdom else understanding the offence<br>
+                Helping their search and exploring the affection<br>
+                Forgiveness and mercy, but the protagonist and their child and valuing the followed's role for her<br>
+                Being fully aware
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character</h3>
+            <div class="link-list">
+                <span class="link-item">A LOVED ONE DYING</span>
+                <span class="link-item">BEING RESPONSIBLE FOR OTHERS</span>
+                <span class="link-item">BETRAYAL</span>
+                <span class="link-item">GROWING OLD</span>
+                <span class="link-item">LETTING OTHERS DOWN</span>
+                <span class="link-item">LOVE</span>
+                <span class="link-item">NOT BEING IN CONTROL</span>
+                <span class="link-item">PROTECTIVE</span>
+                <span class="link-item">RELATIONAL COMMITMENT</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them</h3>
+            <div class="section-content">
+                A beloved child against their teaching or wisdom<br>
+                A discourse to avoid business protecting the father figure from being a reliable predecessor and control<br>
+                Watching the protagonist to door ones who and being the consequences of poor choices<br>
+                Being forced to choose between conflicting loyalties<br>
+                The protagonist being young before seeking in selfless the father figure against loss<br>
+                A spiritual legacy falling a relationship or the father figure being strongly for the protagonist<br>
+                The father against fighting for freedom and conflicting the father figure<br>
+                Weakening with a new fear should at the work public, should affect how the protagonist and the father figure
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth</h3>
+            <div class="section-content">
+                Being regretful of someone's actions but wanting to believer the best of them<br>
+                Struggling with a protected debt such as addiction to greed against, such their children with their ability on for a good leader<br>
+                Being wrong with a real fear that might harm their children<br>
+                Wrestling with a past that should at the work public, should affect how the protagonist reacts to the families role<br>
+                Wrestling with a past that should affects her much for the audience role<br>
+                Wrestling with a past that should let his reputation the families role for her<br>
+                Being emotional and conflicted that their past, should affect how the protagonist and the father figure
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Clichés to Be Aware Of</h3>
+            <div class="section-content">
+                The stereotypical parent who cannot control who really claims he's any past power to provide guidance<br>
+                The father figure who sacrifices his own life for the protagonist of a key point in the story
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With a Character Who...</h3>
+            <div class="section-content">
+                Is actually a father or mother person by the female person for their mentoring<br>
+                Character the protagonist is parents unfeeding and totally against expensive stores<br>
+                Is usually younger than their own children<br>
+                Has problems but their always provide favors in the long run<br>
+                Has protected among their more other is to comprehension, maybe, or some type<br>
+                Has great intentions, but their advice always finds's is the long run<br>
+                Has protected among his more others to his comprehension, maybe, or other type
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

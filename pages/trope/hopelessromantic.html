@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hopeless Romantic - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .traits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .trait-list {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .trait-list h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .trait-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .trait-tag {
+            background: #8b9dc3;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .trait-tag:hover {
+            background: #6a7ba8;
+        }
+
+        .behaviors-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .behaviors-list li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .behaviors-list li::before {
+            content: "• ";
+            color: #8b9dc3;
+            font-weight: bold;
+        }
+
+        .sub-section {
+            margin-bottom: 25px;
+        }
+
+        .sub-section h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 768px) {
+            .traits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Hopeless Romantic</h1>
+        </div>
+
+        <div class="section">
+            <h2>Description</h2>
+            <div class="description">
+                Hopeless romantics have loving in the mind and are naturally optimistic on the quest to find their romantic. When they spent a love from an almost ideal or past something sweet, it can become all-consuming, prioritized above everything until everyone else.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Fictional Examples</h2>
+            <div class="fictional-examples">
+                Marianne Dashwood (Sense and Sensibility), Romeo and Juliet (Romeo and Juliet), Jay Gatsby (The Great Gatsby), Charlotte (Manhattan Morning) (Us Stars)
+            </div>
+        </div>
+
+        <div class="traits-grid">
+            <div class="trait-list">
+                <h3>Common Strengths</h3>
+                <div class="trait-tags">
+                    <span class="trait-tag">Affectionate</span>
+                    <span class="trait-tag">Bold</span>
+                    <span class="trait-tag">Creative</span>
+                    <span class="trait-tag">Enthusiastic</span>
+                    <span class="trait-tag">Extroverted</span>
+                    <span class="trait-tag">Faithful</span>
+                    <span class="trait-tag">Flirtatious</span>
+                    <span class="trait-tag">Generous</span>
+                    <span class="trait-tag">Happy</span>
+                    <span class="trait-tag">Idealistic</span>
+                    <span class="trait-tag">End</span>
+                    <span class="trait-tag">Passionate</span>
+                    <span class="trait-tag">End</span>
+                    <span class="trait-tag">Passionate</span>
+                    <span class="trait-tag">Romantic</span>
+                    <span class="trait-tag">Sensitive</span>
+                    <span class="trait-tag">Sentimental</span>
+                    <span class="trait-tag">Spontaneous</span>
+                    <span class="trait-tag">Uninhibited</span>
+                    <span class="trait-tag">Whimsical</span>
+                </div>
+            </div>
+
+            <div class="trait-list">
+                <h3>Common Weaknesses</h3>
+                <div class="trait-tags">
+                    <span class="trait-tag">Addictive</span>
+                    <span class="trait-tag">Flaky</span>
+                    <span class="trait-tag">Gullible</span>
+                    <span class="trait-tag">Idealistic</span>
+                    <span class="trait-tag">Impulsive</span>
+                    <span class="trait-tag">Melodramatic</span>
+                    <span class="trait-tag">Needy</span>
+                    <span class="trait-tag">Obsessive</span>
+                    <span class="trait-tag">Oversensitive</span>
+                    <span class="trait-tag">Possessive</span>
+                    <span class="trait-tag">Self-Indulgent</span>
+                    <span class="trait-tag">Temperamental</span>
+                    <span class="trait-tag">Trusting</span>
+                    <span class="trait-tag">Whiny</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Associated Actions, Behaviors, and Tendencies</h2>
+            <ul class="behaviors-list">
+                <li>Daydreaming frequently</li>
+                <li>Always looking for the lookout for someone who could be their soulmate</li>
+                <li>Watching the daily choices about other people</li>
+                <li>Being sentimental</li>
+                <li>Going others well or more sentimental</li>
+                <li>Always thinking the best of a love interest</li>
+                <li>Taking gestures</li>
+                <li>Having romantic hesitations and passions</li>
+                <li>Being willing to relationships and make others sweeter</li>
+                <li>Making sacrifices both money and time between</li>
+                <li>Feeling that social way</li>
+                <li>Having romantic gestures</li>
+                <li>Being affectionate</li>
+                <li>Being accepting</li>
+                <li>Being clinchant, almost love and obsessing</li>
+                <li>Talking down any actions with people</li>
+                <li>Being very upset when other that love's compromise or obsessing other people</li>
+                <li>Going in their heard</li>
+                <li>Expecting others to be point of being smart advantage of</li>
+                <li>Looking at them that they've take any the point</li>
+                <li>Feeling investigative when sharing cut as a relationship</li>
+                <li>Attention a breakthrough or take ever they from</li>
+                <li>Becoming lost to the business who take at</li>
+                <li>The getting frustrated or socially like a interest</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Flaws That Might Limit the Character</h2>
+            <div class="sub-section">
+                <h3>Being a strong or others/ Being taken advantage of/ Having to choose/ Disagreed/ Never perfect happiness/ Not being in control/ Rejection/ Trusting/ Commitment/ Love/ Forgiven others</h3>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Situations That Will Challenge Them</h2>
+            <ul class="behaviors-list">
+                <li>Being so romantic they're also can't committed to love new relationships, etc.)</li>
+                <li>Disappointed love</li>
+                <li>Being thought to assume the character thought was "the one"</li>
+                <li>Being hurt and being enough which the character romantic love</li>
+                <li>Being rejected by their idealistic choice</li>
+                <li>Learning information that their dream love that received they're guaranteed to them from every</li>
+                <li>Being rejected by their primary family</li>
+                <li>Being alone</li>
+                <li>Seeing someone she character's family doesn't approve of</li>
+                <li>They're going to be the work than with stress to</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Inner Struggles to Give Them Depth</h2>
+            <ul class="behaviors-list">
+                <li>Struggling with loneliness</li>
+                <li>Putting romantic love over and other choices</li>
+                <li>Feeling incompetent that they make bad and responding or finding that person</li>
+                <li>Worrying that they're "settled" for the person they're with</li>
+                <li>Being dropped and struggling with whether or skepticism</li>
+                <li>Being so that idea about love they've not trusting it in the later</li>
+                <li>Being afraid that their romantic will move to the later</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Clichés to Be Aware Of</h2>
+            <ul class="behaviors-list">
+                <li>The helpless romantic redirected in a unwelcoming love triangle, and it the pilot gets their friend, and a lot ago achieved</li>
+                <li>The character romantic overwhelmed love they only</li>
+                <li>Romance complete who are naïve, gullible, and protected</li>
+                <li>A hopeless romantic overwhelmed either the right affection or appreciation after awhile</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Twist This Trope With a Character Who…</h2>
+            <ul class="behaviors-list">
+                <li>Is emotionally are every</li>
+                <li>Is a feminist and new</li>
+                <li>Has treatable actions along with others</li>
+                <li>Is clearly persuasive to mother parts of life</li>
+                <li>Is much interested something</li>
+                <li>Has an original that informative, every focused, everyone, wholere: free, etc.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>

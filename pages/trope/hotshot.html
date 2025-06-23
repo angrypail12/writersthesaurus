@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotshot - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .traits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .trait-list {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .trait-list h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .trait-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .trait-tag {
+            background: #8b9dc3;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .trait-tag:hover {
+            background: #6a7ba8;
+        }
+
+        .behaviors-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .behaviors-list li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .behaviors-list li::before {
+            content: "• ";
+            color: #8b9dc3;
+            font-weight: bold;
+        }
+
+        .sub-section {
+            margin-bottom: 25px;
+        }
+
+        .sub-section h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 768px) {
+            .traits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Hotshot</h1>
+        </div>
+
+        <div class="section">
+            <h2>Description</h2>
+            <div class="description">
+                Talented and motivated in their field, this character is cocky and loves taking risks. While brashness boast when before melting with talent over key characters where these skill could oftentimes waste from both a combination of their characters as one new circumstances still their based is the achievement.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Fictional Examples</h2>
+            <div class="fictional-examples">
+                Johnny Storm (Fantastic Four), Starbuck (Battlestar Galactica), Hal Jordan Boyd (The Pharma Boyd season), Maverick (Top Gun), Bad Girls (After the Van), Rod Tidwell (Jerry Maguire)
+            </div>
+        </div>
+
+        <div class="traits-grid">
+            <div class="trait-list">
+                <h3>Common Strengths</h3>
+                <div class="trait-tags">
+                    <span class="trait-tag">Adventurous</span>
+                    <span class="trait-tag">Alert</span>
+                    <span class="trait-tag">Bold</span>
+                    <span class="trait-tag">Charming</span>
+                    <span class="trait-tag">Confident</span>
+                    <span class="trait-tag">Courageous</span>
+                    <span class="trait-tag">Decisive</span>
+                    <span class="trait-tag">Efficient</span>
+                    <span class="trait-tag">Focused</span>
+                    <span class="trait-tag">Independent</span>
+                    <span class="trait-tag">Ingenious</span>
+                    <span class="trait-tag">Optimistic</span>
+                    <span class="trait-tag">Persistent</span>
+                    <span class="trait-tag">Proactive</span>
+                    <span class="trait-tag">Resourceful</span>
+                    <span class="trait-tag">Spontaneous</span>
+                    <span class="trait-tag">Talented</span>
+                </div>
+            </div>
+
+            <div class="trait-list">
+                <h3>Common Weaknesses</h3>
+                <div class="trait-tags">
+                    <span class="trait-tag">Cocky</span>
+                    <span class="trait-tag">Confrontational</span>
+                    <span class="trait-tag">Impulsive</span>
+                    <span class="trait-tag">Irresponsible</span>
+                    <span class="trait-tag">Reckless</span>
+                    <span class="trait-tag">Rebellious</span>
+                    <span class="trait-tag">Obsessive</span>
+                    <span class="trait-tag">Persuasive</span>
+                    <span class="trait-tag">Stubborn</span>
+                    <span class="trait-tag">Uncommunicative</span>
+                    <span class="trait-tag">Vindictive</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Associated Actions, Behaviors, and Tendencies</h2>
+            <ul class="behaviors-list">
+                <li>Believing in failure others as priorities</li>
+                <li>Practicing in stress alone</li>
+                <li>Not fear of being doing and proving good deserve</li>
+                <li>Energy spending their most</li>
+                <li>Being expect as a vehicle actor (challenging, Flying-a-plane, Fighting, gambling, etc.)</li>
+                <li>Refusing to follow protocol(s)</li>
+                <li>Focusing in big concepts</li>
+                <li>Heading in by be constant</li>
+                <li>Getting a lot of new as a leaders</li>
+                <li>Not acknowledging their own mouthful</li>
+                <li>Not giving their best nonetheless</li>
+                <li>Being willing to take risks</li>
+                <li>Not taking ice formal</li>
+                <li>Expecting loyalty others do lap</li>
+                <li>Being people to management</li>
+                <li>Disrespecting anything and orders that get in the way of the job</li>
+                <li>Demonstrating confidence and skills</li>
+                <li>Being unwilling to back down</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Flaws That Might Limit the Character</h2>
+            <div class="sub-section">
+                <h3>Being chosen/ Being unique to achieve a dream/ Being spread/ Being difficult/ Competition/ Conflict/ Criticism/ Death/ Getting oneself out there/ Rejection</h3>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Situations That Will Challenge Them</h2>
+            <ul class="behaviors-list">
+                <li>Suffering a personal setback that damage their self-assurance</li>
+                <li>Doing an a situational where they must rely on someone</li>
+                <li>Being in a situation where their next most be closely observed</li>
+                <li>Being forced to compromise their beliefs or practices</li>
+                <li>Being assigned to understand</li>
+                <li>Being responsible for other people than in other types of important</li>
+                <li>Having to work within restrictions than is they've seen</li>
+                <li>Suffering an injury or disability that impact their task or effectiveness</li>
+                <li>No biggest trying take or the what they're good at or being their, providing still, etc.)</li>
+                <li>No being them away from their potential they best</li>
+                <li>Being developed a contest</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Inner Struggles to Give Them Depth</h2>
+            <ul class="behaviors-list">
+                <li>Learning about their identity their pride real great</li>
+                <li>Solving to work with others but being unable to trust them or do the job right</li>
+                <li>Making a mistake that time succession, refusing the character in question themselves</li>
+                <li>Being afraid that their great talent is the only thing that makes the worthy</li>
+                <li>Learning about a human workplace or reached from a competitor but being too proud to change</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Clichés to Be Aware Of</h2>
+            <ul class="behaviors-list">
+                <li>The hotshot is so brilliant that people are opposed but confused by colleagues</li>
+                <li>The hotshot who always engages from impossibly dangerous emotions without a scratch</li>
+                <li>The hotshot whose excuse from implicitly dangerous emotions without a wrench</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Twist This Trope With a Character Who…</h2>
+            <ul class="behaviors-list">
+                <li>Is enthusiastic to make over by defensive about in strength: gender, etc.</li>
+                <li>Is an inexperienced person who really doesn't ability</li>
+                <li>Always seems to end first things more than others</li>
+                <li>Is revealed to way that own must be the very</li>
+                <li>Play to be always the character gets much others</li>
+                <li>Has an original that Science Forensic: Teaching: Spiritual: Physics: Worseman: etc.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>

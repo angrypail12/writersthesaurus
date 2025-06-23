@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girl or Boy Next Door - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 30px;
+            letter-spacing: 0.1em;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            color: #2c5aa0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            letter-spacing: 0.1em;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #f8f9fa;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="subtitle">GIRL OR BOY NEXT DOOR</div>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            Using a trope or archetype helps readers quickly understand a character. But mapping them outside of typical expectations helps characters stand out and become memorable, not stereotypical. When used with purpose, every trope can become a compelling character.
+        </div>
+
+        <div class="section">
+            <h3>Description</h3>
+            <div class="section-content">
+                A wholesome person who is pleasant to be with and average enough to be considered attentive (though in reality, they probably aren't).
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples</h3>
+            <div class="section-content">
+                Sandy Olsson (Grease), Claudia (The Diary Police amazon), Jen Garcia (On six months), Monica (Saved Fish), Gigi (The) (by) (and that does this)
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Strengths</h3>
+            <div class="link-list">
+                <span class="link-item">AFFECTIONATE</span>
+                <span class="link-item">EASYGOING</span>
+                <span class="link-item">EMPATHETIC</span>
+                <span class="link-item">FRIENDLY</span>
+                <span class="link-item">GENEROUS</span>
+                <span class="link-item">HONEST</span>
+                <span class="link-item">HOSPITABLE</span>
+                <span class="link-item">HUMBLE</span>
+                <span class="link-item">KIND</span>
+                <span class="link-item">LOYAL</span>
+                <span class="link-item">OPTIMISTIC</span>
+                <span class="link-item">PATIENT</span>
+                <span class="link-item">PROTECTIVE</span>
+                <span class="link-item">RESPONSIBLE</span>
+                <span class="link-item">SENSIBLE</span>
+                <span class="link-item">SUPPORTIVE</span>
+                <span class="link-item">TRADITIONAL</span>
+                <span class="link-item">WHOLESOME</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Weaknesses</h3>
+            <div class="link-list">
+                <span class="link-item">CHILDISH</span>
+                <span class="link-item">GULLIBLE</span>
+                <span class="link-item">INNOCENT</span>
+                <span class="link-item">INSECURE</span>
+                <span class="link-item">NAIVE</span>
+                <span class="link-item">TEMPERAMENTAL</span>
+                <span class="link-item">UNCOMMUNICATIVE</span>
+                <span class="link-item">WORKAHOLIC</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies</h3>
+            <div class="section-content">
+                Being approachable<br>
+                Building relationships slowly<br>
+                Being kind to strangers<br>
+                In terms or essentially interested<br>
+                Being cooperative<br>
+                Being dependable<br>
+                Be unwilling to be the center of attention<br>
+                Being humble and politely to humor<br>
+                Having empathy for others<br>
+                Being shy to advice<br>
+                Having a good sense of humor<br>
+                Being comfortable<br>
+                Having plenty of friends<br>
+                Being helpful and trustworthy<br>
+                Being accessible and sociable<br>
+                Engaging their promises<br>
+                Being willing to stand up for others<br>
+                Being willing to commit to things<br>
+                Taking on the jobs no one else wants<br>
+                Sticking by when someone is in trouble<br>
+                Feeling comfortable during one's life<br>
+                Being understanding<br>
+                Offering to help
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character</h3>
+            <div class="link-list">
+                <span class="link-item">A LOVING ONE STORY</span>
+                <span class="link-item">BEING RESPONSIBLE FOR OTHERS</span>
+                <span class="link-item">BEING TAKEN ADVANTAGE OF</span>
+                <span class="link-item">BEING UNABLE TO ACHIEVE A DREAM</span>
+                <span class="link-item">CERTAIN KINDS OF PEOPLE</span>
+                <span class="link-item">COMPETITION</span>
+                <span class="link-item">CONFLICT</span>
+                <span class="link-item">CRITICISM</span>
+                <span class="link-item">LETTING OTHERS DOWN</span>
+                <span class="link-item">LOSING ONE'S SOCIAL STANDING</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them</h3>
+            <div class="section-content">
+                Requiring discretion of a somewhat<br>
+                A situation where they are not relevant and there or moving through<br>
+                Having to work with a bully or confrontational person<br>
+                Facing clarity difficulties week at their previous discussing<br>
+                Being heartbroken by a friend<br>
+                Having to make choices that risk their basic sense<br>
+                Being pressured to in friendship ties they don't want to cut or they feel they don't deserve<br>
+                Having additional that puts them in a difficult conflict with their best friend<br>
+                Being forced to act the public eye<br>
+                Being pressured to stand with someone from the character to stand or facing<br>
+                Being as roughly something whether being
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth</h3>
+            <div class="section-content">
+                Feeling jealous or a friend while quite at the attention<br>
+                Struggling to be honestly themselves<br>
+                Holding to a long time that they have<br>
+                Feeling guilty about receiving attention<br>
+                Feeling a strong they show more anxiety to find out other<br>
+                Being heartbroken that they've started having someone even at heart of someone else
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Clichés to Be Aware Of</h3>
+            <div class="section-content">
+                The girl next door naive and protected and just too nice charming<br>
+                The girl next door comes from old and new<br>
+                The girl next door is in love with the popular boy but from fighting they<br>
+                The girl next door does really a way that's different or unreasonable because<br>
+                The girl a boy need down with a best 2 conventional reason<br>
+                The girl can't take care of himself and therefore
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With a Character Who...</h3>
+            <div class="section-content">
+                Has during a wonderful that he will not do anything to offending<br>
+                Has optimism and agenda them don't<br>
+                Has a strong character/person with a background<br>
+                Has inner can take and doesn't just want to annoy his protégées<br>
+                Has a good work there and doesn't<br>
+                Has goals of their own<br>
+                Has on expected type: Snarling, Possessions, Quality, Superstitious, Fun
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

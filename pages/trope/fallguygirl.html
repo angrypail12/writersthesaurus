@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fall Guy or Girl - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 30px;
+            letter-spacing: 0.1em;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            color: #2c5aa0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            letter-spacing: 0.1em;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #f8f9fa;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="subtitle">FALL GUY OR GIRL</div>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            Using a trope or archetype helps readers quickly understand a character. But mapping them outside of typical expectations helps characters stand out and become memorable, not stereotypical. When used with purpose, every trope can become a compelling character.
+        </div>
+
+        <div class="section">
+            <h3>Description</h3>
+            <div class="section-content">
+                This character is often the fool for someone else's misplaying. They may be scaped blamed for one because and are they could become the designated scapegoat for anything that goes wrong.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples</h3>
+            <div class="section-content">
+                Patsy Stone (Absolutely Fabulous), Richard (The Fugitive)
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Strengths</h3>
+            <div class="link-list">
+                <span class="link-item">CALM</span>
+                <span class="link-item">COURAGEOUS</span>
+                <span class="link-item">EMPATHETIC</span>
+                <span class="link-item">GENEROUS</span>
+                <span class="link-item">GENTLE</span>
+                <span class="link-item">HONEST</span>
+                <span class="link-item">HUMBLE</span>
+                <span class="link-item">INNOCENT</span>
+                <span class="link-item">LOYAL</span>
+                <span class="link-item">MERCIFUL</span>
+                <span class="link-item">OPTIMISTIC</span>
+                <span class="link-item">PATIENT</span>
+                <span class="link-item">PROTECTIVE</span>
+                <span class="link-item">SIMPLE</span>
+                <span class="link-item">TRUSTING</span>
+                <span class="link-item">UNSELFISH</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Weaknesses</h3>
+            <div class="link-list">
+                <span class="link-item">GULLIBLE</span>
+                <span class="link-item">INSECURE</span>
+                <span class="link-item">NEEDY</span>
+                <span class="link-item">SUBSERVIENT</span>
+                <span class="link-item">TIMID</span>
+                <span class="link-item">UNCOMMUNICATIVE</span>
+                <span class="link-item">WEAK-WILLED</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies</h3>
+            <div class="section-content">
+                Thinking of others before themselves<br>
+                Taking guilt for things they didn't do<br>
+                Feeling good intentions<br>
+                Being willing to shoulder responsibilities for a victim<br>
+                Working a job or career that provides for family or someone<br>
+                Feeling like best at others<br>
+                Always being willing to help<br>
+                Being loyal and naive<br>
+                Not standing up for themselves<br>
+                Feeling a strong sense of justice<br>
+                For someone to be the center of attention<br>
+                Being overshadowed<br>
+                Struggling to enforce personal boundaries<br>
+                Feeling a bad time speaking up for themselves<br>
+                Being manipulated easily<br>
+                Putting themselves down<br>
+                Wanting to be liked by others<br>
+                Being rarely appreciated<br>
+                Being rarely recognized for the work would be
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them</h3>
+            <div class="section-content">
+                An escalation of pushback turning up to be firm<br>
+                A situation in which they want to stand up for themselves<br>
+                Being forced to uproot our defend themselves because it could affect others<br>
+                Feeling in a way that like fall for someone's confession<br>
+                Caring for a way to like fall in love with a compassionate a...about children hanging friends because the parents want other kids in crime, once<br>
+                Being called operations about the attention they don't know the answers to<br>
+                Being cast by someone they admire and that trust
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth</h3>
+            <div class="section-content">
+                Slapping others for emotional pain or authority or self-preservation<br>
+                Ever feeling like they're really worthwhile or self-knowing<br>
+                Feeling guilt about their confidence or other themselves<br>
+                Feeling guilty about standing up for themselves<br>
+                Feeling forced because of their decisions<br>
+                Being worried to self things to defensive side
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Clichés to Be Aware Of</h3>
+            <div class="section-content">
+                The fall guy or girl who is too much disagreement from<br>
+                The fall guy or girl who is vulnerable on their work<br>
+                The fall guy who stands their time, really, very consistently or in the story
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With a Character Who...</h3>
+            <div class="section-content">
+                Is smart and street-savvy<br>
+                Not really<br>
+                Isn't nearly being<br>
+                Has an strength but they're from the world party characters he scapegoat is emotionally volatile, they have a vengeful streak, such, they a vengeful streak, etc.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

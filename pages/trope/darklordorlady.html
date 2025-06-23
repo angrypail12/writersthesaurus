@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Lord or Lady - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .content-section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .traits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .trait-column {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .trait-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 6px;
+            font-size: 0.8rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .trait-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .helpful-tip {
+            background: #f8f9fa;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .traits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="title">DARK LORD OR LADY</div>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Description:</div>
+            <div class="section-content">
+                Evil personified and seemingly invincible, our antagonist's evil is such the said. They often are new motivations, and the attractive memories imagined, military or influenced of their command in dominant and control others.
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Fictional Examples:</div>
+            <div class="section-content">
+                Emperor Palpatine (the Star Wars films), The White Witch (The Lion, the Witch and the Wardrobe), Voldemort (the Harry Potter stories), Morgana Alley (the Merlin television), Emperor Palpatine (the Star Wars filmmakers)
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Common Strengths:</div>
+            <div class="traits-grid">
+                <div class="trait-column">
+                    <a href="#" class="trait-link">AMBITIOUS</a>
+                    <a href="#" class="trait-link">ALERT</a>
+                    <a href="#" class="trait-link">AMBITIOUS</a>
+                    <a href="#" class="trait-link">ANALYTICAL</a>
+                    <a href="#" class="trait-link">BOLD</a>
+                    <a href="#" class="trait-link">CONFIDENT</a>
+                    <a href="#" class="trait-link">DECISIVE</a>
+                    <a href="#" class="trait-link">EFFICIENT</a>
+                    <a href="#" class="trait-link">FOCUSED</a>
+                    <a href="#" class="trait-link">INDEPENDENT</a>
+                    <a href="#" class="trait-link">INTELLIGENT</a>
+                    <a href="#" class="trait-link">INTROVERTED</a>
+                    <a href="#" class="trait-link">MANIPULATIVE</a>
+                    <a href="#" class="trait-link">PERCEPTIVE</a>
+                    <a href="#" class="trait-link">PERSISTENT</a>
+                    <a href="#" class="trait-link">PERSUASIVE</a>
+                    <a href="#" class="trait-link">RESOURCEFUL</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Common Weaknesses:</div>
+            <div class="traits-grid">
+                <div class="trait-column">
+                    <a href="#" class="trait-link">CALLOUS</a>
+                    <a href="#" class="trait-link">COCKY</a>
+                    <a href="#" class="trait-link">CONFRONTATIONAL</a>
+                    <a href="#" class="trait-link">CONTROLLING</a>
+                    <a href="#" class="trait-link">CRUEL</a>
+                    <a href="#" class="trait-link">DEVIOUS</a>
+                    <a href="#" class="trait-link">DISLOYAL</a>
+                    <a href="#" class="trait-link">EVIL</a>
+                    <a href="#" class="trait-link">GREEDY</a>
+                    <a href="#" class="trait-link">HAUGHTY</a>
+                    <a href="#" class="trait-link">HYPOCRITICAL</a>
+                    <a href="#" class="trait-link">INFLEXIBLE</a>
+                    <a href="#" class="trait-link">IRRATIONAL</a>
+                    <a href="#" class="trait-link">MALIGNANT</a>
+                    <a href="#" class="trait-link">OBESSIVE</a>
+                    <a href="#" class="trait-link">PERFECTIONIST</a>
+                    <a href="#" class="trait-link">PRETENTIOUS</a>
+                    <a href="#" class="trait-link">STUBBORN</a>
+                    <a href="#" class="trait-link">UNETHICAL</a>
+                    <a href="#" class="trait-link">VINDICTIVE</a>
+                    <a href="#" class="trait-link">VIOLENT</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Associated Actions, Behaviors, and Tendencies:</div>
+            <div class="section-content">
+                <p>Having a threatening presence<br>
+                Being highly intelligent at the parent of evil actions<br>
+                Having a regal presence<br>
+                Issuing a big presence that fills the room<br>
+                Wanting clothing meant to mark them more intimidating<br>
+                Talking good, domestic attitude<br>
+                Assessing their force where least<br>
+                Commanding through fear<br>
+                Operating from the shadows<br>
+                Not setting their values than<br>
+                When something their undermines<br>
+                Taking something their own issues<br>
+                Being confident they understood<br>
+                Delaying intolerable to dismiss and themselves<br>
+                Using manipulation, fear, and intimidation tactics to control others<br>
+                Being thought the action of their enemies<br>
+                Owning something dark or mysterious<br>
+                Believing in dark side understanding<br>
+                Choosing to place with dependencies others have not or defend<br>
+                Never acting for help<br>
+                Subjecting to place with understanding<br>
+                Being too important for damage<br>
+                Gaining an incredible for being mastermind<br>
+                Being too confident of nature</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Fears That Might Limit the Character:</div>
+            <div class="traits-grid">
+                <div class="trait-column">
+                    <a href="#" class="trait-link">A SECRET BEING REVEALED</a>
+                    <a href="#" class="trait-link">BECOMING WHAT ONE HATES</a>
+                    <a href="#" class="trait-link">BEING RESPONSIBLE FOR OTHERS</a>
+                    <a href="#" class="trait-link">BEING WATHCED</a>
+                    <a href="#" class="trait-link">BETRAYAL</a>
+                    <a href="#" class="trait-link">CONFLICT</a>
+                    <a href="#" class="trait-link">CRITICISM</a>
+                    <a href="#" class="trait-link">LEADING</a>
+                    <a href="#" class="trait-link">LOOKING THE RESPECT OF OTHERS</a>
+                    <a href="#" class="trait-link">LOVING THE</a>
+                    <a href="#" class="trait-link">MEDIOCRITY</a>
+                    <a href="#" class="trait-link">PUTTING ONESELF OUT THERE</a>
+                    <a href="#" class="trait-link">REJECTION</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <strong>Helpful Tip:</strong> Using a character archetype initially makes character creation and development straightforward. However, the mapping this creates is only a framework on which to begin building your unique character. Don't limit the character to this framework - use it as a foundation and add your own elements and creativity.
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+
+        // Add click handlers for trait links
+        document.querySelectorAll('.trait-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const trait = this.textContent;
+                console.log(`Clicked on trait: ${trait}`);
+                // In a real implementation, this would navigate to the trait page
+            });
+        });
+    </script>
+</body>
+</html>

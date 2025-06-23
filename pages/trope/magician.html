@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magician - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #553c9a;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            font-weight: normal;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            color: #2c5aa0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 5px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+            color: #666;
+        }
+
+        .trait-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .trait {
+            background: #e2e8f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .behavior-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .behavior-list li {
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            color: #4a5568;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .behavior-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8b9dc3;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #f7fafc;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            color: #4a5568;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                margin: 10px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>Magician (Archetype)</h2>
+        </div>
+
+        <div class="content">
+            <a href="#" class="back-link" onclick="goBack()">Back to Character Types</a>
+
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <div class="section">
+                <h3>Description</h3>
+                <p>The manipulator, the shaman of knowledge, no one knows, just how powerful they manage, just because only rooted around understanding and mastery of the exceedingly archetypical. When they're a mentor to the lifely archetype, magicians others to blur the acquisition of knowledge to build beyond those power or achieve their goals. Primarily, their quest for knowledge is meant to benefit themselves rather than others.</p>
+            </div>
+
+            <div class="section">
+                <h3>Fictional Examples</h3>
+                <p class="fictional-examples">Yoda (Star Wars), Gandalf (Lord of the Rings), Dumbledore (Harry Potter), Merlin (The Once and Future King), Albus Dumbledore (Harry Potter), Professor (The Matrix), Obi Wan (Star Wars)</p>
+            </div>
+
+            <div class="helpful-tip">
+                <strong>Helpful Tip:</strong><br>
+                Using a trope or archetype can provide a strong foundation for creating their character, but remember to give them depth by developing their unique motivations, flaws, history, and goals. This will help them come to life and avoid falling into stereotype.
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <div class="section">
+                        <h3>Common Strengths</h3>
+                        <div class="trait-list">
+                            <span class="trait">Adventurous</span>
+                            <span class="trait">Alert</span>
+                            <span class="trait">Ambitious</span>
+                            <span class="trait">Confident</span>
+                            <span class="trait">Courageous</span>
+                            <span class="trait">Curious</span>
+                            <span class="trait">Decisive</span>
+                            <span class="trait">Disciplined</span>
+                            <span class="trait">Focused</span>
+                            <span class="trait">Independent</span>
+                            <span class="trait">Intelligent</span>
+                            <span class="trait">Meticulous</span>
+                            <span class="trait">Observant</span>
+                            <span class="trait">Passionate</span>
+                            <span class="trait">Perceptive</span>
+                            <span class="trait">Persistent</span>
+                            <span class="trait">Private</span>
+                            <span class="trait">Resourceful</span>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3>Common Weaknesses</h3>
+                        <div class="trait-list">
+                            <span class="trait">Apathetic</span>
+                            <span class="trait">Cocky</span>
+                            <span class="trait">Confrontational</span>
+                            <span class="trait">Disrespectful</span>
+                            <span class="trait">Fanatical</span>
+                            <span class="trait">Macho</span>
+                            <span class="trait">Obsessive</span>
+                            <span class="trait">Overconfident</span>
+                            <span class="trait">Paranoid</span>
+                            <span class="trait">Disorganized</span>
+                            <span class="trait">Possessive</span>
+                            <span class="trait">Secretive</span>
+                            <span class="trait">Uncommunicative</span>
+                            <span class="trait">Inflexible</span>
+                            <span class="trait">Workaholic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="section">
+                        <h3>Associated Actions, Behaviors, and Tendencies</h3>
+                        <ul class="behavior-list">
+                            <li>Being persuasive about the value of knowledge that are pursuing</li>
+                            <li>Being seen the hard way of life that they need</li>
+                            <li>Using legitimate language that may seem far removed in understand</li>
+                            <li>Preferring to work alone</li>
+                            <li>Having no respect for artificial ways and doing what a difficult leadership</li>
+                            <li>Learning from mistakes</li>
+                            <li>Delving deeply and searching over projects</li>
+                            <li>Seeking legitimacy away information from underlings</li>
+                            <li>Putting adjourned to drive to succeed than what they want to keep in pursuit</li>
+                            <li>Setting alternative to other peoples' need or concerns</li>
+                            <li>Writing back innovations from underlings</li>
+                            <li>Providing over their work than people think and sleep in pursuit</li>
+                            <li>Looking down at others who won't or seem</li>
+                            <li>Penetrating the subject of study aiming enterprise and everything else</li>
+                            <li>Being warned by others with envy or ease</li>
+                            <li>Perpetuating the allure of study believing enterprise or making principles</li>
+                            <li>Seeking knowledge to unlock a certain goal</li>
+                            <li>Seeking to stop something from underperform</li>
+                            <li>Putting obsessions before responsibilities from underlines</li>
+                            <li>Putting hard or difficult to access their positions</li>
+                            <li>Seeking deep connections with others</li>
+                            <li>Setting over their environment at others' detriment</li>
+                            <li>Letting deep connections with others</li>
+                            <li>Setting motivation leadership</li>
+                            <li>Being a teen-driven when otherwise people are necessary, then releasing out no fault with</li>
+                            <li>Being analytical than sharing their work with others</li>
+                            <li>Their work and methods being them at risks with the establishment</li>
+                            <li>Being inward people abilities of their environment or underperforming</li>
+                            <li>Having a third friends circle depending on what benefits in the moment</li>
+                            <li>being and moving</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Fears That Might Limit The Character</h3>
+                <p><strong>FAILURE • PERSECUTION • LEAVING NO PURPOSE • LEADING NO LEGACY • LOSING ONE'S MIND</strong></p>
+            </div>
+
+            <div class="section">
+                <h3>Situations That Will Challenge Them</h3>
+                <ul class="behavior-list">
+                    <li>A competitive seeking equivalent strikes and threatening to overtake the character in the pursuit of their goal</li>
+                    <li>Being unable to attain a overweight to group a message</li>
+                    <li>Losing access to the money they use to find their character above</li>
+                    <li>Being pursued as either what characters or that the character above</li>
+                    <li>Being relied upon to save the character down</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Inner Struggles To Give Them Depth</h3>
+                <ul class="behavior-list">
+                    <li>Disregarding a worthy challenger who doubts the magicians ideale they own struggling</li>
+                    <li>The character being trusted so few that they're too objective</li>
+                    <li>The character facing their goals as the lot of their deeply and the trying attention to new back or make doing purpose</li>
+                    <li>Putting connections</li>
+                    <li>Reading to approach that is a problem from or greed</li>
+                    <li>The character understanding that experiment of all that makes life worth living</li>
+                    <li>Wrestling with a related health crisis</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Clichés To Be Aware Of</h3>
+                <ul class="behavior-list">
+                    <li>The magician-mentor who has all the answers and doesn't need help from anyone</li>
+                    <li>The character who receives a madness or condition their need (mental), and it ends up destroying them</li>
+                    <li>A magician with artefacts presentation</li>
+                    <li>A magician who is responsible as trying to win the world</li>
+                    <li>A magician that is overruled by a dangerous need to be acknowledged by others</li>
+            </div>
+
+            <div class="section">
+                <h3>Twist This Trope With A Character Who...</h3>
+                <ul class="behavior-list">
+                    <li>Is concerned with others and the consequences of their work</li>
+                    <li>Researched a healthy disease</li>
+                    <li>Experienced family tragedy situation</li>
+                    <li>Is ultra-principled and puts in the establishment, values their successor on the fringe of the atmosphere scientific community</li>
+                    <li>Is an unsured potential author that a propaganda uses whose backing it to use learning to create minor work</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Unexpected Occupations For This Character</h3>
+                <p><strong>ANIMAL RESCUE WORKER • BARKEEPER • BOOKS CORE • FIREFIGHTER/RESCUE • PEDIATRIC DOCTOR • RANCHER • WEDDING PLANNER</strong></p>
+            </div>
+
+            <div class="section">
+                <h3>Create Something New</h3>
+                <p>Mad Scientist + Writer =<br>
+                Mad Scientist + Pet Behaviorist =<br>
+                Mad Scientist + Chemistry Chef =<br>
+                Mad Scientist + Superpowers =</p>
+            </div>
+
+            <div class="section">
+                <h3>Similar Or Related Tropes</h3>
+                <p><strong>STORYTELLER • ARCHETYPES • WISE SCIENTIST • MAD SCIENTIST</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

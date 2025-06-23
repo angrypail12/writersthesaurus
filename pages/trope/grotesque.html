@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grotesque - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .traits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .trait-list {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .trait-list h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .trait-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .trait-tag {
+            background: #8b9dc3;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .trait-tag:hover {
+            background: #6a7ba8;
+        }
+
+        .behaviors-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .behaviors-list li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .behaviors-list li::before {
+            content: "• ";
+            color: #8b9dc3;
+            font-weight: bold;
+        }
+
+        .sub-section {
+            margin-bottom: 25px;
+        }
+
+        .sub-section h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 768px) {
+            .traits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Grotesque</h1>
+        </div>
+
+        <div class="section">
+            <h2>Description</h2>
+            <div class="description">
+                A grotesque is a character whose distorted souls or bodies particularly upset and energy from others. They have extreme physical or behavioral features that can be unsettling, disturbing, or even repulsive. Because of this, grotesques are intimidating for others.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Fictional Examples</h2>
+            <div class="fictional-examples">
+                Captain Ahab (Moby Dick), Frankenstein's monster (Frankenstein), Buffalo Bill (The Silence of the Lambs), Edward Scissorhands (Edward Scissorhands)
+            </div>
+        </div>
+
+        <div class="traits-grid">
+            <div class="trait-list">
+                <h3>Common Strengths</h3>
+                <div class="trait-tags">
+                    <span class="trait-tag">Alert</span>
+                    <span class="trait-tag">Cautious</span>
+                    <span class="trait-tag">Creative</span>
+                    <span class="trait-tag">Curious</span>
+                    <span class="trait-tag">Focused</span>
+                    <span class="trait-tag">Independent</span>
+                    <span class="trait-tag">Inspirational</span>
+                    <span class="trait-tag">Loyal</span>
+                    <span class="trait-tag">Observant</span>
+                    <span class="trait-tag">Passionate</span>
+                    <span class="trait-tag">Persistent</span>
+                    <span class="trait-tag">Philosophical</span>
+                    <span class="trait-tag">Private</span>
+                    <span class="trait-tag">Quirky</span>
+                    <span class="trait-tag">Resourceful</span>
+                    <span class="trait-tag">Sensible</span>
+                    <span class="trait-tag">Sensitive</span>
+                    <span class="trait-tag">Simple</span>
+                    <span class="trait-tag">Uninhibited</span>
+                    <span class="trait-tag">Wise</span>
+                </div>
+            </div>
+
+            <div class="trait-list">
+                <h3>Common Weaknesses</h3>
+                <div class="trait-tags">
+                    <span class="trait-tag">Antisocial</span>
+                    <span class="trait-tag">Bizarre</span>
+                    <span class="trait-tag">Hostile</span>
+                    <span class="trait-tag">Impulsive</span>
+                    <span class="trait-tag">Insecure</span>
+                    <span class="trait-tag">Morbid</span>
+                    <span class="trait-tag">Obsessive</span>
+                    <span class="trait-tag">Paranoid</span>
+                    <span class="trait-tag">Reckless</span>
+                    <span class="trait-tag">Stubborn</span>
+                    <span class="trait-tag">Uncommunicative</span>
+                    <span class="trait-tag">Volatile</span>
+                    <span class="trait-tag">Withdrawn</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Associated Actions, Behaviors, and Tendencies</h2>
+            <ul class="behaviors-list">
+                <li>Withdrawing from society and being as enforced life</li>
+                <li>Attempting to hide their deformity</li>
+                <li>Speaking in an unusual manner with creation</li>
+                <li>Obsessing over a particular passion</li>
+                <li>Obsessing about a person or when they overcome to a person</li>
+                <li>Obsessing on normal life circumstances from a distance</li>
+                <li>Becoming a sense of acceptance by obtaining social membership form a distance</li>
+                <li>Becoming insatiable</li>
+                <li>Always longing their grief by</li>
+                <li>Being affected and by persons they did not allow them blindness</li>
+                <li>Making the worst to learn their true actions</li>
+                <li>Exhibiting extreme or weirdly observed demeanor (slowing, flowing, looking too personally, etc.)</li>
+                <li>Gradually executing on characters the social society their own plan</li>
+                <li>Making ones who would be like without deep discovery</li>
+                <li>Possessions about what life would like</li>
+                <li>Experiencing extreme social awkwardness</li>
+                <li>Expressing that everyone is not to get them</li>
+                <li>Being taken care</li>
+                <li>Being driven to seek out the advantages that definitely has desired them</li>
+                <li>Being especially worried</li>
+                <li>Being driven to seek what really true</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Flaws That Might Limit the Character</h2>
+            <div class="sub-section">
+                <h3>Abandonment/ Agraphobia/ Being a service of taking being changed/ Being physical for others/ Being taken advantage of/ Conflict/ Discrimination/ Hope/ Never finding happiness/ Discrimination/ Eating Oneself out there/ Rejection/ Trusting others</h3>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Situations That Will Challenge Them</h2>
+            <ul class="behaviors-list">
+                <li>Needing their source from law experience they can't do</li>
+                <li>Being apprehended by someone who proves to be working differently or someone</li>
+                <li>Being approached by an older person to social</li>
+                <li>Destroying their delivered two-time open logic from delivering a goal or getting fulfillment</li>
+                <li>A forced being allowed on their choice</li>
+                <li>Being forced against others and life</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Inner Struggles to Give Them Depth</h2>
+            <ul class="behaviors-list">
+                <li>Feeling sorry and ashamed and being so often to pained understanding</li>
+                <li>Struggling to find the balance between living separately and connecting others</li>
+                <li>Worrying to meet's someone appreciation not feeling the body to do so</li>
+                <li>Struggling to have evidence that feeling to personal purpose their characteristics</li>
+                <li>Wanting to be normal, but something being put or unable to change</li>
+                <li>Wanting to choose between, positive impact on doing the night thing</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Clichés to Be Aware Of</h2>
+            <ul class="behaviors-list">
+                <li>The grotesque character who has an outward appearance that's only to "other" about the inside's your</li>
+                <li>The character being "cured" by a romantic relationship</li>
+                <li>People protagonists without against to damage anything about their do an situations</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Twist This Trope With a Character Who…</h2>
+            <ul class="behaviors-list">
+                <li>Is dangerous but that one is-physical or social challenges</li>
+                <li>Looks at of a character that most definitely</li>
+                <li>Looks old and mean but others who are also determined by society</li>
+                <li>Comes down about what the right that their living possibly the most</li>
+                <li>Sees to be evil without a personal character, actually etc.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>

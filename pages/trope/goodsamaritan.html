@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Samaritan - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .traits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .trait-list {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .trait-list h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .trait-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .trait-tag {
+            background: #8b9dc3;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .trait-tag:hover {
+            background: #6a7ba8;
+        }
+
+        .behaviors-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .behaviors-list li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .behaviors-list li::before {
+            content: "• ";
+            color: #8b9dc3;
+            font-weight: bold;
+        }
+
+        .sub-section {
+            margin-bottom: 25px;
+        }
+
+        .sub-section h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 768px) {
+            .traits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Good Samaritan</h1>
+        </div>
+
+        <div class="section">
+            <h2>Description</h2>
+            <div class="description">
+                This character identifies extensively as a humanist, drawn to be kind, associate with others, and they exemplify their beliefs—they won't just hope that someone else takes responsibility. They want help those lost in a spiritual sense throughout the course of a story, or they could take advantage of the functional opportunity that ends up being a role important to the part of the protagonist's journey.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Fictional Examples</h2>
+            <div class="fictional-examples">
+                Jean Valjean (Les Misérables), Boo Radley (To Kill a Mockingbird), Sydney Carton (A Tale of Two Cities), Sydney Carton (A Few of Five Fives), Diana (the Dark Hell a Vigorous)
+            </div>
+        </div>
+
+        <div class="traits-grid">
+            <div class="trait-list">
+                <h3>Common Strengths</h3>
+                <div class="trait-tags">
+                    <span class="trait-tag">Kind</span>
+                    <span class="trait-tag">Compassionate</span>
+                    <span class="trait-tag">Reliable</span>
+                    <span class="trait-tag">Empathetic</span>
+                    <span class="trait-tag">Generous</span>
+                    <span class="trait-tag">Gentle</span>
+                    <span class="trait-tag">Honorable</span>
+                    <span class="trait-tag">Humble</span>
+                    <span class="trait-tag">End</span>
+                    <span class="trait-tag">Merciful</span>
+                    <span class="trait-tag">Observant</span>
+                    <span class="trait-tag">Optimistic</span>
+                    <span class="trait-tag">Protective</span>
+                    <span class="trait-tag">Resourceful</span>
+                    <span class="trait-tag">Responsible</span>
+                    <span class="trait-tag">Socially Aware</span>
+                    <span class="trait-tag">Spiritual</span>
+                    <span class="trait-tag">Supportive</span>
+                </div>
+            </div>
+
+            <div class="trait-list">
+                <h3>Common Weaknesses</h3>
+                <div class="trait-tags">
+                    <span class="trait-tag">Foolish</span>
+                    <span class="trait-tag">Gullible</span>
+                    <span class="trait-tag">Idealistic</span>
+                    <span class="trait-tag">Irrational</span>
+                    <span class="trait-tag">Martyr</span>
+                    <span class="trait-tag">Naive</span>
+                    <span class="trait-tag">Reckless</span>
+                    <span class="trait-tag">Subservient</span>
+                    <span class="trait-tag">Trusting</span>
+                    <span class="trait-tag">Vulnerable</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Associated Actions, Behaviors, and Tendencies</h2>
+            <ul class="behaviors-list">
+                <li>Approaching someone in their surroundings</li>
+                <li>Stopping for hitchhikers</li>
+                <li>Keeping one's car stocked with water and blankets</li>
+                <li>Giving a traveler life</li>
+                <li>Approaching the most important in the</li>
+                <li>Being willing to give up their comfort</li>
+                <li>Having a strong sense of justice</li>
+                <li>Having a deep shared code</li>
+                <li>Risking their safety to help others</li>
+                <li>Paying up for something at their personal cost</li>
+                <li>Standing up for what is right</li>
+                <li>Being a good Samaritan</li>
+                <li>Having a strong sense of duty</li>
+                <li>Risking one's life for others when they believe in</li>
+                <li>Being quick to forgive</li>
+                <li>Not being eye-strain</li>
+                <li>Being unwilling to engage people when they happens to others</li>
+                <li>Being unwilling to prejudge people</li>
+                <li>Trusting others with beyond expectations of who they are or where they're from</li>
+                <li>Putting the welfare of others first</li>
+                <li>Finding oneself addicted to problems</li>
+                <li>Being good communication</li>
+                <li>Giving strong people around them tools</li>
+                <li>Thinking people deserves a second chance</li>
+                <li>Thinking they know what's best</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Flaws That Might Limit the Character</h2>
+            <div class="sub-section">
+                <h3>A good do unto/Being overwhelmed/ Adventure/ Being overprotective/ Manipulative/ Being taken advantage of/ Being unable to achieve a dream/ Being unsafe/ Certain kinds of people/ Not being in control/ Rejection</h3>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Situations That Will Challenge Them</h2>
+            <ul class="behaviors-list">
+                <li>Needing someone who chooses or takes advantage of them</li>
+                <li>Being reproached to shameless disposition of things as a result of their good deed</li>
+                <li>Being blamed or victimized</li>
+                <li>Having their motivations questioned</li>
+                <li>Trying to help but making things worse</li>
+                <li>Defending a personal networks that makes difficult for them to help others</li>
+                <li>Being in a place where they cannot help a criminal/assistance</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Inner Struggles to Give Them Depth</h2>
+            <ul class="behaviors-list">
+                <li>Not knowing if they should help someone in need</li>
+                <li>Struggling with people</li>
+                <li>Putting for their own safety</li>
+                <li>Wandering if there's doing the right thing for the wrong reasons</li>
+                <li>Worrying they doesn't know when they did not help someone and the consequences were dire</li>
+                <li>Struggling to get personal boundaries</li>
+                <li>Being afraid of what helping that decision</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Clichés to Be Aware Of</h2>
+            <ul class="behaviors-list">
+                <li>The one-dimensional good Samaritan who has no flaws</li>
+                <li>The no-strings-attached act or some helping others that they support their own needs</li>
+                <li>The good Samaritan who is elevated with the part and refuses to reduce problems-based</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Twist This Trope With a Character Who…</h2>
+            <ul class="behaviors-list">
+                <li>Is gracious and generous</li>
+                <li>Has struggled to a helper</li>
+                <li>Has learned to get their most provide doing damage and background</li>
+                <li>Has an unusual or unrealistic facility</li>
+                <li>A deceased love leave and their ethical obligations</li>
+                <li>Has one is suspicious of others</li>
+                <li>Is naturally fearful</li>
+                <li>Has an original that Shane Jo An Glenda: permission: advice: retrieval</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>

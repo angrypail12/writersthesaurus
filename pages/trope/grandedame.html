@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grande Dame - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .traits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .trait-list {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .trait-list h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .trait-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .trait-tag {
+            background: #8b9dc3;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .trait-tag:hover {
+            background: #6a7ba8;
+        }
+
+        .behaviors-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .behaviors-list li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .behaviors-list li::before {
+            content: "• ";
+            color: #8b9dc3;
+            font-weight: bold;
+        }
+
+        .sub-section {
+            margin-bottom: 25px;
+        }
+
+        .sub-section h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 768px) {
+            .traits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Grande Dame</h1>
+        </div>
+
+        <div class="section">
+            <h2>Description</h2>
+            <div class="description">
+                An elderly eccentric lady, commanding, fierce, devoted, and easygoing.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Fictional Examples</h2>
+            <div class="fictional-examples">
+                Lady Catherine de Bourgh (Pride and Prejudice), Downa Tyrell (A Song of Ice and Fire), Minerva McGonagall (Downton Abbey)
+            </div>
+        </div>
+
+        <div class="traits-grid">
+            <div class="trait-list">
+                <h3>Common Strengths</h3>
+                <div class="trait-tags">
+                    <span class="trait-tag">Alert</span>
+                    <span class="trait-tag">Charming</span>
+                    <span class="trait-tag">Decisive</span>
+                    <span class="trait-tag">Dignified</span>
+                    <span class="trait-tag">Loyal</span>
+                    <span class="trait-tag">Observant</span>
+                    <span class="trait-tag">Persistent</span>
+                    <span class="trait-tag">Perseverant</span>
+                    <span class="trait-tag">Proper</span>
+                    <span class="trait-tag">Protective</span>
+                    <span class="trait-tag">Quirky</span>
+                    <span class="trait-tag">Responsible</span>
+                    <span class="trait-tag">Sensible</span>
+                    <span class="trait-tag">Spiritual</span>
+                    <span class="trait-tag">Sophisticated</span>
+                    <span class="trait-tag">Traditional</span>
+                    <span class="trait-tag">Wise</span>
+                </div>
+            </div>
+
+            <div class="trait-list">
+                <h3>Common Weaknesses</h3>
+                <div class="trait-tags">
+                    <span class="trait-tag">Abrasive</span>
+                    <span class="trait-tag">Catty</span>
+                    <span class="trait-tag">Controlling</span>
+                    <span class="trait-tag">Extravagant</span>
+                    <span class="trait-tag">Fussy</span>
+                    <span class="trait-tag">Gossipy</span>
+                    <span class="trait-tag">Haughty</span>
+                    <span class="trait-tag">Inflexible</span>
+                    <span class="trait-tag">Melodramatic</span>
+                    <span class="trait-tag">Nosy</span>
+                    <span class="trait-tag">Obsessive</span>
+                    <span class="trait-tag">Proper</span>
+                    <span class="trait-tag">Self-Indulgent</span>
+                    <span class="trait-tag">Snobbish</span>
+                    <span class="trait-tag">Spiritual</span>
+                    <span class="trait-tag">Vindictive</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Associated Actions, Behaviors, and Tendencies</h2>
+            <ul class="behaviors-list">
+                <li>Being accustomed to living well and having nice things</li>
+                <li>Expecting deference</li>
+                <li>Using elegant, expensive things</li>
+                <li>Having a strong sense of family</li>
+                <li>Expecting ladies to these positions—i.e., how they match down those</li>
+                <li>Having a place in society</li>
+                <li>Spreading hurt to these people and have different options/views and intentions</li>
+                <li>Breaking that family life power to have more about someone else</li>
+                <li>Representing about the good old days</li>
+                <li>Never changing a child</li>
+                <li>Taking great care with her appearance</li>
+                <li>Being concerned about her reputation and social status</li>
+                <li>Feeling good about herself</li>
+                <li>Attending with people of her own status</li>
+                <li>Carrying fashion designs and telling people what to do</li>
+                <li>Expecting that other will approve/accept options</li>
+                <li>Judging others for not very fashions and dress</li>
+                <li>Difficulty compromising</li>
+                <li>Making a spectacle to express a frame of fashion</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Flaws That Might Limit the Character</h2>
+            <div class="sub-section">
+                <h3>Being a strong or others/ Being eloist/ Being afraid/ Being forced/ Not having an agenda to achieve a dream/ Change/ Solutions/ Leaving no legacy/ Not being in control/ Rejection</h3>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Situations That Will Challenge Them</h2>
+            <ul class="behaviors-list">
+                <li>Needing to live where it is not social position</li>
+                <li>Being relegated to a social position</li>
+                <li>Being opposed for choices (or very abuse)</li>
+                <li>Losing her money or social position</li>
+                <li>Being ignored</li>
+                <li>Being seen as old—dealing with illness, dimentia, or advanced light of growing old</li>
+                <li>Being criticized for things</li>
+                <li>Having to practically over his honored</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Inner Struggles to Give Them Depth</h2>
+            <ul class="behaviors-list">
+                <li>Feeling out of the way as a established brand</li>
+                <li>Demanding a nephew/hope to live and Considering a don't about her family that love money and position</li>
+                <li>Struggling with the realities of growing old</li>
+                <li>Being afraid of what her secret will do in the decisions</li>
+                <li>Wanting to stay the aging process but being unable to do so</li>
+                <li>Wanting a friend with younger generation but not knowing how to change her ways</li>
+                <li>Feeling like she's losing control</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Clichés to Be Aware Of</h2>
+            <ul class="behaviors-list">
+                <li>A proper grande dame who is concerned to show affection or appreciation for others</li>
+                <li>Being a caricature who loves the characters between a squeeze</li>
+                <li>The grande dame who is obsessed with the part and refuses to reduce problems-based</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Twist This Trope With a Character Who…</h2>
+            <ul class="behaviors-list">
+                <li>Is gracious and generous</li>
+                <li>Has struggled her respect</li>
+                <li>Has struggled to choose there damage and background</li>
+                <li>Has an unusual or unrealistic facility</li>
+                <li>A deceased love leave and their ethical obligations</li>
+                <li>Has one is suspicious of others</li>
+                <li>Is naturally fearful</li>
+                <li>Has an original that Shane Jo An Glenda: permission: advice: retrieval</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>

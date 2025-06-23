@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brownnoser - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            gap: 3px;
+            margin-bottom: 20px;
+        }
+
+        .star {
+            color: #ddd;
+            font-size: 1.2rem;
+        }
+
+        .star.filled {
+            color: #ffd700;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h3 {
+            color: #2c5aa0;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .section p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .traits-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .trait {
+            background: #f0f4f8;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #2c5aa0;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .actions-list, .behaviors-list {
+            margin-left: 20px;
+        }
+
+        .actions-list li, .behaviors-list li {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>BROWNNOSER</h2>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Description</h3>
+            <p>This character believes exactly what they want and shows that they have to have to get it. Their overwhelming behavior may be driven by a desire to be accepted by powerful people or directors from an image so they can further their own purposes.</p>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples</h3>
+            <p><em>Mr. Smithers</em> (The Simpsons), <em>Waymouthers Groan</em> (The Lord of the Rings trilogy), <em>Dwight K. Schrute</em> (The Office), <em>Eddie Haskell</em> (Leave it to Beaver)</p>
+        </div>
+
+        <div class="section">
+            <h3>Common Strengths</h3>
+            <div class="traits-list">
+                <span class="trait">ambitious</span>
+                <span class="trait">analytical</span>
+                <span class="trait">cautious</span>
+                <span class="trait">charming</span>
+                <span class="trait">confident</span>
+                <span class="trait">cooperative</span>
+                <span class="trait">diplomatic</span>
+                <span class="trait">disciplined</span>
+                <span class="trait">efficient</span>
+                <span class="trait">focused</span>
+                <span class="trait">meticulous</span>
+                <span class="trait">observant</span>
+                <span class="trait">organized</span>
+                <span class="trait">persistent</span>
+                <span class="trait">persuasive</span>
+                <span class="trait">professional</span>
+                <span class="trait">resourceful</span>
+                <span class="trait">studious</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Weaknesses</h3>
+            <div class="traits-list">
+                <span class="trait">callous</span>
+                <span class="trait">catty</span>
+                <span class="trait">cocky</span>
+                <span class="trait">confrontational</span>
+                <span class="trait">controlling</span>
+                <span class="trait">cruel</span>
+                <span class="trait">devious</span>
+                <span class="trait">dishonest</span>
+                <span class="trait">greedy</span>
+                <span class="trait">hypocritical</span>
+                <span class="trait">indecisive</span>
+                <span class="trait">jealous</span>
+                <span class="trait">manipulative</span>
+                <span class="trait">materialistic</span>
+                <span class="trait">nosy</span>
+                <span class="trait">possessive</span>
+                <span class="trait">pushy</span>
+                <span class="trait">selfish</span>
+                <span class="trait">unethical</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies</h3>
+            <ul class="actions-list">
+                <li>Flattering their superiors</li>
+                <li>Being a "yes man"</li>
+                <li>Positioning themselves when they are noticed by others</li>
+                <li>Being helpful whenever</li>
+                <li>Deflecting to the people they're trying to impress</li>
+                <li>Reporting on colleagues and classmates</li>
+                <li>Using their relationship with a powerful person to influence others and enhance as deserving</li>
+                <li>Thinking strategically about how to get what they want</li>
+                <li>Manipulating people for personal gain - helping to others to appear good at it</li>
+                <li>Seeking opportunities to schmooze with influential people</li>
+                <li>Being organized</li>
+                <li>Being competitive</li>
+                <li>Reacting strongly to criticism</li>
+                <li>Being adaptive</li>
+                <li>Having a realistic understanding of the situation</li>
+                <li>Being a flexible organized code for shift to fit the situation</li>
+                <li>Attending important talks</li>
+                <li>Maneuvering directions in their advantage</li>
+                <li>Being assistants to advisors</li>
+                <li>Being sensitive to people and groups that threaten the character wants to gain advantage over</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character</h3>
+            <div class="traits-list">
+                <span class="trait">a secret being revealed</span>
+                <span class="trait">becoming what one hates</span>
+                <span class="trait">being judged</span>
+                <span class="trait">being labeled</span>
+                <span class="trait">expecting</span>
+                <span class="trait">humiliation</span>
+                <span class="trait">losing the respect of others</span>
+                <span class="trait">not being good enough</span>
+                <span class="trait">not fitting in</span>
+                <span class="trait">rejection</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them</h3>
+            <ul class="behaviors-list">
+                <li>Disappointing or exposure from their own personal habit</li>
+                <li>Being forced to choose between ethics and loyalty to their superior</li>
+                <li>Being unable to understand or be understood</li>
+                <li>The leader the character has aligned with being exposed from power</li>
+                <li>Seeing as advertisement through many advantagements and promises instead of through their connections</li>
+                <li>Being asked to be advancement through many advantagements, advertisements, and promises instead of through their connections</li>
+                <li>Being asked to give up things that do not communicate with others in their environment</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth</h3>
+            <ul class="behaviors-list">
+                <li>Knowing to even-tempered employees but being asked for less that leads the wise their core</li>
+                <li>Wanting to gain relationships and competences, but not feeling like it's deserved</li>
+                <li>Being afraid of these complications and lack of empathy, but not knowing how to gain the trust of serious through authenticity</li>
+                <li>Feeling guilty about their manipulation and feeling they need them for free without being told by inferiors to do it</li>
+                <li>Finding it difficult to stay vulnerable and stay a task because they've resigned working up to a related them</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Clichés to be Aware Of</h3>
+            <ul class="behaviors-list">
+                <li>The office clerk tells others yet every compromise he colleagues when it so often to show his own status</li>
+                <li>This character being obsessed with appearance as their quick check, many affecting any meticulous or independent thought</li>
+                <li>The world-checking examples this business and agrees with everything the personal and new details harelooking anyone-wie thesaurus like position</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With a Character Who...</h3>
+            <ul class="behaviors-list">
+                <li>Uses surrounding behaviors to protect someone, such as an oppressed character so as intellectual regime learning over the police to draw attention from others</li>
+                <li>Is brownnosing to gain access to something information to find an serious people to carry out a greater mission</li>
+                <li>Pretending to only get one advantage and those working to leadership opportunities</li>
+                <li>Is intrinsically and related environment that act so many to parent teacher organizations</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Unexpected Occupations for This Character</h3>
+            <div class="traits-list">
+                <span class="trait">air traffic controller</span>
+                <span class="trait">auto mechanic</span>
+                <span class="trait">bouncer</span>
+                <span class="trait">business tycoon</span>
+                <span class="trait">emergency room physician</span>
+                <span class="trait">social pilot</span>
+                <span class="trait">professional athlete</span>
+                <span class="trait">tattoo artist</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Create Something New</h3>
+            <p>Brownnoser + Best Goat or Lady<br>
+            Brownnoser + Best Sergeant<br>
+            Brownnoser + Peacemaker<br>
+            Brownnoser + Tall Brownnose</p>
+        </div>
+    </div>
+</body>
+</html>

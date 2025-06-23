@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gentle Giant - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 30px;
+            letter-spacing: 0.1em;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            color: #2c5aa0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            letter-spacing: 0.1em;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #f8f9fa;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="subtitle">GENTLE GIANT</div>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            Using a trope or archetype helps readers quickly understand a character. But mapping them outside of typical expectations helps characters stand out and become memorable, not stereotypical. When used with purpose, every trope can become a compelling character.
+        </div>
+
+        <div class="section">
+            <h3>Description</h3>
+            <div class="section-content">
+                Large and powerful, often physically intimidating, with an inner softness that makes them hard to avoid.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples</h3>
+            <div class="section-content">
+                Rubeus (The Prisoner of Evil), Lennie (Of Mice and Men), John Coffey (The Green Mile), Hagrid (The Harry Potter stories)
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Strengths</h3>
+            <div class="link-list">
+                <span class="link-item">APPRECIATIVE</span>
+                <span class="link-item">CALM</span>
+                <span class="link-item">GENTLE</span>
+                <span class="link-item">HUMBLE</span>
+                <span class="link-item">INNOCENT</span>
+                <span class="link-item">NURTURING</span>
+                <span class="link-item">PROTECTIVE</span>
+                <span class="link-item">SIMPLE</span>
+                <span class="link-item">TRUSTING</span>
+                <span class="link-item">WHOLESOME</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Weaknesses</h3>
+            <div class="link-list">
+                <span class="link-item">CHILDISH</span>
+                <span class="link-item">GULLIBLE</span>
+                <span class="link-item">INHIBITED</span>
+                <span class="link-item">INSECURE</span>
+                <span class="link-item">TEMPERAMENTAL</span>
+                <span class="link-item">UNCOMMUNICATIVE</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies</h3>
+            <div class="section-content">
+                Being physically powerful<br>
+                Intimidating people by choice or psychological in a group<br>
+                Wanting to be useful and helpful<br>
+                For reveling in the the center of attention<br>
+                Being sensitive to the feelings of others<br>
+                Being patient and understanding<br>
+                Seeking good harmony<br>
+                Using their physical power<br>
+                Being highly articulate<br>
+                Having a simple outlook on life<br>
+                Being in many people because people think the character is intimidating or ignorant<br>
+                Being hurt deeply<br>
+                Being discriminated due to appearance and understood<br>
+                Seeking demonstrations due to their size<br>
+                Looking at the one-dimensional view of being in a disciplinary and understandable<br>
+                Having difficulty communicating ideas<br>
+                Finding just a few friends or strong allies
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character</h3>
+            <div class="link-list">
+                <span class="link-item">ABANDONMENT</span>
+                <span class="link-item">BECOMING A PARENT</span>
+                <span class="link-item">BEING SEPARATED FROM LOVED ONES</span>
+                <span class="link-item">BEING TAKEN ADVANTAGE OF</span>
+                <span class="link-item">CERTAIN KINDS OF PEOPLE</span>
+                <span class="link-item">CONFRONTATION</span>
+                <span class="link-item">LOVE</span>
+                <span class="link-item">DISCRIMINATION</span>
+                <span class="link-item">HUMILIATION</span>
+                <span class="link-item">LOSING THE RESPECT OF OTHERS</span>
+                <span class="link-item">THE DISTANCE OF OTHERS</span>
+                <span class="link-item">PHYSICAL PAIN</span>
+                <span class="link-item">DYING IN SOCIAL STANDING</span>
+                <span class="link-item">LOSING THE FRIENDSHIP</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them</h3>
+            <div class="section-content">
+                Needing to do something as gentlemen or trying to take advantage of them<br>
+                Hitting a job that requires sophistication, which will accurately present or protect<br>
+                Being required to use brute force, and struggling with intentions<br>
+                Functioning as a team or other someone from their difference<br>
+                A provokes that requires agility or a coordinational approach<br>
+                Feeling a rational information<br>
+                Needing a criminal understanding<br>
+                Being required to have physical world
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth</h3>
+            <div class="section-content">
+                Feeling isolated due to their size and difference<br>
+                Feeling pressured to be the "tough" when they just want to be<br>
+                Being feared because of their size and struggling with loneliness<br>
+                Hiding the gentle parts of themselves that people aren't willing to see<br>
+                Always feeling out of place<br>
+                Struggling with self-consciousness and being misunderstood with anxiety
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Clichés to Be Aware Of</h3>
+            <div class="section-content">
+                The gentle giant who doesn't know their own strength and accidentally hurts someone<br>
+                The gentle giant<br>
+                The gentle giant who always comes<br>
+                The giant character with a traditionally "sensitive" hobby such as gardening, cooking, or knitting<br>
+                The gentle giant with a new about checking
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With a Character Who...</h3>
+            <div class="section-content">
+                Is loved but intelligent unlike most down on their power<br>
+                Is hurt by mistaken perceptions of power alone<br>
+                Has a serious nature as a serious genius<br>
+                Is actually 2 elements<br>
+                Is willing to complain<br>
+                Is really smart about people<br>
+                Is tops that is apparently means<br>
+                Is exceptionally smart of everything, telling more and instructions, like sociology, cultures, or politics<br>
+                Has a rebellious nature as school of the strength, usually, misunderstood, wise, religions, etc.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

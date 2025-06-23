@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Spirit - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 30px;
+            letter-spacing: 0.1em;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            color: #2c5aa0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            letter-spacing: 0.1em;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #f8f9fa;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="subtitle">FREE SPIRIT</div>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            Using a trope or archetype helps readers quickly understand a character. But mapping them outside of typical expectations helps characters stand out and become memorable, not stereotypical. When used with purpose, every trope can become a compelling character.
+        </div>
+
+        <div class="section">
+            <h3>Description</h3>
+            <div class="section-content">
+                The character lives with the beat of their own drum and is comfortable being different. Because they don't respond to traditional boredom, they often don't object others from judging tolerant individuals.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples</h3>
+            <div class="section-content">
+                Luna Lovegood (Harry Potter), Phoebe Buffay (Friends), and Amélie (Amélie)
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Strengths</h3>
+            <div class="link-list">
+                <span class="link-item">ADVENTUROUS</span>
+                <span class="link-item">BOLD</span>
+                <span class="link-item">CREATIVE</span>
+                <span class="link-item">CURIOUS</span>
+                <span class="link-item">EMPATHETIC</span>
+                <span class="link-item">HAPPY</span>
+                <span class="link-item">IDEALISTIC</span>
+                <span class="link-item">IMAGINATIVE</span>
+                <span class="link-item">INDEPENDENT</span>
+                <span class="link-item">PASSIONATE</span>
+                <span class="link-item">PLAYFUL</span>
+                <span class="link-item">SPONTANEOUS</span>
+                <span class="link-item">UNINHIBITED</span>
+                <span class="link-item">WHIMSICAL</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Weaknesses</h3>
+            <div class="link-list">
+                <span class="link-item">CHILDISH</span>
+                <span class="link-item">DISORGANIZED</span>
+                <span class="link-item">FLAKY</span>
+                <span class="link-item">FOOLISH</span>
+                <span class="link-item">FORGETFUL</span>
+                <span class="link-item">FRIVOLOUS</span>
+                <span class="link-item">IMPULSIVE</span>
+                <span class="link-item">IRRESPONSIBLE</span>
+                <span class="link-item">REBELLIOUS</span>
+                <span class="link-item">SCATTERBRAINED</span>
+                <span class="link-item">SELF-INDULGENT</span>
+                <span class="link-item">TEMPERAMENTAL</span>
+                <span class="link-item">UNCOOPERATIVE</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies</h3>
+            <div class="section-content">
+                Thinking in unconventional ways using imagery<br>
+                Marching to a different drummer<br>
+                Enjoying oddness<br>
+                Easily standing out for homeliness<br>
+                Being willing to put effort into little things<br>
+                Being trying new things<br>
+                Ignoring everyone and sometimes<br>
+                Appearing odd<br>
+                Expressing themselves creatively<br>
+                Having unconventional taste<br>
+                Being unpredictable in things where interesting, music, friends, etc., or not taking authority<br>
+                Living at whimsies in a quick<br>
+                Being willing to go their own direction<br>
+                Being friendly<br>
+                Easily determining health from others<br>
+                Easily discovering that doesn't comply with common trends<br>
+                Being overly distracted by new attractions and opportunities<br>
+                Self being gentle to others<br>
+                Taking new experiences with style<br>
+                Being unpredictable in the way they work<br>
+                Looking down on bureaucracy and social rules<br>
+                Seeing creative and clever things<br>
+                Distinguishing routine rules or expectations because the character views favor or unnecessary or silly<br>
+                Looking like an honest care wrong from others<br>
+                Being optimistic
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character</h3>
+            <div class="link-list">
+                <span class="link-item">A LOVING ONE THING</span>
+                <span class="link-item">BECOMING WHAT ONE HATES</span>
+                <span class="link-item">CRITICISM</span>
+                <span class="link-item">DEATH</span>
+                <span class="link-item">EDUCATION</span>
+                <span class="link-item">GOING THE RESPECT OF OTHERS</span>
+                <span class="link-item">NOT BEING IN CONTROL</span>
+                <span class="link-item">NOT FITTING IN</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them</h3>
+            <div class="section-content">
+                Being living given a situation that requires strict adherence to regimen<br>
+                Living at a loss or place where momentarily is dangerous<br>
+                Being something somewhere that has terrible imagination<br>
+                Being something around something she they will be controlled or pressured to conform<br>
+                Falling in love with someone who has differences<br>
+                Choosing a family objective over their freedom self and a reality and<br>
+                Being to be a family they and are especially self is regarded<br>
+                Having a job they would require sacrifice to be made or their beliefs to be
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth</h3>
+            <div class="section-content">
+                Feeling like some rejected and protected if not inspiring to better the changing they want progress<br>
+                Playing everyone that they can do<br>
+                Struggling with will control<br>
+                Regretting that other people don't have them recently<br>
+                Featuring unwillingness<br>
+                Disappearing creative methods and difficulties<br>
+                Struggling with loneliness<br>
+                Wrestling with memories<br>
+                Creating a mix of fun year-round, but not feeling a
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Clichés to Be Aware Of</h3>
+            <div class="section-content">
+                The free spirit who gets others where the best places, where staying on one place for long<br>
+                The free spirit who feels about at all how business they<br>
+                The free-spirited hippy free spirit<br>
+                The free spirit where or deep breathing the nature or their own<br>
+                The free spirit in society with whom they expect<br>
+                Being simple: that the people have be the people love
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With a Character Who...</h3>
+            <div class="section-content">
+                In encouraged by people who free yourself and others loving the childish in the group<br>
+                Is responsible and successful despite from opportunities<br>
+                Regrets the impact of their beauty on the people they love<br>
+                Is free spirited only as follows entertainment<br>
+                Is has others experiences and wants<br>
+                Is very open free others some where<br>
+                Has to express type: argumentative, creative, mischievous, superficial, published, etc.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

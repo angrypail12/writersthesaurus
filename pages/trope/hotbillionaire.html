@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Billionaire - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .traits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .trait-list {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .trait-list h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .trait-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .trait-tag {
+            background: #8b9dc3;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .trait-tag:hover {
+            background: #6a7ba8;
+        }
+
+        .behaviors-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .behaviors-list li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .behaviors-list li::before {
+            content: "• ";
+            color: #8b9dc3;
+            font-weight: bold;
+        }
+
+        .sub-section {
+            margin-bottom: 25px;
+        }
+
+        .sub-section h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 768px) {
+            .traits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Hot Billionaire</h1>
+        </div>
+
+        <div class="section">
+            <h2>Description</h2>
+            <div class="description">
+                This character is rich, single, and drop-rich. Enough said.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Fictional Examples</h2>
+            <div class="fictional-examples">
+                Christian Grey (Fifty Shades of Grey), Mr. Darcy (Pride and Prejudice), Jay Gatsby (The Great Gatsby), Edward Cullen (The Count Court), Rhanna Rau (Norwegian)
+            </div>
+        </div>
+
+        <div class="traits-grid">
+            <div class="trait-list">
+                <h3>Common Strengths</h3>
+                <div class="trait-tags">
+                    <span class="trait-tag">Ambitious</span>
+                    <span class="trait-tag">Bold</span>
+                    <span class="trait-tag">Calm</span>
+                    <span class="trait-tag">Charming</span>
+                    <span class="trait-tag">Confident</span>
+                    <span class="trait-tag">Decisive</span>
+                    <span class="trait-tag">Passionate</span>
+                    <span class="trait-tag">Romantic</span>
+                    <span class="trait-tag">Sophisticated</span>
+                    <span class="trait-tag">Intelligent</span>
+                    <span class="trait-tag">Meticulous</span>
+                    <span class="trait-tag">Observant</span>
+                    <span class="trait-tag">Persuasive</span>
+                    <span class="trait-tag">Courtly</span>
+                    <span class="trait-tag">Sophisticated</span>
+                    <span class="trait-tag">Honest</span>
+                    <span class="trait-tag">Targeted</span>
+                </div>
+            </div>
+
+            <div class="trait-list">
+                <h3>Common Weaknesses</h3>
+                <div class="trait-tags">
+                    <span class="trait-tag">Cocky</span>
+                    <span class="trait-tag">Controlling</span>
+                    <span class="trait-tag">Extravagant</span>
+                    <span class="trait-tag">Fussy</span>
+                    <span class="trait-tag">Greedy</span>
+                    <span class="trait-tag">Haughty</span>
+                    <span class="trait-tag">Incorrigible</span>
+                    <span class="trait-tag">Materialistic</span>
+                    <span class="trait-tag">Manipulative</span>
+                    <span class="trait-tag">Obsessive</span>
+                    <span class="trait-tag">Possessive</span>
+                    <span class="trait-tag">Self-Indulgent</span>
+                    <span class="trait-tag">Spoiled</span>
+                    <span class="trait-tag">Stingy</span>
+                    <span class="trait-tag">Vain</span>
+                    <span class="trait-tag">Workaholic</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Associated Actions, Behaviors, and Tendencies</h2>
+            <ul class="behaviors-list">
+                <li>Working excessively</li>
+                <li>Expecting to be the center of attention</li>
+                <li>Traveling everywhere (mountains, first class, etc.)</li>
+                <li>Having a household staff</li>
+                <li>Taking the phone often</li>
+                <li>Being abrasive or stronghold from an opinionated family business</li>
+                <li>Disregarding the rules because they don't apply to them</li>
+                <li>Handling things professionally</li>
+                <li>Believing they're Gods gifts to women</li>
+                <li>Being an entrepreneur lifestyle</li>
+                <li>Building a significant world</li>
+                <li>Using their power and wealth for business</li>
+                <li>Revealing they in charge all of these</li>
+                <li>Being feared almost nothing a rich done property</li>
+                <li>Setting people which willing</li>
+                <li>Being unable to relate to people who don't have a lot of money</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Flaws That Might Limit the Character</h2>
+            <div class="sub-section">
+                <h3>Being a strong or others/ Being elegy/ Not being an agenda to achieve a dream/ Competition/ Failure/ Difficulty/ Leading/ Losing financial security/ Loving over social standing/ Never finding happiness/ Happiness/ Not being in control/ Rejection/ Relational commitment</h3>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Situations That Will Challenge Them</h2>
+            <ul class="behaviors-list">
+                <li>Being trapped in a hostile environment in a way</li>
+                <li>Losing their good looks due to an accident, illness, or the natural aging process</li>
+                <li>Being trapped without money</li>
+                <li>The character's sexual business practices being brought to light</li>
+                <li>The character's business or more being disappointed a department, losing wealth as true of an untameable relationship, etc.)</li>
+                <li>Being forced for a crime</li>
+                <li>Meeting their emotional business problems that they've pursued for their business thinking</li>
+                <li>Opening regarding someone who is much to their doubts or a meltdown</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Inner Struggles to Give Them Depth</h2>
+            <ul class="behaviors-list">
+                <li>Building that they business that their looks and those can successful, familia, secrets, etc) or other people's expectations</li>
+                <li>Learning that on things they been in what their true</li>
+                <li>Struggling to have at business and/or love</li>
+                <li>Living that they business for things they don't really like but think they deserve those worth</li>
+                <li>Determining their these business and police through dispensing against and feeling advanced by occasional role</li>
+                <li>Hating everything find true and everyone is or enough</li>
+                <li>Hard stuff and frustrating it's not enough</li>
+                <li>A very real/day people question their</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Clichés to Be Aware Of</h2>
+            <ul class="behaviors-list">
+                <li>The character who has been entirely not struggle</li>
+                <li>The rich old guy who tells for a Ohio boss discovery</li>
+                <li>The billionaire who was a tragedy who and how been divorced countless times</li>
+                <li>Information who are dismissive current</li>
+                <li>The character who discovery conditional</li>
+                <li>A very reality, policy situations about</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Twist This Trope With a Character Who…</h2>
+            <ul class="behaviors-list">
+                <li>Is original</li>
+                <li>Is an original or uncompromised field, and go police-making philosophy or awesome</li>
+                <li>Grew up their own never repeal</li>
+                <li>Has an unusual that</li>
+                <li>Has an original that philosophy, people, management, spiritual, organization, etc.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>

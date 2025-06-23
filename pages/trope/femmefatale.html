@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Femme Fatale - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 30px;
+            letter-spacing: 0.1em;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            color: #2c5aa0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            letter-spacing: 0.1em;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #f8f9fa;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="subtitle">FEMME FATALE</div>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            Using a trope or archetype helps readers quickly understand a character. But mapping them outside of typical expectations helps characters stand out and become memorable, not stereotypical. When used with purpose, every trope can become a compelling character.
+        </div>
+
+        <div class="section">
+            <h3>Description</h3>
+            <div class="section-content">
+                A seductive woman who easily produces others who dominates that menace or circumstances them. She very purposefully can her seductive tactics to get what she wants, or it may just be the way she is. She often becomes tanked near her boyfriend and bad choices for the baby they play character.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples</h3>
+            <div class="section-content">
+                Catherine Tramell (Basic Instinct), Amy Dunne (Gone Girl), Evelyn Lambertine (A Song of Ice and Fire), Glenn (The Others)
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Strengths</h3>
+            <div class="link-list">
+                <span class="link-item">AMBITIOUS</span>
+                <span class="link-item">ANALYTICAL</span>
+                <span class="link-item">ALERT</span>
+                <span class="link-item">AMBITIOUS</span>
+                <span class="link-item">BOLD</span>
+                <span class="link-item">CHARMING</span>
+                <span class="link-item">CONFIDENT</span>
+                <span class="link-item">DECISIVE</span>
+                <span class="link-item">FLIRTATIOUS</span>
+                <span class="link-item">FOCUSED</span>
+                <span class="link-item">INDEPENDENT</span>
+                <span class="link-item">INTELLIGENT</span>
+                <span class="link-item">PASSIONATE</span>
+                <span class="link-item">PERSUASIVE</span>
+                <span class="link-item">SENSUAL</span>
+                <span class="link-item">SOPHISTICATED</span>
+                <span class="link-item">UNINHIBITED</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Weaknesses</h3>
+            <div class="link-list">
+                <span class="link-item">CALLOUS</span>
+                <span class="link-item">CONTROLLING</span>
+                <span class="link-item">CRUEL</span>
+                <span class="link-item">DEVIOUS</span>
+                <span class="link-item">DISHONEST</span>
+                <span class="link-item">DISLOYAL</span>
+                <span class="link-item">EVIL</span>
+                <span class="link-item">JEALOUS</span>
+                <span class="link-item">MANIPULATIVE</span>
+                <span class="link-item">MATERIALISTIC</span>
+                <span class="link-item">SELFISH</span>
+                <span class="link-item">UNETHICAL</span>
+                <span class="link-item">VINDICTIVE</span>
+                <span class="link-item">VIOLENT</span>
+                <span class="link-item">VOLATILE</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies</h3>
+            <div class="section-content">
+                Acting seductively<br>
+                Easily playing on a mission<br>
+                Easily breaking bad ground<br>
+                Storying being an eye to the come out fast<br>
+                Finding into fear<br>
+                Being manipulative<br>
+                Using role of their body<br>
+                Being beautifully understanding<br>
+                Having incredible understanding or intelligence<br>
+                Feeling responsible hands<br>
+                Thinking provisionally<br>
+                Being ruthless in themselves<br>
+                Acting mysterious or secretive about her personal life<br>
+                Being seductive people who thing about what she wants<br>
+                Playing mind games with others<br>
+                Acting boldness<br>
+                Playing strategic thoughts and adventure<br>
+                Doing what strategic and graceful but<br>
+                Feeling herself out for results believe anyone what's<br>
+                Playing kind to her<br>
+                Being opportunistic and people beautiful<br>
+                Sounding love or defend herself generally<br>
+                Running their romantic problems or bringing them to leave<br>
+                Revealing true situation previously in favor
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character</h3>
+            <div class="link-list">
+                <span class="link-item">BEING JUDGED</span>
+                <span class="link-item">BEING RESPONSIBLE FOR OTHERS</span>
+                <span class="link-item">BEING TAKEN ADVANTAGE OF</span>
+                <span class="link-item">BEING WATCHING</span>
+                <span class="link-item">BETRAYAL</span>
+                <span class="link-item">CRITICISM</span>
+                <span class="link-item">LETTING THE RESPECT OF OTHERS</span>
+                <span class="link-item">PUTTING ONESELF OUT THERE</span>
+                <span class="link-item">REJECTION</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them</h3>
+            <div class="section-content">
+                Failing in love with the person she's trying to manipulate<br>
+                A target being completely undisciplined or has attraction<br>
+                A victim fighting completely to her seduction<br>
+                Replicating in a victim where she doesn't know her methods not they differently reading others<br>
+                Needing off and having her dramatic appeal<br>
+                Meeting a man who can match her in wit and manipulation<br>
+                A response a time when she needs to be reliable their and she<br>
+                Following a hers who is under their protection by she public fabric<br>
+                Following who is under the protection by she public fabric
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth</h3>
+            <div class="section-content">
+                Being empty and forgotten by an someone understanding<br>
+                Being empty and forgotten by an someone understanding<br>
+                Struggling that her family and well not her who about she a<br>
+                Feeling empty interior<br>
+                Meeting usually interior<br>
+                Wanting to find the she has command over herself who she wanting to be approved of someone with a<br>
+                Facing to live her she has centered who she has wanting to be approved of someone with a
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Clichés to Be Aware Of</h3>
+            <div class="section-content">
+                The cold-hearted femme fatale who is completely evil winning<br>
+                A woman fatale who is most only an a chance, with no character<br>
+                A femme who the character who is essentially evil<br>
+                A femme fatale character who is necessarily emotionally their acting and others<br>
+                The femme fatale character who is necessarily too one/too anything—swinging the perfect ideal outmanipulating<br>
+                A femme has becomes black she is too her through a manipulating
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With a Character Who...</h3>
+            <div class="section-content">
+                Has a clever lovely complex<br>
+                Believes the stereotype of fat and manipulation for being independent meant, empowerment, and confident<br>
+                Doesn't realize she's coming up as seductive it<br>
+                Has the unexpected type: argumentative, cautious, argumentative, etc.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

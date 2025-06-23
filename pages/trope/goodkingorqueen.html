@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good King or Queen - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 30px;
+            letter-spacing: 0.1em;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            color: #2c5aa0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            letter-spacing: 0.1em;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #f8f9fa;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="subtitle">GOOD KING OR QUEEN</div>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            Using a trope or archetype helps readers quickly understand a character. But mapping them outside of typical expectations helps characters stand out and become memorable, not stereotypical. When used with purpose, every trope can become a compelling character.
+        </div>
+
+        <div class="section">
+            <h3>Description</h3>
+            <div class="section-content">
+                The good ruler is moral and well-being of their people. They exist to govern with fairness and compassion.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples</h3>
+            <div class="section-content">
+                King Arthur (The Once and Future King), Queen Padme Amidala (Star Wars Episodes), Rey T'Challa (Black Panther) (Bio Goku) (Bio: War for the Planet)
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Strengths</h3>
+            <div class="link-list">
+                <span class="link-item">AMBITIOUS</span>
+                <span class="link-item">APPRECIATIVE</span>
+                <span class="link-item">CENTERED</span>
+                <span class="link-item">CONFIDENT</span>
+                <span class="link-item">COOPERATIVE</span>
+                <span class="link-item">COURAGEOUS</span>
+                <span class="link-item">DIPLOMATIC</span>
+                <span class="link-item">DISCIPLINED</span>
+                <span class="link-item">EMPATHETIC</span>
+                <span class="link-item">ENTHUSIASTIC</span>
+                <span class="link-item">FRIENDLY</span>
+                <span class="link-item">GENEROUS</span>
+                <span class="link-item">HONEST</span>
+                <span class="link-item">HONORABLE</span>
+                <span class="link-item">HOSPITABLE</span>
+                <span class="link-item">IDEALISTIC</span>
+                <span class="link-item">INSPIRATIONAL</span>
+                <span class="link-item">JUST</span>
+                <span class="link-item">KIND</span>
+                <span class="link-item">LOYAL</span>
+                <span class="link-item">MERCIFUL</span>
+                <span class="link-item">PATRIOTIC</span>
+                <span class="link-item">PROTECTIVE</span>
+                <span class="link-item">RESPONSIBLE</span>
+                <span class="link-item">WISE</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Weaknesses</h3>
+            <div class="link-list">
+                <span class="link-item">CONTROLLING</span>
+                <span class="link-item">IDEALISTIC</span>
+                <span class="link-item">MARTYR</span>
+                <span class="link-item">OBSESSIVE</span>
+                <span class="link-item">PERFECTIONIST</span>
+                <span class="link-item">WORKAHOLIC</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies</h3>
+            <div class="section-content">
+                Inspiring their kingdom<br>
+                Sacrificing for others<br>
+                Administrative justice with responsibility<br>
+                Acting justly and selflessly<br>
+                Being ethical in actions<br>
+                Devoting to diplomacy<br>
+                Valuing justice and fairness<br>
+                Seeking peace<br>
+                Being unwilling to use underhanded tactics even as weakness<br>
+                Being intelligent<br>
+                Being self-sacrificial<br>
+                Consulting with advisors before important decisions<br>
+                Preserving the defending of common law<br>
+                Avoiding efforts to protect their orders and constituencies<br>
+                Putting others' needs first<br>
+                Accepting hard decisions<br>
+                Learning from past mistakes<br>
+                Seeing themselves as servants of the people<br>
+                Doing everything to have honor if kept<br>
+                Easily gathering brave supporters<br>
+                Training their supporters to act and think helpful<br>
+                Inspiring their armies<br>
+                Working with supporters to achieve their goal of offers<br>
+                Being willing to sacrifice their good for others<br>
+                Allowing morality to intrinsic logic<br>
+                Preventing war or strife<br>
+                Being idealistic types
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character</h3>
+            <div class="link-list">
+                <span class="link-item">BEING UNABLE TO ACHIEVE A DREAM</span>
+                <span class="link-item">CERTAIN KINDS OF PEOPLE</span>
+                <span class="link-item">CONFLICT</span>
+                <span class="link-item">CRITICISM</span>
+                <span class="link-item">LEADING</span>
+                <span class="link-item">LEAVING NO LEGACY</span>
+                <span class="link-item">LOSING FINANCIAL SECURITY</span>
+                <span class="link-item">LOVE</span>
+                <span class="link-item">NOT BEING IN CONTROL</span>
+                <span class="link-item">PUBLIC SPEAKING</span>
+                <span class="link-item">REJECTION</span>
+                <span class="link-item">RELATIONAL COMMITMENT</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them</h3>
+            <div class="section-content">
+                Having to make decisions that may cause others harm<br>
+                Seeing an element or experience that proves their idealized view is invalid<br>
+                Learning that a friend or supporters has been disloyal<br>
+                Being forced to choose between personal glory and greater social needs<br>
+                Their authority being challenged because their decisions or misrecognition in weakness
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

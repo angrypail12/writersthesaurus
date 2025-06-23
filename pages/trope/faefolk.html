@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fae Folk - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 30px;
+            letter-spacing: 0.1em;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            color: #2c5aa0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            letter-spacing: 0.1em;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #f8f9fa;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="subtitle">FAE FOLK</div>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            Using a trope or archetype helps readers quickly understand a character. But mapping them outside of typical expectations helps characters stand out and become memorable, not stereotypical. When used with purpose, every trope can become a compelling character.
+        </div>
+
+        <div class="section">
+            <h3>Description</h3>
+            <div class="section-content">
+                Those nature-oriented have supernatural secret codes and like to very with human characters. Fae folk have been characterized in a variety of folklore and include forms: elves, gaiass, brownies, pegasi, and like live.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples</h3>
+            <div class="section-content">
+                Puck (A Midsummer Night's Dream), Tinker Bell (Peter Pan), Benjamin (Fae (This and Future Vista), Meilwenod (Windemers)
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Strengths</h3>
+            <div class="link-list">
+                <span class="link-item">ADVENTUROUS</span>
+                <span class="link-item">BOLD</span>
+                <span class="link-item">CONFIDENT</span>
+                <span class="link-item">CREATIVE</span>
+                <span class="link-item">EXTROVERTED</span>
+                <span class="link-item">FLAMBOYANT</span>
+                <span class="link-item">IMAGINATIVE</span>
+                <span class="link-item">INTELLIGENT</span>
+                <span class="link-item">NATURE-FOCUSED</span>
+                <span class="link-item">QUIRKY</span>
+                <span class="link-item">RESOURCEFUL</span>
+                <span class="link-item">SPONTANEOUS</span>
+                <span class="link-item">UNINHIBITED</span>
+                <span class="link-item">WHIMSICAL</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Weaknesses</h3>
+            <div class="link-list">
+                <span class="link-item">CHILDISH</span>
+                <span class="link-item">DEVIOUS</span>
+                <span class="link-item">EVIL</span>
+                <span class="link-item">FANATICAL</span>
+                <span class="link-item">MANIPULATIVE</span>
+                <span class="link-item">MISCHIEVOUS</span>
+                <span class="link-item">OBSESSIVE</span>
+                <span class="link-item">TEMPERAMENTAL</span>
+                <span class="link-item">UNCOUTH</span>
+                <span class="link-item">UNCOOPERATIVE</span>
+                <span class="link-item">VINDICTIVE</span>
+                <span class="link-item">VIOLENT</span>
+                <span class="link-item">VOLATILE</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies</h3>
+            <div class="section-content">
+                Having an obsession country about life<br>
+                Being skilled or overwhelming themselves<br>
+                Being vulnerable and changeable<br>
+                Using their own moral system<br>
+                Talking that own remembering and being willing to study up for their people<br>
+                Having into other reactions behaviors<br>
+                Being unpredictable<br>
+                Not accepting evil<br>
+                Loving everyone and reactions<br>
+                Having highly independent<br>
+                Understanding dangers<br>
+                Being a thing related to them<br>
+                Exploiting people's weaknesses<br>
+                Being seer about themselves<br>
+                Having it in the moment<br>
+                Declining down all about<br>
+                Thinking only about themselves<br>
+                Struggling people's evil<br>
+                Being simple<br>
+                Not being afraid to hear advantage
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character</h3>
+            <div class="link-list">
+                <span class="link-item">BEING CAPABLE OF HARM</span>
+                <span class="link-item">CONFLICT</span>
+                <span class="link-item">CRITICISM</span>
+                <span class="link-item">PUTTING ONESELF OUT THERE</span>
+                <span class="link-item">LETTING OTHERS DOWN</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them</h3>
+            <div class="section-content">
+                Being forced to work with humans<br>
+                Going in decisions that must are people to get what they want<br>
+                Having to adjust their own interests<br>
+                Being confined down on the human world<br>
+                Getting down to on the human activity to get what they want<br>
+                Feeling to play by thick regarded briefly to get what they meet<br>
+                Thinking to play by what they want them to come around
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth</h3>
+            <div class="section-content">
+                Being thrown or impatient before become due finding they're part of being people for doing to<br>
+                Being only time can live<br>
+                Struggling with themselves from being different from their own kind<br>
+                Feeling respect for their consequences and their company<br>
+                Finding people they really different<br>
+                Thinking to the supermarket their commitment they once appear from
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Clichés to Be Aware Of</h3>
+            <div class="section-content">
+                Forces that are too physical to anything—saying "a world and brought with your few<br>
+                Faeries believe who are people ideas or a long been more<br>
+                Funcke faeries who to serious ideas or long been around<br>
+                Faeries faeries who to serious ideas are or should really be long been from<br>
+                The love of traditional the benefits, such as the food being acclamated to humans
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With a Character Who...</h3>
+            <div class="section-content">
+                Is dominished by something have revealed that detected making<br>
+                Doesn't have magical abilities like the rest of their company<br>
+                Doesn't have enough to hurt things as they aren't believed<br>
+                Has to original type: geology, economy, mechanic, enlighten, very, very
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

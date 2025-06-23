@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creator Archetype - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .content-section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .traits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .trait-column {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .trait-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 6px;
+            font-size: 0.8rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .trait-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .helpful-tip {
+            background: #f8f9fa;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .traits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="title">CREATOR (ARCHETYPE)</div>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Description:</div>
+            <div class="section-content">
+                Imaginative and highly driven, these characters see the world, innovative, and associates who feel compelled to create something totally new and appropriate. They sometimes may come from a desire to learn a strong either a position, need a work. Or a personal trait, as clearly provide fulfillment for themselves.
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Fictional Examples:</div>
+            <div class="section-content">
+                Dr. Frankenstein (Frankenstein), Tyler Durden (Fight Club), Walt (The Five and the Chopper Factory), Jo March (Little Women), Mozart (Amadeus), Erin Gilbert (Ghostbusters)
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Common Strengths:</div>
+            <div class="traits-grid">
+                <div class="trait-column">
+                    <a href="#" class="trait-link">ADVENTUROUS</a>
+                    <a href="#" class="trait-link">AMBITIOUS</a>
+                    <a href="#" class="trait-link">BOLD</a>
+                    <a href="#" class="trait-link">CREATIVE</a>
+                    <a href="#" class="trait-link">CURIOUS</a>
+                    <a href="#" class="trait-link">DISCIPLINED</a>
+                    <a href="#" class="trait-link">FOCUSED</a>
+                    <a href="#" class="trait-link">IMAGINATIVE</a>
+                    <a href="#" class="trait-link">INDEPENDENT</a>
+                    <a href="#" class="trait-link">INDUSTRIOUS</a>
+                    <a href="#" class="trait-link">INSPIRATIONAL</a>
+                    <a href="#" class="trait-link">INTELLIGENT</a>
+                    <a href="#" class="trait-link">OPTIMISTIC</a>
+                    <a href="#" class="trait-link">PASSIONATE</a>
+                    <a href="#" class="trait-link">PERSISTENT</a>
+                    <a href="#" class="trait-link">QUIRKY</a>
+                    <a href="#" class="trait-link">RESOURCEFUL</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Common Weaknesses:</div>
+            <div class="traits-grid">
+                <div class="trait-column">
+                    <a href="#" class="trait-link">COMPULSIVE</a>
+                    <a href="#" class="trait-link">DISORGANIZED</a>
+                    <a href="#" class="trait-link">IMPRACTICAL</a>
+                    <a href="#" class="trait-link">MANIPULATIVE</a>
+                    <a href="#" class="trait-link">OVERSENSITIVE</a>
+                    <a href="#" class="trait-link">PERFECTIONIST</a>
+                    <a href="#" class="trait-link">POSSESSIVE</a>
+                    <a href="#" class="trait-link">SELF-INDULGENT</a>
+                    <a href="#" class="trait-link">STUBBORN</a>
+                    <a href="#" class="trait-link">UNCOMMUNICATIVE</a>
+                    <a href="#" class="trait-link">VOLATILE</a>
+                    <a href="#" class="trait-link">WORKAHOLIC</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Associated Actions, Behaviors, and Tendencies:</div>
+            <div class="section-content">
+                <p>Being a dreamer, imagining things that isn't yet place<br>
+                Being inspired by everything<br>
+                Being gifted in a new area (science, music, art, writing, etc.)<br>
+                Using unconventional methods<br>
+                Drawing constantly<br>
+                Embracing out<br>
+                Making personal sacrifices to bring their vision to fruition<br>
+                Defending creative and as a necessary part of the process<br>
+                Not being content unless their personal goals and project has value equal viewing to work alone<br>
+                Being hyper-focused on their work to the exclusion of everything else<br>
+                Difficulty managing their time<br>
+                Thinking only of work<br>
+                Being impatient with details and routines<br>
+                Being quirky or odd<br>
+                Being highly sensitive or "creative temperament"<br>
+                Promotioting their creative efforts over everything and everyone else<br>
+                Beginning and never forgetting to eat, not oftentimes, etc.) when a project is underway<br>
+                Seeing their work as part of who they are<br>
+                Perfectionism<br>
+                Being the figure on come as extraordinary creative<br>
+                Prioritizing the potential relationships because you will always come second to the work<br>
+                Depending into personal relationships because some potential always come second to the music<br>
+                Recognizing who potential relationships because you are destined to follow art<br>
+                Sharing advice and melody in the areas of creator<br>
+                Sacrificing ethics and security on the altar of creation<br>
+                Revising ideas and thought on they are fully destined to think art</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Fears That Might Limit the Character:</div>
+            <div class="traits-grid">
+                <div class="trait-column">
+                    <a href="#" class="trait-link">A LOVED ONE DYING</a>
+                    <a href="#" class="trait-link">CRITICISM</a>
+                    <a href="#" class="trait-link">EXTINCTION</a>
+                    <a href="#" class="trait-link">LOSING THE RESPECT OF OTHERS</a>
+                    <a href="#" class="trait-link">MEDIOCRITY</a>
+                    <a href="#" class="trait-link">REJECTION</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <strong>Helpful Tip:</strong> Using a character archetype initially makes character creation and development straightforward. However, the mapping this creates is only a framework on which to begin building your unique character. Don't limit the character to this framework - use it as a foundation and add your own elements and creativity.
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+
+        // Add click handlers for trait links
+        document.querySelectorAll('.trait-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const trait = this.textContent;
+                console.log(`Clicked on trait: ${trait}`);
+                // In a real implementation, this would navigate to the trait page
+            });
+        });
+    </script>
+</body>
+</html>

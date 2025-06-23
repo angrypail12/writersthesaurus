@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrenaline Junkie - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 30px;
+            letter-spacing: 0.1em;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            color: #2c5aa0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            letter-spacing: 0.1em;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #f8f9fa;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="subtitle">ADRENALINE JUNKIE</div>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            Using a trope or archetype helps readers quickly understand a character. But mapping them outside of typical expectations helps characters stand out and become memorable, not stereotypical. When used with purpose, every trope can become a compelling character.
+        </div>
+
+        <div class="section">
+            <h3>Description</h3>
+            <div class="section-content">
+                The adrenaline junkie is driven by a need for stimulation and excitement. The more intense or dangerous the situation is, the more likely they are to participate.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples</h3>
+            <div class="section-content">
+                Johnny Utah (Point Break), Tony (The Lord of the Rings), Starbuck (Battlestar Galactica), Tyler Durden (Fight Club), and Marla Singer (Fight Club).
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Strengths</h3>
+            <div class="link-list">
+                <span class="link-item">ADVENTUROUS</span>
+                <span class="link-item">BOLD</span>
+                <span class="link-item">CONFIDENT</span>
+                <span class="link-item">COURAGEOUS</span>
+                <span class="link-item">CREATIVE</span>
+                <span class="link-item">CURIOUS</span>
+                <span class="link-item">DECISIVE</span>
+                <span class="link-item">FOCUSED</span>
+                <span class="link-item">IMAGINATIVE</span>
+                <span class="link-item">INDEPENDENT</span>
+                <span class="link-item">PASSIONATE</span>
+                <span class="link-item">PERSISTENT</span>
+                <span class="link-item">PROACTIVE</span>
+                <span class="link-item">SPONTANEOUS</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Weaknesses</h3>
+            <div class="link-list">
+                <span class="link-item">ANTISOCIAL</span>
+                <span class="link-item">COMPULSIVE</span>
+                <span class="link-item">DISORGANIZED</span>
+                <span class="link-item">IMPULSIVE</span>
+                <span class="link-item">IRRESPONSIBLE</span>
+                <span class="link-item">RECKLESS</span>
+                <span class="link-item">SELF-DESTRUCTIVE</span>
+                <span class="link-item">STUBBORN</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies</h3>
+            <div class="section-content">
+                Seeking out risky activities<br>
+                Looking for adrenaline<br>
+                Pursuing dangerous hobbies<br>
+                Being highly independent<br>
+                Thrill-seeking behavior<br>
+                Dismissing danger<br>
+                Acting in the moment<br>
+                Needing challenges with a strong possibility of failure<br>
+                Taking risks with their personal relationships<br>
+                Living life to the full<br>
+                Being over-enthusiastic about their ideas and goals<br>
+                Breaking standard limitations<br>
+                Pursuing novel experiences<br>
+                Difficulty seeking help (a problem-solving mentality or safety hazard)<br>
+                Being overly confident in their own abilities<br>
+                Taking unnecessary chances<br>
+                Living dangerously<br>
+                Following the heart over logic in their emotional needs<br>
+                Difficulty telling no for an answer<br>
+                Lacking fear of consequences or physical harm-centered risks<br>
+                Struggling with preventive behaviors, force management, and other social-centered tasks<br>
+                Impulsivity
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Physical Traits or Characteristics</h3>
+            <div class="link-list">
+                <span class="link-item">ADRENALINE</span>
+                <span class="link-item">BEING LARGER</span>
+                <span class="link-item">SCARS</span>
+                <span class="link-item">SUN-KISSED OR TANNED</span>
+                <span class="link-item">PHYSICAL PAIN</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them</h3>
+            <div class="section-content">
+                Tedium in their routine work<br>
+                Situations that require consistently doing the same activity as a bureaucracy<br>
+                Caring for others and having others care for them (one to three year job)<br>
+                Functioning and working for others<br>
+                Settling in relationships to avoid/settle their own desires<br>
+                Accepting a failure or injury that restricts their mobility (a giant metal wall that's too high, navigating a wheelchaired kid without a girlfriend, etc.)
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

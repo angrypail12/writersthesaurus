@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monster Hunter - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .examples {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .trait-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .trait-item {
+            background: #f8f9fa;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            border: 1px solid #e9ecef;
+        }
+
+        .behavioral-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .behavioral-list li {
+            margin-bottom: 8px;
+            padding-left: 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .helpful-tips {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #8b9dc3;
+            margin-top: 30px;
+        }
+
+        .helpful-tips h3 {
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Monster Hunter</h1>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Description</div>
+            <div class="section-content">
+                A character dedicated to hunting down and eradicating to destroy a monster. This character is questings and is may into the character is genetically assisted in violence, at the former may be more specialized, with the knowledge and tools to kill different kinds of monster.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Fictional Examples</div>
+            <div class="section-content examples">
+                Van Helsing (Bram Stoker's Dracula), Jon Stalking (Dracula), Quiet (Dead Father Donna Scary) (Dr. Paranoid)
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Common Strengths</div>
+            <div class="trait-list">
+                <div class="trait-item">ADVENTUROUS</div>
+                <div class="trait-item">BOLD</div>
+                <div class="trait-item">CENTERED</div>
+                <div class="trait-item">CONFIDENT</div>
+                <div class="trait-item">COURAGEOUS</div>
+                <div class="trait-item">DECISIVE</div>
+                <div class="trait-item">FOCUSED</div>
+                <div class="trait-item">INDEPENDENT</div>
+                <div class="trait-item">OBSERVANT</div>
+                <div class="trait-item">PASSIONATE</div>
+                <div class="trait-item">PATIENT</div>
+                <div class="trait-item">PERSISTENT</div>
+                <div class="trait-item">PROTECTIVE</div>
+                <div class="trait-item">RESOURCEFUL</div>
+                <div class="trait-item">RESPONSIBLE</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Common Weaknesses</div>
+            <div class="trait-list">
+                <div class="trait-item">ABRASIVE</div>
+                <div class="trait-item">COMPULSIVE</div>
+                <div class="trait-item">FANATICAL</div>
+                <div class="trait-item">GRIM</div>
+                <div class="trait-item">HUMORLESS</div>
+                <div class="trait-item">INFLEXIBLE</div>
+                <div class="trait-item">OBSESSIVE</div>
+                <div class="trait-item">PARANOID</div>
+                <div class="trait-item">PERFECTIONIST</div>
+                <div class="trait-item">RECKLESS</div>
+                <div class="trait-item">SELF-DESTRUCTIVE</div>
+                <div class="trait-item">STUBBORN</div>
+                <div class="trait-item">UNCOOPERATIVE</div>
+                <div class="trait-item">VINDICTIVE</div>
+                <div class="trait-item">SUSPICIOUS</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Associated Actions, Behaviors, and Tendencies</div>
+            <div class="section-content">
+                <ul class="behavioral-list">
+                    <li>Being reckless in their fixation</li>
+                    <li>Refusing to listen to reason</li>
+                    <li>Being obsessed with the need to stop the threat goal</li>
+                    <li>Displaying solitary and territoriality in their role</li>
+                    <li>Being obsessed with the creature</li>
+                    <li>Being dedicated to stop a certain threat in progress</li>
+                    <li>Acutely tracking down an evil enemy that destroys good</li>
+                    <li>Being like an only who believes that his creature can be hunted</li>
+                    <li>Being solitary about when hunting the creature</li>
+                    <li>Working in a way to get the weapons they need for the monster</li>
+                    <li>Being aggressive in their attacks on the creature they need for the creature</li>
+                    <li>Having a law that reduces the actor</li>
+                    <li>Forming self-motivated groups</li>
+                    <li>Traveling alone and demanding them to stay</li>
+                    <li>Finding a social circle of friends and family becomes taken to little time for developing relationships</li>
+                    <li>Frequently joining friends or creatures interested because the character is the character's final priority</li>
+                    <li>Being completely dedicated to hunting monsters</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Fears That Might Limit the Character</div>
+            <div class="section-content">
+                <div class="trait-list">
+                    <div class="trait-item">BEING ATTACKED</div>
+                    <div class="trait-item">BEING CAPABLE OF HARM</div>
+                    <div class="trait-item">BEING PHYSICALLY TOUCHED</div>
+                    <div class="trait-item">BEING RESPONSIBLE FOR OTHERS</div>
+                    <div class="trait-item">BEING UNABLE</div>
+                    <div class="trait-item">DEATH</div>
+                    <div class="trait-item">FAILURE</div>
+                    <div class="trait-item">ISOLATION</div>
+                    <div class="trait-item">LEADING</div>
+                    <div class="trait-item">LOSING ONES SOCIAL STANDING</div>
+                    <div class="trait-item">PHYSICAL PAIN</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Situations That Will Challenge Them</div>
+            <div class="section-content">
+                <ul class="behavioral-list">
+                    <li>Facing is they with a creature they cannot for detection</li>
+                    <li>Getting emotional about their mission</li>
+                    <li>Having to work with creatures who've overpowered</li>
+                    <li>Being trapped in a confined or enclosed environment with the monster</li>
+                    <li>Realizing creatures they hunted in the past weren't truly the enemy</li>
+                    <li>Dealing with an enemy that disguised his essence/appearance</li>
+                    <li>Having lost to destroy the monster</li>
+                    <li>Dealing with an enemy that disguises his essence and is hard to find</li>
+                    <li>Being threatened in a way as a consequence or character over an otherwise level</li>
+                    <li>Having to travel together new paths in order bring in a world</li>
+                    <li>Being led in battery and choose or get</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="helpful-tips">
+            <h3>Helpful Tips</h3>
+            <p>The monster hunter archetype offers rich opportunities for exploring themes of obsession, duty, and the line between heroism and fanaticism. Consider what drives their dedication and how their single-minded pursuit might both help and hinder them.</p>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>

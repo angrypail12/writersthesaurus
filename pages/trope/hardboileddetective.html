@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hard-Boiled Detective - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #8b9dc3;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #333;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .description {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .traits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .trait-list {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .trait-list h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            color: #555;
+        }
+
+        .trait-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .trait-tag {
+            background: #8b9dc3;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .trait-tag:hover {
+            background: #6a7ba8;
+        }
+
+        .behaviors-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .behaviors-list li {
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .behaviors-list li::before {
+            content: "• ";
+            color: #8b9dc3;
+            font-weight: bold;
+        }
+
+        .sub-section {
+            margin-bottom: 25px;
+        }
+
+        .sub-section h3 {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        @media (max-width: 768px) {
+            .traits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Hard-Boiled Detective</h1>
+        </div>
+
+        <div class="section">
+            <h2>Description</h2>
+            <div class="description">
+                This experienced detective is a tough, lonesome, and street smart. Traditionally male, he won't give up until he's solved his case.
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Fictional Examples</h2>
+            <div class="fictional-examples">
+                Philip Marlowe (The Big Sleep), Shell Thorp (Red Thorn), Sean Spade (The Maltese Falcon), Jake Gittes (Chinatown)
+            </div>
+        </div>
+
+        <div class="traits-grid">
+            <div class="trait-list">
+                <h3>Common Strengths</h3>
+                <div class="trait-tags">
+                    <span class="trait-tag">Adaptable</span>
+                    <span class="trait-tag">Alert</span>
+                    <span class="trait-tag">Analytical</span>
+                    <span class="trait-tag">Cautious</span>
+                    <span class="trait-tag">Confident</span>
+                    <span class="trait-tag">Courageous</span>
+                    <span class="trait-tag">Decisive</span>
+                    <span class="trait-tag">Disciplined</span>
+                    <span class="trait-tag">Efficient</span>
+                    <span class="trait-tag">Focused</span>
+                    <span class="trait-tag">Independent</span>
+                    <span class="trait-tag">Intelligent</span>
+                    <span class="trait-tag">Just</span>
+                    <span class="trait-tag">Meticulous</span>
+                    <span class="trait-tag">Observant</span>
+                    <span class="trait-tag">Passionate</span>
+                    <span class="trait-tag">Patient</span>
+                    <span class="trait-tag">Perceptive</span>
+                    <span class="trait-tag">Persistent</span>
+                    <span class="trait-tag">Private</span>
+                    <span class="trait-tag">Professional</span>
+                    <span class="trait-tag">Resourceful</span>
+                </div>
+            </div>
+
+            <div class="trait-list">
+                <h3>Common Weaknesses</h3>
+                <div class="trait-tags">
+                    <span class="trait-tag">Abrasive</span>
+                    <span class="trait-tag">Addictive</span>
+                    <span class="trait-tag">Antisocial</span>
+                    <span class="trait-tag">Callous</span>
+                    <span class="trait-tag">Cynical</span>
+                    <span class="trait-tag">Confrontational</span>
+                    <span class="trait-tag">Cynical</span>
+                    <span class="trait-tag">Defensive</span>
+                    <span class="trait-tag">Evasive</span>
+                    <span class="trait-tag">Fussy</span>
+                    <span class="trait-tag">Reckless</span>
+                    <span class="trait-tag">Self-Destructive</span>
+                    <span class="trait-tag">Stubborn</span>
+                    <span class="trait-tag">Suspicious</span>
+                    <span class="trait-tag">Vindictive</span>
+                    <span class="trait-tag">Volatile</span>
+                    <span class="trait-tag">Workaholic</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Associated Actions, Behaviors, and Tendencies</h2>
+            <ul class="behaviors-list">
+                <li>Thinking carefully before speaking</li>
+                <li>Being adept at sizing the big picture from smaller clout</li>
+                <li>Looking for answers in all the obvious places to nullify</li>
+                <li>Following leads doggedly</li>
+                <li>Being a night owl</li>
+                <li>Remaining in pains of the case</li>
+                <li>Drinking heavily, smoking</li>
+                <li>Using straightforward methods to solve a case</li>
+                <li>Peeling back the deep between cover stories there no only one who thinks that way</li>
+                <li>Working around the clock on something</li>
+                <li>Preferring to work alone</li>
+                <li>Being unable to trust people very highly suspicious of money</li>
+                <li>Having jaded from past experiences</li>
+                <li>Hanging only a few close friends, mostly of whom are somewhat shady</li>
+                <li>Obsessing over objectives once they're working on</li>
+                <li>Having connections to crime bosses (sometimes police)</li>
+                <li>Getting into trouble when people try to protect</li>
+                <li>Being hesitant to something in their past</li>
+                <li>Carrying grudges</li>
+                <li>Making investigative contact</li>
+                <li>Being willing to make personal sacrifices to get the job done</li>
+                <li>Being stubborn to use every possible method</li>
+                <li>Being stubborn to listen to</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Flaws That Might Limit the Character</h2>
+            <div class="sub-section">
+                <h3>Being in fear/ Being elegy/ Being personal/ Conflict/ Criticism/ Death/ Letting others down/ Being physical/ Rejecting/ Drinking</h3>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Situations That Will Challenge Them</h2>
+            <ul class="behaviors-list">
+                <li>Being related to a case which involves a former partner</li>
+                <li>Being the target of corruption</li>
+                <li>Substance a personal setback that makes it difficult to focus on the case</li>
+                <li>Being involved of corruption</li>
+                <li>Taking a case that appears simple but turns complicated activity</li>
+                <li>Losing detective or corruption and having problems with authorities</li>
+                <li>Losing their main source of information</li>
+                <li>A loved one being caught confused knowing that the character's intervention in a case</li>
+                <li>Having to work with someone they know or contract</li>
+                <li>Hating to work for someone they have a conflict</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Inner Struggles to Give Them Depth</h2>
+            <ul class="behaviors-list">
+                <li>Despising the life they live</li>
+                <li>Worrying that if they think they're no passions down</li>
+                <li>Fearing the they're no one they hand find or always and having to help</li>
+                <li>Struggling with an addition to social media or some other distraction that family</li>
+                <li>Being resigned to work strongly</li>
+                <li>Being tempted to make what for cash and knowing but to cash back professionally</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Clichés to Be Aware Of</h2>
+            <ul class="behaviors-list">
+                <li>The hardened detective with a drinking and violence, drugs, alcohol, something, etc.</li>
+                <li>The detective detective who the detective might not be a hard part of town</li>
+                <li>The tough-guy detective whose great at everything professionally but his personal life is a wreck</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Twist This Trope With a Character Who…</h2>
+            <ul class="behaviors-list">
+                <li>Is a feature</li>
+                <li>Is teen to business work with personal relationships</li>
+                <li>Is emotionally overwhelmed, such as taking losses, being gay or having a disability</li>
+                <li>Has an unconventional approach</li>
+                <li>Has an unusual that</li>
+                <li>Is physically or more story</li>
+                <li>Has an original that Freelance: Doctrine: People: blue: Cytoxic: Worseman: etc.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>

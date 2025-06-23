@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriarch - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section-title {
+            font-size: 1rem;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: #555;
+        }
+
+        .examples {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .trait-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .trait-item {
+            background: #f8f9fa;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            border: 1px solid #e9ecef;
+        }
+
+        .behavioral-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .behavioral-list li {
+            margin-bottom: 8px;
+            padding-left: 0;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .helpful-tips {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 4px solid #8b9dc3;
+            margin-top: 30px;
+        }
+
+        .helpful-tips h3 {
+            margin-bottom: 10px;
+            color: #333;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Matriarch</h1>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Description</div>
+            <div class="section-content">
+                A female leader who knows over her family, tribe, or clan.
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Fictional Examples</div>
+            <div class="section-content examples">
+                Catelyn Stark (A Song of Ice and Fire), Lady Patience (Farseer), Mother Abigail (The Stand), Moiha Belmore (The Sisters Expatriated), Alcinda Stark (Deverry)
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Common Strengths</div>
+            <div class="trait-list">
+                <div class="trait-item">PROTECTIVE</div>
+                <div class="trait-item">ASSERTIVE</div>
+                <div class="trait-item">NURTURING</div>
+                <div class="trait-item">WISE</div>
+                <div class="trait-item">CALM</div>
+                <div class="trait-item">CAUTIOUS</div>
+                <div class="trait-item">COURTEOUS</div>
+                <div class="trait-item">DECISIVE</div>
+                <div class="trait-item">DESCRIPTIVE</div>
+                <div class="trait-item">GROUNDED</div>
+                <div class="trait-item">HOSPITABLE</div>
+                <div class="trait-item">INFLUENTIAL</div>
+                <div class="trait-item">LOYAL</div>
+                <div class="trait-item">NURTURING</div>
+                <div class="trait-item">ORGANIZED</div>
+                <div class="trait-item">PASSIONATE</div>
+                <div class="trait-item">PROTECTIVE</div>
+                <div class="trait-item">RESPONSIBLE</div>
+                <div class="trait-item">SUPPORTIVE</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Common Weaknesses</div>
+            <div class="trait-list">
+                <div class="trait-item">ABRASIVE</div>
+                <div class="trait-item">CONFRONTATIONAL</div>
+                <div class="trait-item">FANATICAL</div>
+                <div class="trait-item">FUSSY</div>
+                <div class="trait-item">HUMORLESS</div>
+                <div class="trait-item">IMPATIENT</div>
+                <div class="trait-item">INFLEXIBLE</div>
+                <div class="trait-item">MANIPULATIVE</div>
+                <div class="trait-item">OBSESSIVE</div>
+                <div class="trait-item">OVERBEARING</div>
+                <div class="trait-item">PERFECTIONIST</div>
+                <div class="trait-item">PROUD</div>
+                <div class="trait-item">STUBBORN</div>
+                <div class="trait-item">SUSPICIOUS</div>
+                <div class="trait-item">UNFORGIVING</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Associated Actions, Behaviors, and Tendencies</div>
+            <div class="section-content">
+                <ul class="behavioral-list">
+                    <li>Being a stern guide and counselor</li>
+                    <li>Teaching the family about their lineage/history</li>
+                    <li>Fostering strong family traditions</li>
+                    <li>Setting ground rules about relationships in social affairs</li>
+                    <li>Making important decisions for the family</li>
+                    <li>Being able to make hard choices that are best for the group</li>
+                    <li>Being a source of comfort to family members</li>
+                    <li>Being toughly negotiated</li>
+                    <li>Meditating conflicts within the family</li>
+                    <li>Preserving the family name and traditions</li>
+                    <li>Ensuring others to spend and share to corresponding on the talking</li>
+                    <li>Being frequently visited has learned but a good deal of experience</li>
+                    <li>Being manipulative if it means protecting the family</li>
+                    <li>Sacrificing her own needs for the family—but only when it's warranted</li>
+                    <li>Being and aware of wary of how there are demonstrating</li>
+                    <li>Embracing both responsibilities to the community and family</li>
+                    <li>Being able to act as family manager</li>
+                    <li>Realizing responsibility in and within his greatest community</li>
+                    <li>Expecting to be obeyed and respected</li>
+                    <li>Expecting the unwavering loyalty of family</li>
+                    <li>Coming down hard on anyone challenging her authority</li>
+                    <li>Charging her loyalty to the behalf and not allowing to other groups of favor</li>
+                    <li>Expecting respect from society and viewing certain behaviors should be made</li>
+                    <li>Being unwilling to roll on help from other family</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Fears That Might Limit the Character</div>
+            <div class="section-content">
+                <div class="trait-list">
+                    <div class="trait-item">BEING POWERLESS FOR OTHERS</div>
+                    <div class="trait-item">CONFLICT</div>
+                    <div class="trait-item">CRITICISM</div>
+                    <div class="trait-item">LEADING</div>
+                    <div class="trait-item">PUBLIC SPEAKING</div>
+                    <div class="trait-item">PUTTING ONESELF OUT THERE</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">Situations That Will Challenge Them</div>
+            <div class="section-content">
+                <ul class="behavioral-list">
+                    <li>A family member that commits a difficult-to-live-in situation situation</li>
+                    <li>Being confronted by an authority figure on the family's behalf</li>
+                    <li>An external force that must be overcome, such as an epidemic or war</li>
+                    <li>A long from outside the family unit</li>
+                    <li>Financial hardship or tragedy</li>
+                    <li>A new development that impacts their ability to lead, such as a cognitive decline or an illness or injury</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="helpful-tips">
+            <h3>Helpful Tips</h3>
+            <p>The matriarch is a powerful figure in storytelling who can drive conflict and character development through her protective instincts and strong will. Consider how her desire to maintain family unity might conflict with individual family members' needs for independence.</p>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+    </script>
+</body>
+</html>

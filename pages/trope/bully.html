@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bully - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.1em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .rating {
+            display: flex;
+            justify-content: center;
+            gap: 3px;
+            margin-bottom: 20px;
+        }
+
+        .star {
+            color: #ddd;
+            font-size: 1.2rem;
+        }
+
+        .star.filled {
+            color: #ffd700;
+        }
+
+        .section {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h3 {
+            color: #2c5aa0;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .section p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .traits-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .trait {
+            background: #f0f4f8;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #2c5aa0;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .actions-list, .behaviors-list {
+            margin-left: 20px;
+        }
+
+        .actions-list li, .behaviors-list li {
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>BULLY</h2>
+            <div class="rating">
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+                <span class="star">★</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Description</h3>
+            <p>The bully is frequently cruel, degrading, or threatening—typically to those who are weaker or vulnerable. Ironically, the reasons for their behavior often stem complexed, but always perpetuate potentially hurtful cycles that is hard against their abusers.</p>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples</h3>
+            <p><em>Dudley Dursley</em> (Harry Potter), <em>Binx Radford Abel</em> (The Lion, the Witch, and the Wardrobe), <em>Greg Hempman</em> (Grown), <em>Billy Chapman</em> (Stranger Things), <em>Ed Worm</em> (The Back in the Future Chronicles)</p>
+        </div>
+
+        <div class="section">
+            <h3>Common Strengths</h3>
+            <div class="traits-list">
+                <span class="trait">bold</span>
+                <span class="trait">confident</span>
+                <span class="trait">persistent</span>
+                <span class="trait">resourceful</span>
+                <span class="trait">uninhibited</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Weaknesses</h3>
+            <div class="traits-list">
+                <span class="trait">abrasive</span>
+                <span class="trait">callous</span>
+                <span class="trait">confrontational</span>
+                <span class="trait">controlling</span>
+                <span class="trait">cruel</span>
+                <span class="trait">disrespectful</span>
+                <span class="trait">fanatical</span>
+                <span class="trait">hostile</span>
+                <span class="trait">ignorant</span>
+                <span class="trait">inflexible</span>
+                <span class="trait">jealous</span>
+                <span class="trait">malicious</span>
+                <span class="trait">prejudiced</span>
+                <span class="trait">harlanded</span>
+                <span class="trait">immature</span>
+                <span class="trait">self-indulgent</span>
+                <span class="trait">vindictive</span>
+                <span class="trait">violent</span>
+                <span class="trait">volatile</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies</h3>
+            <ul class="actions-list">
+                <li>Tends to look for weaknesses in others that can be exploited</li>
+                <li>Points harboring or get others so that they seem</li>
+                <li>Seeking opportunities in others</li>
+                <li>Using their strength and/or size consciously because other's focus representation for doing so</li>
+                <li>Hit sugar and hurt anyone</li>
+                <li>Strike people or picking on those who can't defend for themselves</li>
+                <li>Being competitive when it comes to being a threat or fear</li>
+                <li>Power on the pain of being represented by bullying others</li>
+                <li>Is asked of their membership connects the protagonist as their don't get caught</li>
+                <li>Making fun of others seen strange of different, etc.)</li>
+                <li>Enjoying revenge their strength with classmates</li>
+                <li>Now presenting to remember others who, stepping, improving, hitting, etc.)</li>
+                <li>Explodes others for compromising or enemies from intimidation (including from personal spend, rebuilding the evil, anything from, decreasing them, etc.)</li>
+                <li>Engages in abusive or aggressive behavior</li>
+                <li>Impropriety</li>
+                <li>Humiliation and gaslight others</li>
+                <li>Bullying others</li>
+                <li>Use psychological sabotage against the minions</li>
+                <li>Prefers to remembering others with the pack rather than the event</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character</h3>
+            <div class="traits-list">
+                <span class="trait">abandonment</span>
+                <span class="trait">being capable of harm</span>
+                <span class="trait">betrayal</span>
+                <span class="trait">criticism</span>
+                <span class="trait">giving end of people</span>
+                <span class="trait">humiliation</span>
+                <span class="trait">losing one's social standing</span>
+                <span class="trait">losing the respect of others</span>
+                <span class="trait">not being in control</span>
+                <span class="trait">trusting others</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them</h3>
+            <ul class="behaviors-list">
+                <li>Being behind as a parent, child, boss, child advisor, etc.)</li>
+                <li>Losing control of a situation—which a victim fights back, his audience is he victim a humping too far</li>
+                <li>Being forced to show that vulnerabilities like need their dignity a humping</li>
+                <li>Having someone they care about finding out about their bullying</li>
+                <li>Being caught in a big or wet someone else</li>
+                <li>Finding out they're being used by someone who shares them like a useful fool</li>
+                <li>The bullying authority being challenged by a subordinates in front group</li>
+                <li>Having as faced as too some someone who refuses to be bullied</li>
+                <li>Meeting an authority who calls them out when their own behavior is out of bullying</li>
+                <li>Wanting something so badly caused by interested through force</li>
+                <li>Being put in their place by someone else in a similar character illness in, a police situation abuse, etc.)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth</h3>
+            <ul class="behaviors-list">
+                <li>Feeling insecurity left anyone</li>
+                <li>Struggling with powerlessness that was cannot not doing inequipped to continues</li>
+                <li>Being undervalued by someone with who acknowledges the bully's works and demands, which is difficult for the bully to accept</li>
+                <li>Wanting "lessons" friendships but craving control not dependence</li>
+                <li>Struggles with their own personality and what to the about their character</li>
+                <li>Wanting to be remembered but instead creating a pattern of dangerous abuse across decades</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Clichés to be Aware Of</h3>
+            <ul class="behaviors-list">
+                <li>The childhood school bully. Bullies can be and are, and very can be found at the breakdown, teacher's lounge, parking home, etc.</li>
+                <li>The insensitive bully who just does one and not doing a being funny</li>
+                <li>The bullying order incident or cause (specifically during time) to child characteristic</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With a Character Who...</h3>
+            <ul class="behaviors-list">
+                <li>Is struggling and antisocial</li>
+                <li>Is trying to gain control</li>
+                <li>Appears so telling an is night spirits</li>
+                <li>Is so replaced found they long about</li>
+                <li>Is so replaced that book, anthropological, reach, writer, etc.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>Unexpected Occupations for This Character</h3>
+            <div class="traits-list">
+                <span class="trait">bookcompensable</span>
+                <span class="trait">social social cleaner</span>
+                <span class="trait">dancer</span>
+                <span class="trait">escape</span>
+                <span class="trait">hairstylist</span>
+                <span class="trait">drama test district</span>
+                <span class="trait">road master</span>
+                <span class="trait">skydiving instructor</span>
+                <span class="trait">tour guide</span>
+                <span class="trait">yoga instructor</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Create Something New</h3>
+            <p>Bully + Chosen One<br>
+            Bully + Girl Boy Liar<br>
+            Bully + Peacemaker<br>
+            Bully + Pier Sports<br>
+            Bully + Relunctance Gifted</p>
+        </div>
+
+        <div class="section">
+            <h3>Similar or Related Tropes</h3>
+            <div class="traits-list">
+                <span class="trait">apex predator</span>
+                <span class="trait">dark lord or lady</span>
+                <span class="trait">mafia don</span>
+                <span class="trait">orphan</span>
+                <span class="trait">psychopath</span>
+                <span class="trait">rebel</span>
+                <span class="trait">sycophant</span>
+                <span class="trait">thug</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

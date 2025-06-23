@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mad Scientist - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #2d3748;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 1.8rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .header h2 {
+            font-size: 1.2rem;
+            font-weight: normal;
+            opacity: 0.9;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        .section h3 {
+            color: #2c5aa0;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 5px;
+        }
+
+        .section p {
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+
+        .fictional-examples {
+            font-style: italic;
+            color: #666;
+        }
+
+        .trait-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 15px;
+        }
+
+        .trait {
+            background: #e2e8f0;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .behavior-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .behavior-list li {
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            color: #4a5568;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .behavior-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8b9dc3;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #f7fafc;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            color: #4a5568;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .container {
+                margin: 10px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <h2>Mad Scientist</h2>
+        </div>
+
+        <div class="content">
+            <a href="#" class="back-link" onclick="goBack()">Back to Character Types</a>
+
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+
+            <div class="section">
+                <h3>Description</h3>
+                <p>Brilliant, inventive, and often insane, the mad scientist believes their work is vitally important and approached conventional morals as either. In the pursuit of personal and proving their work is valid, they'll sacrifice the difference of others.</p>
+            </div>
+
+            <div class="section">
+                <h3>Fictional Examples</h3>
+                <p class="fictional-examples">Dr. Strangelove (Dr. Strangelove), Dr. Frankenstein (Frankenstein), Dr. Jekyll (Dr. Strange Case of Dr. Jekyll and Mr. Hyde), Doc Brown (Back to the Future), Walter White (Breaking Bad)</p>
+            </div>
+
+            <div class="helpful-tip">
+                <strong>Helpful Tip:</strong><br>
+                Using a trope or archetype can provide a strong foundation for creating their character, but remember to give them depth by developing their unique motivations, flaws, history, and goals. This will help them come to life and avoid falling into stereotype.
+            </div>
+
+            <div class="two-column">
+                <div>
+                    <div class="section">
+                        <h3>Common Strengths</h3>
+                        <div class="trait-list">
+                            <span class="trait">Ambitious</span>
+                            <span class="trait">Confident</span>
+                            <span class="trait">Curious</span>
+                            <span class="trait">Decisive</span>
+                            <span class="trait">Disciplined</span>
+                            <span class="trait">Focused</span>
+                            <span class="trait">Independent</span>
+                            <span class="trait">Industrious</span>
+                            <span class="trait">Intelligent</span>
+                            <span class="trait">Meticulous</span>
+                            <span class="trait">Observant</span>
+                            <span class="trait">Passionate</span>
+                            <span class="trait">Persistent</span>
+                            <span class="trait">Persuasive</span>
+                            <span class="trait">Proactive</span>
+                            <span class="trait">Resourceful</span>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h3>Common Weaknesses</h3>
+                        <div class="trait-list">
+                            <span class="trait">Antisocial</span>
+                            <span class="trait">Fanatical</span>
+                            <span class="trait">Impatient</span>
+                            <span class="trait">Antisocial</span>
+                            <span class="trait">Irresponsible</span>
+                            <span class="trait">Obsessive</span>
+                            <span class="trait">Reckless</span>
+                            <span class="trait">Stubborn</span>
+                            <span class="trait">Unethical</span>
+                            <span class="trait">Workaholic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="section">
+                        <h3>Associated Actions, Behaviors, and Tendencies</h3>
+                        <ul class="behavior-list">
+                            <li>Being absent-minded</li>
+                            <li>Having eccentric habits</li>
+                            <li>Working in long binges</li>
+                            <li>Neglecting personal care</li>
+                            <li>Speaking in long tirades</li>
+                            <li>Perfecting to mind alone</li>
+                            <li>Being fixated on finishing their latest work</li>
+                            <li>Believing to give up on their experiments</li>
+                            <li>Perpetually trying hard to flourish</li>
+                            <li>Obsessing about results to the people around</li>
+                            <li>Having no moral ethical compass</li>
+                            <li>Having no oversight of work</li>
+                            <li>Difficulty being objective about their work</li>
+                            <li>Working alone</li>
+                            <li>Bookishness; believing that people don't get what they're doing are unintelligent or uneducated</li>
+                            <li>Condescension</li>
+                            <li>Experimenting on the world with other moral considerations</li>
+                            <li>Using test subjects without permission</li>
+                            <li>Talking over people's heads</li>
+                            <li>Ignoring the higher ramifications of what they're doing</li>
+                            <li>Being interested in the functionality, not the results, processing, and shooting</li>
+                            <li>Their prattle and verbally getting them at odds with the establishment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h3>Fears That Might Limit The Character</h3>
+                <p><strong>BEING JUDGED • BEING LABELED • FAILURE • PERSECUTION • ISOLATION • LEAVING NO LEGACY • LOSING ONE'S MIND</strong></p>
+            </div>
+
+            <div class="section">
+                <h3>Situations That Will Challenge Them</h3>
+                <ul class="behavior-list">
+                    <li>An experiment missing equipment they can't replace</li>
+                    <li>Being blamed or made to be guilty</li>
+                    <li>A "baby" achieving success and finding sudden disuse of the scientist</li>
+                    <li>Being pressured back doing the work they dream of</li>
+                    <li>Being confronted about their methods</li>
+                    <li>Having to win over other outstanding ingredients from a project</li>
+                    <li>Learning like a character or benefactor has ulterior motives</li>
+                    <li>Being forced to treat other people around them</li>
+                    <li>Having expectations about what they're trying to achieve</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Inner Struggles To Give Them Depth</h3>
+                <ul class="behavior-list">
+                    <li>The character looking at what they do as good</li>
+                    <li>Finding motivation</li>
+                    <li>Deciding to pursue a established as a project; fear, or greed</li>
+                    <li>The character facing psychological impediments in all that makes life worth living</li>
+                    <li>Believing with a mental health issues</li>
+                    <li>Wrestling with a recent health crisis</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Clichés To Be Aware Of</h3>
+                <ul class="behavior-list">
+                    <li>The scientist who remains a madness that combats their need (mental), and it ends up destroying them</li>
+                    <li>A scientist with reckless presentation</li>
+                    <li>A scientist that is responsible to try to rule the world</li>
+                    <li>A scientist that is overruled by a dangerous need to be acknowledged by others</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Twist This Trope With A Character Who...</h3>
+                <ul class="behavior-list">
+                    <li>Is misnamed with others and the consequences of their work</li>
+                    <li>Resented a healthy disease</li>
+                    <li>Experienced family health problems</li>
+                    <li>Is ultra-principled and puts in the establishment, values their successor on the fringe of the atmosphere scientific community</li>
+                    <li>Is an unspent potential auditor who a protestation uses whose backing it to use learning to create minor work</li>
+                </ul>
+            </div>
+
+            <div class="section">
+                <h3>Unexpected Occupations For This Character</h3>
+                <p><strong>ANIMAL RESCUE WORKER • BARKEEPER • BOOK SALES • FIREFIGHTER/POLICE • PEDIATRIC DOCTOR • RANKING • WEDDING PLANNER</strong></p>
+            </div>
+
+            <div class="section">
+                <h3>Create Something New</h3>
+                <p>Magician + Politician =<br>
+                Magician + Con Artist =<br>
+                Magician + Antihero =<br>
+                Magician + Storyteller =<br>
+                Magician + Mother Figure =</p>
+            </div>
+
+            <div class="section">
+                <h3>Similar Or Related Tropes</h3>
+                <p><strong>CREATOR (ARCHETYPE) • MAGICIAN (ARCHETYPE) • WITCH IN THE WOODS</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

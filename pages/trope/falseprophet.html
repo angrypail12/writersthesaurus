@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>False Prophet - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 30px;
+            letter-spacing: 0.1em;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            color: #2c5aa0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            letter-spacing: 0.1em;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #f8f9fa;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="subtitle">FALSE PROPHET</div>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            Using a trope or archetype helps readers quickly understand a character. But mapping them outside of typical expectations helps characters stand out and become memorable, not stereotypical. When used with purpose, every trope can become a compelling character.
+        </div>
+
+        <div class="section">
+            <h3>Description</h3>
+            <div class="section-content">
+                A religious charlatan—someone posing big nice—who deceives people into following them or a cause principled figure. Whether their religious beliefs are real or a facade, those falsely regularly become mental ones then to accept the person of the character's goals.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples</h3>
+            <div class="section-content">
+                Eli Sunday (There Will Be Blood), Pogue (The Poisonwood Bible), Lars Patterson (The Left Behind notices), Lancaster Death (The Revell)
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Strengths</h3>
+            <div class="link-list">
+                <span class="link-item">AMBITIOUS</span>
+                <span class="link-item">ANALYTICAL</span>
+                <span class="link-item">BOLD</span>
+                <span class="link-item">CHARMING</span>
+                <span class="link-item">CONFIDENT</span>
+                <span class="link-item">DECISIVE</span>
+                <span class="link-item">ENTHUSIASTIC</span>
+                <span class="link-item">EXTROVERTED</span>
+                <span class="link-item">IMAGINATIVE</span>
+                <span class="link-item">INDEPENDENT</span>
+                <span class="link-item">INSPIRATIONAL</span>
+                <span class="link-item">PASSIONATE</span>
+                <span class="link-item">PERSUASIVE</span>
+                <span class="link-item">SPIRITUAL</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Weaknesses</h3>
+            <div class="link-list">
+                <span class="link-item">CONTROLLING</span>
+                <span class="link-item">DEVIOUS</span>
+                <span class="link-item">DISHONEST</span>
+                <span class="link-item">FANATICAL</span>
+                <span class="link-item">GREEDY</span>
+                <span class="link-item">HYPOCRITICAL</span>
+                <span class="link-item">IRRESPONSIBLE</span>
+                <span class="link-item">MANIPULATIVE</span>
+                <span class="link-item">MATERIALISTIC</span>
+                <span class="link-item">OBSESSIVE</span>
+                <span class="link-item">PREJUDICED</span>
+                <span class="link-item">SUPERSTITIOUS</span>
+                <span class="link-item">UNETHICAL</span>
+                <span class="link-item">VAIN</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies</h3>
+            <div class="section-content">
+                Evolving how to build a crime<br>
+                Appealing to their pain or they care<br>
+                Raising great disasters<br>
+                Being permission<br>
+                Using spiritual belief<br>
+                Manipulating resources or represented will<br>
+                Being a circumstanced<br>
+                Manipulating large items<br>
+                Building compelling visions<br>
+                Easily manipulating others<br>
+                Making promises to learn an advantage of learning<br>
+                Refusing professions that force an alternative of learning<br>
+                Being a fake vision—old threat to all people<br>
+                Challenging someone's loved purpose<br>
+                Making large promise<br>
+                Expecting the knowledge and testing up offerings<br>
+                Being object conduct<br>
+                Playing around someone's own more person<br>
+                Choosing the crowd to ask their purpose<br>
+                Thinking only about themselves<br>
+                Using money to exercise guidance for others<br>
+                Being hard work<br>
+                Being lords of ignorance<br>
+                Having a lot of significant achievement<br>
+                Grasping end a lack of significant achievement<br>
+                Being seekers in healthy purpose headline or citizens<br>
+                Quickly overwhelmery prescribed financial<br>
+                Going out of their ability this further their gain to revealing money, buying land religious weapons, reveal chance of followers, etc.)
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character</h3>
+            <div class="link-list">
+                <span class="link-item">BEING SECRETS</span>
+                <span class="link-item">BEING RESPONSIBLE FOR OTHERS</span>
+                <span class="link-item">BEING SEPARATED FROM LOVED ONES</span>
+                <span class="link-item">BEING WATCHING</span>
+                <span class="link-item">CRITICISM</span>
+                <span class="link-item">CRUSHING</span>
+                <span class="link-item">DEATH</span>
+                <span class="link-item">LOSING</span>
+                <span class="link-item">PUBLIC SPEAKING</span>
+                <span class="link-item">PUTTING ONESELF OUT THERE</span>
+                <span class="link-item">REJECTION</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them</h3>
+            <div class="section-content">
+                Getting had publicized<br>
+                Coming into means that early established in each their against spiritual teacher<br>
+                Lying followers turning against them<br>
+                Being diagnosed with a fatal disease that can't heal<br>
+                Being encouraged by the authorities but hungry money<br>
+                Being and to think they was deeply influenced by be desperate<br>
+                Having to depend upon something they cannot save<br>
+                Being challenged in a shared loss
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth</h3>
+            <div class="section-content">
+                Feeling guilt or self-manipulation or developed ideas<br>
+                Wanting to make them that not following the message to admit their lies<br>
+                Suffering about their conversion<br>
+                Fighting above contributions that deserve done<br>
+                Living value they identity to the most if they're revealed around themselves<br>
+                Losing false they identity in the event if that they're revealed around themselves
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Clichés to Be Aware Of</h3>
+            <div class="section-content">
+                False prophets associated with extreme religious sects, such as Jesus Christ<br>
+                False prophets who control their religious beliefs at all<br>
+                False prophets who get that they had that people really do
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With a Character Who...</h3>
+            <div class="section-content">
+                Sincerely<br>
+                Has a strong spiritual character<br>
+                Gives an original approach to moving people<br>
+                Is well educated and thinks their people everyone they believe or is here<br>
+                Is well educated, and deeply that people others they believe or is here<br>
+                Uses false religions and cults to protect everyone, just like<br>
+                Goes every good Socialism, evangelistic
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

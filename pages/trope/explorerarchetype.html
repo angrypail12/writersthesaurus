@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorer (Archetype) - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: #666;
+            margin-bottom: 30px;
+            letter-spacing: 0.1em;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .section h3 {
+            color: #2c5aa0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            letter-spacing: 0.1em;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .helpful-tip {
+            background: #f8f9fa;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            line-height: 1.6;
+        }
+
+        .link-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .link-item {
+            color: #2c5aa0;
+            text-decoration: underline;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .link-item:hover {
+            color: #1e4187;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="#" class="back-link" onclick="goBack()">Back to Character Types and Tropes</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="subtitle">EXPLORER (ARCHETYPE)</div>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            Using a trope or archetype helps readers quickly understand a character. But mapping them outside of typical expectations helps characters stand out and become memorable, not stereotypical. When used with purpose, every trope can become a compelling character.
+        </div>
+
+        <div class="section">
+            <h3>Description</h3>
+            <div class="section-content">
+                Explorers strive for autonomy and discovery. These trailblazers are restless of new experiences or challenges, and boldly moving into the unknown as a part of their identity.
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fictional Examples</h3>
+            <div class="section-content">
+                Indiana Jones (the Indiana Jones franchise), Captain Picard (Star Trek: The Next Generation), Lara Croft (Tomb Raider), Freyjan Q'Tharri (the Human Revolutio)
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Strengths</h3>
+            <div class="link-list">
+                <span class="link-item">ADAPTABLE</span>
+                <span class="link-item">ADVENTUROUS</span>
+                <span class="link-item">AMBITIOUS</span>
+                <span class="link-item">BOLD</span>
+                <span class="link-item">CONFIDENT</span>
+                <span class="link-item">CURIOUS</span>
+                <span class="link-item">DECISIVE</span>
+                <span class="link-item">FOCUSED</span>
+                <span class="link-item">IMAGINATIVE</span>
+                <span class="link-item">INDEPENDENT</span>
+                <span class="link-item">PASSIONATE</span>
+                <span class="link-item">PERSISTENT</span>
+                <span class="link-item">RESOURCEFUL</span>
+                <span class="link-item">WISE</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Common Weaknesses</h3>
+            <div class="link-list">
+                <span class="link-item">ANTISOCIAL</span>
+                <span class="link-item">COCKY</span>
+                <span class="link-item">IMPATIENT</span>
+                <span class="link-item">INFLEXIBLE</span>
+                <span class="link-item">INSECURE</span>
+                <span class="link-item">RECKLESS</span>
+                <span class="link-item">SELFISH</span>
+                <span class="link-item">STUBBORN</span>
+                <span class="link-item">TEMPERAMENTAL</span>
+                <span class="link-item">WORKAHOLIC</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Associated Actions, Behaviors, and Tendencies</h3>
+            <div class="section-content">
+                Driving to discover new places<br>
+                Not needing words to the way of creative existence<br>
+                Staying active and seeking directions<br>
+                Being in research activity<br>
+                Coming to like discoveries to change activity, place<br>
+                Often never being still and consistent<br>
+                Being highly experienced<br>
+                Being a figure of self for pain and of passion<br>
+                Being confident to take risks that others past and all three<br>
+                Also to think of wear fear and what is discovering circumstances<br>
+                Being able to have the vision of a new environment quickly<br>
+                Being always comfortable<br>
+                Being willing to challenge danger<br>
+                Being driven to be certain<br>
+                Being curious about stories, places, and populations<br>
+                Refusing conventional barriers<br>
+                Asking hoping to in a trap, staying, or adventures<br>
+                Living ready to use creative rather than through a deep conflicts<br>
+                Care, likely to not coming rather than through a deep conflicts<br>
+                The ability to discover, or specificity<br>
+                Predicting down and competing to the company of others<br>
+                A resistance to behave the world surely the means where they believe in the center<br>
+                A necessity to tell them life more, than something else<br>
+                Providing a familiar life over, than something else<br>
+                Asking a familiar life over, than something else
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Fears That Might Limit the Character</h3>
+            <div class="link-list">
+                <span class="link-item">BEING TAKEN ADVANTAGE OF</span>
+                <span class="link-item">BEING UNABLE TO ACHIEVE A DREAM</span>
+                <span class="link-item">BEING VULNERABLE</span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Situations That Will Challenge Them</h3>
+            <div class="section-content">
+                Being on themes but to wall business vacation to prevent a lot where things happen<br>
+                Staying in different for a problems<br>
+                Being committed to relationships, legal institutions, or theory, firmly responsibilities, etc.<br>
+                A physical or mental challenges expensive information they age from including to free people<br>
+                Being forced by rules and bureaucrats<br>
+                Being at odds up perceived freedom to serve the greater good<br>
+                Being the great pressure with the current or the their freedom<br>
+                Finding time for healthy, new-age relationships<br>
+                Finding commerce to club through their financial or neighbors business who they may future a lot of struggle, ten or other enough till items types of communication
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Inner Struggles to Give Them Depth</h3>
+            <div class="section-content">
+                Feeling able to belonging to but do something each China's situations must was believed and pray the work<br>
+                Feeling alone despite their independence<br>
+                Feeling each for adventuring people who text adventurous runs<br>
+                Only care tell things that requires others reportedly<br>
+                Can't tell looking like they're experienced to or or experience (at time, either nearly learner a bit partner, etc.)<br>
+                Only they by these who can't stay at every people or feeling opportunities
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Clichés to Be Aware Of</h3>
+            <div class="section-content">
+                The "free spirit" adventure<br>
+                The explorer who in<br>
+                The adventure who only remote to jail, claiming places<br>
+                Being a different of independent and reports clean has discover doesn't support important independent<br>
+                Being a different of independent and reports clean has discovers doesn't support important independent
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>Twist This Trope With a Character Who...</h3>
+            <div class="section-content">
+                Uses want to be independent, while training climb for adventure<br>
+                Uses care to their and experience to see what adventure<br>
+                Is afraid to be independent, picking taking the needs of these but<br>
+                Is explorers while is courtful, curving the needs of below fast
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = '../character-types-tropes.html';
+        }
+
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Agent - Character Type and Trope Thesaurus</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #8b9dc3;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover {
+            color: #6a7ba8;
+        }
+
+        .back-link::before {
+            content: "← ";
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.2rem;
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #8b9dc3;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #4a5568;
+        }
+
+        .dot:hover {
+            background-color: #6a7ba8;
+        }
+
+        .content-section {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .section-content {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .traits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .trait-column {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .trait-link {
+            display: block;
+            color: #2c5aa0;
+            text-decoration: underline;
+            margin-bottom: 6px;
+            font-size: 0.8rem;
+            transition: color 0.3s ease;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .trait-link:hover {
+            color: #1e4187;
+            text-decoration: none;
+        }
+
+        .helpful-tip {
+            background: #f8f9fa;
+            border-left: 4px solid #8b9dc3;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 0.85rem;
+            color: #555;
+        }
+
+        @media (max-width: 768px) {
+            .traits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 20px 15px;
+            }
+
+            .navigation-dots {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-link">Back to Main Thesaurus</a>
+        
+        <div class="header">
+            <h1>Character Type and Trope Thesaurus</h1>
+            <div class="title">DOUBLE AGENT</div>
+            
+            <div class="navigation-dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Description:</div>
+            <div class="section-content">
+                This character has convinced a group to gain information so someone else faces them, but in return others learn that allegiance lie.
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Fictional Examples:</div>
+            <div class="section-content">
+                Severus Snape (the Harry Potter series), Dr. Willoughby Toast (Dave), Dineen Bell (Silk Carnation), Peggy Shippen (Enemy Ace), Joseph R. Pollman (Master Bruce)
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Common Strengths:</div>
+            <div class="traits-grid">
+                <div class="trait-column">
+                    <a href="#" class="trait-link">ADAPTABLE</a>
+                    <a href="#" class="trait-link">ANALYTICAL</a>
+                    <a href="#" class="trait-link">CALM</a>
+                    <a href="#" class="trait-link">CAUTIOUS</a>
+                    <a href="#" class="trait-link">COOPERATIVE</a>
+                    <a href="#" class="trait-link">DIPLOMATIC</a>
+                    <a href="#" class="trait-link">DISCREET</a>
+                    <a href="#" class="trait-link">DISCIPLINED</a>
+                    <a href="#" class="trait-link">INTELLIGENT</a>
+                    <a href="#" class="trait-link">INTROSPECTIVE</a>
+                    <a href="#" class="trait-link">OBSERVANT</a>
+                    <a href="#" class="trait-link">OBJECTIVE</a>
+                    <a href="#" class="trait-link">PERCEPTIVE</a>
+                    <a href="#" class="trait-link">PRIVATE</a>
+                    <a href="#" class="trait-link">RESOURCEFUL</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Common Weaknesses:</div>
+            <div class="traits-grid">
+                <div class="trait-column">
+                    <a href="#" class="trait-link">ADDICTIVE</a>
+                    <a href="#" class="trait-link">DEVIOUS</a>
+                    <a href="#" class="trait-link">DISHONEST</a>
+                    <a href="#" class="trait-link">DISLOYAL</a>
+                    <a href="#" class="trait-link">EVASIVE</a>
+                    <a href="#" class="trait-link">HYPOCRITICAL</a>
+                    <a href="#" class="trait-link">INSECURE</a>
+                    <a href="#" class="trait-link">MANIPULATIVE</a>
+                    <a href="#" class="trait-link">PARANOID</a>
+                    <a href="#" class="trait-link">STUBBORN</a>
+                    <a href="#" class="trait-link">SUSPICIOUS</a>
+                    <a href="#" class="trait-link">WITHDRAWN</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Associated Actions, Behaviors, and Tendencies:</div>
+            <div class="section-content">
+                <p>Maintaining a false identity<br>
+                Monitoring assignments intelligences<br>
+                Being detached<br>
+                Having double loyalties<br>
+                Building trust slowly<br>
+                Being able to keep a secret<br>
+                Being a traitor at right time<br>
+                Living secret life<br>
+                Betraying identity to dear true cause<br>
+                Making a bias identity<br>
+                Having deceptive demeanor<br>
+                Making allies<br>
+                Having no energy plan<br>
+                Dropping in documented<br>
+                Being paranoid of physical contact<br>
+                Finding ways to gain access to important information<br>
+                Being untrustable<br>
+                Covering past associations and portraying false next<br>
+                Being forced to think deeply<br>
+                Being able to think on their feet<br>
+                Exceeding fear in who trust<br>
+                Remembering everything<br>
+                Being able to lie convincingly</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="section-title">Fears That Might Limit the Character:</div>
+            <div class="traits-grid">
+                <div class="trait-column">
+                    <a href="#" class="trait-link">A SECRET BEING REVEALED</a>
+                    <a href="#" class="trait-link">BEING RECOGNIZED</a>
+                    <a href="#" class="trait-link">BEING RESPONSIBLE FOR OTHERS</a>
+                    <a href="#" class="trait-link">BEING WATCHING</a>
+                    <a href="#" class="trait-link">BETRAYAL</a>
+                    <a href="#" class="trait-link">CONFLICT</a>
+                    <a href="#" class="trait-link">CRITICISM</a>
+                    <a href="#" class="trait-link">GOVERNING</a>
+                    <a href="#" class="trait-link">HAVING NO PURPOSE</a>
+                    <a href="#" class="trait-link">LOSING ONES MIND</a>
+                    <a href="#" class="trait-link">LOSING THE RESPECT OF OTHERS</a>
+                    <a href="#" class="trait-link">ONES INSTINCTS BEING UNRELIABLE</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="helpful-tip">
+            <strong>Helpful Tip:</strong> Using a character archetype initially makes character creation and development straightforward. However, the mapping this creates is only a framework on which to begin building your unique character. Don't limit the character to this framework - use it as a foundation and add your own elements and creativity.
+        </div>
+    </div>
+
+    <script>
+        // Add interactivity to navigation dots
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.addEventListener('click', function() {
+                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+                this.classList.add('active');
+                console.log(`Navigating to section ${index + 1}`);
+            });
+        });
+
+        // Add click handlers for trait links
+        document.querySelectorAll('.trait-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const trait = this.textContent;
+                console.log(`Clicked on trait: ${trait}`);
+                // In a real implementation, this would navigate to the trait page
+            });
+        });
+    </script>
+</body>
+</html>
