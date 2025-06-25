@@ -1,267 +1,259 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emotion Amplifier Thesaurus</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Emotion Amplifier Thesaurus</title>
+   <style>
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
 
-        body {
-            font-family: 'Georgia', 'Times New Roman', serif;
-            background-color: #f5f3f0;
-            color: #333;
-            line-height: 1.6;
-        }
+       body {
+           font-family: 'Georgia', 'Times New Roman', serif;
+           background-color: #f5f3f0;
+           color: #333;
+           line-height: 1.6;
+       }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+       .container {
+           max-width: 1200px;
+           margin: 0 auto;
+           padding: 40px 20px;
+       }
 
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
+       .header {
+           text-align: center;
+           margin-bottom: 40px;
+       }
 
-        .header h1 {
-            font-size: 2.2rem;
-            letter-spacing: 0.15em;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-            font-weight: normal;
-            color: #333;
-        }
+       .header h1 {
+           font-size: 2.2rem;
+           letter-spacing: 0.15em;
+           margin-bottom: 20px;
+           text-transform: uppercase;
+           font-weight: normal;
+           color: #333;
+       }
 
-        .navigation-dots {
-            display: flex;
-            justify-content: center;
-            gap: 8px;
-            margin-bottom: 30px;
-        }
+       .navigation-dots {
+           display: flex;
+           justify-content: center;
+           gap: 8px;
+           margin-bottom: 30px;
+       }
 
-        .dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #8b9dc3;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+       .dot {
+           width: 12px;
+           height: 12px;
+           border-radius: 50%;
+           background-color: #8b9dc3;
+           cursor: pointer;
+           transition: background-color 0.3s ease;
+       }
 
-        .dot.active {
-            background-color: #4a5568;
-        }
+       .dot.active {
+           background-color: #4a5568;
+       }
 
-        .dot:hover {
-            background-color: #6a7ba8;
-        }
+       .dot:hover {
+           background-color: #6a7ba8;
+       }
 
-        .intro-text {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            font-size: 0.9rem;
-            color: #666;
-            line-height: 1.7;
-        }
+       .intro-text {
+           background: white;
+           padding: 20px;
+           border-radius: 8px;
+           margin-bottom: 30px;
+           box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+           font-size: 0.9rem;
+           color: #666;
+           line-height: 1.7;
+       }
 
-        .amplifiers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
+       .amplifiers-grid {
+           display: grid;
+           grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+           gap: 30px;
+           margin-bottom: 30px;
+       }
 
-        .amplifier-column {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
+       .amplifier-column {
+           background: white;
+           padding: 25px;
+           border-radius: 8px;
+           box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+       }
 
-        .amplifier-link {
-            display: block;
-            color: #2c5aa0;
-            text-decoration: underline;
-            margin-bottom: 8px;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-            cursor: pointer;
-        }
+       .amplifier-link {
+           display: block;
+           color: #2c5aa0;
+           text-decoration: underline;
+           margin-bottom: 8px;
+           font-size: 0.9rem;
+           transition: color 0.3s ease;
+           cursor: pointer;
+       }
 
-        .amplifier-link:hover {
-            color: #1e4187;
-            text-decoration: none;
-        }
+       .amplifier-link:hover {
+           color: #1e4187;
+           text-decoration: none;
+       }
 
-        .back-link {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #8b9dc3;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-        }
+       .back-link {
+           display: inline-block;
+           margin-bottom: 20px;
+           color: #8b9dc3;
+           text-decoration: none;
+           font-size: 0.9rem;
+           transition: color 0.3s ease;
+       }
 
-        .back-link:hover {
-            color: #6a7ba8;
-        }
+       .back-link:hover {
+           color: #6a7ba8;
+       }
 
-        .back-link::before {
-            content: "← ";
-        }
+       .back-link::before {
+           content: "← ";
+       }
 
-        .shortcut-info {
-            text-align: center;
-            margin-top: 30px;
-            font-size: 0.8rem;
-            color: #999;
-        }
+       .shortcut-info {
+           text-align: center;
+           margin-top: 30px;
+           font-size: 0.8rem;
+           color: #999;
+       }
 
-        .shortcut-info a {
-            color: #8b9dc3;
-            text-decoration: underline;
-        }
+       .shortcut-info a {
+           color: #8b9dc3;
+           text-decoration: underline;
+       }
 
-        @media (max-width: 768px) {
-            .amplifiers-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .header h1 {
-                font-size: 1.8rem;
-            }
-            
-            .container {
-                padding: 20px 15px;
-            }
+       @media (max-width: 768px) {
+           .amplifiers-grid {
+               grid-template-columns: 1fr;
+           }
+           
+           .header h1 {
+               font-size: 1.8rem;
+           }
+           
+           .container {
+               padding: 20px 15px;
+           }
 
-            .navigation-dots {
-                flex-wrap: wrap;
-            }
-        }
-    </style>
+           .navigation-dots {
+               flex-wrap: wrap;
+           }
+       }
+   </style>
 </head>
 <body>
-    <div class="container">
-        <a href="../index.html" class="back-link">Back to Main Thesaurus</a>
-        
-        <div class="header">
-            <h1>Emotion Amplifier Thesaurus</h1>
-            
-            <div class="navigation-dots">
-                <div class="dot active"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-            </div>
-        </div>
+   <div class="container">
+       <a href="../index.html" class="back-link">Back to Main Thesaurus</a>
+       
+       <div class="header">
+           <h1>Emotion Amplifier Thesaurus</h1>
+           
+           <div class="navigation-dots">
+               <div class="dot active"></div>
+               <div class="dot"></div>
+               <div class="dot"></div>
+               <div class="dot"></div>
+               <div class="dot"></div>
+               <div class="dot"></div>
+               <div class="dot"></div>
+               <div class="dot"></div>
+               <div class="dot"></div>
+               <div class="dot"></div>
+               <div class="dot"></div>
+               <div class="dot"></div>
+           </div>
+       </div>
 
-        <div class="intro-text">
-            Altering a character's mood through emotional amplifiers such as hunger, illness, and pain is a great way to generate tension and add conflict. If you need to turn up the heat and complicate your character's story, check out these entries for ways to make things more difficult for him or her.
-        </div>
+       <div class="intro-text">
+           Altering a character's mood through emotional amplifiers such as hunger, illness, and pain is a great way to generate tension and add conflict. If you need to turn up the heat and complicate your character's story, check out these entries for ways to make things more difficult for him or her.
+       </div>
 
-        <div class="amplifiers-grid">
-            <div class="amplifier-column">
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('addiction')">ADDICTION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('arousal')">AROUSAL</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('attraction')">ATTRACTION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('being-stuck')">BEING STUCK</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('bereavement')">BEREAVEMENT</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('boredom')">BOREDOM</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('brainwashing')">BRAINWASHING</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('burnout')">BURNOUT</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('chronic-pain')">CHRONIC PAIN</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('cognitive-bias')">COGNITIVE BIAS</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('cognitive-decline')">COGNITIVE DECLINE</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('cold')">COLD</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('competition')">COMPETITION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('compulsion')">COMPULSION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('confinement')">CONFINEMENT</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('danger')">DANGER</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('deception')">DECEPTION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('dehydration')">DEHYDRATION</a>
-            </div>
+       <div class="amplifiers-grid">
+           <div class="amplifier-column">
+               <a href="addiction.html" class="amplifier-link">ADDICTION</a>
+               <a href="arousal.html" class="amplifier-link">AROUSAL</a>
+               <a href="attraction.html" class="amplifier-link">ATTRACTION</a>
+               <a href="being-stuck.html" class="amplifier-link">BEING STUCK</a>
+               <a href="bereavement.html" class="amplifier-link">BEREAVEMENT</a>
+               <a href="boredom.html" class="amplifier-link">BOREDOM</a>
+               <a href="brainwashing.html" class="amplifier-link">BRAINWASHING</a>
+               <a href="burnout.html" class="amplifier-link">BURNOUT</a>
+               <a href="chronic-pain.html" class="amplifier-link">CHRONIC PAIN</a>
+               <a href="cognitive-bias.html" class="amplifier-link">COGNITIVE BIAS</a>
+               <a href="cognitive-decline.html" class="amplifier-link">COGNITIVE DECLINE</a>
+               <a href="cold.html" class="amplifier-link">COLD</a>
+               <a href="competition.html" class="amplifier-link">COMPETITION</a>
+               <a href="compulsion.html" class="amplifier-link">COMPULSION</a>
+               <a href="confinement.html" class="amplifier-link">CONFINEMENT</a>
+               <a href="danger.html" class="amplifier-link">DANGER</a>
+               <a href="deception.html" class="amplifier-link">DECEPTION</a>
+               <a href="dehydration.html" class="amplifier-link">DEHYDRATION</a>
+           </div>
 
-            <div class="amplifier-column">
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('distraction')">DISTRACTION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('exhaustion')">EXHAUSTION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('hangover')">HANGOVER</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('heat')">HEAT</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('hormonal-imbalance')">HORMONAL IMBALANCE</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('hunger')">HUNGER</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('hyperactivity')">HYPERACTIVITY</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('hypnotized')">HYPNOTIZED</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('illness')">ILLNESS</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('indecision')">INDECISION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('injury')">INJURY</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('instability')">INSTABILITY</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('intoxication')">INTOXICATION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('isolation')">ISOLATION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('lethargy')">LETHARGY</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('malnutrition')">MALNUTRITION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('mental-health-condition')">MENTAL HEALTH CONDITION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('mortal-peril')">MORTAL PERIL</a>
-            </div>
+           <div class="amplifier-column">
+               <a href="distraction.html" class="amplifier-link">DISTRACTION</a>
+               <a href="exhaustion.html" class="amplifier-link">EXHAUSTION</a>
+               <a href="hangover.html" class="amplifier-link">HANGOVER</a>
+               <a href="heat.html" class="amplifier-link">HEAT</a>
+               <a href="hormonal-imbalance.html" class="amplifier-link">HORMONAL IMBALANCE</a>
+               <a href="hunger.html" class="amplifier-link">HUNGER</a>
+               <a href="hyperactivity.html" class="amplifier-link">HYPERACTIVITY</a>
+               <a href="hypnotized.html" class="amplifier-link">HYPNOTIZED</a>
+               <a href="illness.html" class="amplifier-link">ILLNESS</a>
+               <a href="indecision.html" class="amplifier-link">INDECISION</a>
+               <a href="injury.html" class="amplifier-link">INJURY</a>
+               <a href="instability.html" class="amplifier-link">INSTABILITY</a>
+               <a href="intoxication.html" class="amplifier-link">INTOXICATION</a>
+               <a href="isolation.html" class="amplifier-link">ISOLATION</a>
+               <a href="lethargy.html" class="amplifier-link">LETHARGY</a>
+               <a href="malnutrition.html" class="amplifier-link">MALNUTRITION</a>
+               <a href="mental-health-condition.html" class="amplifier-link">MENTAL HEALTH CONDITION</a>
+               <a href="mortal-peril.html" class="amplifier-link">MORTAL PERIL</a>
+           </div>
 
-            <div class="amplifier-column">
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('pain')">PAIN</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('panic-attack')">PANIC ATTACK</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('physical-disorientation')">PHYSICAL DISORIENTATION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('physical-health-condition')">PHYSICAL HEALTH CONDITION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('possession')">POSSESSION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('pregnancy')">PREGNANCY</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('pressure')">PRESSURE</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('psychosis')">PSYCHOSIS</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('puberty')">PUBERTY</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('scrutiny')">SCRUTINY</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('sensory-overload')">SENSORY OVERLOAD</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('sleep-deprivation')">SLEEP DEPRIVATION</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('stress')">STRESS</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('substance-withdrawal')">SUBSTANCE WITHDRAWAL</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('torture')">TORTURE</a>
-                <a href="#" class="amplifier-link" onclick="navigateToAmplifier('trauma')">TRAUMA</a>
-            </div>
-        </div>
+           <div class="amplifier-column">
+               <a href="pain.html" class="amplifier-link">PAIN</a>
+               <a href="panic-attack.html" class="amplifier-link">PANIC ATTACK</a>
+               <a href="physical-disorientation.html" class="amplifier-link">PHYSICAL DISORIENTATION</a>
+               <a href="physical-health-condition.html" class="amplifier-link">PHYSICAL HEALTH CONDITION</a>
+               <a href="possession.html" class="amplifier-link">POSSESSION</a>
+               <a href="pregnancy.html" class="amplifier-link">PREGNANCY</a>
+               <a href="pressure.html" class="amplifier-link">PRESSURE</a>
+               <a href="psychosis.html" class="amplifier-link">PSYCHOSIS</a>
+               <a href="puberty.html" class="amplifier-link">PUBERTY</a>
+               <a href="scrutiny.html" class="amplifier-link">SCRUTINY</a>
+               <a href="sensory-overload.html" class="amplifier-link">SENSORY OVERLOAD</a>
+               <a href="sleep-deprivation.html" class="amplifier-link">SLEEP DEPRIVATION</a>
+               <a href="stress.html" class="amplifier-link">STRESS</a>
+               <a href="substance-withdrawal.html" class="amplifier-link">SUBSTANCE WITHDRAWAL</a>
+               <a href="torture.html" class="amplifier-link">TORTURE</a>
+               <a href="trauma.html" class="amplifier-link">TRAUMA</a>
+           </div>
+       </div>
 
-        <div class="shortcut-info">
-            The shortcut for this page is t+a. For a complete list of shortcuts, see our <a href="#">Accessibility</a> guide.
-        </div>
-    </div>
+       <div class="shortcut-info">
+           The shortcut for this page is t+a. For a complete list of shortcuts, see our <a href="#">Accessibility</a> guide.
+       </div>
+   </div>
 
-    <script>
-        function goBack() {
-            alert('Navigating back to main thesaurus page');
-        }
-
-        function navigateToAmplifier(amplifierSlug) {
-            alert(`Navigating to: ${amplifierSlug}\n\nNext, you can show me the content for specific amplifier pages you'd like me to build!`);
-        }
-
-        // Add interactivity to navigation dots
-        document.querySelectorAll('.dot').forEach((dot, index) => {
-            dot.addEventListener('click', function() {
-                document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
-                this.classList.add('active');
-                console.log(`Navigating to section ${index + 1}`);
-            });
-        });
-    </script>
+   <script>
+       // Add interactivity to navigation dots
+       document.querySelectorAll('.dot').forEach((dot, index) => {
+           dot.addEventListener('click', function() {
+               document.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+               this.classList.add('active');
+               console.log(`Navigating to section ${index + 1}`);
+           });
+       });
+   </script>
 </body>
 </html>
