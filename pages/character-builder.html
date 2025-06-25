@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Builder - Elevate Your Storytelling</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background-color: #f5f3f0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            background-color: #f5f3f0;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #333;
+            border-bottom: 2px solid #333;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .workspace-header {
+            background-color: #4a5568;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1rem;
+            text-decoration: underline;
+        }
+
+        .nav-tabs {
+            background-color: #e2e8f0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #cbd5e0;
+        }
+
+        .nav-tab {
+            padding: 12px 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            color: #4a5568;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease;
+        }
+
+        .nav-tab:hover {
+            background-color: #cbd5e0;
+        }
+
+        .nav-tab.active {
+            background-color: #a0aec0;
+            color: #1a202c;
+        }
+
+        .controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .control-btn {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 5px;
+            color: #4a5568;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 30px 20px;
+            position: relative;
+        }
+
+        .character-basics {
+            background-color: #b8d4e3;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+
+        .character-basics h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            color: #2d3748;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr 2fr;
+            gap: 20px;
+            align-items: start;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #2d3748;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 8px 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 0.9rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .backstory-row {
+            display: grid;
+            grid-template-columns: 1fr 3fr 1fr;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .character-avatar {
+            width: 150px;
+            height: 150px;
+            background-color: #a0aec0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #718096;
+            font-size: 0.9rem;
+        }
+
+        .workspace-items {
+            margin-top: 15px;
+        }
+
+        .workspace-items h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .workspace-items .add-remove {
+            color: #4299e1;
+            text-decoration: underline;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .section {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .section-header {
+            background-color: #e2e8f0;
+            padding: 15px 20px;
+            border-radius: 8px 8px 0 0;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: #2d3748;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-content {
+            padding: 20px;
+            display: block;
+        }
+
+        .section-content.hidden {
+            display: none;
+        }
+
+        .wound-info {
+            background-color: #f7fafc;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .wound-info a {
+            color: #4299e1;
+            text-decoration: underline;
+        }
+
+        .wound-actions {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            background-color: #4a5568;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #2d3748;
+        }
+
+        .btn-secondary {
+            background-color: #718096;
+        }
+
+        .btn-secondary:hover {
+            background-color: #4a5568;
+        }
+
+        .wound-selector {
+            margin-bottom: 20px;
+        }
+
+        .wound-selector h4 {
+            margin-bottom: 10px;
+            color: #2d3748;
+        }
+
+        .wound-dropdown {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #cbd5e0;
+            border-radius: 4px;
+            font-family: inherit;
+            margin-bottom: 10px;
+        }
+
+        .selected-wounds {
+            margin-top: 15px;
+        }
+
+        .wound-item {
+            background-color: #edf2f7;
+            padding: 10px;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .wound-item.primary {
+            background-color: #fed7d7;
+            border-left: 4px solid #f56565;
+        }
+
+        .wound-item-title {
+            font-weight: bold;
+            color: #2d3748;
+        }
+
+        .wound-item-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .wound-item-btn {
+            background: none;
+            border: none;
+            color: #4299e1;
+            cursor: pointer;
+            font-size: 0.8rem;
+            text-decoration: underline;
+        }
+
+        .wound-item-btn:hover {
+            color: #2b6cb0;
+        }
+
+        .wound-item-btn.remove {
+            color: #e53e3e;
+        }
+
+        .fear-info {
+            background-color: #f7fafc;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .fear-info h4 {
+            color: #2d3748;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            font-size: 0.95rem;
+        }
+
+        .fear-info a {
+            color: #4299e1;
+            text-decoration: underline;
+        }
+
+        .fear-selection {
+            background-color: #b8d4e3;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .fear-options {
+            margin-bottom: 20px;
+        }
+
+        .fear-option {
+            margin-bottom: 8px;
+        }
+
+        .fear-checkbox {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: #2d3748;
+        }
+
+        .fear-checkbox input[type="checkbox"] {
+            margin-right: 8px;
+            transform: scale(1.1);
+        }
+
+        .fear-text {
+            line-height: 1.4;
+        }
+
+        .fear-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .selected-fears h4 {
+            color: #2d3748;
+            margin-bottom: 15px;
+        }
+
+        .no-primary-wound {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #f7fafc;
+            border-radius: 4px;
+        }
+
+        .save-btn {
+            display: block;
+            margin: 30px auto;
+            padding: 12px 30px;
+            background-color: #718096;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .save-btn:hover {
+            background-color: #4a5568;
+        }
+
+        .toggle-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .toggle-icon.rotated {
+            transform: rotate(180deg);
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .backstory-row {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-tabs {
+                flex-direction: column;
+            }
+
+            .controls {
+                position: static;
+                justify-content: center;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Elevate Your Storytelling</h1>
+    </div>
+
+    <div class="workspace-header">
+        My Workspace
+    </div>
+
+    <div class="nav-tabs">
+        <button class="nav-tab active">Backstory</button>
+        <button class="nav-tab">Personality</button>
+        <button class="nav-tab">Behavior</button>
+        <button class="nav-tab">Motivations</button>
+        <button class="nav-tab">Physical Details</button>
+        <button class="nav-tab">Daily Life</button>
+        <button class="nav-tab">Gallery</button>
+        <button class="nav-tab">Summary</button>
+    </div>
+
+    <div class="controls">
+        <button class="control-btn" title="View">👁</button>
+        <button class="control-btn" title="Delete">🗑</button>
+        <button class="control-btn" title="Copy">📋</button>
+        <button class="control-btn" title="Menu">☰</button>
+    </div>
+
+    <div class="container">
+        <div class="character-basics">
+            <h2>Character Basics</h2>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="character-name">Name</label>
+                    <input type="text" id="character-name" placeholder="Enter character name">
+                </div>
+                <div class="form-group">
+                    <label for="character-role">Role</label>
+                    <select id="character-role">
+                        <option value="">Choose</option>
+                        <option value="protagonist">Protagonist</option>
+                        <option value="antagonist">Antagonist</option>
+                        <option value="supporting">Supporting Character</option>
+                        <option value="minor">Minor Character</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="backstory-row">
+                <div class="form-group">
+                    <label for="backstory-overview">Backstory Overview</label>
+                    <textarea id="backstory-overview" placeholder="Are you more of a Pantser than a Plotter, or are you designing a character who doesn't require much planning? If you'd rather not do a full workup, use this box to make notes for this aspect of characterization."></textarea>
+                    
+                    <div class="workspace-items">
+                        <h3>Workspace Items</h3>
+                        <span class="add-remove">Add/Remove</span>
+                        <textarea placeholder="Additional notes and items"></textarea>
+                    </div>
+                </div>
+                <div style="flex: 1;"></div>
+                <div class="character-avatar">
+                    Character Image
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('wound-section')">
+                <span>Wound</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="section-content" id="wound-section">
+                <div class="wound-info">
+                    To figure out who your character is in the present, it's necessary to examine their past. A key piece to this historical puzzle is the <a href="#">emotional wound</a>. Because the primary <a href="#">fear</a>, the <a href="#">lie</a>, <a href="#">flaws</a>, <a href="#">attributes</a>, and other personality elements spring directly from it, this wounding experience is incredibly important to identify. If you're working on a character with a wound that factors into your story (such as a <a href="#">protagonist</a>, <a href="#">villain</a>, etc.), explore the possibilities here, choosing any that might make sense for the character. For more information, please see the <a href="#">Emotional Wound Tutorial</a>.
+                    <br><br>
+                    Remember that researching wounds can sometimes trigger personal reactions. Please practice self-care.
+                </div>
+
+                <div class="wound-actions">
+                    <button class="btn" onclick="showWoundSelector()">Add Wound</button>
+                    <button class="btn btn-secondary" onclick="showCustomWoundForm()">Add My Own Wound</button>
+                </div>
+
+                <div class="wound-selector" id="wound-selector" style="display: none;">
+                    <h4>Select Emotional Wounds:</h4>
+                    <select class="wound-dropdown" id="wound-dropdown">
+                        <option value="">Choose a wound...</option>
+                        <option value="being-victimized-by-a-perpetrator-who-was-never-caught">Being victimized by a perpetrator who was never caught</option>
+                        <option value="caving-to-peer-pressure">Caving to peer pressure</option>
+                        <option value="childhood-sexual-abuse-by-a-known-person">Childhood sexual abuse by a known person</option>
+                        <option value="choosing-to-not-be-involved-in-a-childs-life">Choosing to not be involved in a child's life</option>
+                        <option value="cracking-under-pressure">Cracking under pressure</option>
+                        <option value="crossing-moral-lines-to-survive">Crossing moral lines to survive</option>
+                        <option value="declaring-bankruptcy">Declaring bankruptcy</option>
+                        <option value="discovering-a-partners-sexual-orientation-secret">Discovering a partner's sexual orientation secret</option>
+                        <option value="discovering-a-siblings-abuse">Discovering a sibling's abuse</option>
+                        <option value="discovering-hidden-information-about-ones-ancestry">Discovering hidden information about one's ancestry</option>
+                        <option value="divorcing-ones-spouse">Divorcing one's spouse</option>
+                        <option value="domestic-abuse">Domestic abuse</option>
+                        <option value="experiencing-poverty">Experiencing poverty</option>
+                        <option value="experiencing-the-death-of-a-parent-as-a-child-or-youth">Experiencing the death of a parent as a child or youth</option>
+                        <option value="failing-at-school">Failing at school</option>
+                        <option value="failing-to-do-the-right-thing">Failing to do the right thing</option>
+                        <option value="failing-to-save-someones-life">Failing to save someone's life</option>
+                        <option value="falling-short-of-societys-physical-standards">Falling short of society's physical standards</option>
+                        <option value="financial-ruin-due-to-a-spouses-irresponsibility">Financial ruin due to a spouse's irresponsibility</option>
+                        <option value="finding-out-one-was-adopted">Finding out one was adopted</option>
+                        <option value="finding-out-ones-child-was-abused">Finding out one's child was abused</option>
+                        <option value="getting-dumped">Getting dumped</option>
+                        <option value="getting-lost-in-a-natural-environment">Getting lost in a natural environment</option>
+                        <option value="giving-a-child-up-for-adoption">Giving a child up for adoption</option>
+                        <option value="growing-up-in-a-cult">Growing up in a cult</option>
+                        <option value="growing-up-in-foster-care">Growing up in foster care</option>
+                        <option value="growing-up-in-the-public-eye">Growing up in the public eye</option>
+                        <option value="growing-up-in-the-shadow-of-a-successful-sibling">Growing up in the shadow of a successful sibling</option>
+                        <option value="growing-up-with-a-siblings-disability-or-chronic-illness">Growing up with a sibling's disability or chronic illness</option>
+                        <option value="having-a-controlling-or-overly-strict-parent">Having a controlling or overly strict parent</option>
+                        <option value="having-an-abortion">Having an abortion</option>
+                        <option value="having-ones-ideas-or-work-stolen">Having one's ideas or work stolen</option>
+                        <option value="having-parents-who-favored-one-child-over-another">Having parents who favored one child over another</option>
+                        <option value="identity-theft">Identity theft</option>
+                        <option value="infertility">Infertility</option>
+                        <option value="infidelity">Infidelity</option>
+                        <option value="learning-that-one-parent-had-a-second-family">Learning that one parent had a second family</option>
+                        <option value="learning-that-ones-parent-was-a-monster">Learning that one's parent was a monster</option>
+                        <option value="living-in-a-dangerous-neighborhood">Living in a dangerous neighborhood</option>
+                        <option value="living-in-an-emotionally-repressed-household">Living in an emotionally repressed household</option>
+                        <option value="living-through-civil-unrest">Living through civil unrest</option>
+                        <option value="living-through-famine-or-drought">Living through famine or drought</option>
+                        <option value="living-with-a-critical-medical-diagnosis">Living with a critical medical diagnosis</option>
+                        <option value="living-with-an-abusive-caregiver">Living with an abusive caregiver</option>
+                        <option value="living-with-chronic-pain-or-illness">Living with chronic pain or illness</option>
+                        <option value="losing-a-limb">Losing a limb</option>
+                        <option value="losing-a-loved-one-due-to-a-professionals-negligence">Losing a loved one due to a professional's negligence</option>
+                        <option value="losing-a-loved-one-to-a-random-act-of-violence">Losing a loved one to a random act of violence</option>
+                        <option value="making-a-very-public-mistake">Making a very public mistake</option>
+                        <option value="misplaced-loyalty">Misplaced loyalty</option>
+                        <option value="not-being-a-priority-growing-up">Not being a priority growing up</option>
+                        <option value="poor-judgment-leading-to-unintended-consequences">Poor judgment leading to unintended consequences</option>
+                        <option value="prejudice-or-discrimination">Prejudice or discrimination</option>
+                        <option value="sexual-dysfunction">Sexual dysfunction</option>
+                        <option value="social-difficulties">Social difficulties</option>
+                        <option value="telling-the-truth-but-not-being-believed">Telling the truth but not being believed</option>
+                        <option value="the-death-of-a-pet">The death of a pet</option>
+                        <option value="the-death-of-ones-child">The death of one's child</option>
+                        <option value="unrequited-love">Unrequited love</option>
+                        <option value="watching-someone-die">Watching someone die</option>
+                        <option value="witnessing-a-murder">Witnessing a murder</option>
+                        <option value="witnessing-violence-at-a-young-age">Witnessing violence at a young age</option>
+                        <option value="wrongful-imprisonment">Wrongful imprisonment</option>
+                    </select>
+                    <button class="btn" onclick="addSelectedWound()">Add Selected Wound</button>
+                </div>
+
+                <div class="selected-wounds" id="selected-wounds">
+                    <!-- Selected wounds will appear here -->
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('fear-section')">
+                <span>Fear</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="section-content hidden" id="fear-section">
+                <div class="fear-info" id="fear-info" style="display: none;">
+                    <h4 id="fear-title">Fear Resulting From The Primary Wound</h4>
+                    <p>The wounding event from a character's past will spawn <a href="#">fears</a> tied to that painful experience. These fears will keep the character from succeeding, both at life and achieving the story goal.</p>
+                    <p>The following is a list of fears that could logically arise from the primary <a href="#">wound</a> you've chosen. Select as many possibilities as you'd like, then narrow your choices down to one <a href="#">primary</a> fear that will most impact your character and impede their progress throughout the story. For more information on this fear and how it relates to their wound, see the <a href="#">Fear Tutorial</a>.</p>
+                </div>
+
+                <div class="fear-selection" id="fear-selection" style="display: none;">
+                    <div class="fear-options" id="fear-options">
+                        <!-- Dynamic fear checkboxes will be populated here -->
+                    </div>
+                    
+                    <div class="fear-actions">
+                        <button class="btn" onclick="showFearThesaurusOptions()">Fear Thesaurus Options</button>
+                        <button class="btn btn-secondary" onclick="showCustomFearForm()">Add My Own Fear</button>
+                    </div>
+                </div>
+
+                <div class="no-primary-wound" id="no-primary-wound">
+                    <p style="color: #718096; font-style: italic;">Please select a primary wound in the Wound section above to see related fears.</p>
+                </div>
+
+                <div class="selected-fears" id="selected-fears">
+                    <!-- Selected fears will appear here -->
+                </div>
+
+                <div class="fear-behaviors" id="fear-behaviors" style="display: none;">
+                    <h4>Fear-Related Behaviors and Attitudes</h4>
+                    <div class="behaviors-content" id="behaviors-content">
+                        <!-- Behaviors will be populated based on selected fears -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('lie-section')">
+                <span>Lie</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="section-content hidden" id="lie-section">
+                <p>Lie content will be added here...</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header" onclick="toggleSection('secrets-section')">
+                <span>Secrets</span>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <div class="section-content hidden" id="secrets-section">
+                <p>Secrets content will be added here...</p>
+            </div>
+        </div>
+
+        <button class="save-btn">SAVE</button>
+    </div>
+
+    <script>
+        let selectedWounds = [];
+        let primaryWound = null;
+        let selectedFears = [];
+        let primaryFear = null;
+
+        // Fear mapping for each wound - this would be populated from your thesaurus data
+        const woundFearMapping = {
+            'being-victimized-by-a-perpetrator-who-was-never-caught': [
+                'Strangers',
+                'Trusting The Wrong Person',
+                'Being Alone And Vulnerable',
+                'Having Their Control Taken Away',
+                'Another Break-In',
+                'Criminals And Addicts, Or People Similar To The Perpetrators In Some Way',
+                'Intimacy And Sex (if They Were Sexually Assaulted)',
+                'Particular Elements Associated With The Ordeal'
+            ],
+            'domestic-abuse': [
+                'Conflict',
+                'Being Watched',
+                'Losing Control',
+                'Trusting Others',
+                'Intimacy And Physical Touch',
+                'Certain Kinds Of People',
+                'Being Unsafe',
+                'Repeating A Cycle Of Abuse'
+            ],
+            'experiencing-poverty': [
+                'Losing Financial Security',
+                'Not Having Enough',
+                'Being A Burden To Others',
+                'Being Judged',
+                'Failure',
+                'Not Being In Control',
+                'Change',
+                'Taking Risks'
+            ],
+            'failing-to-save-someones-life': [
+                'Being Responsible For Others',
+                'Failure',
+                'Making The Wrong Decision',
+                'Being Unable To Help',
+                'Losing Someone Close',
+                'Emergency Situations',
+                'Being Judged',
+                'Letting Others Down'
+            ],
+            'growing-up-in-foster-care': [
+                'Abandonment',
+                'Not Fitting In',
+                'Being Unwanted',
+                'Trusting Others',
+                'Conditional Love',
+                'Being Separated From Loved Ones',
+                'Change',
+                'Being A Burden'
+            ],
+            'infidelity': [
+                'Betrayal',
+                'Trusting Others',
+                'Being Replaced',
+                'Not Being Enough',
+                'Intimacy',
+                'Being Alone',
+                'Losing Someone Important',
+                'Being Deceived'
+            ],
+            'witnessing-violence-at-a-young-age': [
+                'Violence',
+                'Certain Kinds Of People',
+                'Being Unsafe',
+                'Losing Control',
+                'Conflict',
+                'Being Helpless',
+                'Protecting Others',
+                'Sudden Changes'
+            ]
+            // Add more wound-fear mappings as needed
+        };
+
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const header = section.previousElementSibling;
+            const icon = header.querySelector('.toggle-icon');
+            
+            if (section.classList.contains('hidden')) {
+                section.classList.remove('hidden');
+                icon.classList.add('rotated');
+            } else {
+                section.classList.add('hidden');
+                icon.classList.remove('rotated');
+            }
+        }
+
+        function showWoundSelector() {
+            const selector = document.getElementById('wound-selector');
+            selector.style.display = selector.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function showCustomWoundForm() {
+            const customWound = prompt('Enter your custom wound:');
+            if (customWound && customWound.trim()) {
+                addWound(customWound.trim(), true);
+            }
+        }
+
+        function addSelectedWound() {
+            const dropdown = document.getElementById('wound-dropdown');
+            const selectedValue = dropdown.value;
+            const selectedText = dropdown.options[dropdown.selectedIndex].text;
+            
+            if (selectedValue && !selectedWounds.some(w => w.id === selectedValue)) {
+                addWound(selectedText, false, selectedValue);
+                dropdown.value = '';
+            }
+        }
+
+        function addWound(title, isCustom, id = null) {
+            const woundId = id || title.toLowerCase().replace(/[^a-z0-9]/g, '-');
+            const wound = {
+                id: woundId,
+                title: title,
+                isCustom: isCustom,
+                isPrimary: false
+            };
+            
+            selectedWounds.push(wound);
+            renderSelectedWounds();
+        }
+
+        function removeWound(woundId) {
+            selectedWounds = selectedWounds.filter(w => w.id !== woundId);
+            if (primaryWound === woundId) {
+                primaryWound = null;
+            }
+            renderSelectedWounds();
+        }
+
+        function setPrimaryWound(woundId) {
+            // Remove primary status from all wounds
+            selectedWounds.forEach(w => w.isPrimary = false);
+            
+            // Set new primary wound
+            const wound = selectedWounds.find(w => w.id === woundId);
+            if (wound) {
+                wound.isPrimary = true;
+                primaryWound = woundId;
+                updateFearSection();
+            }
+            
+            renderSelectedWounds();
+        }
+
+        function updateFearSection() {
+            const fearInfo = document.getElementById('fear-info');
+            const fearSelection = document.getElementById('fear-selection');
+            const noPrimaryWound = document.getElementById('no-primary-wound');
+            const fearTitle = document.getElementById('fear-title');
+            
+            if (primaryWound && woundFearMapping[primaryWound]) {
+                // Show fear content
+                fearInfo.style.display = 'block';
+                fearSelection.style.display = 'block';
+                noPrimaryWound.style.display = 'none';
+                
+                // Update title with wound name
+                const woundObj = selectedWounds.find(w => w.id === primaryWound);
+                fearTitle.textContent = `Fear Resulting From The Primary Wound (${woundObj.title})`;
+                
+                // Populate fear options
+                populateFearOptions();
+            } else {
+                // Hide fear content
+                fearInfo.style.display = 'none';
+                fearSelection.style.display = 'none';
+                noPrimaryWound.style.display = 'block';
+            }
+        }
+
+        function populateFearOptions() {
+            const fearOptions = document.getElementById('fear-options');
+            const fears = woundFearMapping[primaryWound] || [];
+            
+            const html = fears.map(fear => {
+                const fearId = fear.toLowerCase().replace(/[^a-z0-9]/g, '-');
+                const isChecked = selectedFears.some(f => f.id === fearId) ? 'checked' : '';
+                
+                return `
+                    <div class="fear-option">
+                        <label class="fear-checkbox">
+                            <input type="checkbox" value="${fearId}" ${isChecked} onchange="toggleFear('${fearId}', '${fear}')">
+                            <span class="fear-text">${fear}</span>
+                        </label>
+                    </div>
+                `;
+            }).join('');
+            
+            fearOptions.innerHTML = html;
+        }
+
+        function toggleFear(fearId, fearTitle) {
+            const existingIndex = selectedFears.findIndex(f => f.id === fearId);
+            
+            if (existingIndex >= 0) {
+                selectedFears.splice(existingIndex, 1);
+                if (primaryFear === fearId) {
+                    primaryFear = null;
+                }
+            } else {
+                selectedFears.push({
+                    id: fearId,
+                    title: fearTitle,
+                    isPrimary: false,
+                    isCustom: false
+                });
+            }
+            
+            renderSelectedFears();
+        }
+
+        function showFearThesaurusOptions() {
+            // This would link to your fear thesaurus or show additional fear options
+            alert('This would open the full Fear Thesaurus for additional options.');
+        }
+
+        function showCustomFearForm() {
+            const customFear = prompt('Enter your custom fear:');
+            if (customFear && customFear.trim()) {
+                const fearId = customFear.toLowerCase().replace(/[^a-z0-9]/g, '-');
+                if (!selectedFears.some(f => f.id === fearId)) {
+                    selectedFears.push({
+                        id: fearId,
+                        title: customFear.trim(),
+                        isPrimary: false,
+                        isCustom: true
+                    });
+                    renderSelectedFears();
+                }
+            }
+        }
+
+        function removeFear(fearId) {
+            selectedFears = selectedFears.filter(f => f.id !== fearId);
+            if (primaryFear === fearId) {
+                primaryFear = null;
+            }
+            renderSelectedFears();
+            populateFearOptions(); // Update checkboxes
+        }
+
+        function setPrimaryFear(fearId) {
+            // Remove primary status from all fears
+            selectedFears.forEach(f => f.isPrimary = false);
+            
+            // Set new primary fear
+            const fear = selectedFears.find(f => f.id === fearId);
+            if (fear) {
+                fear.isPrimary = true;
+                primaryFear = fearId;
+            }
+            
+            renderSelectedFears();
+        }
+
+        function renderSelectedFears() {
+            const container = document.getElementById('selected-fears');
+            
+            if (selectedFears.length === 0) {
+                container.innerHTML = '';
+                return;
+            }
+            
+            const html = `
+                <h4 style="margin-bottom: 15px;">Selected Fears:</h4>
+                ${selectedFears.map(fear => `
+                    <div class="wound-item ${fear.isPrimary ? 'primary' : ''}">
+                        <div>
+                            <div class="wound-item-title">${fear.title}</div>
+                            ${fear.isPrimary ? '<small style="color: #e53e3e; font-weight: bold;">PRIMARY FEAR</small>' : ''}
+                            ${fear.isCustom ? '<small style="color: #4299e1;">(Custom)</small>' : ''}
+                        </div>
+                        <div class="wound-item-actions">
+                            ${!fear.isPrimary ? `<button class="wound-item-btn" onclick="setPrimaryFear('${fear.id}')">Set as Primary</button>` : ''}
+                            <button class="wound-item-btn remove" onclick="removeFear('${fear.id}')">Remove</button>
+                        </div>
+                    </div>
+                `).join('')}
+            `;
+            
+            container.innerHTML = html;
+        }
+
+        function renderSelectedWounds() {
+            const container = document.getElementById('selected-wounds');
+            
+            if (selectedWounds.length === 0) {
+                container.innerHTML = '';
+                return;
+            }
+            
+            const html = selectedWounds.map(wound => `
+                <div class="wound-item ${wound.isPrimary ? 'primary' : ''}">
+                    <div>
+                        <div class="wound-item-title">${wound.title}</div>
+                        ${wound.isPrimary ? '<small style="color: #e53e3e; font-weight: bold;">PRIMARY WOUND</small>' : ''}
+                        ${wound.isCustom ? '<small style="color: #4299e1;">(Custom)</small>' : ''}
+                    </div>
+                    <div class="wound-item-actions">
+                        ${!wound.isPrimary ? `<button class="wound-item-btn" onclick="setPrimaryWound('${wound.id}')">Set as Primary</button>` : ''}
+                        <button class="wound-item-btn remove" onclick="removeWound('${wound.id}')">Remove</button>
+                    </div>
+                </div>
+            `).join('');
+            
+            container.innerHTML = html;
+        }
+
+        // Initialize the page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Any initialization code can go here
+        });
+    </script>
+</body>
+</html>
